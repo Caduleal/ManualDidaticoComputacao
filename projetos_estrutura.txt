@@ -1,0 +1,1221 @@
+[
+  {
+    "PROJETO": "PRJ 1.1",
+    "TITULO": "Circuito com massa de modelar condutiva",
+    "MODULO": "Módulo I - Ensino Infantil",
+    "COMPLEXIDADE": "Básico",
+    "TEMPO_ESTIMADO": "2 h/aula (100 min)",
+    "PRE_REQUISITOS": "",
+    "HABILIDADES_DE_COMPUTACAO": [
+      "Corrente Elétrica e Circuitos Fechados"
+    ],
+    "COMPETENCIA_INTERDISCIPLINARES": {
+      "COMPETENCIA": "",
+      "BNCC_CODIGO": ""
+    },
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
+    "FLUXO_ESTRUTURA_CODIGO": [],
+    "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
+      "BOM": [],
+      "MAPEAMENTO_PINOS": [],
+      "IMAGEM_ESQUEMA": "",
+      "LINK_THINKERCAD": ""
+    },
+    "MODELAGEM_LOGICO_ALGORITMA": {
+      "ARQUIVO": "",
+      "CODIGO_FONTE": ""
+    },
+    "ROTEIRO_PRATICO_DE_EXECUCAO": [],
+    "ARTICULACAO_E_APROFUNDAMENTO": "",
+    "DESAFIOS_DE_EXPANSAO": []
+  },
+  {
+    "PROJETO": "PRJ 1.2",
+    "TITULO": "Classificação",
+    "MODULO": "Módulo I - Ensino Infantil",
+    "COMPLEXIDADE": "Básico",
+    "TEMPO_ESTIMADO": "2 h/aula (100 min)",
+    "PRE_REQUISITOS": "",
+    "HABILIDADES_DE_COMPUTACAO": [
+      "Agrupamento por Atributos e Filtros"
+    ],
+    "COMPETENCIA_INTERDISCIPLINARES": {
+      "COMPETENCIA": "",
+      "BNCC_CODIGO": ""
+    },
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
+    "FLUXO_ESTRUTURA_CODIGO": [],
+    "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
+      "BOM": [],
+      "MAPEAMENTO_PINOS": [],
+      "IMAGEM_ESQUEMA": "",
+      "LINK_THINKERCAD": ""
+    },
+    "MODELAGEM_LOGICO_ALGORITMA": {
+      "ARQUIVO": "",
+      "CODIGO_FONTE": ""
+    },
+    "ROTEIRO_PRATICO_DE_EXECUCAO": [],
+    "ARTICULACAO_E_APROFUNDAMENTO": "",
+    "DESAFIOS_DE_EXPANSAO": []
+  },
+  {
+    "PROJETO": "PRJ 1.3",
+    "TITULO": "Ordenação",
+    "MODULO": "Módulo I - Ensino Infantil",
+    "COMPLEXIDADE": "Básico",
+    "TEMPO_ESTIMADO": "2 h/aula (100 min)",
+    "PRE_REQUISITOS": "",
+    "HABILIDADES_DE_COMPUTACAO": [
+      "Algoritmos Sequenciais e Sequenciamento"
+    ],
+    "COMPETENCIA_INTERDISCIPLINARES": {
+      "COMPETENCIA": "",
+      "BNCC_CODIGO": ""
+    },
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
+    "FLUXO_ESTRUTURA_CODIGO": [],
+    "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
+      "BOM": [],
+      "MAPEAMENTO_PINOS": [],
+      "IMAGEM_ESQUEMA": "",
+      "LINK_THINKERCAD": ""
+    },
+    "MODELAGEM_LOGICO_ALGORITMA": {
+      "ARQUIVO": "",
+      "CODIGO_FONTE": ""
+    },
+    "ROTEIRO_PRATICO_DE_EXECUCAO": [],
+    "ARTICULACAO_E_APROFUNDAMENTO": "",
+    "DESAFIOS_DE_EXPANSAO": []
+  },
+  {
+    "PROJETO": "PRJ 1.4",
+    "TITULO": "Cartões com circuitos de papel",
+    "MODULO": "Módulo I - Ensino Infantil",
+    "COMPLEXIDADE": "Básico",
+    "TEMPO_ESTIMADO": "2 h/aula (100 min)",
+    "PRE_REQUISITOS": "",
+    "HABILIDADES_DE_COMPUTACAO": [
+      "Fita de Cobre, LEDs e Conectividade"
+    ],
+    "COMPETENCIA_INTERDISCIPLINARES": {
+      "COMPETENCIA": "",
+      "BNCC_CODIGO": ""
+    },
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
+    "FLUXO_ESTRUTURA_CODIGO": [],
+    "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
+      "BOM": [],
+      "MAPEAMENTO_PINOS": [],
+      "IMAGEM_ESQUEMA": "",
+      "LINK_THINKERCAD": ""
+    },
+    "MODELAGEM_LOGICO_ALGORITMA": {
+      "ARQUIVO": "",
+      "CODIGO_FONTE": ""
+    },
+    "ROTEIRO_PRATICO_DE_EXECUCAO": [],
+    "ARTICULACAO_E_APROFUNDAMENTO": "",
+    "DESAFIOS_DE_EXPANSAO": []
+  },
+  {
+    "PROJETO": "PRJ 1.5",
+    "TITULO": "Simulação de portas lógicas",
+    "MODULO": "Módulo I - Ensino Infantil",
+    "COMPLEXIDADE": "Intermediário",
+    "TEMPO_ESTIMADO": "2 h/aula (100 min)",
+    "PRE_REQUISITOS": "",
+    "HABILIDADES_DE_COMPUTACAO": [
+      "Lógica Booleana Básica (AND/OR Desplugado)"
+    ],
+    "COMPETENCIA_INTERDISCIPLINARES": {
+      "COMPETENCIA": "",
+      "BNCC_CODIGO": ""
+    },
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
+    "FLUXO_ESTRUTURA_CODIGO": [],
+    "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
+      "BOM": [],
+      "MAPEAMENTO_PINOS": [],
+      "IMAGEM_ESQUEMA": "",
+      "LINK_THINKERCAD": ""
+    },
+    "MODELAGEM_LOGICO_ALGORITMA": {
+      "ARQUIVO": "",
+      "CODIGO_FONTE": ""
+    },
+    "ROTEIRO_PRATICO_DE_EXECUCAO": [],
+    "ARTICULACAO_E_APROFUNDAMENTO": "",
+    "DESAFIOS_DE_EXPANSAO": []
+  },
+  {
+    "PROJETO": "PRJ 1.6",
+    "TITULO": "Ventilador de bancada com motor DC",
+    "MODULO": "Módulo I - Ensino Infantil",
+    "COMPLEXIDADE": "Intermediário",
+    "TEMPO_ESTIMADO": "2 h/aula (100 min)",
+    "PRE_REQUISITOS": "",
+    "HABILIDADES_DE_COMPUTACAO": [
+      "Atuadores, Motores DC e Circuito de Potência"
+    ],
+    "COMPETENCIA_INTERDISCIPLINARES": {
+      "COMPETENCIA": "",
+      "BNCC_CODIGO": ""
+    },
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
+    "FLUXO_ESTRUTURA_CODIGO": [],
+    "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
+      "BOM": [],
+      "MAPEAMENTO_PINOS": [],
+      "IMAGEM_ESQUEMA": "",
+      "LINK_THINKERCAD": ""
+    },
+    "MODELAGEM_LOGICO_ALGORITMA": {
+      "ARQUIVO": "",
+      "CODIGO_FONTE": ""
+    },
+    "ROTEIRO_PRATICO_DE_EXECUCAO": [],
+    "ARTICULACAO_E_APROFUNDAMENTO": "",
+    "DESAFIOS_DE_EXPANSAO": []
+  },
+  {
+    "PROJETO": "PRJ 1.7",
+    "TITULO": "Labirinto e lógica de decisão",
+    "MODULO": "Módulo I - Ensino Infantil",
+    "COMPLEXIDADE": "Intermediário",
+    "TEMPO_ESTIMADO": "2 h/aula (100 min)",
+    "PRE_REQUISITOS": "",
+    "HABILIDADES_DE_COMPUTACAO": [
+      "Condicionais e Árvore de Decisão"
+    ],
+    "COMPETENCIA_INTERDISCIPLINARES": {
+      "COMPETENCIA": "",
+      "BNCC_CODIGO": ""
+    },
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
+    "FLUXO_ESTRUTURA_CODIGO": [],
+    "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
+      "BOM": [],
+      "MAPEAMENTO_PINOS": [],
+      "IMAGEM_ESQUEMA": "",
+      "LINK_THINKERCAD": ""
+    },
+    "MODELAGEM_LOGICO_ALGORITMA": {
+      "ARQUIVO": "",
+      "CODIGO_FONTE": ""
+    },
+    "ROTEIRO_PRATICO_DE_EXECUCAO": [],
+    "ARTICULACAO_E_APROFUNDAMENTO": "",
+    "DESAFIOS_DE_EXPANSAO": []
+  },
+  {
+    "PROJETO": "PRJ 1.8",
+    "TITULO": "Que animal é? Sons",
+    "MODULO": "Módulo I - Ensino Infantil",
+    "COMPLEXIDADE": "Intermediário",
+    "TEMPO_ESTIMADO": "2 h/aula (100 min)",
+    "PRE_REQUISITOS": "",
+    "HABILIDADES_DE_COMPUTACAO": [
+      "Mapeamento de Entradas e Saídas Sonoras"
+    ],
+    "COMPETENCIA_INTERDISCIPLINARES": {
+      "COMPETENCIA": "",
+      "BNCC_CODIGO": ""
+    },
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
+    "FLUXO_ESTRUTURA_CODIGO": [],
+    "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
+      "BOM": [],
+      "MAPEAMENTO_PINOS": [],
+      "IMAGEM_ESQUEMA": "",
+      "LINK_THINKERCAD": ""
+    },
+    "MODELAGEM_LOGICO_ALGORITMA": {
+      "ARQUIVO": "",
+      "CODIGO_FONTE": ""
+    },
+    "ROTEIRO_PRATICO_DE_EXECUCAO": [],
+    "ARTICULACAO_E_APROFUNDAMENTO": "",
+    "DESAFIOS_DE_EXPANSAO": []
+  },
+  {
+    "PROJETO": "PRJ 2.1",
+    "TITULO": "Semáforo",
+    "MODULO": "Módulo II - Ensino Fundamental I",
+    "COMPLEXIDADE": "Básico",
+    "TEMPO_ESTIMADO": "2 h/aula (100 min)",
+    "PRE_REQUISITOS": "",
+    "HABILIDADES_DE_COMPUTACAO": [
+      "Variáveis, Temporização e Delays"
+    ],
+    "COMPETENCIA_INTERDISCIPLINARES": {
+      "COMPETENCIA": "",
+      "BNCC_CODIGO": ""
+    },
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
+    "FLUXO_ESTRUTURA_CODIGO": [],
+    "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
+      "BOM": [],
+      "MAPEAMENTO_PINOS": [],
+      "IMAGEM_ESQUEMA": "",
+      "LINK_THINKERCAD": ""
+    },
+    "MODELAGEM_LOGICO_ALGORITMA": {
+      "ARQUIVO": "",
+      "CODIGO_FONTE": ""
+    },
+    "ROTEIRO_PRATICO_DE_EXECUCAO": [],
+    "ARTICULACAO_E_APROFUNDAMENTO": "",
+    "DESAFIOS_DE_EXPANSAO": []
+  },
+  {
+    "PROJETO": "PRJ 2.2",
+    "TITULO": "Jogo de reflexo (Acerte o Botão)",
+    "MODULO": "Módulo II - Ensino Fundamental I",
+    "COMPLEXIDADE": "Básico",
+    "TEMPO_ESTIMADO": "2 h/aula (100 min)",
+    "PRE_REQUISITOS": "",
+    "HABILIDADES_DE_COMPUTACAO": [
+      "Variáveis Temp., Contadores, Operadores"
+    ],
+    "COMPETENCIA_INTERDISCIPLINARES": {
+      "COMPETENCIA": "",
+      "BNCC_CODIGO": ""
+    },
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
+    "FLUXO_ESTRUTURA_CODIGO": [],
+    "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
+      "BOM": [],
+      "MAPEAMENTO_PINOS": [],
+      "IMAGEM_ESQUEMA": "",
+      "LINK_THINKERCAD": ""
+    },
+    "MODELAGEM_LOGICO_ALGORITMA": {
+      "ARQUIVO": "",
+      "CODIGO_FONTE": ""
+    },
+    "ROTEIRO_PRATICO_DE_EXECUCAO": [],
+    "ARTICULACAO_E_APROFUNDAMENTO": "",
+    "DESAFIOS_DE_EXPANSAO": []
+  },
+  {
+    "PROJETO": "PRJ 2.3",
+    "TITULO": "Portão automático com sensor ultrassônico",
+    "MODULO": "Módulo II - Ensino Fundamental I",
+    "COMPLEXIDADE": "Intermediário",
+    "TEMPO_ESTIMADO": "2 h/aula (100 min)",
+    "PRE_REQUISITOS": "",
+    "HABILIDADES_DE_COMPUTACAO": [
+      "Ultrassom, Servomotor, Condicionais"
+    ],
+    "COMPETENCIA_INTERDISCIPLINARES": {
+      "COMPETENCIA": "",
+      "BNCC_CODIGO": ""
+    },
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
+    "FLUXO_ESTRUTURA_CODIGO": [],
+    "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
+      "BOM": [],
+      "MAPEAMENTO_PINOS": [],
+      "IMAGEM_ESQUEMA": "",
+      "LINK_THINKERCAD": ""
+    },
+    "MODELAGEM_LOGICO_ALGORITMA": {
+      "ARQUIVO": "",
+      "CODIGO_FONTE": ""
+    },
+    "ROTEIRO_PRATICO_DE_EXECUCAO": [],
+    "ARTICULACAO_E_APROFUNDAMENTO": "",
+    "DESAFIOS_DE_EXPANSAO": []
+  },
+  {
+    "PROJETO": "PRJ 2.4",
+    "TITULO": "Lixeira automática",
+    "MODULO": "Módulo II - Ensino Fundamental I",
+    "COMPLEXIDADE": "Intermediário",
+    "TEMPO_ESTIMADO": "2 h/aula (100 min)",
+    "PRE_REQUISITOS": "",
+    "HABILIDADES_DE_COMPUTACAO": [
+      "Sensor de Proximidade e Atuação Mecânica"
+    ],
+    "COMPETENCIA_INTERDISCIPLINARES": {
+      "COMPETENCIA": "",
+      "BNCC_CODIGO": ""
+    },
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
+    "FLUXO_ESTRUTURA_CODIGO": [],
+    "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
+      "BOM": [],
+      "MAPEAMENTO_PINOS": [],
+      "IMAGEM_ESQUEMA": "",
+      "LINK_THINKERCAD": ""
+    },
+    "MODELAGEM_LOGICO_ALGORITMA": {
+      "ARQUIVO": "",
+      "CODIGO_FONTE": ""
+    },
+    "ROTEIRO_PRATICO_DE_EXECUCAO": [],
+    "ARTICULACAO_E_APROFUNDAMENTO": "",
+    "DESAFIOS_DE_EXPANSAO": []
+  },
+  {
+    "PROJETO": "PRJ 2.5",
+    "TITULO": "Fotos com microcontroladores",
+    "MODULO": "Módulo II - Ensino Fundamental I",
+    "COMPLEXIDADE": "Intermediário",
+    "TEMPO_ESTIMADO": "2 h/aula (100 min)",
+    "PRE_REQUISITOS": "",
+    "HABILIDADES_DE_COMPUTACAO": [
+      "Captura Digital e Disparo por Hardware"
+    ],
+    "COMPETENCIA_INTERDISCIPLINARES": {
+      "COMPETENCIA": "",
+      "BNCC_CODIGO": ""
+    },
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
+    "FLUXO_ESTRUTURA_CODIGO": [],
+    "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
+      "BOM": [],
+      "MAPEAMENTO_PINOS": [],
+      "IMAGEM_ESQUEMA": "",
+      "LINK_THINKERCAD": ""
+    },
+    "MODELAGEM_LOGICO_ALGORITMA": {
+      "ARQUIVO": "",
+      "CODIGO_FONTE": ""
+    },
+    "ROTEIRO_PRATICO_DE_EXECUCAO": [],
+    "ARTICULACAO_E_APROFUNDAMENTO": "",
+    "DESAFIOS_DE_EXPANSAO": []
+  },
+  {
+    "PROJETO": "PRJ 2.6",
+    "TITULO": "Comunicação com outros controladores",
+    "MODULO": "Módulo II - Ensino Fundamental I",
+    "COMPLEXIDADE": "Intermediário",
+    "TEMPO_ESTIMADO": "2 h/aula (100 min)",
+    "PRE_REQUISITOS": "",
+    "HABILIDADES_DE_COMPUTACAO": [
+      "Comunicação Serial RX/TX"
+    ],
+    "COMPETENCIA_INTERDISCIPLINARES": {
+      "COMPETENCIA": "",
+      "BNCC_CODIGO": ""
+    },
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
+    "FLUXO_ESTRUTURA_CODIGO": [],
+    "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
+      "BOM": [],
+      "MAPEAMENTO_PINOS": [],
+      "IMAGEM_ESQUEMA": "",
+      "LINK_THINKERCAD": ""
+    },
+    "MODELAGEM_LOGICO_ALGORITMA": {
+      "ARQUIVO": "",
+      "CODIGO_FONTE": ""
+    },
+    "ROTEIRO_PRATICO_DE_EXECUCAO": [],
+    "ARTICULACAO_E_APROFUNDAMENTO": "",
+    "DESAFIOS_DE_EXPANSAO": []
+  },
+  {
+    "PROJETO": "PRJ 2.7",
+    "TITULO": "Termômetro escolar",
+    "MODULO": "Módulo II - Ensino Fundamental I",
+    "COMPLEXIDADE": "Intermediário",
+    "TEMPO_ESTIMADO": "2 h/aula (100 min)",
+    "PRE_REQUISITOS": "",
+    "HABILIDADES_DE_COMPUTACAO": [
+      "Sensor de Temperatura e Mapeamento Analógico"
+    ],
+    "COMPETENCIA_INTERDISCIPLINARES": {
+      "COMPETENCIA": "",
+      "BNCC_CODIGO": ""
+    },
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
+    "FLUXO_ESTRUTURA_CODIGO": [],
+    "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
+      "BOM": [],
+      "MAPEAMENTO_PINOS": [],
+      "IMAGEM_ESQUEMA": "",
+      "LINK_THINKERCAD": ""
+    },
+    "MODELAGEM_LOGICO_ALGORITMA": {
+      "ARQUIVO": "",
+      "CODIGO_FONTE": ""
+    },
+    "ROTEIRO_PRATICO_DE_EXECUCAO": [],
+    "ARTICULACAO_E_APROFUNDAMENTO": "",
+    "DESAFIOS_DE_EXPANSAO": []
+  },
+  {
+    "PROJETO": "PRJ 2.8",
+    "TITULO": "Automação de regagem de plantas",
+    "MODULO": "Módulo II - Ensino Fundamental I",
+    "COMPLEXIDADE": "Avançado",
+    "TEMPO_ESTIMADO": "2 h/aula (100 min)",
+    "PRE_REQUISITOS": "",
+    "HABILIDADES_DE_COMPUTACAO": [
+      "Sensor de Umidade do Solo e Relés"
+    ],
+    "COMPETENCIA_INTERDISCIPLINARES": {
+      "COMPETENCIA": "",
+      "BNCC_CODIGO": ""
+    },
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
+    "FLUXO_ESTRUTURA_CODIGO": [],
+    "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
+      "BOM": [],
+      "MAPEAMENTO_PINOS": [],
+      "IMAGEM_ESQUEMA": "",
+      "LINK_THINKERCAD": ""
+    },
+    "MODELAGEM_LOGICO_ALGORITMA": {
+      "ARQUIVO": "",
+      "CODIGO_FONTE": ""
+    },
+    "ROTEIRO_PRATICO_DE_EXECUCAO": [],
+    "ARTICULACAO_E_APROFUNDAMENTO": "",
+    "DESAFIOS_DE_EXPANSAO": []
+  },
+  {
+    "PROJETO": "PRJ 2.9",
+    "TITULO": "Robô com desvio de proximidade",
+    "MODULO": "Módulo II - Ensino Fundamental I",
+    "COMPLEXIDADE": "Avançado",
+    "TEMPO_ESTIMADO": "2 h/aula (100 min)",
+    "PRE_REQUISITOS": "",
+    "HABILIDADES_DE_COMPUTACAO": [
+      "Ponte H, Motores DC e Algoritmo de Esquiva"
+    ],
+    "COMPETENCIA_INTERDISCIPLINARES": {
+      "COMPETENCIA": "",
+      "BNCC_CODIGO": ""
+    },
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
+    "FLUXO_ESTRUTURA_CODIGO": [],
+    "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
+      "BOM": [],
+      "MAPEAMENTO_PINOS": [],
+      "IMAGEM_ESQUEMA": "",
+      "LINK_THINKERCAD": ""
+    },
+    "MODELAGEM_LOGICO_ALGORITMA": {
+      "ARQUIVO": "",
+      "CODIGO_FONTE": ""
+    },
+    "ROTEIRO_PRATICO_DE_EXECUCAO": [],
+    "ARTICULACAO_E_APROFUNDAMENTO": "",
+    "DESAFIOS_DE_EXPANSAO": []
+  },
+  {
+    "PROJETO": "PRJ 3.1",
+    "TITULO": "Jogo da Memória com LEDs",
+    "MODULO": "Módulo III - Ensino Fundamental II",
+    "COMPLEXIDADE": "Básico",
+    "TEMPO_ESTIMADO": "2 h/aula (100 min)",
+    "PRE_REQUISITOS": "",
+    "HABILIDADES_DE_COMPUTACAO": [
+      "Arrays, Funções, Loops e Randomização"
+    ],
+    "COMPETENCIA_INTERDISCIPLINARES": {
+      "MATEMATICA": "Medidas de tempo e operadores relacionais.",
+      "BNCC_CODIGO": ""
+    },
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Jogos de reflexo medem o tempo de reação humano. Como podemos utilizar um microcontrolador para gerar um evento aleatório e medir milissegundos?",
+    "FLUXO_ESTRUTURA_CODIGO": [],
+    "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
+      "BOM": [
+        {
+          "qtd": "1x",
+          "componente": "Arduino Uno"
+        },
+        {
+          "qtd": "2x",
+          "componente": "LEDs e Resistores 330Ω"
+        }
+      ],
+      "MAPEAMENTO_PINOS": [
+        "Pino 2: Entrada Digital (Botão)",
+        "Pino 8: Saída Digital (LED)"
+      ],
+      "IMAGEM_ESQUEMA": "",
+      "LINK_THINKERCAD": ""
+    },
+    "MODELAGEM_LOGICO_ALGORITMA": {
+      "ARQUIVO": "",
+      "CODIGO_FONTE": ""
+    },
+    "ROTEIRO_PRATICO_DE_EXECUCAO": [],
+    "ARTICULACAO_E_APROFUNDAMENTO": "",
+    "DESAFIOS_DE_EXPANSAO": []
+  },
+  {
+    "PROJETO": "PRJ 3.2",
+    "TITULO": "Lâmpada noturna automática",
+    "MODULO": "Módulo III - Ensino Fundamental II",
+    "COMPLEXIDADE": "Básico",
+    "TEMPO_ESTIMADO": "2 h/aula (100 min)",
+    "PRE_REQUISITOS": "",
+    "HABILIDADES_DE_COMPUTACAO": [
+      "Sensor LDR, Leitura Analógica e Histese"
+    ],
+    "COMPETENCIA_INTERDISCIPLINARES": {
+      "FISICA": "Sistemas tecnológicos e eficiência energética.",
+      "BNCC_CODIGO": ""
+    },
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Iluminação pública ativa durante o dia gera desperdício de energia. Como automatizar o acendimento das lâmpadas com base na luz natural?",
+    "FLUXO_ESTRUTURA_CODIGO": [],
+    "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
+      "BOM": [
+        {
+          "qtd": "1x",
+          "componente": "Arduino Uno"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Fotoresistor LDR 5mm"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Resistor 10kΩ e LED Difuso"
+        }
+      ],
+      "MAPEAMENTO_PINOS": [
+        "A0: Entrada Analógica (ADC Sensor LDR)",
+        "9: Saída Digital/PWM (Atuador LED)"
+      ],
+      "IMAGEM_ESQUEMA": "",
+      "LINK_THINKERCAD": ""
+    },
+    "MODELAGEM_LOGICO_ALGORITMA": {
+      "ARQUIVO": "",
+      "CODIGO_FONTE": ""
+    },
+    "ROTEIRO_PRATICO_DE_EXECUCAO": [],
+    "ARTICULACAO_E_APROFUNDAMENTO": "",
+    "DESAFIOS_DE_EXPANSAO": []
+  },
+  {
+    "PROJETO": "PRJ 3.3",
+    "TITULO": "Despertador com sensores",
+    "MODULO": "Módulo III - Ensino Fundamental II",
+    "COMPLEXIDADE": "Intermediário",
+    "TEMPO_ESTIMADO": "2 h/aula (100 min)",
+    "PRE_REQUISITOS": "",
+    "HABILIDADES_DE_COMPUTACAO": [
+      "Módulo RTC, Alarmes e Sinalização Sonora"
+    ],
+    "COMPETENCIA_INTERDISCIPLINARES": {
+      "COMPETENCIA": "",
+      "BNCC_CODIGO": ""
+    },
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
+    "FLUXO_ESTRUTURA_CODIGO": [],
+    "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
+      "BOM": [],
+      "MAPEAMENTO_PINOS": [],
+      "IMAGEM_ESQUEMA": "",
+      "LINK_THINKERCAD": ""
+    },
+    "MODELAGEM_LOGICO_ALGORITMA": {
+      "ARQUIVO": "",
+      "CODIGO_FONTE": ""
+    },
+    "ROTEIRO_PRATICO_DE_EXECUCAO": [],
+    "ARTICULACAO_E_APROFUNDAMENTO": "",
+    "DESAFIOS_DE_EXPANSAO": []
+  },
+  {
+    "PROJETO": "PRJ 3.4",
+    "TITULO": "Estação de telemetria",
+    "MODULO": "Módulo III - Ensino Fundamental II",
+    "COMPLEXIDADE": "Intermediário",
+    "TEMPO_ESTIMADO": "2 h/aula (100 min)",
+    "PRE_REQUISITOS": "",
+    "HABILIDADES_DE_COMPUTACAO": [
+      "Multissensores e Transmissão de Dados"
+    ],
+    "COMPETENCIA_INTERDISCIPLINARES": {
+      "COMPETENCIA": "",
+      "BNCC_CODIGO": ""
+    },
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
+    "FLUXO_ESTRUTURA_CODIGO": [],
+    "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
+      "BOM": [],
+      "MAPEAMENTO_PINOS": [],
+      "IMAGEM_ESQUEMA": "",
+      "LINK_THINKERCAD": ""
+    },
+    "MODELAGEM_LOGICO_ALGORITMA": {
+      "ARQUIVO": "",
+      "CODIGO_FONTE": ""
+    },
+    "ROTEIRO_PRATICO_DE_EXECUCAO": [],
+    "ARTICULACAO_E_APROFUNDAMENTO": "",
+    "DESAFIOS_DE_EXPANSAO": []
+  },
+  {
+    "PROJETO": "PRJ 3.5",
+    "TITULO": "Estacionamento com contador de vagas",
+    "MODULO": "Módulo III - Ensino Fundamental II",
+    "COMPLEXIDADE": "Intermediário",
+    "TEMPO_ESTIMADO": "2 h/aula (100 min)",
+    "PRE_REQUISITOS": "",
+    "HABILIDADES_DE_COMPUTACAO": [
+      "Displays de 7 Segmentos e Sensores Ópticos"
+    ],
+    "COMPETENCIA_INTERDISCIPLINARES": {
+      "COMPETENCIA": "",
+      "BNCC_CODIGO": ""
+    },
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
+    "FLUXO_ESTRUTURA_CODIGO": [],
+    "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
+      "BOM": [],
+      "MAPEAMENTO_PINOS": [],
+      "IMAGEM_ESQUEMA": "",
+      "LINK_THINKERCAD": ""
+    },
+    "MODELAGEM_LOGICO_ALGORITMA": {
+      "ARQUIVO": "",
+      "CODIGO_FONTE": ""
+    },
+    "ROTEIRO_PRATICO_DE_EXECUCAO": [],
+    "ARTICULACAO_E_APROFUNDAMENTO": "",
+    "DESAFIOS_DE_EXPANSAO": []
+  },
+  {
+    "PROJETO": "PRJ 3.6",
+    "TITULO": "Contador de pessoas",
+    "MODULO": "Módulo III - Ensino Fundamental II",
+    "COMPLEXIDADE": "Intermediário",
+    "TEMPO_ESTIMADO": "2 h/aula (100 min)",
+    "PRE_REQUISITOS": "",
+    "HABILIDADES_DE_COMPUTACAO": [
+      "Sensores de Barreira Infravermelha"
+    ],
+    "COMPETENCIA_INTERDISCIPLINARES": {
+      "COMPETENCIA": "",
+      "BNCC_CODIGO": ""
+    },
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
+    "FLUXO_ESTRUTURA_CODIGO": [],
+    "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
+      "BOM": [],
+      "MAPEAMENTO_PINOS": [],
+      "IMAGEM_ESQUEMA": "",
+      "LINK_THINKERCAD": ""
+    },
+    "MODELAGEM_LOGICO_ALGORITMA": {
+      "ARQUIVO": "",
+      "CODIGO_FONTE": ""
+    },
+    "ROTEIRO_PRATICO_DE_EXECUCAO": [],
+    "ARTICULACAO_E_APROFUNDAMENTO": "",
+    "DESAFIOS_DE_EXPANSAO": []
+  },
+  {
+    "PROJETO": "PRJ 3.7",
+    "TITULO": "Câmera fotográfica",
+    "MODULO": "Módulo III - Ensino Fundamental II",
+    "COMPLEXIDADE": "Intermediário",
+    "TEMPO_ESTIMADO": "2 h/aula (100 min)",
+    "PRE_REQUISITOS": "",
+    "HABILIDADES_DE_COMPUTACAO": [
+      "Mapeamento de Arquivos em Cartão SD"
+    ],
+    "COMPETENCIA_INTERDISCIPLINARES": {
+      "COMPETENCIA": "",
+      "BNCC_CODIGO": ""
+    },
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
+    "FLUXO_ESTRUTURA_CODIGO": [],
+    "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
+      "BOM": [],
+      "MAPEAMENTO_PINOS": [],
+      "IMAGEM_ESQUEMA": "",
+      "LINK_THINKERCAD": ""
+    },
+    "MODELAGEM_LOGICO_ALGORITMA": {
+      "ARQUIVO": "",
+      "CODIGO_FONTE": ""
+    },
+    "ROTEIRO_PRATICO_DE_EXECUCAO": [],
+    "ARTICULACAO_E_APROFUNDAMENTO": "",
+    "DESAFIOS_DE_EXPANSAO": []
+  },
+  {
+    "PROJETO": "PRJ 3.8",
+    "TITULO": "Enviando fotos pela rede",
+    "MODULO": "Módulo III - Ensino Fundamental II",
+    "COMPLEXIDADE": "Avançado",
+    "TEMPO_ESTIMADO": "2 h/aula (100 min)",
+    "PRE_REQUISITOS": "",
+    "HABILIDADES_DE_COMPUTACAO": [
+      "Protocolo HTTP e Requisições POST"
+    ],
+    "COMPETENCIA_INTERDISCIPLINARES": {
+      "COMPETENCIA": "",
+      "BNCC_CODIGO": ""
+    },
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
+    "FLUXO_ESTRUTURA_CODIGO": [],
+    "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
+      "BOM": [],
+      "MAPEAMENTO_PINOS": [],
+      "IMAGEM_ESQUEMA": "",
+      "LINK_THINKERCAD": ""
+    },
+    "MODELAGEM_LOGICO_ALGORITMA": {
+      "ARQUIVO": "",
+      "CODIGO_FONTE": ""
+    },
+    "ROTEIRO_PRATICO_DE_EXECUCAO": [],
+    "ARTICULACAO_E_APROFUNDAMENTO": "",
+    "DESAFIOS_DE_EXPANSAO": []
+  },
+  {
+    "PROJETO": "PRJ 3.9",
+    "TITULO": "Comunicação Via Rádio",
+    "MODULO": "Módulo III - Ensino Fundamental II",
+    "COMPLEXIDADE": "Avançado",
+    "TEMPO_ESTIMADO": "2 h/aula (100 min)",
+    "PRE_REQUISITOS": "",
+    "HABILIDADES_DE_COMPUTACAO": [
+      "Transceptores RF/LoRa e Pacotes de Dados"
+    ],
+    "COMPETENCIA_INTERDISCIPLINARES": {
+      "COMPETENCIA": "",
+      "BNCC_CODIGO": ""
+    },
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
+    "FLUXO_ESTRUTURA_CODIGO": [],
+    "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
+      "BOM": [],
+      "MAPEAMENTO_PINOS": [],
+      "IMAGEM_ESQUEMA": "",
+      "LINK_THINKERCAD": ""
+    },
+    "MODELAGEM_LOGICO_ALGORITMA": {
+      "ARQUIVO": "",
+      "CODIGO_FONTE": ""
+    },
+    "ROTEIRO_PRATICO_DE_EXECUCAO": [],
+    "ARTICULACAO_E_APROFUNDAMENTO": "",
+    "DESAFIOS_DE_EXPANSAO": []
+  },
+  {
+    "PROJETO": "PRJ 3.10",
+    "TITULO": "Estação de Monitoramento de pH",
+    "MODULO": "Módulo III - Ensino Fundamental II",
+    "COMPLEXIDADE": "Avançado",
+    "TEMPO_ESTIMADO": "2 h/aula (100 min)",
+    "PRE_REQUISITOS": "",
+    "HABILIDADES_DE_COMPUTACAO": [
+      "Calibração de Sensores Químicos e ADC"
+    ],
+    "COMPETENCIA_INTERDISCIPLINARES": {
+      "COMPETENCIA": "",
+      "BNCC_CODIGO": ""
+    },
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
+    "FLUXO_ESTRUTURA_CODIGO": [],
+    "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
+      "BOM": [],
+      "MAPEAMENTO_PINOS": [],
+      "IMAGEM_ESQUEMA": "",
+      "LINK_THINKERCAD": ""
+    },
+    "MODELAGEM_LOGICO_ALGORITMA": {
+      "ARQUIVO": "",
+      "CODIGO_FONTE": ""
+    },
+    "ROTEIRO_PRATICO_DE_EXECUCAO": [],
+    "ARTICULACAO_E_APROFUNDAMENTO": "",
+    "DESAFIOS_DE_EXPANSAO": []
+  },
+  {
+    "PROJETO": "PRJ 3.11",
+    "TITULO": "Comedor Pet Automático",
+    "MODULO": "Módulo III - Ensino Fundamental II",
+    "COMPLEXIDADE": "Avançado",
+    "TEMPO_ESTIMADO": "2 h/aula (100 min)",
+    "PRE_REQUISITOS": "",
+    "HABILIDADES_DE_COMPUTACAO": [
+      "Temporizadores de Precisão e Servomecanismo"
+    ],
+    "COMPETENCIA_INTERDISCIPLINARES": {
+      "COMPETENCIA": "",
+      "BNCC_CODIGO": ""
+    },
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
+    "FLUXO_ESTRUTURA_CODIGO": [],
+    "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
+      "BOM": [],
+      "MAPEAMENTO_PINOS": [],
+      "IMAGEM_ESQUEMA": "",
+      "LINK_THINKERCAD": ""
+    },
+    "MODELAGEM_LOGICO_ALGORITMA": {
+      "ARQUIVO": "",
+      "CODIGO_FONTE": ""
+    },
+    "ROTEIRO_PRATICO_DE_EXECUCAO": [],
+    "ARTICULACAO_E_APROFUNDAMENTO": "",
+    "DESAFIOS_DE_EXPANSAO": []
+  },
+  {
+    "PROJETO": "PRJ 3.12",
+    "TITULO": "Robô seguidor de linha",
+    "MODULO": "Módulo III - Ensino Fundamental II",
+    "COMPLEXIDADE": "Avançado",
+    "TEMPO_ESTIMADO": "2 h/aula (100 min)",
+    "PRE_REQUISITOS": "",
+    "HABILIDADES_DE_COMPUTACAO": [
+      "Sensores Reflexivos IR e Algoritmo PID"
+    ],
+    "COMPETENCIA_INTERDISCIPLINARES": {
+      "COMPETENCIA": "",
+      "BNCC_CODIGO": ""
+    },
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
+    "FLUXO_ESTRUTURA_CODIGO": [],
+    "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
+      "BOM": [],
+      "MAPEAMENTO_PINOS": [],
+      "IMAGEM_ESQUEMA": "",
+      "LINK_THINKERCAD": ""
+    },
+    "MODELAGEM_LOGICO_ALGORITMA": {
+      "ARQUIVO": "",
+      "CODIGO_FONTE": ""
+    },
+    "ROTEIRO_PRATICO_DE_EXECUCAO": [],
+    "ARTICULACAO_E_APROFUNDAMENTO": "",
+    "DESAFIOS_DE_EXPANSAO": []
+  },
+  {
+    "PROJETO": "PRJ 4.1",
+    "TITULO": "Calculadora",
+    "MODULO": "Módulo IV - Ensino Médio",
+    "COMPLEXIDADE": "Básico",
+    "TEMPO_ESTIMADO": "2 h/aula (100 min)",
+    "PRE_REQUISITOS": "",
+    "HABILIDADES_DE_COMPUTACAO": [
+      "Teclado Matricial e Displays LCD"
+    ],
+    "COMPETENCIA_INTERDISCIPLINARES": {
+      "COMPETENCIA": "",
+      "BNCC_CODIGO": ""
+    },
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
+    "FLUXO_ESTRUTURA_CODIGO": [],
+    "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
+      "BOM": [],
+      "MAPEAMENTO_PINOS": [],
+      "IMAGEM_ESQUEMA": "",
+      "LINK_THINKERCAD": ""
+    },
+    "MODELAGEM_LOGICO_ALGORITMA": {
+      "ARQUIVO": "",
+      "CODIGO_FONTE": ""
+    },
+    "ROTEIRO_PRATICO_DE_EXECUCAO": [],
+    "ARTICULACAO_E_APROFUNDAMENTO": "",
+    "DESAFIOS_DE_EXPANSAO": []
+  },
+  {
+    "PROJETO": "PRJ 4.2",
+    "TITULO": "Urna eletrônica",
+    "MODULO": "Módulo IV - Ensino Médio",
+    "COMPLEXIDADE": "Básico",
+    "TEMPO_ESTIMADO": "2 h/aula (100 min)",
+    "PRE_REQUISITOS": "",
+    "HABILIDADES_DE_COMPUTACAO": [
+      "Máquinas de Estado e Memória EEPROM/Flash"
+    ],
+    "COMPETENCIA_INTERDISCIPLINARES": {
+      "COMPETENCIA": "",
+      "BNCC_CODIGO": ""
+    },
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
+    "FLUXO_ESTRUTURA_CODIGO": [],
+    "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
+      "BOM": [],
+      "MAPEAMENTO_PINOS": [],
+      "IMAGEM_ESQUEMA": "",
+      "LINK_THINKERCAD": ""
+    },
+    "MODELAGEM_LOGICO_ALGORITMA": {
+      "ARQUIVO": "",
+      "CODIGO_FONTE": ""
+    },
+    "ROTEIRO_PRATICO_DE_EXECUCAO": [],
+    "ARTICULACAO_E_APROFUNDAMENTO": "",
+    "DESAFIOS_DE_EXPANSAO": []
+  },
+  {
+    "PROJETO": "PRJ 4.3",
+    "TITULO": "Radar Sonar",
+    "MODULO": "Módulo IV - Ensino Médio",
+    "COMPLEXIDADE": "Intermediário",
+    "TEMPO_ESTIMADO": "2 h/aula (100 min)",
+    "PRE_REQUISITOS": "",
+    "HABILIDADES_DE_COMPUTACAO": [
+      "Varredura Angular e Renderização Gráfica"
+    ],
+    "COMPETENCIA_INTERDISCIPLINARES": {
+      "COMPETENCIA": "",
+      "BNCC_CODIGO": ""
+    },
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
+    "FLUXO_ESTRUTURA_CODIGO": [],
+    "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
+      "BOM": [],
+      "MAPEAMENTO_PINOS": [],
+      "IMAGEM_ESQUEMA": "",
+      "LINK_THINKERCAD": ""
+    },
+    "MODELAGEM_LOGICO_ALGORITMA": {
+      "ARQUIVO": "",
+      "CODIGO_FONTE": ""
+    },
+    "ROTEIRO_PRATICO_DE_EXECUCAO": [],
+    "ARTICULACAO_E_APROFUNDAMENTO": "",
+    "DESAFIOS_DE_EXPANSAO": []
+  },
+  {
+    "PROJETO": "PRJ 4.4",
+    "TITULO": "Controle de Acesso (NFC)",
+    "MODULO": "Módulo IV - Ensino Médio",
+    "COMPLEXIDADE": "Intermediário",
+    "TEMPO_ESTIMADO": "2 h/aula (100 min)",
+    "PRE_REQUISITOS": "",
+    "HABILIDADES_DE_COMPUTACAO": [
+      "Comunicação SPI/I2C e Leitura RFID/NFC"
+    ],
+    "COMPETENCIA_INTERDISCIPLINARES": {
+      "COMPETENCIA": "",
+      "BNCC_CODIGO": ""
+    },
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
+    "FLUXO_ESTRUTURA_CODIGO": [],
+    "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
+      "BOM": [],
+      "MAPEAMENTO_PINOS": [],
+      "IMAGEM_ESQUEMA": "",
+      "LINK_THINKERCAD": ""
+    },
+    "MODELAGEM_LOGICO_ALGORITMA": {
+      "ARQUIVO": "",
+      "CODIGO_FONTE": ""
+    },
+    "ROTEIRO_PRATICO_DE_EXECUCAO": [],
+    "ARTICULACAO_E_APROFUNDAMENTO": "",
+    "DESAFIOS_DE_EXPANSAO": []
+  },
+  {
+    "PROJETO": "PRJ 4.5",
+    "TITULO": "Servidor com fotos",
+    "MODULO": "Módulo IV - Ensino Médio",
+    "COMPLEXIDADE": "Intermediário",
+    "TEMPO_ESTIMADO": "2 h/aula (100 min)",
+    "PRE_REQUISITOS": "",
+    "HABILIDADES_DE_COMPUTACAO": [
+      "Web Server Embarcado e Arquivos Estáticos"
+    ],
+    "COMPETENCIA_INTERDISCIPLINARES": {
+      "COMPETENCIA": "",
+      "BNCC_CODIGO": ""
+    },
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
+    "FLUXO_ESTRUTURA_CODIGO": [],
+    "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
+      "BOM": [],
+      "MAPEAMENTO_PINOS": [],
+      "IMAGEM_ESQUEMA": "",
+      "LINK_THINKERCAD": ""
+    },
+    "MODELAGEM_LOGICO_ALGORITMA": {
+      "ARQUIVO": "",
+      "CODIGO_FONTE": ""
+    },
+    "ROTEIRO_PRATICO_DE_EXECUCAO": [],
+    "ARTICULACAO_E_APROFUNDAMENTO": "",
+    "DESAFIOS_DE_EXPANSAO": []
+  },
+  {
+    "PROJETO": "PRJ 4.6",
+    "TITULO": "Câmera de monitoramento",
+    "MODULO": "Módulo IV - Ensino Médio",
+    "COMPLEXIDADE": "Avançado",
+    "TEMPO_ESTIMADO": "2 h/aula (100 min)",
+    "PRE_REQUISITOS": "",
+    "HABILIDADES_DE_COMPUTACAO": [
+      "Streaming MJPEG e Protocolo WebSocket"
+    ],
+    "COMPETENCIA_INTERDISCIPLINARES": {
+      "COMPETENCIA": "",
+      "BNCC_CODIGO": ""
+    },
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
+    "FLUXO_ESTRUTURA_CODIGO": [],
+    "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
+      "BOM": [],
+      "MAPEAMENTO_PINOS": [],
+      "IMAGEM_ESQUEMA": "",
+      "LINK_THINKERCAD": ""
+    },
+    "MODELAGEM_LOGICO_ALGORITMA": {
+      "ARQUIVO": "",
+      "CODIGO_FONTE": ""
+    },
+    "ROTEIRO_PRATICO_DE_EXECUCAO": [],
+    "ARTICULACAO_E_APROFUNDAMENTO": "",
+    "DESAFIOS_DE_EXPANSAO": []
+  },
+  {
+    "PROJETO": "PRJ 4.7",
+    "TITULO": "Automação Elétrica",
+    "MODULO": "Módulo IV - Ensino Médio",
+    "COMPLEXIDADE": "Avançado",
+    "TEMPO_ESTIMADO": "2 h/aula (100 min)",
+    "PRE_REQUISITOS": "",
+    "HABILIDADES_DE_COMPUTACAO": [
+      "Módulos Relé, Cargas AC e Protocolo MQTT"
+    ],
+    "COMPETENCIA_INTERDISCIPLINARES": {
+      "COMPETENCIA": "",
+      "BNCC_CODIGO": ""
+    },
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
+    "FLUXO_ESTRUTURA_CODIGO": [],
+    "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
+      "BOM": [],
+      "MAPEAMENTO_PINOS": [],
+      "IMAGEM_ESQUEMA": "",
+      "LINK_THINKERCAD": ""
+    },
+    "MODELAGEM_LOGICO_ALGORITMA": {
+      "ARQUIVO": "",
+      "CODIGO_FONTE": ""
+    },
+    "ROTEIRO_PRATICO_DE_EXECUCAO": [],
+    "ARTICULACAO_E_APROFUNDAMENTO": "",
+    "DESAFIOS_DE_EXPANSAO": []
+  },
+  {
+    "PROJETO": "PRJ 4.8",
+    "TITULO": "Sistema autônomo de estacionamento",
+    "MODULO": "Módulo IV - Ensino Médio",
+    "COMPLEXIDADE": "Avançado",
+    "TEMPO_ESTIMADO": "2 h/aula (100 min)",
+    "PRE_REQUISITOS": "",
+    "HABILIDADES_DE_COMPUTACAO": [
+      "Lógica Fuzzy e Processamento de Imagens"
+    ],
+    "COMPETENCIA_INTERDISCIPLINARES": {
+      "COMPETENCIA": "",
+      "BNCC_CODIGO": ""
+    },
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
+    "FLUXO_ESTRUTURA_CODIGO": [],
+    "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
+      "BOM": [],
+      "MAPEAMENTO_PINOS": [],
+      "IMAGEM_ESQUEMA": "",
+      "LINK_THINKERCAD": ""
+    },
+    "MODELAGEM_LOGICO_ALGORITMA": {
+      "ARQUIVO": "",
+      "CODIGO_FONTE": ""
+    },
+    "ROTEIRO_PRATICO_DE_EXECUCAO": [],
+    "ARTICULACAO_E_APROFUNDAMENTO": "",
+    "DESAFIOS_DE_EXPANSAO": []
+  },
+  {
+    "PROJETO": "PRJ 4.9",
+    "TITULO": "Rastreador Solar",
+    "MODULO": "Módulo IV - Ensino Médio",
+    "COMPLEXIDADE": "Avançado",
+    "TEMPO_ESTIMADO": "4 h/aula (200 min)",
+    "PRE_REQUISITOS": "",
+    "HABILIDADES_DE_COMPUTACAO": [
+      "Malha fechada, Ponte Divisora LDR, Motores Servo"
+    ],
+    "COMPETENCIA_INTERDISCIPLINARES": {
+      "FISICA": "Transformação e otimização de energia renovável.",
+      "BNCC_CODIGO": ""
+    },
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Painéis solares fixos perdem até 40% de eficiência ao longo do dia. Como criar um mecanismo rotacional que acompanhe a incidência da luz solar em tempo real?",
+    "FLUXO_ESTRUTURA_CODIGO": [],
+    "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
+      "BOM": [
+        {
+          "qtd": "1x",
+          "componente": "Arduino Uno / Nano"
+        },
+        {
+          "qtd": "2x",
+          "componente": "Fotoresistores LDR"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Servomotor SG90"
+        },
+        {
+          "qtd": "2x",
+          "componente": "Resistores 10kΩ"
+        }
+      ],
+      "MAPEAMENTO_PINOS": [
+        "A0: Entrada Analógica (LDR Esquerda)",
+        "A1: Entrada Analógica (LDR Direita)",
+        "9: Saída PWM (Sinal Servomotor)"
+      ],
+      "IMAGEM_ESQUEMA": "",
+      "LINK_THINKERCAD": ""
+    },
+    "MODELAGEM_LOGICO_ALGORITMA": {
+      "ARQUIVO": "",
+      "CODIGO_FONTE": ""
+    },
+    "ROTEIRO_PRATICO_DE_EXECUCAO": [],
+    "ARTICULACAO_E_APROFUNDAMENTO": "",
+    "DESAFIOS_DE_EXPANSAO": []
+  },
+  {
+    "PROJETO": "PRJ 4.10",
+    "TITULO": "Robô com controle a distância",
+    "MODULO": "Módulo IV - Ensino Médio",
+    "COMPLEXIDADE": "Avançado",
+    "TEMPO_ESTIMADO": "2 h/aula (100 min)",
+    "PRE_REQUISITOS": "",
+    "HABILIDADES_DE_COMPUTACAO": [
+      "Teleoperação via Wi-Fi/Bluetooth e Gamepad"
+    ],
+    "COMPETENCIA_INTERDISCIPLINARES": {
+      "COMPETENCIA": "",
+      "BNCC_CODIGO": ""
+    },
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
+    "FLUXO_ESTRUTURA_CODIGO": [],
+    "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
+      "BOM": [],
+      "MAPEAMENTO_PINOS": [],
+      "IMAGEM_ESQUEMA": "",
+      "LINK_THINKERCAD": ""
+    },
+    "MODELAGEM_LOGICO_ALGORITMA": {
+      "ARQUIVO": "",
+      "CODIGO_FONTE": ""
+    },
+    "ROTEIRO_PRATICO_DE_EXECUCAO": [],
+    "ARTICULACAO_E_APROFUNDAMENTO": "",
+    "DESAFIOS_DE_EXPANSAO": []
+  }
+]

@@ -1,0 +1,118 @@
+[
+  {
+    "PROJETO": "PRJ 3.1",
+    "TITULO": "Jogo da Memória com LEDs (Genius / Simon)",
+    "MODULO": "Módulo III - Ensino Fundamental II",
+    "COMPLEXIDADE": "Intermediário",
+    "TEMPO_ESTIMADO": "2 h/aula (100 min)",
+    "PRE_REQUISITOS": "Estruturas de controle de fluxo (if/else, while), arrays unidimensionais, funções com parâmetros e retorno, conceitos de sinais digitais (Active-High) e leitura de entradas analógicas flutuantes.",
+    "HABILIDADES_DE_COMPUTACAO": [
+      "Arrays Unidimensionais e Indexação",
+      "Funções e Abstração de Modulardade",
+      "Estruturas de Repetição (For e While)",
+      "Randomização Pseudoaleatória e Entropia Eletrônica",
+      "Abstração de Hardware ",
+      "Lógica de Varredura de Entradas (Polling)"
+    ],
+    "COMPETENCIA_INTERDISCIPLINARES": {
+      "HISTORIA_E_SOCIEDADE": "Origem dos jogos eletrônicos na Segunda Era dos Microprocessadores (década de 1970). O surgimento do brinquedo Simon (lançado no Brasil pela Estrela como Genius em 1980), desenhado por Ralph Baer e Howard Morrison, representando a transição dos brinquedos analógicos e mecânicos para os brinquedos embarcados com microcontroladores dedicados de 4 bits.",
+      "MATEMATICA": "Geração de números pseudoaleatórios via distribuição uniforme."
+    },
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Lançado no final da década de 1970 no Studio 54 em Nova York, o Simon (Genius no Brasil) tornou-se um marco da cultura pop e da engenharia de computação ao provar que sistemas microcontrolados simples podiam criar interações complexas de memória e padrão auditivo-visual. Como modelar a lógica de geração de sequências dinâmicas, o armazenamento em filas indexadas de vetores e a validação em tempo real das entradas do usuário utilizando um microcontrolador moderno como o Arduino?",
+    "FLUXO_ESTRUTURA_CODIGO": [
+      "Definição de Pinos",
+      "Setup",
+      "Liga LED",
+      "Desligar LED",
+      "Sequenciar LEDs",
+      "Start",
+      "Game Over",
+      "Loop"
+    ],
+    "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
+      "BOM": [
+        {
+          "qtd": "1x",
+          "componente": "Placa Arduino Uno R3"
+        },
+        {
+          "qtd": "1x",
+          "componente": "LED Vermelho 5mm"
+        },
+        {
+          "qtd": "1x",
+          "componente": "LED Amarelo 5mm"
+        },
+        {
+          "qtd": "1x",
+          "componente": "LED Azul 5mm"
+        },
+        {
+          "qtd": "1x",
+          "componente": "LED Verde 5mm"
+        },
+        {
+          "qtd": "4x",
+          "componente": "Push Buttons / Chaves Táctil 4 Pinos"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Buzzer Passivo 5V"
+        },
+        {
+          "qtd": "8x",
+          "componente": "Resistores 220Ω 1/4W (4x limitação dos LEDs e 4x Pull-Down dos botões)"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Protoboard 830 pontos"
+        },
+        {
+          "qtd": "16x",
+          "componente": "Cabos Jumpers Macho-Macho"
+        }
+      ],
+      "MAPEAMENTO_PINOS": [
+        "D2 → LED Verde (Anodo via resistor 220Ω)",
+        "D3 → LED Azul (Anodo via resistor 220Ω)",
+        "D4 → LED Amarelo (Anodo via resistor 220Ω)",
+        "D5 → LED Vermelho (Anodo via resistor 220Ω)",
+        "D8 → Botão Vermelho (Active-High com Pull-Down de 220Ω)",
+        "D9 → Botão Amarelo (Active-High com Pull-Down de 220Ω)",
+        "D10 → Botão Azul (Active-High com Pull-Down de 220Ω)",
+        "D11 → Botão Verde (Active-High com Pull-Down de 220Ω)",
+        "D12 → Buzzer Passivo",
+        "A0 → Pino Analógico Desconectado (Semente de Entropia para randomSeed)"
+      ],
+      "IMAGEM_ESQUEMA": "projetos/prj_3_1_esquema.png",
+      "LINK_THINKERCAD": "https://www.tinkercad.com/things/66hrvqjr0HT-jogo-da-memoria?sharecode=7-SX2pF2aCBu4g14pAuLQF0axR53FBzI9UjHQ8CZ5nE"
+    },
+    "MODELAGEM_LOGICO_ALGORITMA": {
+      "ARQUIVO": "projetos/prj_3_1_fluxograma.png",
+      "CODIGO_FONTE": " //==========================\n// Loop Principal\n// ==========================\nvoid loop() {\n  if (!jogoInciado) {\n    start();\n    randomSeed(analogRead(A0));\n    jogoInciado = true;\n    delay(500);\n  }\n\n  filaOriginal[nivel - 1] = random(0, numPares);\n  reproduzirSequencia();\n  delay(100);\n\n  for (uint16_t i = 0; i < nivel; i++) {\n    int botaoPressionado = -1;\n\n    while (botaoPressionado == -1) {\n      botaoPressionado = espelharBotoesNosLeds();\n    }\n\n    delay(40); // Debounce por filtro de tempo para estabilização mecânica\n\n    if (botaoPressionado != filaOriginal[i]) {\n      Serial.println(\"-> Erro: Game Over\");\n      gameOver();\n      return;\n    }\n\n    while (espelharBotoesNosLeds() != -1) {\n      delay(10);\n    }\n  }\n\n  Serial.println(\"-> Sequencia correta. Proximo nivel.\");\n  nivel++;\n  delay(1000);\n}"
+    },
+    "ROTEIRO_PRATICO_DE_EXECUCAO": [
+      "1. Monte os quatro LEDs (Vermelho, Amarelo, Azul e Verde) nos pinos digitais D5, D4, D3 e D2 respectivamente. O anodo de cada LED deve se conectar ao pino digital e o catodo deve se ligar ao GND passando por um resistor de 220Ω.",
+      "2. Monte os quatro botões no barramento da protoboard. Conecte um lado das chaves à linha de 5V. No outro lado, conecte o pino do Arduino correspondente (D8, D9, D10 e D11) acompanhado de um resistor de 220Ω ligado ao GND (configuração Active-High com Pull-Down externo).",
+      "3. Conecte o pino positivo do buzzer passivo ao pino D12 do Arduino e o polo negativo diretamente ao barramento de GND.",
+      "4. Deixe a entrada analógica A0 completamente desconectada de fios ou componentes para garantir a amostragem de ruído térmico/eletromagnético ambiente.",
+      "5. Configure o pino dos botões como INPUT simples no setup() para evitar a ativação do pull-up interno e prevenir flutuações de tensão no divisor de resistor.",
+      "6. Carregue o firmware na Placa Arduino Uno, inicie o Monitor Serial a 9600 baud para acompanhar o rastreamento dos índices e jogue."
+    ],
+    "ARTICULACAO_E_APROFUNDAMENTO": "1) Estrutura do Circuito Pull-Down: O botão fica conectado entre os 5V e o pino digital. Um resistor de 220Ω liga o pino ao GND. Em repouso, o resistor drenará qualquer carga, garantindo nível lógico LOW (0V). Ao pressionar o botão, o circuito fecha diretamente com os 5V, elevando o pino a HIGH (sinal Active-High).\n\n2) Mapeamento por Índices Paralelos: A lógica utiliza o mesmo índice `i` para correlacionar três vetores de hardware (`leds[i]`, `botoes[i]` e `simonTones[i]`). O vetor `filaOriginal` atua como um buffer linear indexado do histórico do jogo.\n\n3) Entropia via Pino Analógico Flutuante: Computadores são determinísticos. A chamada `randomSeed(analogRead(A0))` amostra o ruído eletromagnético do pino A0 desconectado para inicializar o gerador pseudoaleatório (PRNG) com uma semente imprevisível.\n\n4) Controle de Fluxo por Polling: O firmware intercala laços `for` determinísticos para reproduzir a sequência armazenada com laços `while` bloqueantes para varredura do estado das entradas até a confirmação do clique e soltura da tecla.",
+    "DESAFIOS_DE_EXPANSAO": [
+      {
+        "nivel": "Fácil",
+        "descricao": "Implementar aceleração progressiva do tempo de exibição dos LEDs à medida que o nível aumenta, diminuindo o delay de exibição da sequência dinamicamente a cada rodada."
+      },
+      {
+        "nivel": "Intermediário",
+        "descricao": "Armazenar e recuperar o recorde histórico de nível (High Score) na memória EEPROM não-volátil do Arduino, mantendo o valor salvo mesmo após desligar a placa da energia."
+      },
+      {
+        "nivel": "Avançado",
+        "descricao": "Mudar a dinâmica do projeto para que a montagem da estrutura física do jogo seja realizada integralmente pelos próprios alunos. Eles deverão projetar o circuito do zero a partir do esquemático, planejar o dimensionamento dos resistores de limitação e pull-down, e implementar uma máquina de estados finitos (FSM) por software para controlar as fases de 'Standby', 'Exibição', 'Entrada do Jogador' e 'Game Over'."
+      }
+    ]
+  }
+]

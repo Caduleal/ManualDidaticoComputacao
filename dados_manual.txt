@@ -1,0 +1,299 @@
+{
+  "meta": {
+    "titulo_manual": "METODOLOGIA E MONTAGEM PARA LABORATÓRIOS DE INFORMÁTICA ESCOLAR",
+    "subtitulo": "Desenvolvimento de manual didático para o ensino estrutural de computação na Educação Básica",
+    "autor": "Carlos Eduardo Leal",
+    "edicao": "2026"
+  },
+  "modulos": [
+    {
+      "id": "I",
+      "etapa": "Ensino Infantil",
+      "titulo": "Interação Lúdica e Pensamento Desplugado",
+      "competencias": [
+        "Atividades lúdicas e interdisciplinares.",
+        "Reconhecimento de padrões e ordenação.",
+        "Jogos de estados binários e lógica desplugada.",
+        "Execução de tarefas ordenadas e circuitos de papel.",
+        "Atividades de contato inicial com eletrônica e som."
+      ],
+      "projetos_matriz": [
+        {
+          "codigo": "PRJ 1.1",
+          "nome": "Circuito com massa de modelar condutiva",
+          "conceitos": "Corrente Elétrica e Circuitos Fechados",
+          "nivel": "Básico"
+        },
+        {
+          "codigo": "PRJ 1.2",
+          "nome": "Classificação",
+          "conceitos": "Agrupamento por Atributos e Filtros",
+          "nivel": "Básico"
+        },
+        {
+          "codigo": "PRJ 1.3",
+          "nome": "Ordenação",
+          "conceitos": "Algoritmos Sequenciais e Sequenciamento",
+          "nivel": "Básico"
+        },
+        {
+          "codigo": "PRJ 1.4",
+          "nome": "Cartões com circuitos de papel",
+          "conceitos": "Fita de Cobre, LEDs e Conectividade",
+          "nivel": "Básico"
+        },
+        {
+          "codigo": "PRJ 1.5",
+          "nome": "Simulação de portas lógicas",
+          "conceitos": "Lógica Booleana Básica (AND/OR Desplugado)",
+          "nivel": "Intermediário"
+        },
+        {
+          "codigo": "PRJ 1.6",
+          "nome": "Ventilador de bancada com motor DC",
+          "conceitos": "Atuadores, Motores DC e Circuito de Potência",
+          "nivel": "Intermediário"
+        },
+        {
+          "codigo": "PRJ 1.7",
+          "nome": "Labirinto e lógica de decisão",
+          "conceitos": "Condicionais e Árvore de Decisão",
+          "nivel": "Intermediário"
+        },
+        {
+          "codigo": "PRJ 1.8",
+          "nome": "Que animal é? Sons",
+          "conceitos": "Mapeamento de Entradas e Saídas Sonoras",
+          "nivel": "Intermediário"
+        }
+      ]
+    },
+    {
+      "id": "II",
+      "etapa": "Ensino Fundamental I",
+      "titulo": "Introdução à Programação e Controle",
+      "competencias": [
+        "Agrupar elementos por categorias e atributos.",
+        "Formas de comunicação e envio de mensagens entre dispositivos.",
+        "Fluxo de execução de tarefas (Fluxogramas).",
+        "Desvio de fluxo (condicionais) e laços de repetição.",
+        "Operadores Booleanos (AND, OR, NOT) e leitura analógica/digital."
+      ],
+      "projetos_matriz": [
+        {
+          "codigo": "PRJ 2.1",
+          "nome": "Semáforo",
+          "conceitos": "Variáveis, Temporização e Delays",
+          "nivel": "Básico"
+        },
+        {
+          "codigo": "PRJ 2.2",
+          "nome": "Jogo de reflexo (Acerte o Botão)",
+          "conceitos": "Variáveis Temp., Contadores, Operadores",
+          "nivel": "Básico"
+        },
+        {
+          "codigo": "PRJ 2.3",
+          "nome": "Portão automático com sensor ultrassônico",
+          "conceitos": "Ultrassom, Servomotor, Condicionais",
+          "nivel": "Intermediário"
+        },
+        {
+          "codigo": "PRJ 2.4",
+          "nome": "Lixeira automática",
+          "conceitos": "Sensor de Proximidade e Atuação Mecânica",
+          "nivel": "Intermediário"
+        },
+        {
+          "codigo": "PRJ 2.5",
+          "nome": "Fotos com microcontroladores",
+          "conceitos": "Captura Digital e Disparo por Hardware",
+          "nivel": "Intermediário"
+        },
+        {
+          "codigo": "PRJ 2.6",
+          "nome": "Comunicação com outros controladores",
+          "conceitos": "Comunicação Serial RX/TX",
+          "nivel": "Intermediário"
+        },
+        {
+          "codigo": "PRJ 2.7",
+          "nome": "Termômetro escolar",
+          "conceitos": "Sensor de Temperatura e Mapeamento Analógico",
+          "nivel": "Intermediário"
+        },
+        {
+          "codigo": "PRJ 2.8",
+          "nome": "Automação de regagem de plantas",
+          "conceitos": "Sensor de Umidade do Solo e Relés",
+          "nivel": "Avançado"
+        },
+        {
+          "codigo": "PRJ 2.9",
+          "nome": "Robô com desvio de proximidade",
+          "conceitos": "Ponte H, Motores DC e Algoritmo de Esquiva",
+          "nivel": "Avançado"
+        }
+      ]
+    },
+    {
+      "id": "III",
+      "etapa": "Ensino Fundamental II",
+      "titulo": "Sistemas Embarcados, Sensores e Lógica Formal",
+      "competencias": [
+        "Tipos e estruturas de dados avançadas (Arrays, Matrizes).",
+        "Modularização e criação de funções personalizadas.",
+        "Protocolos de comunicação rádio e rede sem fio.",
+        "Integração de hardware avançado (Câmeras, Displays, Sensores de pH).",
+        "Robótica móvel e algoritmos de malha fechada."
+      ],
+      "projetos_matriz": [
+        {
+          "codigo": "PRJ 3.1",
+          "nome": "Jogo da Memória com LEDs",
+          "conceitos": "Arrays, Funções, Loops e Randomização",
+          "nivel": "Básico"
+        },
+        {
+          "codigo": "PRJ 3.2",
+          "nome": "Lâmpada noturna automática",
+          "conceitos": "Sensor LDR, Leitura Analógica e Histese",
+          "nivel": "Básico"
+        },
+        {
+          "codigo": "PRJ 3.3",
+          "nome": "Despertador com sensores",
+          "conceitos": "Módulo RTC, Alarmes e Sinalização Sonora",
+          "nivel": "Intermediário"
+        },
+        {
+          "codigo": "PRJ 3.4",
+          "nome": "Estação de telemetria",
+          "conceitos": "Multissensores e Transmissão de Dados",
+          "nivel": "Intermediário"
+        },
+        {
+          "codigo": "PRJ 3.5",
+          "nome": "Estacionamento com contador de vagas",
+          "conceitos": "Displays de 7 Segmentos e Sensores Ópticos",
+          "nivel": "Intermediário"
+        },
+        {
+          "codigo": "PRJ 3.6",
+          "nome": "Contador de pessoas",
+          "conceitos": "Sensores de Barreira Infravermelha",
+          "nivel": "Intermediário"
+        },
+        {
+          "codigo": "PRJ 3.7",
+          "nome": "Câmera fotográfica",
+          "conceitos": "Mapeamento de Arquivos em Cartão SD",
+          "nivel": "Intermediário"
+        },
+        {
+          "codigo": "PRJ 3.8",
+          "nome": "Enviando fotos pela rede",
+          "conceitos": "Protocolo HTTP e Requisições POST",
+          "nivel": "Avançado"
+        },
+        {
+          "codigo": "PRJ 3.9",
+          "nome": "Comunicação Via Rádio",
+          "conceitos": "Transceptores RF/LoRa e Pacotes de Dados",
+          "nivel": "Avançado"
+        },
+        {
+          "codigo": "PRJ 3.10",
+          "nome": "Estação de Monitoramento de pH",
+          "conceitos": "Calibração de Sensores Químicos e ADC",
+          "nivel": "Avançado"
+        },
+        {
+          "codigo": "PRJ 3.11",
+          "nome": "Comedor Pet Automático",
+          "conceitos": "Temporizadores de Precisão e Servomecanismo",
+          "nivel": "Avançado"
+        },
+        {
+          "codigo": "PRJ 3.12",
+          "nome": "Robô seguidor de linha",
+          "conceitos": "Sensores Reflexivos IR e Algoritmo PID",
+          "nivel": "Avançado"
+        }
+      ]
+    },
+    {
+      "id": "IV",
+      "etapa": "Ensino Médio",
+      "titulo": "Integração de Sistemas, IoT e Soluções Complexas",
+      "competencias": [
+        "Engenharia de Software e arquitetura de sistemas embarcados.",
+        "Sistemas web embarcados, WebSockets e streaming.",
+        "Sistemas de controle de acesso e segurança cibernética.",
+        "Automação industrial, controle de cargas AC e rastreamento solar."
+      ],
+      "projetos_matriz": [
+        {
+          "codigo": "PRJ 4.1",
+          "nome": "Calculadora",
+          "conceitos": "Teclado Matricial e Displays LCD",
+          "nivel": "Básico"
+        },
+        {
+          "codigo": "PRJ 4.2",
+          "nome": "Urna eletrônica",
+          "conceitos": "Máquinas de Estado e Memória EEPROM/Flash",
+          "nivel": "Básico"
+        },
+        {
+          "codigo": "PRJ 4.3",
+          "nome": "Radar Sonar",
+          "conceitos": "Varredura Angular e Renderização Gráfica",
+          "nivel": "Intermediário"
+        },
+        {
+          "codigo": "PRJ 4.4",
+          "nome": "Controle de Acesso (NFC)",
+          "conceitos": "Comunicação SPI/I2C e Leitura RFID/NFC",
+          "nivel": "Intermediário"
+        },
+        {
+          "codigo": "PRJ 4.5",
+          "nome": "Servidor com fotos",
+          "conceitos": "Web Server Embarcado e Arquivos Estáticos",
+          "nivel": "Intermediário"
+        },
+        {
+          "codigo": "PRJ 4.6",
+          "nome": "Câmera de monitoramento",
+          "conceitos": "Streaming MJPEG e Protocolo WebSocket",
+          "nivel": "Avançado"
+        },
+        {
+          "codigo": "PRJ 4.7",
+          "nome": "Automação Elétrica",
+          "conceitos": "Módulos Relé, Cargas AC e Protocolo MQTT",
+          "nivel": "Avançado"
+        },
+        {
+          "codigo": "PRJ 4.8",
+          "nome": "Sistema autônomo de estacionamento",
+          "conceitos": "Lógica Fuzzy e Processamento de Imagens",
+          "nivel": "Avançado"
+        },
+        {
+          "codigo": "PRJ 4.9",
+          "nome": "Rastreador Solar",
+          "conceitos": "Malha Fechada e Algoritmo de Ponto de Máxima Potência",
+          "nivel": "Avançado"
+        },
+        {
+          "codigo": "PRJ 4.10",
+          "nome": "Robô com controle a distância",
+          "conceitos": "Teleoperação via Wi-Fi/Bluetooth e Gamepad",
+          "nivel": "Avançado"
+        }
+      ]
+    }
+  ]
+}

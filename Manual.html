@@ -1,0 +1,2509 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Manual Didático - Metodologia e Montagem
+  </title>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <!-- Tipografia Principal do Design System Editorial -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&amp;family=Inter:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+  <!-- Iconografia (Material Symbols) -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <script>
+   tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            500: '#64748b',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        },
+                        accent: {
+                            blue: '#2563eb',
+                            teal: '#0d9488',
+                        },
+                        teacher: {
+                            light: '#e0e7ff',
+                            DEFAULT: '#4f46e5',
+                            dark: '#3730a3',
+                        },
+                        student: {
+                            light: '#e0f2fe',
+                            DEFAULT: '#0ea5e9',
+                            dark: '#075985',
+                        },
+                        bncc: {
+                            light: '#d1fae5',
+                            DEFAULT: '#10b981',
+                            dark: '#065f46',
+                        },
+                        alert: {
+                            light: '#fef2f2',
+                            DEFAULT: '#ef4444',
+                            dark: '#991b1b',
+                        },
+                        trouble: {
+                            light: '#fff7ed',
+                            DEFAULT: '#f97316',
+                            dark: '#9a3412',
+                        }
+                    }
+                }
+            }
+        }
+  </script>
+  <style>
+   /* Base para visualização na tela (Simulação de papel A4 com dimensão da capa) */
+        body {
+            background-color: #cbd5e1;
+            color: #1e293b;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .a4-page {
+            width: 210mm;
+            height: 297mm;
+            max-width: 210mm;
+            max-height: 297mm;
+            margin: 2rem auto;
+            background-color: #ffffff;
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.12);
+            padding: 2.2cm 1.8cm;
+            box-sizing: border-box;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* Capa Editorial Clean & Acadêmica */
+        .cover-page {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background: #ffffff;
+            border-left: 12px solid #0f172a;
+            position: relative;
+        }
+
+        /* Detalhe Geométrico Discreto no Fundo da Capa */
+        .cover-bg-accent {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 320px;
+            height: 320px;
+            background: radial-gradient(circle at 100% 0%, rgba(37, 99, 235, 0.04) 0%, rgba(255, 255, 255, 0) 70%);
+            pointer-events: none;
+        }
+
+        .code-block {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            line-height: 1.5;
+        }
+
+        .icon-align {
+            vertical-align: -0.15em;
+        }
+
+        .curriculum-map img {
+            width: 100%;
+            height: auto;
+            border-radius: 0.5rem;
+            border: 1px solid #e2e8f0;
+        }
+  </style>
+  <style id="print-fix">
+   /**
+ * style.css
+ * Estilos dedicados para formatacao de manuais didaticos e impressao A4.
+ */
+
+@media screen {
+    .a4-page {
+        width: 210mm !important;
+        height: 297mm !important;
+        max-width: 210mm !important;
+        max-height: 297mm !important;
+        margin: 20px auto !important;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1) !important;
+        overflow: hidden !important;
+        background-color: white !important;
+        box-sizing: border-box !important;
+        position: relative !important;
+        padding: 2.2cm 1.8cm !important;
+    }
+}
+
+@media print {
+    @page {
+        size: 210mm 297mm;
+        margin: 0;
+    }
+
+    html,
+    body {
+        width: 210mm;
+        height: 297mm;
+        background-color: #ffffff !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    .a4-page {
+        width: 210mm !important;
+        height: 297mm !important;
+        max-width: 210mm !important;
+        max-height: 297mm !important;
+        margin: 0 !important;
+        padding: 2.2cm 1.8cm !important;
+        box-shadow: none !important;
+        box-sizing: border-box !important;
+        page-break-after: always !important;
+        break-after: page !important;
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+        overflow: hidden !important;
+        position: relative !important;
+    }
+
+    .md\\:grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+
+    .md\\:flex-row {
+        flex-direction: row !important;
+    }
+
+    .no-print {
+        display: none !important;
+    }
+
+    .page-break {
+        page-break-before: always !important;
+        break-before: page !important;
+    }
+
+    .avoid-break {
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+    }
+}
+
+.code-block {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+.icon-align {
+    vertical-align: -0.15em;
+}
+
+.curriculum-map img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    border: 1px solid #e2e8f0;
+}
+
+/* Marcador de Paginacao Superior - Posicionado na Margem Superior */
+.page-top-header {
+    position: absolute;
+    top: 1cm;
+    left: 1.8cm;
+    right: 1.8cm;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 8.5px;
+    color: #94a3b8;
+    letter-spacing: 0.05em;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.page-top-header .page-header-title {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.page-top-header .page-header-number {
+    font-weight: 700;
+    color: #64748b;
+}
+
+/* ==============================================================================
+   Sumario Editorial Proporcional - 1 Folha A4 Rigorosa
+   ============================================================================== */
+#secao-sumario {
+    padding: 2.2cm 1.8cm 2.0cm 1.8cm !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+}
+
+#secao-sumario header {
+    margin-bottom: 0.65rem !important;
+    padding-bottom: 0.35rem !important;
+    border-bottom: 2px solid #0f172a !important;
+}
+
+#secao-sumario header h2 {
+    font-size: 1.35rem !important;
+    line-height: 1.2 !important;
+    margin: 0 !important;
+}
+
+.sumario-lista {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 4.4px !important;
+    width: 100% !important;
+}
+
+.toc-row, .sumario-item {
+    display: flex !important;
+    align-items: baseline !important;
+    width: 100% !important;
+    text-decoration: none !important;
+    color: inherit !important;
+    font-size: 10.2px !important;
+    line-height: 1.35 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+}
+
+.toc-row:hover {
+    opacity: 0.8;
+}
+
+.toc-row span {
+    font-size: 10.2px !important;
+}
+
+.toc-leader {
+    flex-grow: 1;
+    border-bottom: 1px dotted #cbd5e1;
+    margin: 0 0.45rem;
+    position: relative;
+    bottom: 0.22rem;
+}
+
+/* Tabela de Projetos do Modulo Interativa */
+.module-project-link {
+    color: #0f172a;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.15s ease-in-out;
+}
+
+.module-project-link:hover {
+    color: #2563eb;
+    text-decoration: underline;
+}
+
+/* Fluxo Sequencial de Codigo com Setas */
+.code-flow-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    padding: 0.6rem 0.8rem;
+    border-radius: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.code-flow-step {
+    display: inline-flex;
+    align-items: center;
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 0.375rem;
+    padding: 0.25rem 0.5rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9.5px;
+    font-weight: 600;
+    color: #1e293b;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.code-flow-arrow {
+    color: #64748b;
+    font-weight: bold;
+    font-size: 11px;
+    display: inline-flex;
+    align-items: center;
+}
+
+/* Bloco GitHub com QR Code */
+.github-box {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: #ffffff;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+    border: 1px solid #334155;
+    box-shadow: 0 2px 4px rgba(15, 23, 42, 0.08);
+}
+
+/* Tipografia Editorial Continua */
+.secao-texto-continuo {
+    --line-height: 1.45;
+}
+
+.secao-texto-continuo p,
+#secao-introducao .secao-texto-continuo p,
+#secao-didatica .secao-texto-continuo p {
+    font-size: 10px;
+    line-height: var(--line-height, 1.45);
+    margin: 0;
+    margin-bottom: 0;
+    padding: 0;
+    text-align: justify;
+    text-justify: inter-word;
+    text-indent: 1.5em;
+    color: #1e293b;
+    font-weight: 400;
+}
+  </style>
+ </head>
+ <body class="font-sans">
+  <div class="no-print fixed top-4 right-4 z-50">
+   <button class="bg-brand-800 hover:bg-brand-900 text-white font-bold py-2.5 px-4 rounded-lg shadow-xl flex items-center gap-2 cursor-pointer transition-all border border-brand-700 active:scale-95" onclick="window.print()">
+    <span class="material-symbols-outlined text-[20px]">
+     print
+    </span>
+    <span class="text-xs font-sans">
+     Gerar PDF / Imprimir
+    </span>
+   </button>
+  </div>
+  <main class="a4-page cover-page" id="secao-capa">
+   <div class="cover-bg-accent">
+   </div>
+   <!-- Cabeçalho Superior Institucional -->
+   <div>
+    <div class="flex items-center justify-between border-b border-brand-200 pb-5 mb-14">
+     <div class="flex items-center gap-3">
+      <span class="h-3 w-3 bg-brand-900 rounded-full inline-block">
+      </span>
+      <span class="font-mono text-xs font-semibold tracking-widest text-brand-700 uppercase">
+       Manual Didático • Educação Básica
+      </span>
+     </div>
+     <span class="text-brand-500 font-mono text-xs font-medium tracking-wider uppercase">
+      Ciência da Computação
+     </span>
+    </div>
+    <!-- Divisor / Marcação de Design Estruturado -->
+    <div class="mb-10">
+     <span class="text-xs font-mono font-bold text-accent-blue tracking-widest uppercase block mb-3">
+      Publicação Acadêmica &amp; Pedagógica
+     </span>
+     <div class="h-1 w-16 bg-brand-900 rounded-full">
+     </div>
+    </div>
+    <!-- Bloco de Título Principal e Subtítulo -->
+    <div class="space-y-6 max-w-2xl">
+     <h1 class="font-heading font-extrabold text-4xl text-brand-900 leading-[1.15] tracking-tight">
+      METODOLOGIA E MONTAGEM PARA LABORATÓRIOS DE INFORMÁTICA ESCOLAR
+     </h1>
+     <p class="font-heading text-lg text-brand-700 font-normal leading-relaxed border-l-2 border-brand-300 pl-4 py-1">
+      Desenvolvimento de manual didático para o ensino estrutural de computação na Educação Básica
+     </p>
+    </div>
+   </div>
+   <img alt="Capa" class="cover object-contain mx-auto max-h-[120mm] bg-transparent" src="Capa.png"/>
+   <!-- Rodapé da Capa: Identificação do Autor -->
+   <div class="border-t-2 border-brand-900 pt-6 mt-8">
+    <div class="flex items-end justify-between">
+     <div>
+      <span class="text-[11px] font-mono uppercase text-brand-500 font-bold tracking-widest block mb-1">
+       Autor
+      </span>
+      <h2 class="font-heading font-bold text-2xl text-brand-900 tracking-tight">
+       Carlos Eduardo Leal
+      </h2>
+      <p class="text-xs text-brand-500 mt-0.5">
+       Pesquisa e Desenvolvimento em Educação Tecnológica
+      </p>
+     </div>
+     <div class="text-right">
+      <span class="text-[11px] font-mono uppercase text-brand-500 font-bold tracking-widest block mb-1">
+       Edição
+      </span>
+      <p class="font-mono text-sm font-bold text-brand-900">
+       2026
+      </p>
+     </div>
+    </div>
+   </div>
+  </main>
+  <main class="a4-page page-break" id="secao-sumario">
+   <div class="page-top-header">
+    <span class="page-header-title">
+     Manual Didático de Computação • Sumário
+    </span>
+    <span class="page-header-number">
+     Página 02
+    </span>
+   </div>
+   <div class="w-full">
+    <header class="border-b-2 border-brand-800 pb-1.5 mb-2.5 avoid-break">
+     <h2 class="font-heading font-bold text-xl text-brand-900 leading-tight text-center">
+      Sumário
+     </h2>
+    </header>
+    <div class="sumario-lista">
+     <a class="toc-row sumario-item group" href="#secao-introducao">
+      <span class="font-mono text-brand-500 font-bold min-w-[62px] whitespace-nowrap shrink-0">
+       01.
+      </span>
+      <span class="text-brand-900 font-medium group-hover:text-accent-blue truncate">
+       Introdução e Contexto Histórico da Computação Escolar
+      </span>
+      <span class="toc-leader">
+      </span>
+      <span class="font-mono text-brand-600 font-bold shrink-0">
+       Pág. 03
+      </span>
+     </a>
+     <a class="toc-row sumario-item group" href="#secao-didatica">
+      <span class="font-mono text-brand-500 font-bold min-w-[62px] whitespace-nowrap shrink-0">
+       02.
+      </span>
+      <span class="text-brand-900 font-medium group-hover:text-accent-blue truncate">
+       Estrutura didática dos Projetos
+      </span>
+      <span class="toc-leader">
+      </span>
+      <span class="font-mono text-brand-600 font-bold shrink-0">
+       Pág. 04
+      </span>
+     </a>
+     <a class="toc-row sumario-item group" href="#secao-fluxograma-geral">
+      <span class="font-mono text-brand-500 font-bold min-w-[62px] whitespace-nowrap shrink-0">
+       03.
+      </span>
+      <span class="text-brand-900 font-medium group-hover:text-accent-blue truncate">
+       Fluxograma Geral Integrado dos Projetos
+      </span>
+      <span class="toc-leader">
+      </span>
+      <span class="font-mono text-brand-600 font-bold shrink-0">
+       Pág. 05
+      </span>
+     </a>
+     <a class="toc-row sumario-item group" href="#modulo-1">
+      <span class="font-mono text-brand-500 font-bold min-w-[62px] whitespace-nowrap shrink-0">
+       MÓD. I
+      </span>
+      <span class="text-brand-900 font-medium group-hover:text-accent-blue truncate">
+       Interação Lúdica e Pensamento Desplugado (Educação Infantil)
+      </span>
+      <span class="toc-leader">
+      </span>
+      <span class="font-mono text-brand-600 font-bold shrink-0">
+       Pág. 06
+      </span>
+     </a>
+     <a class="toc-row sumario-item group" href="#modulo-2">
+      <span class="font-mono text-brand-500 font-bold min-w-[62px] whitespace-nowrap shrink-0">
+       MÓD. II
+      </span>
+      <span class="text-brand-900 font-medium group-hover:text-accent-blue truncate">
+       Introdução à Programação e Controle (Ensino Fundamental I)
+      </span>
+      <span class="toc-leader">
+      </span>
+      <span class="font-mono text-brand-600 font-bold shrink-0">
+       Pág. 07
+      </span>
+     </a>
+     <a class="toc-row sumario-item group" href="#modulo-3">
+      <span class="font-mono text-brand-500 font-bold min-w-[62px] whitespace-nowrap shrink-0">
+       MÓD. III
+      </span>
+      <span class="text-brand-900 font-medium group-hover:text-accent-blue truncate">
+       Sistemas Embarcados, Sensores e Lógica Formal (Ensino Fundamental II)
+      </span>
+      <span class="toc-leader">
+      </span>
+      <span class="font-mono text-brand-600 font-bold shrink-0">
+       Pág. 08
+      </span>
+     </a>
+     <a class="toc-row sumario-item group" href="#modulo-4">
+      <span class="font-mono text-brand-500 font-bold min-w-[62px] whitespace-nowrap shrink-0">
+       MÓD. IV
+      </span>
+      <span class="text-brand-900 font-medium group-hover:text-accent-blue truncate">
+       Integração de Sistemas, IoT e Soluções Complexas (Ensino Médio)
+      </span>
+      <span class="toc-leader">
+      </span>
+      <span class="font-mono text-brand-600 font-bold shrink-0">
+       Pág. 09
+      </span>
+     </a>
+     <a class="toc-row sumario-item group" href="#prj-31">
+      <span class="font-mono text-brand-500 font-bold min-w-[62px] whitespace-nowrap shrink-0">
+       PRJ 3.1
+      </span>
+      <span class="text-brand-900 font-medium group-hover:text-accent-blue truncate">
+       Jogo da Memória com LEDs (Genius / Simon)
+      </span>
+      <span class="toc-leader">
+      </span>
+      <span class="font-mono text-brand-600 font-bold shrink-0">
+       Pág. 10
+      </span>
+     </a>
+    </div>
+   </div>
+  </main>
+  <main class="a4-page page-break secao-introducao" id="secao-introducao">
+   <div class="page-top-header">
+    <span class="page-header-title">
+     Manual Didático de Computação • Introdução
+    </span>
+    <span class="page-header-number">
+     Página 03
+    </span>
+   </div>
+   <div>
+    <header class="border-b-4 border-brand-800 pb-1.5 mb-2 avoid-break">
+     <h2 class="font-heading font-bold text-2xl text-brand-900 leading-tight">
+      Introdução e Contexto Histórico
+     </h2>
+    </header>
+    <section class="mb-2 avoid-break">
+     <div class="bg-white p-3 rounded-lg border border-brand-200 shadow-2xs secao-texto-continuo">
+      <p class="text-brand-800 text-justify indent-6 font-normal">
+       A trajetória da inclusão das Tecnologias de Informação e Comunicação (TIC) no ambiente escolar brasileiro revela um histórico marcado pela priorização infraestrutural e da aquisição de equipamentos físicos. Desde as primeiras políticas públicas de informática educativa no final do século XX, grande parte dos esforços concentrou-se na instalação de laboratórios e no provimento de computadores nas escolas. No entanto, a mera presença dos recursos tecnológicos não se traduziu na apropriação efetiva dos fundamentos científicos e metodológicos da Computação. O modelo pedagógico predominante manteve-se instrumental, restringindo o uso das máquinas ao suporte de atividades tradicionais, como a digitação de textos, a realização de pesquisas na internet e o manuseio de softwares educativos fechados, o que manteve os princípios operacionais internos da tecnologia velados e distantes da compreensão dos estudantes.
+      </p>
+      <p class="text-brand-800 text-justify indent-6 font-normal">
+       Com o objetivo de superar essa perspectiva estritamente utilitária e formar sujeitos capacitados a atuar criticamente na sociedade contemporânea, consolida-se a abordagem da Computação como ciência e o desenvolvimento do Pensamento Computacional. Formulado como a capacidade de expressar e resolver problemas por meio de conceitos fundamentais da ciência da computação como decomposição, reconhecimento de padrões, abstração e algoritmo, esse paradigma desloca o foco do simples uso de aplicações prontas para a capacidade de projetar e compreender o funcionamento dos sistemas digitais. Essa reorientação educacional encontra sustentação regulatória nos marcos normativos nacionais, especialmente na Base Nacional Comum Curricular (BNCC) e na Resolução CNE/CEB nº 1/2022, que formalizam a obrigatoriedade da integração de conceitos computacionais em todas as etapas da Educação Básica.
+      </p>
+      <p class="text-brand-800 text-justify indent-6 font-normal">
+       Apesar dos avanços normativos, a implementação efetiva dessas diretrizes no cotidiano escolar enfrenta barreiras estruturais significativas. Destacam-se a precariedade de infraestrutura de muitos estabelecimentos, a escassez de iniciativas continuadas para a formação docente na área e a carência de materiais didáticos estruturados que orientem a prática pedagógica de forma sistemática. No contexto atual, os dispositivos digitais permanecem frequentemente tratados como "caixas-pretas", ferramentas cujas interfaces são operadas sem o entendimento dos circuitos, sinais e lógicas que viabilizam seu funcionamento. Essa desconexão limita o desenvolvimento de habilidades de criação e autoria tecnológica, mantendo a comunidade escolar restrita à condição de consumidora passiva de tecnologias concebidas por terceiros.
+      </p>
+      <p class="text-brand-800 text-justify indent-6 font-normal">
+       Em resposta a essas limitações, e fundamentado teórica e metodologicamente no construcionismo de Seymour Papert e nos princípios de emancipação da pedagogia da autonomia de Paulo Freire, este trabalho propõe uma abordagem voltada à práxis libertadora e ao aprendizado significativo. Parte-se da premissa de que a assimilação de conceitos abstratos de lógica e programação é potencializada quando mediada pela construção de artefatos concretos no mundo físico. Assim, a integração de sistemas embarcados, microcontroladores, sensores e atuadores estabelece uma ponte tangível entre a teoria e a experimentação empírica. Ao manipular circuitos e programar o comportamento de dispositivos físicos, o estudante observa o impacto direto de seu código no ambiente, o que favorece a identificação e a correção de erros, a testagem sistemática de hipóteses e a consolidação do raciocínio lógico-algorítmico.
+      </p>
+      <p class="text-brand-800 text-justify indent-6 font-normal">
+       Diante dessas premissas, este trabalho tem como objetivo desenvolver um manual didático modular direcionado a professores da Educação Básica, fornecendo suporte técnico e pedagógico para a estruturação e a condução de atividades em laboratórios escolares. A proposta foi desenhada sob a metodologia da pesquisa-ação e pauta-se pelo uso de metodologias ativas baseadas na resolução de problemas e na interdisciplinaridade. Visando assegurar a viabilidade financeira e a ampla replicabilidade do material em redes públicas de ensino, prioriza-se o emprego de plataformas de hardware de código aberto, softwares livres e componentes eletrônicos de baixo custo, reduzindo as barreiras de acesso ao ensino prático de Ciência da Computação.
+      </p>
+      <p class="text-brand-800 text-justify indent-6 font-normal">
+       A estrutura do manual foi organizada segundo uma progressão cognitiva e didática contínua, abrangendo desde noções elementares de circuitos elétricos até o desenvolvimento de algoritmos e o controle de sistemas embarcados complexos. O material divide-se em módulos instrucionais que englobam orientações de infraestrutura, roteiros de montagem, propostas de articulação curricular com disciplinas como Física e Matemática. Com este recurso, pretende-se oferecer aos docentes uma ferramenta estruturada para mediar o ensino de Computação, contribuindo para a democratização do conhecimento científico-tecnológico e para o fortalecimento da autonomia dos estudantes.
+      </p>
+     </div>
+    </section>
+    <!-- Tópicos em Bloco Vertical Estrito (um abaixo do outro) -->
+    <div class="flex flex-col space-y-1 block avoid-break">
+     <div class="block w-full bg-white border border-slate-200 border-l-4 border-l-brand-800 p-1.5 px-2.5 rounded-sm">
+      <div class="mb-0.5 text-slate-900 font-bold text-xs uppercase">
+       <span>
+        Marco Regulatório: BNCC e Resolução CNE/CEB nº 1/2022
+       </span>
+      </div>
+      <p class="text-[9px] text-slate-700 leading-snug m-0">
+       Superação do uso meramente instrumental dos computadores, consolidando a Computação como ciência e o desenvolvimento do Pensamento Computacional.
+      </p>
+     </div>
+     <div class="block w-full bg-white border border-slate-200 border-l-4 border-l-brand-800 p-1.5 px-2.5 rounded-sm">
+      <div class="mb-0.5 text-slate-900 font-bold text-xs uppercase">
+       <span>
+        Bases Epistemológicas: Seymour Papert e Paulo Freire
+       </span>
+      </div>
+      <p class="text-[9px] text-slate-700 leading-snug m-0">
+       Integração do construcionismo com a pedagogia da autonomia para promover a emancipação tecnológica dos estudantes como criadores ativos.
+      </p>
+     </div>
+     <div class="block w-full bg-white border border-slate-200 border-l-4 border-l-brand-800 p-1.5 px-2.5 rounded-sm">
+      <div class="mb-0.5 text-slate-900 font-bold text-xs uppercase">
+       <span>
+        Viabilidade Pública: Hardware Aberto e Baixo Custo
+       </span>
+      </div>
+      <p class="text-[9px] text-slate-700 leading-snug m-0">
+       Soluções modulares, plataformas de código aberto e componentes acessíveis para viabilizar laboratórios escolares em redes públicas.
+      </p>
+     </div>
+     <div class="block w-full bg-white border border-slate-200 border-l-4 border-l-brand-800 p-1.5 px-2.5 rounded-sm">
+      <div class="mb-0.5 text-slate-900 font-bold text-xs uppercase">
+       <span>
+        Interdisciplinaridade
+       </span>
+      </div>
+      <p class="text-[9px] text-slate-700 leading-snug m-0">
+       Suguestões de temas a serem abordados que vão além dos projetos como tecnologia e sociedade, matemática, física e
+                        lógica.
+      </p>
+     </div>
+    </div>
+   </div>
+  </main>
+  <main class="a4-page page-break" id="secao-didatica">
+   <div class="page-top-header">
+    <span class="page-header-title">
+     Manual Didático de Computação • Estrutura didática dos Projetos
+    </span>
+    <span class="page-header-number">
+     Página 04
+    </span>
+   </div>
+   <div>
+    <header class="border-b-4 border-brand-800 pb-2 mb-3 avoid-break">
+     <h2 class="font-heading font-bold text-2xl text-brand-900 leading-tight">
+      Estrutura didática dos Projetos
+     </h2>
+    </header>
+    <!-- Texto Introdutório: Atividades Extracurriculares e Autonomia -->
+    <section class="mb-3 avoid-break">
+     <div class="bg-white p-3 rounded-lg border border-brand-200 shadow-2xs secao-texto-continuo">
+      <h3 class="font-heading font-bold text-brand-900 text-xs uppercase tracking-wider mb-2">
+       Aplicação Extracurricular e Autonomia Estudantil
+      </h3>
+      <p class="text-brand-800 text-justify indent-4 font-normal">
+       Este manual foi concebido para extrapolar os limites do ensino curricular convencional, posicionando-se como um guia prático, flexível e dinâmico para a estruturação de atividades extracurriculares, tais como feiras de ciências, clubes de robótica, mostras tecnológicas, olimpíadas do conhecimento e oficinas de invenção. A proposta metodológica visa fomentar o protagonismo e a autonomia investigativa do estudante, encorajando-o a agir como um verdadeiro agente de criação tecnológica. Ao interagir diretamente com os componentes físicos e os ambientes de simulação, o aluno é incentivado a formular suas próprias hipóteses, diagnosticar falhas de circuitos e algoritmos, e projetar soluções de forma independente. Dessa forma, articula-se a criatividade com os pilares do pensamento computacional e da engenharia, transformando a curiosidade científica em projetos funcionais de impacto real.
+      </p>
+      <p class="text-brand-800 text-justify indent-4 font-normal">
+       Além disso, o ecossistema educacional contemporâneo beneficia-se enormemente do acesso facilitado a plataformas
+                        digitais, simuladores online e ambientes virtuais de aprendizagem. Essa flexibilidade tecnológica garante que a prática
+                        não fique restrita ao espaço ou ao tempo da sala de aula física: atividades que eventualmente não possam ser concluídas
+                        durante o horário regular podem ser facilmente desdobradas como tarefas de casa, desafios de expansão ou projetos para
+                        clubes de tecnologia. Dessa forma, as ferramentas virtuais democratizam o contato com a computação, permitindo que o
+                        estudante continue explorando, criando e aprimorando seus projetos no seu próprio ritmo e de qualquer lugar.
+      </p>
+     </div>
+    </section>
+    <!-- Modelagem Prévia de Engenharia: Esquema e Fluxograma -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3.5 avoid-break">
+     <div class="bg-white p-3 rounded-lg border border-brand-200 shadow-2xs">
+      <div class="mb-1 text-brand-900 font-bold text-xs">
+       <span>
+        Esquema Elétrico de Circuito
+       </span>
+      </div>
+      <p class="text-[10px] text-brand-700 leading-relaxed m-0">
+       Diagramas completos de conexão na protoboard com especificação de pinagem, polaridades e resistores de proteção.
+      </p>
+     </div>
+     <div class="bg-white p-3 rounded-lg border border-brand-200 shadow-2xs">
+      <div class="mb-1 text-brand-900 font-bold text-xs">
+       <span>
+        Fluxograma Lógico-Algorítmico
+       </span>
+      </div>
+      <p class="text-[10px] text-brand-700 leading-relaxed m-0">
+       Mapeamento visual do algoritmo antes da programação, estruturando tomadas de decisão (if/else) e laços (loop).
+      </p>
+     </div>
+    </div>
+    <!-- Apresentação Vertical das Ferramentas Digitais -->
+    <section class="space-y-2.5 mb-3.5 avoid-break">
+     <h3 class="font-heading font-bold text-brand-900 text-xs uppercase tracking-wider mb-1">
+      Ecossistema de Ferramentas Digitais
+     </h3>
+     <!-- Tinkercad -->
+     <div class="bg-white p-2.5 rounded-lg border border-brand-200 shadow-2xs flex items-center gap-3">
+      <img alt="Logo Tinkercad" class="w-10 h-10 object-contain shrink-0 p-1 bg-slate-50 border border-slate-200 rounded-md" src="https://cdn.simpleicons.org/tinkercad/005F9E"/>
+      <div>
+       <h4 class="font-heading font-bold text-brand-900 text-xs mb-0.5">
+        Tinkercad: Simulação Virtual e Prototipagem em Nuvem
+       </h4>
+       <p class="text-[10px] text-brand-700 leading-snug m-0">
+        Ambiente online e gratuito da Autodesk para modelagem e simulação interativa de circuitos e códigos C++ no navegador. Permite ao estudante experimentar, testar sensores/atuadores e depurar hipóteses sem risco de queima de componentes, viabilizando o estudo autônomo e a preparação prévia antes do laboratório físico.
+       </p>
+      </div>
+     </div>
+     <!-- Wokwi -->
+     <div class="bg-white p-2.5 rounded-lg border border-brand-200 shadow-2xs flex items-center gap-3">
+      <img alt="Logo Wokwi" class="w-10 h-10 object-contain shrink-0 p-1 bg-slate-50 border border-slate-200 rounded-md" src="https://avatars.githubusercontent.com/u/56967200?s=280&amp;v=4"/>
+      <div>
+       <h4 class="font-heading font-bold text-brand-900 text-xs mb-0.5">
+        Wokwi: Simulação Avançada e Prototipagem de Microcontroladores ESP
+       </h4>
+       <p class="text-[10px] text-brand-700 leading-snug m-0">
+        Plataforma de simulação em nuvem voltada para o desenvolvimento de projetos baseados na arquitetura ESP (como ESP32 e ESP8266). Permite a validação de circuitos, integração com protocolos de conectividade Wi-Fi/IoT e execução de firmwares diretamente no navegador, eliminando a necessidade de hardware físico na etapa de testes e garantindo a prototipagem ágil desses microcontroladores.
+       </p>
+      </div>
+     </div>
+     <!-- GitHub -->
+     <div class="bg-white p-2.5 rounded-lg border border-brand-200 shadow-2xs flex items-center gap-3">
+      <img alt="Logo GitHub" class="w-10 h-10 object-contain shrink-0 p-1 bg-slate-50 border border-slate-200 rounded-md" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"/>
+      <div>
+       <h4 class="font-heading font-bold text-brand-900 text-xs mb-0.5">
+        GitHub: Repositório Aberto e Versionamento de Código
+       </h4>
+       <p class="text-[10px] text-brand-700 leading-snug m-0">
+        Plataforma de hospedagem e compartilhamento comunitário onde todos os códigos-fonte (.ino), esquemas elétricos e arquivos dos projetos estão organizados. Garante transparência pedagógica, histórico de versões e acesso rápido via QR Code para que alunos e professores possam baixar, estudar e expandir os códigos.
+       </p>
+      </div>
+     </div>
+     <!-- Arduino IDE -->
+     <div class="bg-white p-2.5 rounded-lg border border-brand-200 shadow-2xs flex items-center gap-3">
+      <img alt="Logo Arduino IDE" class="w-10 h-10 object-contain shrink-0 p-1 bg-slate-50 border border-slate-200 rounded-md" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg"/>
+      <div>
+       <h4 class="font-heading font-bold text-brand-900 text-xs mb-0.5">
+        Arduino IDE: Compilação, Upload e Monitoramento Serial
+       </h4>
+       <p class="text-[10px] text-brand-700 leading-snug m-0">
+        Software oficial de desenvolvimento utilizado na bancada para validar sintaxe, compilar e transferir o firmware via USB para a placa física. Disponibiliza o Monitor Serial como recurso essencial para leitura de variáveis, telemetria em tempo real e verificação dos estados operacionais do circuito.
+       </p>
+      </div>
+     </div>
+    </section>
+    <!-- Diagrama Geral do Fluxo de Código em C++ -->
+    <div class="bg-white p-2.5 rounded-lg border border-brand-200 shadow-2xs avoid-break">
+     <h4 class="font-heading font-bold text-brand-900 text-xs uppercase tracking-wider mb-1.5">
+      Diagrama Geral do Fluxo de Código em C++
+     </h4>
+     <div class="code-flow-container m-0">
+      <span class="code-flow-step">
+       Bibliotecas
+      </span>
+      <span class="code-flow-arrow">
+       →
+      </span>
+      <span class="code-flow-step">
+       Pinos e Constantes
+      </span>
+      <span class="code-flow-arrow">
+       →
+      </span>
+      <span class="code-flow-step">
+       setup()
+      </span>
+      <span class="code-flow-arrow">
+       →
+      </span>
+      <span class="code-flow-step">
+       Funções Auxiliares
+      </span>
+      <span class="code-flow-arrow">
+       →
+      </span>
+      <span class="code-flow-step">
+       loop()
+      </span>
+     </div>
+    </div>
+   </div>
+  </main>
+  <main class="a4-page page-break" id="secao-fluxograma-geral">
+   <div class="page-top-header">
+    <span class="page-header-title">
+     Manual Didático de Computação • Fluxograma Geral
+    </span>
+    <span class="page-header-number">
+     Página 05
+    </span>
+   </div>
+   <div>
+    <header class="border-b-4 border-brand-800 pb-2 mb-3.5 avoid-break">
+     <h2 class="font-heading font-bold text-2xl text-brand-900 leading-tight">
+      Fluxograma Geral Integrado dos Projetos
+     </h2>
+    </header>
+    <!-- Card Pedagógico: Aplicação Multinível e Aprofundamento -->
+    <section class="mb-3.5 avoid-break">
+     <div class="bg-white p-3.5 rounded-lg border border-brand-200 shadow-2xs">
+      <p class="text-[10.5px] text-brand-800 leading-relaxed text-justify indent-4 m-0 font-normal">
+       A progressão pedagógica apresentada neste fluxograma organiza as competências de forma modular e contínua. Os projetos propostos para etapas e anos anteriores podem ser plenamente aplicados em anos mais avançados sem a necessidade de simplificar os conteúdos ou reduzir os desafios técnicos. A diferenciação reside essencialmente no nível de aprofundamento investigativo, na sofisticação da modelagem algorítmica e na autonomia dos estudantes na prototipagem física. Teoricamente, todas as crianças e jovens são plenamente capazes de desenvolver as atividades práticas aqui delineadas, respeitando-se suas trajetórias singulares, seus conhecimentos prévios e o ritmo de aprendizagem de cada faixa etária.
+      </p>
+      <p class="text-[10.5px] text-brand-800 leading-relaxed text-justify indent-4 m-0 font-normal">
+       Para garantir a máxima eficácia dessa abordagem, é fundamental que a seleção dos projetos seja adaptada à realidade, aos
+                        recursos e ao nível de maturidade de cada turma. A sequência de atividades apresentada neste manual não exige uma
+                        execução estritamente linear, permitindo que o educador priorize os temas que melhor se conectem com o contexto local
+                        dos estudantes. Contudo, é indispensável atentar para a progressão dos conceitos fundamentais envolvidos: ainda que a
+                        ordem dos projetos seja flexibilizada, os requisitos conceituais e lógicos de cada etapa devem ser devidamente abordados
+                        e consolidados antes do avanço para estruturas de maior complexidade, assegurando uma aprendizagem sólida e integrada.
+      </p>
+      <p class="text-[10.5px] text-brand-800 leading-relaxed text-justify indent-4 m-0 font-normal">
+       No que tange à Educação Infantil, é imperativo respeitar o tempo de desenvolvimento cognitivo, a fase de alfabetização e
+                        a maturação motora dos estudantes. Nessa etapa, a inserção dos fundamentos computacionais não deve envolver a escrita de
+                        códigos ou o uso de telas digitais; pelo contrário, deve ser pautada exclusivamente pela computação desplugada. O
+                        aprendizado deve ocorrer por meio de dinâmicas lúdicas, brincadeiras corporais, jogos de mesa, circuitos motores e
+                        manipulação de materiais concretos. Essa abordagem garante a construção do raciocínio lógico, do reconhecimento de
+                        padrões e da espacialidade de forma saudável, promovendo uma relação equilibrada e pedagógica com a tecnologia desde os
+                        primeiros anos.
+      </p>
+     </div>
+    </section>
+    <!-- Fluxograma Panorâmico com Borda e Legenda Técnica em Fundo Cinza -->
+    <div class="bg-slate-100 border border-slate-200 rounded-xl p-3 text-center avoid-break shadow-2xs">
+     <img alt="Fluxograma Geral dos Projetos" class="w-full max-h-[165mm] object-contain mx-auto rounded mb-1.5" src="Projetos.png"/>
+     <span class="font-mono text-[9px] font-bold text-slate-500 uppercase tracking-wider block">
+      FIGURA GERAL: FLUXOGRAMA DE INTEGRAÇÃO DOS PROJETOS E NÍVEIS DE ENSINO
+     </span>
+    </div>
+   </div>
+  </main>
+  <main class="a4-page page-break" id="modulo-1">
+   <div class="page-top-header">
+    <span class="page-header-title">
+     Diretrizes Curriculares • Módulo I (Educação Infantil)
+    </span>
+    <span class="page-header-number">
+     Página 06
+    </span>
+   </div>
+   <div>
+    <section class="mb-8">
+     <h2 class="font-heading font-bold text-2xl text-brand-900 mb-6 flex items-center gap-2 border-b border-brand-100 pb-2">
+      Módulo I
+     </h2>
+     <div class="bg-brand-50 border border-brand-100 p-5 rounded-lg mb-3.5 avoid-break relative overflow-hidden">
+      <div class="absolute top-0 right-0 bg-green-500 text-white px-3 py-0.5 font-mono text-[10px] font-bold rounded-bl-lg">
+       Ensino Infantil
+      </div>
+      <h3 class="font-heading font-bold text-lg text-brand-900 mb-2">
+       Interação Lúdica e Pensamento Desplugado
+      </h3>
+      <div>
+       <h4 class="font-heading font-semibold text-xs text-brand-800 uppercase tracking-wide mb-2">
+        Competências Globais e Objetivos:
+       </h4>
+       <ul class="list-disc pl-5 text-xs text-brand-800 space-y-1">
+        <li>
+         Atividades lúdicas e interdisciplinares.
+        </li>
+        <li>
+         Reconhecimento de padrões e ordenação.
+        </li>
+        <li>
+         Jogos de estados binários e lógica desplugada.
+        </li>
+        <li>
+         Execução de tarefas ordenadas e circuitos de papel.
+        </li>
+        <li>
+         Atividades de contato inicial com eletrônica e som.
+        </li>
+       </ul>
+      </div>
+     </div>
+     <div class="avoid-break">
+      <div class="rounded-lg overflow-hidden border border-slate-300 shadow-2xs bg-white mb-0">
+       <table class="w-full text-left text-xs border-collapse">
+        <thead>
+         <tr class="bg-slate-200 text-brand-900 font-heading border-b border-slate-300">
+          <th class="p-2.5 text-center font-heading font-bold text-xs uppercase tracking-wider bg-slate-200 text-brand-900 border-b border-slate-300" colspan="4">
+           MÓDULO I - EDUCAÇÃO INFANTIL
+          </th>
+         </tr>
+         <tr class="bg-brand-800 text-white font-heading">
+          <th class="p-2.5 border border-brand-800 text-white font-semibold text-[11px] w-20">
+           Cód
+          </th>
+          <th class="p-2.5 border border-brand-800 text-white font-semibold text-[11px]">
+           Projeto
+          </th>
+          <th class="p-2.5 border border-brand-800 text-white font-semibold text-[11px]">
+           Conceitos Abordados
+          </th>
+          <th class="p-2.5 border border-brand-800 text-white font-semibold text-[11px]">
+           Nível
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr class="bg-white border-b border-brand-100">
+          <td class="p-2.5 font-mono text-brand-500 border border-brand-100">
+           <a class="font-mono font-bold text-accent-blue hover:underline" href="#prj-prj-11">
+            PRJ 1.1
+           </a>
+          </td>
+          <td class="p-2.5 font-medium text-brand-900 border border-brand-100">
+           <a class="module-project-link" href="#prj-prj-11">
+            Circuito com massa de modelar condutiva
+           </a>
+          </td>
+          <td class="p-2.5 text-brand-800 border border-brand-100 text-[11px]">
+           Corrente Elétrica e Circuitos Fechados
+          </td>
+          <td class="p-2.5 border border-brand-100 text-center">
+           <span class="bg-green-100 text-green-800 px-2 py-0.5 rounded text-[9px] font-bold uppercase">
+            Básico
+           </span>
+          </td>
+         </tr>
+         <tr class="bg-brand-50 border-b border-brand-100">
+          <td class="p-2.5 font-mono text-brand-500 border border-brand-100">
+           <a class="font-mono font-bold text-accent-blue hover:underline" href="#prj-prj-12">
+            PRJ 1.2
+           </a>
+          </td>
+          <td class="p-2.5 font-medium text-brand-900 border border-brand-100">
+           <a class="module-project-link" href="#prj-prj-12">
+            Classificação
+           </a>
+          </td>
+          <td class="p-2.5 text-brand-800 border border-brand-100 text-[11px]">
+           Agrupamento por Atributos e Filtros
+          </td>
+          <td class="p-2.5 border border-brand-100 text-center">
+           <span class="bg-green-100 text-green-800 px-2 py-0.5 rounded text-[9px] font-bold uppercase">
+            Básico
+           </span>
+          </td>
+         </tr>
+         <tr class="bg-white border-b border-brand-100">
+          <td class="p-2.5 font-mono text-brand-500 border border-brand-100">
+           <a class="font-mono font-bold text-accent-blue hover:underline" href="#prj-prj-13">
+            PRJ 1.3
+           </a>
+          </td>
+          <td class="p-2.5 font-medium text-brand-900 border border-brand-100">
+           <a class="module-project-link" href="#prj-prj-13">
+            Ordenação
+           </a>
+          </td>
+          <td class="p-2.5 text-brand-800 border border-brand-100 text-[11px]">
+           Algoritmos Sequenciais e Sequenciamento
+          </td>
+          <td class="p-2.5 border border-brand-100 text-center">
+           <span class="bg-green-100 text-green-800 px-2 py-0.5 rounded text-[9px] font-bold uppercase">
+            Básico
+           </span>
+          </td>
+         </tr>
+         <tr class="bg-brand-50 border-b border-brand-100">
+          <td class="p-2.5 font-mono text-brand-500 border border-brand-100">
+           <a class="font-mono font-bold text-accent-blue hover:underline" href="#prj-prj-14">
+            PRJ 1.4
+           </a>
+          </td>
+          <td class="p-2.5 font-medium text-brand-900 border border-brand-100">
+           <a class="module-project-link" href="#prj-prj-14">
+            Cartões com circuitos de papel
+           </a>
+          </td>
+          <td class="p-2.5 text-brand-800 border border-brand-100 text-[11px]">
+           Fita de Cobre, LEDs e Conectividade
+          </td>
+          <td class="p-2.5 border border-brand-100 text-center">
+           <span class="bg-green-100 text-green-800 px-2 py-0.5 rounded text-[9px] font-bold uppercase">
+            Básico
+           </span>
+          </td>
+         </tr>
+         <tr class="bg-white border-b border-brand-100">
+          <td class="p-2.5 font-mono text-brand-500 border border-brand-100">
+           <a class="font-mono font-bold text-accent-blue hover:underline" href="#prj-prj-15">
+            PRJ 1.5
+           </a>
+          </td>
+          <td class="p-2.5 font-medium text-brand-900 border border-brand-100">
+           <a class="module-project-link" href="#prj-prj-15">
+            Simulação de portas lógicas
+           </a>
+          </td>
+          <td class="p-2.5 text-brand-800 border border-brand-100 text-[11px]">
+           Lógica Booleana Básica (AND/OR Desplugado)
+          </td>
+          <td class="p-2.5 border border-brand-100 text-center">
+           <span class="bg-yellow-100 text-yellow-800 px-2 py-0.5 rounded text-[9px] font-bold uppercase">
+            Intermediário
+           </span>
+          </td>
+         </tr>
+         <tr class="bg-brand-50 border-b border-brand-100">
+          <td class="p-2.5 font-mono text-brand-500 border border-brand-100">
+           <a class="font-mono font-bold text-accent-blue hover:underline" href="#prj-prj-16">
+            PRJ 1.6
+           </a>
+          </td>
+          <td class="p-2.5 font-medium text-brand-900 border border-brand-100">
+           <a class="module-project-link" href="#prj-prj-16">
+            Ventilador de bancada com motor DC
+           </a>
+          </td>
+          <td class="p-2.5 text-brand-800 border border-brand-100 text-[11px]">
+           Atuadores, Motores DC e Circuito de Potência
+          </td>
+          <td class="p-2.5 border border-brand-100 text-center">
+           <span class="bg-yellow-100 text-yellow-800 px-2 py-0.5 rounded text-[9px] font-bold uppercase">
+            Intermediário
+           </span>
+          </td>
+         </tr>
+         <tr class="bg-white border-b border-brand-100">
+          <td class="p-2.5 font-mono text-brand-500 border border-brand-100">
+           <a class="font-mono font-bold text-accent-blue hover:underline" href="#prj-prj-17">
+            PRJ 1.7
+           </a>
+          </td>
+          <td class="p-2.5 font-medium text-brand-900 border border-brand-100">
+           <a class="module-project-link" href="#prj-prj-17">
+            Labirinto e lógica de decisão
+           </a>
+          </td>
+          <td class="p-2.5 text-brand-800 border border-brand-100 text-[11px]">
+           Condicionais e Árvore de Decisão
+          </td>
+          <td class="p-2.5 border border-brand-100 text-center">
+           <span class="bg-yellow-100 text-yellow-800 px-2 py-0.5 rounded text-[9px] font-bold uppercase">
+            Intermediário
+           </span>
+          </td>
+         </tr>
+         <tr class="bg-brand-50 border-b border-brand-100">
+          <td class="p-2.5 font-mono text-brand-500 border border-brand-100">
+           <a class="font-mono font-bold text-accent-blue hover:underline" href="#prj-prj-18">
+            PRJ 1.8
+           </a>
+          </td>
+          <td class="p-2.5 font-medium text-brand-900 border border-brand-100">
+           <a class="module-project-link" href="#prj-prj-18">
+            Que animal é? Sons
+           </a>
+          </td>
+          <td class="p-2.5 text-brand-800 border border-brand-100 text-[11px]">
+           Mapeamento de Entradas e Saídas Sonoras
+          </td>
+          <td class="p-2.5 border border-brand-100 text-center">
+           <span class="bg-yellow-100 text-yellow-800 px-2 py-0.5 rounded text-[9px] font-bold uppercase">
+            Intermediário
+           </span>
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </div>
+     </div>
+    </section>
+   </div>
+  </main>
+  <main class="a4-page page-break" id="modulo-2">
+   <div class="page-top-header">
+    <span class="page-header-title">
+     Diretrizes Curriculares • Módulo II (Ensino Fundamental I)
+    </span>
+    <span class="page-header-number">
+     Página 07
+    </span>
+   </div>
+   <div>
+    <section class="mb-8">
+     <h2 class="font-heading font-bold text-2xl text-brand-900 mb-6 flex items-center gap-2 border-b border-brand-100 pb-2">
+      Módulo II
+     </h2>
+     <div class="bg-brand-50 border border-brand-100 p-5 rounded-lg mb-3.5 avoid-break relative overflow-hidden">
+      <div class="absolute top-0 right-0 bg-green-500 text-white px-3 py-0.5 font-mono text-[10px] font-bold rounded-bl-lg">
+       Ensino Fundamental I
+      </div>
+      <h3 class="font-heading font-bold text-lg text-brand-900 mb-2">
+       Introdução à Programação e Controle
+      </h3>
+      <div>
+       <h4 class="font-heading font-semibold text-xs text-brand-800 uppercase tracking-wide mb-2">
+        Competências Globais e Objetivos:
+       </h4>
+       <ul class="list-disc pl-5 text-xs text-brand-800 space-y-1">
+        <li>
+         Agrupar elementos por categorias e atributos.
+        </li>
+        <li>
+         Formas de comunicação e envio de mensagens entre dispositivos.
+        </li>
+        <li>
+         Fluxo de execução de tarefas (Fluxogramas).
+        </li>
+        <li>
+         Desvio de fluxo (condicionais) e laços de repetição.
+        </li>
+        <li>
+         Operadores Booleanos (AND, OR, NOT) e leitura analógica/digital.
+        </li>
+       </ul>
+      </div>
+     </div>
+     <div class="avoid-break">
+      <div class="rounded-lg overflow-hidden border border-slate-300 shadow-2xs bg-white mb-0">
+       <table class="w-full text-left text-xs border-collapse">
+        <thead>
+         <tr class="bg-slate-200 text-brand-900 font-heading border-b border-slate-300">
+          <th class="p-2.5 text-center font-heading font-bold text-xs uppercase tracking-wider bg-slate-200 text-brand-900 border-b border-slate-300" colspan="4">
+           MÓDULO II - ENSINO FUNDAMENTAL I
+          </th>
+         </tr>
+         <tr class="bg-brand-800 text-white font-heading">
+          <th class="p-2.5 border border-brand-800 text-white font-semibold text-[11px] w-20">
+           Cód
+          </th>
+          <th class="p-2.5 border border-brand-800 text-white font-semibold text-[11px]">
+           Projeto
+          </th>
+          <th class="p-2.5 border border-brand-800 text-white font-semibold text-[11px]">
+           Conceitos Abordados
+          </th>
+          <th class="p-2.5 border border-brand-800 text-white font-semibold text-[11px]">
+           Nível
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr class="bg-white border-b border-brand-100">
+          <td class="p-2.5 font-mono text-brand-500 border border-brand-100">
+           <a class="font-mono font-bold text-accent-blue hover:underline" href="#prj-prj-21">
+            PRJ 2.1
+           </a>
+          </td>
+          <td class="p-2.5 font-medium text-brand-900 border border-brand-100">
+           <a class="module-project-link" href="#prj-prj-21">
+            Semáforo
+           </a>
+          </td>
+          <td class="p-2.5 text-brand-800 border border-brand-100 text-[11px]">
+           Variáveis, Temporização e Delays
+          </td>
+          <td class="p-2.5 border border-brand-100 text-center">
+           <span class="bg-green-100 text-green-800 px-2 py-0.5 rounded text-[9px] font-bold uppercase">
+            Básico
+           </span>
+          </td>
+         </tr>
+         <tr class="bg-brand-50 border-b border-brand-100">
+          <td class="p-2.5 font-mono text-brand-500 border border-brand-100">
+           <a class="font-mono font-bold text-accent-blue hover:underline" href="#prj-prj-22">
+            PRJ 2.2
+           </a>
+          </td>
+          <td class="p-2.5 font-medium text-brand-900 border border-brand-100">
+           <a class="module-project-link" href="#prj-prj-22">
+            Jogo de reflexo (Acerte o Botão)
+           </a>
+          </td>
+          <td class="p-2.5 text-brand-800 border border-brand-100 text-[11px]">
+           Variáveis Temp., Contadores, Operadores
+          </td>
+          <td class="p-2.5 border border-brand-100 text-center">
+           <span class="bg-green-100 text-green-800 px-2 py-0.5 rounded text-[9px] font-bold uppercase">
+            Básico
+           </span>
+          </td>
+         </tr>
+         <tr class="bg-white border-b border-brand-100">
+          <td class="p-2.5 font-mono text-brand-500 border border-brand-100">
+           <a class="font-mono font-bold text-accent-blue hover:underline" href="#prj-prj-23">
+            PRJ 2.3
+           </a>
+          </td>
+          <td class="p-2.5 font-medium text-brand-900 border border-brand-100">
+           <a class="module-project-link" href="#prj-prj-23">
+            Portão automático com sensor ultrassônico
+           </a>
+          </td>
+          <td class="p-2.5 text-brand-800 border border-brand-100 text-[11px]">
+           Ultrassom, Servomotor, Condicionais
+          </td>
+          <td class="p-2.5 border border-brand-100 text-center">
+           <span class="bg-yellow-100 text-yellow-800 px-2 py-0.5 rounded text-[9px] font-bold uppercase">
+            Intermediário
+           </span>
+          </td>
+         </tr>
+         <tr class="bg-brand-50 border-b border-brand-100">
+          <td class="p-2.5 font-mono text-brand-500 border border-brand-100">
+           <a class="font-mono font-bold text-accent-blue hover:underline" href="#prj-prj-24">
+            PRJ 2.4
+           </a>
+          </td>
+          <td class="p-2.5 font-medium text-brand-900 border border-brand-100">
+           <a class="module-project-link" href="#prj-prj-24">
+            Lixeira automática
+           </a>
+          </td>
+          <td class="p-2.5 text-brand-800 border border-brand-100 text-[11px]">
+           Sensor de Proximidade e Atuação Mecânica
+          </td>
+          <td class="p-2.5 border border-brand-100 text-center">
+           <span class="bg-yellow-100 text-yellow-800 px-2 py-0.5 rounded text-[9px] font-bold uppercase">
+            Intermediário
+           </span>
+          </td>
+         </tr>
+         <tr class="bg-white border-b border-brand-100">
+          <td class="p-2.5 font-mono text-brand-500 border border-brand-100">
+           <a class="font-mono font-bold text-accent-blue hover:underline" href="#prj-prj-25">
+            PRJ 2.5
+           </a>
+          </td>
+          <td class="p-2.5 font-medium text-brand-900 border border-brand-100">
+           <a class="module-project-link" href="#prj-prj-25">
+            Fotos com microcontroladores
+           </a>
+          </td>
+          <td class="p-2.5 text-brand-800 border border-brand-100 text-[11px]">
+           Captura Digital e Disparo por Hardware
+          </td>
+          <td class="p-2.5 border border-brand-100 text-center">
+           <span class="bg-yellow-100 text-yellow-800 px-2 py-0.5 rounded text-[9px] font-bold uppercase">
+            Intermediário
+           </span>
+          </td>
+         </tr>
+         <tr class="bg-brand-50 border-b border-brand-100">
+          <td class="p-2.5 font-mono text-brand-500 border border-brand-100">
+           <a class="font-mono font-bold text-accent-blue hover:underline" href="#prj-prj-26">
+            PRJ 2.6
+           </a>
+          </td>
+          <td class="p-2.5 font-medium text-brand-900 border border-brand-100">
+           <a class="module-project-link" href="#prj-prj-26">
+            Comunicação com outros controladores
+           </a>
+          </td>
+          <td class="p-2.5 text-brand-800 border border-brand-100 text-[11px]">
+           Comunicação Serial RX/TX
+          </td>
+          <td class="p-2.5 border border-brand-100 text-center">
+           <span class="bg-yellow-100 text-yellow-800 px-2 py-0.5 rounded text-[9px] font-bold uppercase">
+            Intermediário
+           </span>
+          </td>
+         </tr>
+         <tr class="bg-white border-b border-brand-100">
+          <td class="p-2.5 font-mono text-brand-500 border border-brand-100">
+           <a class="font-mono font-bold text-accent-blue hover:underline" href="#prj-prj-27">
+            PRJ 2.7
+           </a>
+          </td>
+          <td class="p-2.5 font-medium text-brand-900 border border-brand-100">
+           <a class="module-project-link" href="#prj-prj-27">
+            Termômetro escolar
+           </a>
+          </td>
+          <td class="p-2.5 text-brand-800 border border-brand-100 text-[11px]">
+           Sensor de Temperatura e Mapeamento Analógico
+          </td>
+          <td class="p-2.5 border border-brand-100 text-center">
+           <span class="bg-yellow-100 text-yellow-800 px-2 py-0.5 rounded text-[9px] font-bold uppercase">
+            Intermediário
+           </span>
+          </td>
+         </tr>
+         <tr class="bg-brand-50 border-b border-brand-100">
+          <td class="p-2.5 font-mono text-brand-500 border border-brand-100">
+           <a class="font-mono font-bold text-accent-blue hover:underline" href="#prj-prj-28">
+            PRJ 2.8
+           </a>
+          </td>
+          <td class="p-2.5 font-medium text-brand-900 border border-brand-100">
+           <a class="module-project-link" href="#prj-prj-28">
+            Automação de regagem de plantas
+           </a>
+          </td>
+          <td class="p-2.5 text-brand-800 border border-brand-100 text-[11px]">
+           Sensor de Umidade do Solo e Relés
+          </td>
+          <td class="p-2.5 border border-brand-100 text-center">
+           <span class="bg-red-100 text-red-800 px-2 py-0.5 rounded text-[9px] font-bold uppercase">
+            Avançado
+           </span>
+          </td>
+         </tr>
+         <tr class="bg-white border-b border-brand-100">
+          <td class="p-2.5 font-mono text-brand-500 border border-brand-100">
+           <a class="font-mono font-bold text-accent-blue hover:underline" href="#prj-prj-29">
+            PRJ 2.9
+           </a>
+          </td>
+          <td class="p-2.5 font-medium text-brand-900 border border-brand-100">
+           <a class="module-project-link" href="#prj-prj-29">
+            Robô com desvio de proximidade
+           </a>
+          </td>
+          <td class="p-2.5 text-brand-800 border border-brand-100 text-[11px]">
+           Ponte H, Motores DC e Algoritmo de Esquiva
+          </td>
+          <td class="p-2.5 border border-brand-100 text-center">
+           <span class="bg-red-100 text-red-800 px-2 py-0.5 rounded text-[9px] font-bold uppercase">
+            Avançado
+           </span>
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </div>
+     </div>
+    </section>
+   </div>
+  </main>
+  <main class="a4-page page-break" id="modulo-3">
+   <div class="page-top-header">
+    <span class="page-header-title">
+     Diretrizes Curriculares • Módulo III (Ensino Fundamental II)
+    </span>
+    <span class="page-header-number">
+     Página 08
+    </span>
+   </div>
+   <div>
+    <section class="mb-8">
+     <h2 class="font-heading font-bold text-2xl text-brand-900 mb-6 flex items-center gap-2 border-b border-brand-100 pb-2">
+      Módulo III
+     </h2>
+     <div class="bg-brand-50 border border-brand-100 p-5 rounded-lg mb-3.5 avoid-break relative overflow-hidden">
+      <div class="absolute top-0 right-0 bg-green-500 text-white px-3 py-0.5 font-mono text-[10px] font-bold rounded-bl-lg">
+       Ensino Fundamental II
+      </div>
+      <h3 class="font-heading font-bold text-lg text-brand-900 mb-2">
+       Sistemas Embarcados, Sensores e Lógica Formal
+      </h3>
+      <div>
+       <h4 class="font-heading font-semibold text-xs text-brand-800 uppercase tracking-wide mb-2">
+        Competências Globais e Objetivos:
+       </h4>
+       <ul class="list-disc pl-5 text-xs text-brand-800 space-y-1">
+        <li>
+         Tipos e estruturas de dados avançadas (Arrays, Matrizes).
+        </li>
+        <li>
+         Modularização e criação de funções personalizadas.
+        </li>
+        <li>
+         Protocolos de comunicação rádio e rede sem fio.
+        </li>
+        <li>
+         Integração de hardware avançado (Câmeras, Displays, Sensores de pH).
+        </li>
+        <li>
+         Robótica móvel e algoritmos de malha fechada.
+        </li>
+       </ul>
+      </div>
+     </div>
+     <div class="avoid-break">
+      <div class="rounded-lg overflow-hidden border border-slate-300 shadow-2xs bg-white mb-0">
+       <table class="w-full text-left text-xs border-collapse">
+        <thead>
+         <tr class="bg-slate-200 text-brand-900 font-heading border-b border-slate-300">
+          <th class="p-2.5 text-center font-heading font-bold text-xs uppercase tracking-wider bg-slate-200 text-brand-900 border-b border-slate-300" colspan="4">
+           MÓDULO III - ENSINO FUNDAMENTAL II
+          </th>
+         </tr>
+         <tr class="bg-brand-800 text-white font-heading">
+          <th class="p-2.5 border border-brand-800 text-white font-semibold text-[11px] w-20">
+           Cód
+          </th>
+          <th class="p-2.5 border border-brand-800 text-white font-semibold text-[11px]">
+           Projeto
+          </th>
+          <th class="p-2.5 border border-brand-800 text-white font-semibold text-[11px]">
+           Conceitos Abordados
+          </th>
+          <th class="p-2.5 border border-brand-800 text-white font-semibold text-[11px]">
+           Nível
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr class="bg-white border-b border-brand-100">
+          <td class="p-2.5 font-mono text-brand-500 border border-brand-100">
+           <a class="font-mono font-bold text-accent-blue hover:underline" href="#prj-31">
+            PRJ 3.1
+           </a>
+          </td>
+          <td class="p-2.5 font-medium text-brand-900 border border-brand-100">
+           <a class="module-project-link" href="#prj-31">
+            Jogo da Memória com LEDs
+           </a>
+          </td>
+          <td class="p-2.5 text-brand-800 border border-brand-100 text-[11px]">
+           Arrays, Funções, Loops e Randomização
+          </td>
+          <td class="p-2.5 border border-brand-100 text-center">
+           <span class="bg-green-100 text-green-800 px-2 py-0.5 rounded text-[9px] font-bold uppercase">
+            Básico
+           </span>
+          </td>
+         </tr>
+         <tr class="bg-brand-50 border-b border-brand-100">
+          <td class="p-2.5 font-mono text-brand-500 border border-brand-100">
+           <a class="font-mono font-bold text-accent-blue hover:underline" href="#prj-prj-32">
+            PRJ 3.2
+           </a>
+          </td>
+          <td class="p-2.5 font-medium text-brand-900 border border-brand-100">
+           <a class="module-project-link" href="#prj-prj-32">
+            Lâmpada noturna automática
+           </a>
+          </td>
+          <td class="p-2.5 text-brand-800 border border-brand-100 text-[11px]">
+           Sensor LDR, Leitura Analógica e Histese
+          </td>
+          <td class="p-2.5 border border-brand-100 text-center">
+           <span class="bg-green-100 text-green-800 px-2 py-0.5 rounded text-[9px] font-bold uppercase">
+            Básico
+           </span>
+          </td>
+         </tr>
+         <tr class="bg-white border-b border-brand-100">
+          <td class="p-2.5 font-mono text-brand-500 border border-brand-100">
+           <a class="font-mono font-bold text-accent-blue hover:underline" href="#prj-prj-33">
+            PRJ 3.3
+           </a>
+          </td>
+          <td class="p-2.5 font-medium text-brand-900 border border-brand-100">
+           <a class="module-project-link" href="#prj-prj-33">
+            Despertador com sensores
+           </a>
+          </td>
+          <td class="p-2.5 text-brand-800 border border-brand-100 text-[11px]">
+           Módulo RTC, Alarmes e Sinalização Sonora
+          </td>
+          <td class="p-2.5 border border-brand-100 text-center">
+           <span class="bg-yellow-100 text-yellow-800 px-2 py-0.5 rounded text-[9px] font-bold uppercase">
+            Intermediário
+           </span>
+          </td>
+         </tr>
+         <tr class="bg-brand-50 border-b border-brand-100">
+          <td class="p-2.5 font-mono text-brand-500 border border-brand-100">
+           <a class="font-mono font-bold text-accent-blue hover:underline" href="#prj-prj-34">
+            PRJ 3.4
+           </a>
+          </td>
+          <td class="p-2.5 font-medium text-brand-900 border border-brand-100">
+           <a class="module-project-link" href="#prj-prj-34">
+            Estação de telemetria
+           </a>
+          </td>
+          <td class="p-2.5 text-brand-800 border border-brand-100 text-[11px]">
+           Multissensores e Transmissão de Dados
+          </td>
+          <td class="p-2.5 border border-brand-100 text-center">
+           <span class="bg-yellow-100 text-yellow-800 px-2 py-0.5 rounded text-[9px] font-bold uppercase">
+            Intermediário
+           </span>
+          </td>
+         </tr>
+         <tr class="bg-white border-b border-brand-100">
+          <td class="p-2.5 font-mono text-brand-500 border border-brand-100">
+           <a class="font-mono font-bold text-accent-blue hover:underline" href="#prj-prj-35">
+            PRJ 3.5
+           </a>
+          </td>
+          <td class="p-2.5 font-medium text-brand-900 border border-brand-100">
+           <a class="module-project-link" href="#prj-prj-35">
+            Estacionamento com contador de vagas
+           </a>
+          </td>
+          <td class="p-2.5 text-brand-800 border border-brand-100 text-[11px]">
+           Displays de 7 Segmentos e Sensores Ópticos
+          </td>
+          <td class="p-2.5 border border-brand-100 text-center">
+           <span class="bg-yellow-100 text-yellow-800 px-2 py-0.5 rounded text-[9px] font-bold uppercase">
+            Intermediário
+           </span>
+          </td>
+         </tr>
+         <tr class="bg-brand-50 border-b border-brand-100">
+          <td class="p-2.5 font-mono text-brand-500 border border-brand-100">
+           <a class="font-mono font-bold text-accent-blue hover:underline" href="#prj-prj-36">
+            PRJ 3.6
+           </a>
+          </td>
+          <td class="p-2.5 font-medium text-brand-900 border border-brand-100">
+           <a class="module-project-link" href="#prj-prj-36">
+            Contador de pessoas
+           </a>
+          </td>
+          <td class="p-2.5 text-brand-800 border border-brand-100 text-[11px]">
+           Sensores de Barreira Infravermelha
+          </td>
+          <td class="p-2.5 border border-brand-100 text-center">
+           <span class="bg-yellow-100 text-yellow-800 px-2 py-0.5 rounded text-[9px] font-bold uppercase">
+            Intermediário
+           </span>
+          </td>
+         </tr>
+         <tr class="bg-white border-b border-brand-100">
+          <td class="p-2.5 font-mono text-brand-500 border border-brand-100">
+           <a class="font-mono font-bold text-accent-blue hover:underline" href="#prj-prj-37">
+            PRJ 3.7
+           </a>
+          </td>
+          <td class="p-2.5 font-medium text-brand-900 border border-brand-100">
+           <a class="module-project-link" href="#prj-prj-37">
+            Câmera fotográfica
+           </a>
+          </td>
+          <td class="p-2.5 text-brand-800 border border-brand-100 text-[11px]">
+           Mapeamento de Arquivos em Cartão SD
+          </td>
+          <td class="p-2.5 border border-brand-100 text-center">
+           <span class="bg-yellow-100 text-yellow-800 px-2 py-0.5 rounded text-[9px] font-bold uppercase">
+            Intermediário
+           </span>
+          </td>
+         </tr>
+         <tr class="bg-brand-50 border-b border-brand-100">
+          <td class="p-2.5 font-mono text-brand-500 border border-brand-100">
+           <a class="font-mono font-bold text-accent-blue hover:underline" href="#prj-prj-38">
+            PRJ 3.8
+           </a>
+          </td>
+          <td class="p-2.5 font-medium text-brand-900 border border-brand-100">
+           <a class="module-project-link" href="#prj-prj-38">
+            Enviando fotos pela rede
+           </a>
+          </td>
+          <td class="p-2.5 text-brand-800 border border-brand-100 text-[11px]">
+           Protocolo HTTP e Requisições POST
+          </td>
+          <td class="p-2.5 border border-brand-100 text-center">
+           <span class="bg-red-100 text-red-800 px-2 py-0.5 rounded text-[9px] font-bold uppercase">
+            Avançado
+           </span>
+          </td>
+         </tr>
+         <tr class="bg-white border-b border-brand-100">
+          <td class="p-2.5 font-mono text-brand-500 border border-brand-100">
+           <a class="font-mono font-bold text-accent-blue hover:underline" href="#prj-prj-39">
+            PRJ 3.9
+           </a>
+          </td>
+          <td class="p-2.5 font-medium text-brand-900 border border-brand-100">
+           <a class="module-project-link" href="#prj-prj-39">
+            Comunicação Via Rádio
+           </a>
+          </td>
+          <td class="p-2.5 text-brand-800 border border-brand-100 text-[11px]">
+           Transceptores RF/LoRa e Pacotes de Dados
+          </td>
+          <td class="p-2.5 border border-brand-100 text-center">
+           <span class="bg-red-100 text-red-800 px-2 py-0.5 rounded text-[9px] font-bold uppercase">
+            Avançado
+           </span>
+          </td>
+         </tr>
+         <tr class="bg-brand-50 border-b border-brand-100">
+          <td class="p-2.5 font-mono text-brand-500 border border-brand-100">
+           <a class="font-mono font-bold text-accent-blue hover:underline" href="#prj-prj-310">
+            PRJ 3.10
+           </a>
+          </td>
+          <td class="p-2.5 font-medium text-brand-900 border border-brand-100">
+           <a class="module-project-link" href="#prj-prj-310">
+            Estação de Monitoramento de pH
+           </a>
+          </td>
+          <td class="p-2.5 text-brand-800 border border-brand-100 text-[11px]">
+           Calibração de Sensores Químicos e ADC
+          </td>
+          <td class="p-2.5 border border-brand-100 text-center">
+           <span class="bg-red-100 text-red-800 px-2 py-0.5 rounded text-[9px] font-bold uppercase">
+            Avançado
+           </span>
+          </td>
+         </tr>
+         <tr class="bg-white border-b border-brand-100">
+          <td class="p-2.5 font-mono text-brand-500 border border-brand-100">
+           <a class="font-mono font-bold text-accent-blue hover:underline" href="#prj-prj-311">
+            PRJ 3.11
+           </a>
+          </td>
+          <td class="p-2.5 font-medium text-brand-900 border border-brand-100">
+           <a class="module-project-link" href="#prj-prj-311">
+            Comedor Pet Automático
+           </a>
+          </td>
+          <td class="p-2.5 text-brand-800 border border-brand-100 text-[11px]">
+           Temporizadores de Precisão e Servomecanismo
+          </td>
+          <td class="p-2.5 border border-brand-100 text-center">
+           <span class="bg-red-100 text-red-800 px-2 py-0.5 rounded text-[9px] font-bold uppercase">
+            Avançado
+           </span>
+          </td>
+         </tr>
+         <tr class="bg-brand-50 border-b border-brand-100">
+          <td class="p-2.5 font-mono text-brand-500 border border-brand-100">
+           <a class="font-mono font-bold text-accent-blue hover:underline" href="#prj-prj-312">
+            PRJ 3.12
+           </a>
+          </td>
+          <td class="p-2.5 font-medium text-brand-900 border border-brand-100">
+           <a class="module-project-link" href="#prj-prj-312">
+            Robô seguidor de linha
+           </a>
+          </td>
+          <td class="p-2.5 text-brand-800 border border-brand-100 text-[11px]">
+           Sensores Reflexivos IR e Algoritmo PID
+          </td>
+          <td class="p-2.5 border border-brand-100 text-center">
+           <span class="bg-red-100 text-red-800 px-2 py-0.5 rounded text-[9px] font-bold uppercase">
+            Avançado
+           </span>
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </div>
+     </div>
+    </section>
+   </div>
+  </main>
+  <main class="a4-page page-break" id="modulo-4">
+   <div class="page-top-header">
+    <span class="page-header-title">
+     Diretrizes Curriculares • Módulo IV (Ensino Médio)
+    </span>
+    <span class="page-header-number">
+     Página 09
+    </span>
+   </div>
+   <div>
+    <section class="mb-8">
+     <h2 class="font-heading font-bold text-2xl text-brand-900 mb-6 flex items-center gap-2 border-b border-brand-100 pb-2">
+      Módulo IV
+     </h2>
+     <div class="bg-brand-50 border border-brand-100 p-5 rounded-lg mb-3.5 avoid-break relative overflow-hidden">
+      <div class="absolute top-0 right-0 bg-green-500 text-white px-3 py-0.5 font-mono text-[10px] font-bold rounded-bl-lg">
+       Ensino Médio
+      </div>
+      <h3 class="font-heading font-bold text-lg text-brand-900 mb-2">
+       Integração de Sistemas, IoT e Soluções Complexas
+      </h3>
+      <div>
+       <h4 class="font-heading font-semibold text-xs text-brand-800 uppercase tracking-wide mb-2">
+        Competências Globais e Objetivos:
+       </h4>
+       <ul class="list-disc pl-5 text-xs text-brand-800 space-y-1">
+        <li>
+         Engenharia de Software e arquitetura de sistemas embarcados.
+        </li>
+        <li>
+         Sistemas web embarcados, WebSockets e streaming.
+        </li>
+        <li>
+         Sistemas de controle de acesso e segurança cibernética.
+        </li>
+        <li>
+         Automação industrial, controle de cargas AC e rastreamento solar.
+        </li>
+       </ul>
+      </div>
+     </div>
+     <div class="avoid-break">
+      <div class="rounded-lg overflow-hidden border border-slate-300 shadow-2xs bg-white mb-0">
+       <table class="w-full text-left text-xs border-collapse">
+        <thead>
+         <tr class="bg-slate-200 text-brand-900 font-heading border-b border-slate-300">
+          <th class="p-2.5 text-center font-heading font-bold text-xs uppercase tracking-wider bg-slate-200 text-brand-900 border-b border-slate-300" colspan="4">
+           MÓDULO IV - ENSINO MÉDIO
+          </th>
+         </tr>
+         <tr class="bg-brand-800 text-white font-heading">
+          <th class="p-2.5 border border-brand-800 text-white font-semibold text-[11px] w-20">
+           Cód
+          </th>
+          <th class="p-2.5 border border-brand-800 text-white font-semibold text-[11px]">
+           Projeto
+          </th>
+          <th class="p-2.5 border border-brand-800 text-white font-semibold text-[11px]">
+           Conceitos Abordados
+          </th>
+          <th class="p-2.5 border border-brand-800 text-white font-semibold text-[11px]">
+           Nível
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr class="bg-white border-b border-brand-100">
+          <td class="p-2.5 font-mono text-brand-500 border border-brand-100">
+           <a class="font-mono font-bold text-accent-blue hover:underline" href="#prj-prj-41">
+            PRJ 4.1
+           </a>
+          </td>
+          <td class="p-2.5 font-medium text-brand-900 border border-brand-100">
+           <a class="module-project-link" href="#prj-prj-41">
+            Calculadora
+           </a>
+          </td>
+          <td class="p-2.5 text-brand-800 border border-brand-100 text-[11px]">
+           Teclado Matricial e Displays LCD
+          </td>
+          <td class="p-2.5 border border-brand-100 text-center">
+           <span class="bg-green-100 text-green-800 px-2 py-0.5 rounded text-[9px] font-bold uppercase">
+            Básico
+           </span>
+          </td>
+         </tr>
+         <tr class="bg-brand-50 border-b border-brand-100">
+          <td class="p-2.5 font-mono text-brand-500 border border-brand-100">
+           <a class="font-mono font-bold text-accent-blue hover:underline" href="#prj-prj-42">
+            PRJ 4.2
+           </a>
+          </td>
+          <td class="p-2.5 font-medium text-brand-900 border border-brand-100">
+           <a class="module-project-link" href="#prj-prj-42">
+            Urna eletrônica
+           </a>
+          </td>
+          <td class="p-2.5 text-brand-800 border border-brand-100 text-[11px]">
+           Máquinas de Estado e Memória EEPROM/Flash
+          </td>
+          <td class="p-2.5 border border-brand-100 text-center">
+           <span class="bg-green-100 text-green-800 px-2 py-0.5 rounded text-[9px] font-bold uppercase">
+            Básico
+           </span>
+          </td>
+         </tr>
+         <tr class="bg-white border-b border-brand-100">
+          <td class="p-2.5 font-mono text-brand-500 border border-brand-100">
+           <a class="font-mono font-bold text-accent-blue hover:underline" href="#prj-prj-43">
+            PRJ 4.3
+           </a>
+          </td>
+          <td class="p-2.5 font-medium text-brand-900 border border-brand-100">
+           <a class="module-project-link" href="#prj-prj-43">
+            Radar Sonar
+           </a>
+          </td>
+          <td class="p-2.5 text-brand-800 border border-brand-100 text-[11px]">
+           Varredura Angular e Renderização Gráfica
+          </td>
+          <td class="p-2.5 border border-brand-100 text-center">
+           <span class="bg-yellow-100 text-yellow-800 px-2 py-0.5 rounded text-[9px] font-bold uppercase">
+            Intermediário
+           </span>
+          </td>
+         </tr>
+         <tr class="bg-brand-50 border-b border-brand-100">
+          <td class="p-2.5 font-mono text-brand-500 border border-brand-100">
+           <a class="font-mono font-bold text-accent-blue hover:underline" href="#prj-prj-44">
+            PRJ 4.4
+           </a>
+          </td>
+          <td class="p-2.5 font-medium text-brand-900 border border-brand-100">
+           <a class="module-project-link" href="#prj-prj-44">
+            Controle de Acesso (NFC)
+           </a>
+          </td>
+          <td class="p-2.5 text-brand-800 border border-brand-100 text-[11px]">
+           Comunicação SPI/I2C e Leitura RFID/NFC
+          </td>
+          <td class="p-2.5 border border-brand-100 text-center">
+           <span class="bg-yellow-100 text-yellow-800 px-2 py-0.5 rounded text-[9px] font-bold uppercase">
+            Intermediário
+           </span>
+          </td>
+         </tr>
+         <tr class="bg-white border-b border-brand-100">
+          <td class="p-2.5 font-mono text-brand-500 border border-brand-100">
+           <a class="font-mono font-bold text-accent-blue hover:underline" href="#prj-prj-45">
+            PRJ 4.5
+           </a>
+          </td>
+          <td class="p-2.5 font-medium text-brand-900 border border-brand-100">
+           <a class="module-project-link" href="#prj-prj-45">
+            Servidor com fotos
+           </a>
+          </td>
+          <td class="p-2.5 text-brand-800 border border-brand-100 text-[11px]">
+           Web Server Embarcado e Arquivos Estáticos
+          </td>
+          <td class="p-2.5 border border-brand-100 text-center">
+           <span class="bg-yellow-100 text-yellow-800 px-2 py-0.5 rounded text-[9px] font-bold uppercase">
+            Intermediário
+           </span>
+          </td>
+         </tr>
+         <tr class="bg-brand-50 border-b border-brand-100">
+          <td class="p-2.5 font-mono text-brand-500 border border-brand-100">
+           <a class="font-mono font-bold text-accent-blue hover:underline" href="#prj-prj-46">
+            PRJ 4.6
+           </a>
+          </td>
+          <td class="p-2.5 font-medium text-brand-900 border border-brand-100">
+           <a class="module-project-link" href="#prj-prj-46">
+            Câmera de monitoramento
+           </a>
+          </td>
+          <td class="p-2.5 text-brand-800 border border-brand-100 text-[11px]">
+           Streaming MJPEG e Protocolo WebSocket
+          </td>
+          <td class="p-2.5 border border-brand-100 text-center">
+           <span class="bg-red-100 text-red-800 px-2 py-0.5 rounded text-[9px] font-bold uppercase">
+            Avançado
+           </span>
+          </td>
+         </tr>
+         <tr class="bg-white border-b border-brand-100">
+          <td class="p-2.5 font-mono text-brand-500 border border-brand-100">
+           <a class="font-mono font-bold text-accent-blue hover:underline" href="#prj-prj-47">
+            PRJ 4.7
+           </a>
+          </td>
+          <td class="p-2.5 font-medium text-brand-900 border border-brand-100">
+           <a class="module-project-link" href="#prj-prj-47">
+            Automação Elétrica
+           </a>
+          </td>
+          <td class="p-2.5 text-brand-800 border border-brand-100 text-[11px]">
+           Módulos Relé, Cargas AC e Protocolo MQTT
+          </td>
+          <td class="p-2.5 border border-brand-100 text-center">
+           <span class="bg-red-100 text-red-800 px-2 py-0.5 rounded text-[9px] font-bold uppercase">
+            Avançado
+           </span>
+          </td>
+         </tr>
+         <tr class="bg-brand-50 border-b border-brand-100">
+          <td class="p-2.5 font-mono text-brand-500 border border-brand-100">
+           <a class="font-mono font-bold text-accent-blue hover:underline" href="#prj-prj-48">
+            PRJ 4.8
+           </a>
+          </td>
+          <td class="p-2.5 font-medium text-brand-900 border border-brand-100">
+           <a class="module-project-link" href="#prj-prj-48">
+            Sistema autônomo de estacionamento
+           </a>
+          </td>
+          <td class="p-2.5 text-brand-800 border border-brand-100 text-[11px]">
+           Lógica Fuzzy e Processamento de Imagens
+          </td>
+          <td class="p-2.5 border border-brand-100 text-center">
+           <span class="bg-red-100 text-red-800 px-2 py-0.5 rounded text-[9px] font-bold uppercase">
+            Avançado
+           </span>
+          </td>
+         </tr>
+         <tr class="bg-white border-b border-brand-100">
+          <td class="p-2.5 font-mono text-brand-500 border border-brand-100">
+           <a class="font-mono font-bold text-accent-blue hover:underline" href="#prj-prj-49">
+            PRJ 4.9
+           </a>
+          </td>
+          <td class="p-2.5 font-medium text-brand-900 border border-brand-100">
+           <a class="module-project-link" href="#prj-prj-49">
+            Rastreador Solar
+           </a>
+          </td>
+          <td class="p-2.5 text-brand-800 border border-brand-100 text-[11px]">
+           Malha Fechada e Algoritmo de Ponto de Máxima Potência
+          </td>
+          <td class="p-2.5 border border-brand-100 text-center">
+           <span class="bg-red-100 text-red-800 px-2 py-0.5 rounded text-[9px] font-bold uppercase">
+            Avançado
+           </span>
+          </td>
+         </tr>
+         <tr class="bg-brand-50 border-b border-brand-100">
+          <td class="p-2.5 font-mono text-brand-500 border border-brand-100">
+           <a class="font-mono font-bold text-accent-blue hover:underline" href="#prj-prj-410">
+            PRJ 4.10
+           </a>
+          </td>
+          <td class="p-2.5 font-medium text-brand-900 border border-brand-100">
+           <a class="module-project-link" href="#prj-prj-410">
+            Robô com controle a distância
+           </a>
+          </td>
+          <td class="p-2.5 text-brand-800 border border-brand-100 text-[11px]">
+           Teleoperação via Wi-Fi/Bluetooth e Gamepad
+          </td>
+          <td class="p-2.5 border border-brand-100 text-center">
+           <span class="bg-red-100 text-red-800 px-2 py-0.5 rounded text-[9px] font-bold uppercase">
+            Avançado
+           </span>
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </div>
+     </div>
+    </section>
+   </div>
+  </main>
+  <main class="a4-page page-break" id="prj-31">
+   <div class="page-top-header">
+    <span class="page-header-title">
+     PRJ 3.1 • Visão Geral e Materiais
+    </span>
+    <span class="page-header-number">
+     Página 10
+    </span>
+   </div>
+   <div>
+    <header class="flex items-start justify-between mb-3.5 avoid-break border-b-2 border-brand-800 pb-2.5 gap-4">
+     <div class="flex-1">
+      <span class="font-mono text-brand-500 text-[10px] font-bold tracking-widest uppercase block mb-0.5">
+       Módulo III - Ensino Fundamental II
+      </span>
+      <h2 class="font-heading font-extrabold text-xl text-brand-900 mb-0.5 leading-tight">
+       PRJ 3.1 - Jogo da Memória com LEDs (Genius / Simon)
+      </h2>
+     </div>
+     <div class="flex flex-col items-center justify-center border border-brand-200 bg-white p-1 rounded shadow-xs shrink-0 avoid-break">
+      <a href="https://www.tinkercad.com/things/66hrvqjr0HT-jogo-da-memoria?sharecode=7-SX2pF2aCBu4g14pAuLQF0axR53FBzI9UjHQ8CZ5nE" rel="noopener noreferrer" target="_blank" title="Acessar no Tinkercad">
+       <img alt="QR Code Tinkercad" class="w-12 h-12 object-contain" src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&amp;data=https%3A%2F%2Fwww.tinkercad.com%2Fthings%2F66hrvqjr0HT-jogo-da-memoria%3Fsharecode%3D7-SX2pF2aCBu4g14pAuLQF0axR53FBzI9UjHQ8CZ5nE"/>
+      </a>
+      <span class="text-[7px] font-bold text-brand-800 uppercase tracking-tighter mt-0.5">
+       Tinkercad
+      </span>
+     </div>
+    </header>
+    <div class="flex flex-col gap-2.5 mb-3 avoid-break">
+     <!-- Especificações Técnicas: barra verde sinalizando orientação pedagógica -->
+     <div class="bg-white border border-slate-200 border-l-4 border-l-emerald-600 p-2.5 rounded-sm">
+      <h3 class="font-heading font-bold text-brand-900 mb-1 text-[10.5px] uppercase tracking-wider">
+       Especificações Técnicas
+      </h3>
+      <ul class="text-[10.5px] space-y-0.5 text-slate-800">
+       <li>
+        <strong class="text-slate-900">
+         Complexidade:
+        </strong>
+        Intermediário
+       </li>
+       <li>
+        <strong class="text-slate-900">
+         Tempo Estimado:
+        </strong>
+        2 h/aula (100 min)
+       </li>
+       <li>
+        <strong class="text-slate-900">
+         Pré-requisitos:
+        </strong>
+        Estruturas de controle de fluxo (if/else, while), arrays unidimensionais, funções com parâmetros e retorno, conceitos de sinais digitais (Active-High) e leitura de entradas analógicas flutuantes.
+       </li>
+      </ul>
+     </div>
+     <!-- Articulação Curricular: barra verde sinalizando orientação pedagógica -->
+     <div class="bg-white border border-slate-200 border-l-4 border-l-emerald-600 p-2.5 rounded-sm">
+      <h3 class="font-heading font-bold text-brand-900 mb-1 text-[10.5px] uppercase tracking-wider">
+       Articulação Curricular
+      </h3>
+      <p class="text-[10px] text-slate-800 leading-snug mb-1">
+       <strong class="text-slate-900">
+        Interdisciplinaridade:
+       </strong>
+       HISTORIA_E_SOCIEDADE: Origem dos jogos eletrônicos na Segunda Era dos Microprocessadores (década de 1970). O surgimento do brinquedo Simon (lançado no Brasil pela Estrela como Genius em 1980), desenhado por Ralph Baer e Howard Morrison, representando a transição dos brinquedos analógicos e mecânicos para os brinquedos embarcados com microcontroladores dedicados de 4 bits. | MATEMATICA: Geração de números pseudoaleatórios via distribuição uniforme.
+      </p>
+      <strong class="text-[10px] text-slate-900 block mb-0.5">
+       Habilidades de Computação:
+      </strong>
+      <ul class="list-disc pl-4 text-[10px] text-slate-700 space-y-0.5">
+       <li>
+        Arrays Unidimensionais e Indexação
+       </li>
+       <li>
+        Funções e Abstração de Modulardade
+       </li>
+       <li>
+        Estruturas de Repetição (For e While)
+       </li>
+       <li>
+        Randomização Pseudoaleatória e Entropia Eletrônica
+       </li>
+       <li>
+        Abstração de Hardware
+       </li>
+       <li>
+        Lógica de Varredura de Entradas (Polling)
+       </li>
+      </ul>
+     </div>
+    </div>
+    <section class="mb-3 avoid-break">
+     <h3 class="font-heading font-bold text-brand-900 text-xs mb-1.5 pb-0.5 border-b border-slate-200 uppercase tracking-wide">
+      Contextualização e Modelagem do Problema Real
+     </h3>
+     <div class="pl-3 border-l-2 border-slate-400 text-slate-800 text-[10.5px] space-y-1 text-justify leading-relaxed">
+      <p class="m-0">
+       Lançado no final da década de 1970 no Studio 54 em Nova York, o Simon (Genius no Brasil) tornou-se um marco da cultura pop e da engenharia de computação ao provar que sistemas microcontrolados simples podiam criar interações complexas de memória e padrão auditivo-visual. Como modelar a lógica de geração de sequências dinâmicas, o armazenamento em filas indexadas de vetores e a validação em tempo real das entradas do usuário utilizando um microcontrolador moderno como o Arduino?
+      </p>
+     </div>
+    </section>
+    <section class="border border-sky-200 rounded-lg overflow-hidden mb-3 avoid-break bg-sky-50/60">
+     <div class="bg-brand-900 text-white px-3.5 py-1.5">
+      <h3 class="font-heading font-bold text-[11px] uppercase tracking-wider m-0">
+       Arquitetura de Hardware e Lista de Materiais
+      </h3>
+     </div>
+     <div class="p-3">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+       <div>
+        <h4 class="font-heading font-bold text-slate-900 text-[10.5px] uppercase tracking-wide mb-1.5 pb-0.5 border-b border-sky-200">
+         Lista de Materiais (BOM)
+        </h4>
+        <table class="w-full text-left border-collapse">
+         <thead>
+          <tr class="border-b-2 border-slate-700 text-slate-900 text-[10px]">
+           <th class="py-1 px-2 font-bold text-center w-14">
+            Qtd
+           </th>
+           <th class="py-1 px-2 font-bold">
+            Componente
+           </th>
+          </tr>
+         </thead>
+         <tbody>
+          <tr class="border-b border-sky-200/60">
+           <td class="py-1.5 px-2 text-center font-mono font-medium text-slate-800 text-[9.5px]">
+            1x
+           </td>
+           <td class="py-1.5 px-2 text-slate-800 text-[10px]">
+            Placa Arduino Uno R3
+           </td>
+          </tr>
+          <tr class="border-b border-sky-200/60">
+           <td class="py-1.5 px-2 text-center font-mono font-medium text-slate-800 text-[9.5px]">
+            1x
+           </td>
+           <td class="py-1.5 px-2 text-slate-800 text-[10px]">
+            LED Vermelho 5mm
+           </td>
+          </tr>
+          <tr class="border-b border-sky-200/60">
+           <td class="py-1.5 px-2 text-center font-mono font-medium text-slate-800 text-[9.5px]">
+            1x
+           </td>
+           <td class="py-1.5 px-2 text-slate-800 text-[10px]">
+            LED Amarelo 5mm
+           </td>
+          </tr>
+          <tr class="border-b border-sky-200/60">
+           <td class="py-1.5 px-2 text-center font-mono font-medium text-slate-800 text-[9.5px]">
+            1x
+           </td>
+           <td class="py-1.5 px-2 text-slate-800 text-[10px]">
+            LED Azul 5mm
+           </td>
+          </tr>
+          <tr class="border-b border-sky-200/60">
+           <td class="py-1.5 px-2 text-center font-mono font-medium text-slate-800 text-[9.5px]">
+            1x
+           </td>
+           <td class="py-1.5 px-2 text-slate-800 text-[10px]">
+            LED Verde 5mm
+           </td>
+          </tr>
+          <tr class="border-b border-sky-200/60">
+           <td class="py-1.5 px-2 text-center font-mono font-medium text-slate-800 text-[9.5px]">
+            4x
+           </td>
+           <td class="py-1.5 px-2 text-slate-800 text-[10px]">
+            Push Buttons / Chaves Táctil 4 Pinos
+           </td>
+          </tr>
+          <tr class="border-b border-sky-200/60">
+           <td class="py-1.5 px-2 text-center font-mono font-medium text-slate-800 text-[9.5px]">
+            1x
+           </td>
+           <td class="py-1.5 px-2 text-slate-800 text-[10px]">
+            Buzzer Passivo 5V
+           </td>
+          </tr>
+          <tr class="border-b border-sky-200/60">
+           <td class="py-1.5 px-2 text-center font-mono font-medium text-slate-800 text-[9.5px]">
+            8x
+           </td>
+           <td class="py-1.5 px-2 text-slate-800 text-[10px]">
+            Resistores 220Ω 1/4W (4x limitação dos LEDs e 4x Pull-Down dos botões)
+           </td>
+          </tr>
+          <tr class="border-b border-sky-200/60">
+           <td class="py-1.5 px-2 text-center font-mono font-medium text-slate-800 text-[9.5px]">
+            1x
+           </td>
+           <td class="py-1.5 px-2 text-slate-800 text-[10px]">
+            Protoboard 830 pontos
+           </td>
+          </tr>
+          <tr class="border-b border-sky-200/60">
+           <td class="py-1.5 px-2 text-center font-mono font-medium text-slate-800 text-[9.5px]">
+            16x
+           </td>
+           <td class="py-1.5 px-2 text-slate-800 text-[10px]">
+            Cabos Jumpers Macho-Macho
+           </td>
+          </tr>
+         </tbody>
+        </table>
+       </div>
+       <div>
+        <h4 class="font-heading font-bold text-slate-900 text-[10.5px] uppercase tracking-wide mb-1.5 pb-0.5 border-b border-sky-200">
+         Mapeamento de Pinos
+        </h4>
+        <div class="bg-white/80 p-2.5 rounded-md border border-sky-200/80">
+         <ul class="font-mono text-[9.5px] text-slate-800 space-y-1">
+          <li>
+           D2 → LED Verde (Anodo via resistor 220Ω)
+          </li>
+          <li>
+           D3 → LED Azul (Anodo via resistor 220Ω)
+          </li>
+          <li>
+           D4 → LED Amarelo (Anodo via resistor 220Ω)
+          </li>
+          <li>
+           D5 → LED Vermelho (Anodo via resistor 220Ω)
+          </li>
+          <li>
+           D8 → Botão Vermelho (Active-High com Pull-Down de 220Ω)
+          </li>
+          <li>
+           D9 → Botão Amarelo (Active-High com Pull-Down de 220Ω)
+          </li>
+          <li>
+           D10 → Botão Azul (Active-High com Pull-Down de 220Ω)
+          </li>
+          <li>
+           D11 → Botão Verde (Active-High com Pull-Down de 220Ω)
+          </li>
+          <li>
+           D12 → Buzzer Passivo
+          </li>
+          <li>
+           A0 → Pino Analógico Desconectado (Semente de Entropia para randomSeed)
+          </li>
+         </ul>
+        </div>
+       </div>
+      </div>
+     </div>
+    </section>
+   </div>
+  </main>
+  <main class="a4-page page-break">
+   <div class="page-top-header">
+    <span class="page-header-title">
+     PRJ 3.1 • Detalhamento Prático
+    </span>
+    <span class="page-header-number">
+     Página 11
+    </span>
+   </div>
+   <div>
+    <section>
+     <header class="mb-3 avoid-break border-b-2 border-brand-800 pb-1.5">
+      <h3 class="font-heading font-extrabold text-base text-brand-900">
+       PRJ 3.1 - Detalhamento e Prática
+      </h3>
+     </header>
+     <div class="bg-slate-100 rounded-xl p-3 text-center avoid-break mb-3">
+      <img alt="Esquema do Circuito" class="max-h-60 mx-auto object-contain rounded mb-1.5" src="projetos/prj_3_1_esquema.png"/>
+      <span class="font-mono text-[9px] font-bold text-slate-500 uppercase tracking-wider block">
+       FIGURA 1: ESQUEMA DO CIRCUITO ELETRÔNICO
+      </span>
+     </div>
+     <div class="bg-slate-100 rounded-xl p-3 text-center avoid-break mb-3">
+      <img alt="Fluxograma Lógico" class="max-h-100 mx-auto object-contain rounded mb-1.5" src="projetos/prj_3_1_fluxograma.png"/>
+      <span class="font-mono text-[9px] font-bold text-slate-500 uppercase tracking-wider block">
+       FIGURA 2: FLUXOGRAMA LÓGICO-ALGORÍTMICO
+      </span>
+     </div>
+     <div class="bg-brand-50/70 border border-brand-200 p-2.5 rounded-lg mb-3 avoid-break">
+      <span class="font-mono text-[9px] font-bold text-brand-700 uppercase tracking-wider block mb-1.5">
+       Sequência de Estruturação do Código
+      </span>
+      <div class="code-flow-container m-0">
+       <span class="code-flow-step">
+        Definição de Pinos
+       </span>
+       <span class="code-flow-arrow">
+        →
+       </span>
+       <span class="code-flow-step">
+        Setup
+       </span>
+       <span class="code-flow-arrow">
+        →
+       </span>
+       <span class="code-flow-step">
+        Liga LED
+       </span>
+       <span class="code-flow-arrow">
+        →
+       </span>
+       <span class="code-flow-step">
+        Desligar LED
+       </span>
+       <span class="code-flow-arrow">
+        →
+       </span>
+       <span class="code-flow-step">
+        Sequenciar LEDs
+       </span>
+       <span class="code-flow-arrow">
+        →
+       </span>
+       <span class="code-flow-step">
+        Start
+       </span>
+       <span class="code-flow-arrow">
+        →
+       </span>
+       <span class="code-flow-step">
+        Game Over
+       </span>
+       <span class="code-flow-arrow">
+        →
+       </span>
+       <span class="code-flow-step">
+        Loop
+       </span>
+      </div>
+     </div>
+     <div class="github-box avoid-break">
+      <div class="flex items-center gap-3">
+       <div class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center shrink-0">
+        <span class="material-symbols-outlined text-white text-[20px]">
+         code
+        </span>
+       </div>
+       <div>
+        <span class="text-[11px] font-bold tracking-wide uppercase block text-brand-200">
+         Repositório GitHub
+        </span>
+        <p class="text-[10px] text-brand-100 leading-snug m-0">
+         Acesse o código-fonte C++ completo e atualizado escaneando o QR Code ao lado ou acessando o repositório no GitHub.
+        </p>
+       </div>
+      </div>
+      <div class="flex flex-col items-center justify-center bg-white p-1 rounded shadow-xs shrink-0">
+       <a href="https://github.com/cadu-leal/manual-computacao-escolar/tree/main/prj-31" rel="noopener noreferrer" target="_blank" title="Acessar repositório no GitHub">
+        <img alt="QR Code GitHub" class="w-11 h-11 object-contain" src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&amp;data=https%3A%2F%2Fgithub.com%2Fcadu-leal%2Fmanual-computacao-escolar%2Ftree%2Fmain%2Fprj-31"/>
+       </a>
+       <span class="text-[6.5px] font-bold text-brand-900 uppercase font-mono mt-0.5">
+        GitHub
+       </span>
+      </div>
+     </div>
+    </section>
+   </div>
+  </main>
+  <main class="a4-page page-break">
+   <div class="page-top-header">
+    <span class="page-header-title">
+     PRJ 3.1 • Detalhamento Prático
+    </span>
+    <span class="page-header-number">
+     Página 12
+    </span>
+   </div>
+   <div>
+    <section>
+     <section class="bg-sky-50/70 border border-sky-200 p-3.5 rounded-lg avoid-break mb-3.5">
+      <h3 class="font-heading font-bold text-sky-950 text-[11.5px] uppercase tracking-wide mb-2 pb-1 border-b border-sky-200">
+       ROTEIRO PRÁTICO DE EXECUÇÃO
+      </h3>
+      <ol class="list-decimal pl-4 space-y-2 text-[10px] text-slate-800 leading-[1.6]">
+       <li>
+        Monte os quatro LEDs (Vermelho, Amarelo, Azul e Verde) nos pinos digitais D5, D4, D3 e D2 respectivamente. O anodo de cada LED deve se conectar ao pino digital e o catodo deve se ligar ao GND passando por um resistor de 220Ω.
+       </li>
+       <li>
+        Monte os quatro botões no barramento da protoboard. Conecte um lado das chaves à linha de 5V. No outro lado, conecte o pino do Arduino correspondente (D8, D9, D10 e D11) acompanhado de um resistor de 220Ω ligado ao GND (configuração Active-High com Pull-Down externo).
+       </li>
+       <li>
+        Conecte o pino positivo do buzzer passivo ao pino D12 do Arduino e o polo negativo diretamente ao barramento de GND.
+       </li>
+       <li>
+        Deixe a entrada analógica A0 completamente desconectada de fios ou componentes para garantir a amostragem de ruído térmico/eletromagnético ambiente.
+       </li>
+       <li>
+        Configure o pino dos botões como INPUT simples no setup() para evitar a ativação do pull-up interno e prevenir flutuações de tensão no divisor de resistor.
+       </li>
+       <li>
+        Carregue o firmware na Placa Arduino Uno, inicie o Monitor Serial a 9600 baud para acompanhar o rastreamento dos índices e jogue.
+       </li>
+      </ol>
+     </section>
+     <section class="bg-emerald-50/70 border border-emerald-200 p-3.5 rounded-lg mb-3.5 avoid-break">
+      <h3 class="font-heading font-bold text-emerald-950 text-[11.5px] uppercase tracking-wide mb-2 pb-1 border-b border-emerald-200">
+       ARTICULAÇÃO E APROFUNDAMENTO TEÓRICO
+      </h3>
+      <div class="pl-4 space-y-2 text-[10px] text-slate-800 leading-[1.6] m-0">
+       <p class="m-0">
+        <strong class="font-bold text-slate-900">
+         Estrutura do Circuito Pull-Down:
+        </strong>
+        O botão fica conectado entre os 5V e o pino digital. Um resistor de 220Ω liga o pino ao GND. Em repouso, o resistor drenará qualquer carga, garantindo nível lógico LOW (0V). Ao pressionar o botão, o circuito fecha diretamente com os 5V, elevando o pino a HIGH (sinal Active-High).
+       </p>
+       <p class="m-0">
+        <strong class="font-bold text-slate-900">
+         Mapeamento por Índices Paralelos:
+        </strong>
+        A lógica utiliza o mesmo índice `i` para correlacionar três vetores de hardware (`leds[i]`, `botoes[i]` e `simonTones[i]`). O vetor `filaOriginal` atua como um buffer linear indexado do histórico do jogo.
+       </p>
+       <p class="m-0">
+        <strong class="font-bold text-slate-900">
+         Entropia via Pino Analógico Flutuante:
+        </strong>
+        Computadores são determinísticos. A chamada `randomSeed(analogRead(A0))` amostra o ruído eletromagnético do pino A0 desconectado para inicializar o gerador pseudoaleatório (PRNG) com uma semente imprevisível.
+       </p>
+       <p class="m-0">
+        <strong class="font-bold text-slate-900">
+         Controle de Fluxo por Polling:
+        </strong>
+        O firmware intercala laços `for` determinísticos para reproduzir a sequência armazenada com laços `while` bloqueantes para varredura do estado das entradas até a confirmação do clique e soltura da tecla.
+       </p>
+      </div>
+     </section>
+     <section class="bg-slate-100 border border-slate-200 p-3.5 rounded-lg avoid-break mb-3.5">
+      <h3 class="font-heading font-bold text-slate-800 text-[11.5px] uppercase tracking-wide mb-2 pb-1 border-b border-slate-300">
+       DESAFIOS DE EXPANSÃO
+      </h3>
+      <div class="space-y-1.5">
+       <div class="flex items-center justify-between gap-3 bg-white p-2.5 rounded-md border border-slate-200/80 shadow-2xs avoid-break mb-2">
+        <p class="text-[10px] text-slate-800 leading-snug m-0 font-medium flex-1">
+         Implementar aceleração progressiva do tempo de exibição dos LEDs à medida que o nível aumenta, diminuindo o delay de exibição da sequência dinamicamente a cada rodada.
+        </p>
+        <div class="flex items-center justify-center text-[9px] font-bold uppercase px-3 py-1.5 rounded-md shrink-0 min-w-[90px] text-center bg-emerald-100 text-emerald-800 border border-emerald-300">
+         Fácil
+        </div>
+       </div>
+       <div class="flex items-center justify-between gap-3 bg-white p-2.5 rounded-md border border-slate-200/80 shadow-2xs avoid-break mb-2">
+        <p class="text-[10px] text-slate-800 leading-snug m-0 font-medium flex-1">
+         Armazenar e recuperar o recorde histórico de nível (High Score) na memória EEPROM não-volátil do Arduino, mantendo o valor salvo mesmo após desligar a placa da energia.
+        </p>
+        <div class="flex items-center justify-center text-[9px] font-bold uppercase px-3 py-1.5 rounded-md shrink-0 min-w-[90px] text-center bg-amber-100 text-amber-800 border border-amber-300">
+         Intermediário
+        </div>
+       </div>
+       <div class="flex items-center justify-between gap-3 bg-white p-2.5 rounded-md border border-slate-200/80 shadow-2xs avoid-break mb-2">
+        <p class="text-[10px] text-slate-800 leading-snug m-0 font-medium flex-1">
+         Mudar a dinâmica do projeto para que a montagem da estrutura física do jogo seja realizada integralmente pelos próprios alunos. Eles deverão projetar o circuito do zero a partir do esquemático, planejar o dimensionamento dos resistores de limitação e pull-down, e implementar uma máquina de estados finitos (FSM) por software para controlar as fases de 'Standby', 'Exibição', 'Entrada do Jogador' e 'Game Over'.
+        </p>
+        <div class="flex items-center justify-center text-[9px] font-bold uppercase px-3 py-1.5 rounded-md shrink-0 min-w-[90px] text-center bg-red-100 text-red-800 border border-red-300">
+         Avançado
+        </div>
+       </div>
+      </div>
+     </section>
+     <div class="bg-emerald-50/80 border border-emerald-200 border-l-4 border-l-emerald-600 p-2.5 rounded-sm mb-3 avoid-break">
+      <div class="flex items-start gap-2">
+       <span class="text-sm shrink-0 leading-none mt-0.5">
+       </span>
+       <div>
+        <span class="font-heading font-bold text-emerald-950 text-[10.5px] uppercase tracking-wide block mb-0.5">
+         Explore e Modifique
+        </span>
+        <p class="text-[10px] text-emerald-900 leading-relaxed m-0">
+         O fluxograma e o código fornecidos são a base do projeto. Incentive os estudantes a alterarem trechos do algoritmo (como intervalos de tempo, frequências sonoras, padrões de repetição e limites lógicos) e a proporem novas funcionalidades, estimulando a criatividade, a experimentação ativa e a autonomia investigativa.
+        </p>
+       </div>
+      </div>
+     </div>
+    </section>
+   </div>
+  </main>
+  <main class="a4-page page-break">
+   <div class="page-top-header">
+    <span class="page-header-title">
+     PRJ 3.1 • Detalhamento Prático
+    </span>
+    <span class="page-header-number">
+     Página 13
+    </span>
+   </div>
+   <div>
+    <section>
+     <section class="mb-3.5 avoid-break">
+      <h3 class="font-heading font-bold text-slate-900 text-[11.5px] uppercase tracking-wide mb-2 pb-1 border-b border-slate-200">
+       TRECHO DO CÓDIGO-FONTE
+      </h3>
+      <div class="border border-brand-900 rounded-lg overflow-hidden shadow-xs mb-2">
+       <div class="bg-brand-900 px-3.5 py-1.5 flex items-center justify-between">
+        <span class="text-brand-100 font-mono text-[10px] font-semibold tracking-wide">
+         Loop Principal - Lógica de Controle do Jogo
+        </span>
+        <span class="text-[9px] font-mono text-brand-300 font-medium">
+         C++ / Arduino
+        </span>
+       </div>
+       <div class="bg-white p-3 overflow-x-auto code-block">
+        <pre class="m-0"><code class="text-black text-[9.5px] font-mono leading-relaxed whitespace-pre-wrap break-words">void loop() {
+  if (!jogoInciado) {
+    start();
+    randomSeed(analogRead(A0));
+    jogoInciado = true;
+    delay(500);
+  }
+
+  filaOriginal[nivel - 1] = random(0, numPares);
+  reproduzirSequencia();
+  delay(100);
+
+  for (uint16_t i = 0; i &lt; nivel; i++) {
+    int botaoPressionado = -1;
+
+    while (botaoPressionado == -1) {
+      botaoPressionado = espelharBotoesNosLeds();
+    }
+
+    delay(40); // Debounce por filtro de tempo para estabilização mecânica
+
+    if (botaoPressionado != filaOriginal[i]) {
+      Serial.println("-&gt; Erro: Game Over");
+      gameOver();
+      return;
+    }
+
+    while (espelharBotoesNosLeds() != -1) {
+      delay(10);
+    }
+  }
+
+  Serial.println("-&gt; Sequencia correta. Proximo nivel.");
+  nivel++;
+  delay(1000);
+
+// ... (código completo disponível no GitHub)</code></pre>
+       </div>
+      </div>
+      <div class="bg-amber-50/90 border border-amber-200 rounded-md p-2.5 flex items-start gap-2 text-amber-950">
+       <span class="text-sm shrink-0 leading-none mt-0.5">
+       </span>
+       <p class="text-[9.5px] leading-relaxed m-0 font-normal">
+        <strong>
+         Nota:
+        </strong>
+        Por motivos didáticos e de síntese visual, exibimos acima apenas o trecho principal da lógica do algoritmo. O código-fonte integral em C++ (com todas as rotinas auxiliares, mapeamentos de pinos e laço de setup) está disponível para consulta e download via QR Code do Repositório GitHub.
+       </p>
+      </div>
+     </section>
+    </section>
+   </div>
+  </main>
+ </body>
+</html>
