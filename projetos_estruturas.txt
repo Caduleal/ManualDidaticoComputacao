@@ -84,11 +84,14 @@
         "D12 → Buzzer Passivo",
         "A0 → Pino Analógico Desconectado (Semente de Entropia para randomSeed)"
       ],
-      "IMAGEM_ESQUEMA": "projetos/prj_3_1_esquema.png",
+      "IMAGEM_ESQUEMA": "projetos/PRJ_3_1_esquema.png",
+      "TITULO_ESQUEMA": "FIGURA 1: ESQUEMA DO CIRCUITO ELETRÔNICO",
       "LINK_THINKERCAD": "https://www.tinkercad.com/things/66hrvqjr0HT-jogo-da-memoria?sharecode=7-SX2pF2aCBu4g14pAuLQF0axR53FBzI9UjHQ8CZ5nE"
     },
     "MODELAGEM_LOGICO_ALGORITMA": {
-      "ARQUIVO": "projetos/prj_3_1_fluxograma.png",
+      "NOME_PASSO": "Fluxograma Lógico",
+      "TIPO_PASSO": "IMAGEM",
+      "ARQUIVO": "projetos/PRJ_3_1_Fluxograma.png",
       "CODIGO_FONTE": " //==========================\n// Loop Principal\n// ==========================\nvoid loop() {\n  if (!jogoInciado) {\n    start();\n    randomSeed(analogRead(A0));\n    jogoInciado = true;\n    delay(500);\n  }\n\n  filaOriginal[nivel - 1] = random(0, numPares);\n  reproduzirSequencia();\n  delay(100);\n\n  for (uint16_t i = 0; i < nivel; i++) {\n    int botaoPressionado = -1;\n\n    while (botaoPressionado == -1) {\n      botaoPressionado = espelharBotoesNosLeds();\n    }\n\n    delay(40); // Debounce por filtro de tempo para estabilização mecânica\n\n    if (botaoPressionado != filaOriginal[i]) {\n      Serial.println(\"-> Erro: Game Over\");\n      gameOver();\n      return;\n    }\n\n    while (espelharBotoesNosLeds() != -1) {\n      delay(10);\n    }\n  }\n\n  Serial.println(\"-> Sequencia correta. Proximo nivel.\");\n  nivel++;\n  delay(1000);\n}"
     },
     "ROTEIRO_PRATICO_DE_EXECUCAO": [
