@@ -12,7 +12,7 @@
 [![BNCC](https://img.shields.io/badge/BNCC-Alinhado-success.svg)](#marco-regulatório-e-fundamentação)
 [![Hardware](https://img.shields.io/badge/Hardware-Arduino%20%7C%20ESP32-orange.svg)](#arquitetura-e-ecossistema-de-ferramentas)
 [![Simuladores](https://img.shields.io/badge/Simulação-Tinkercad%20%7C%20Wokwi-teal.svg)](#arquitetura-e-ecossistema-de-ferramentas)
-[![Status](https://img.shields.io/badge/Status-Ativo%20%2F%20Versão%20Final-brightgreen.svg)](#)
+[![Status](https://img.shields.io/badge/Status-Em%20Produção-blue.svg)](#)
 
 </div>
 
@@ -221,18 +221,24 @@ Certifique-se de possuir o Python 3.10+ e a biblioteca `beautifulsoup4` instalad
 pip install beautifulsoup4
 ```
 
-#### 1. Gerar o Manual Piloto (`Manual.html`):
+#### Gerar os Manuais (Piloto e Completo Automáticos):
 ```bash
-python gerar_projetos.py
+python gerar_projetos_refatorado.py
 ```
+O script compilará duas versões de forma automática:
+1. **Manual.html** (apenas com o projeto piloto da estrutura base)
+2. **Manual_Completo_Atualizado.html** (Manual consolidado completo com os 39 projetos)
 
-#### 2. Compilar o Manual Completo com todos os 39 Projetos (`Manual_Completo_Atualizado.html`):
-```bash
-python -c "import gerar_projetos_refatorado; gerar_projetos_refatorado.executar_automacao(arq_origem='Manual.html', arq_json='projetos_estrutura.txt', arq_destino='Manual_Completo_Atualizado.html')"
-```
+#### Exportar para PDF:
+Abra qualquer um dos arquivos `.html` gerados no navegador (Chrome, Edge ou Firefox) e clique no botão flutuante **"Gerar PDF / Imprimir"** ou pressione `Ctrl + P`. O layout `@media print` já está estritamente ajustado para folha A4 com margens simétricas.
 
-#### 3. Exportar para PDF:
-Abra qualquer um dos arquivos `.html` no navegador (Chrome, Edge ou Firefox) e clique no botão flutuante **"Gerar PDF / Imprimir"** ou pressione `Ctrl + P`. O layout `@media print` já está estritamente ajustado para folha A4 com margens simétricas.
+---
+
+## 📚 Referências Bibliográficas
+
+* **FREIRE, Paulo.** *Pedagogia da autonomia: saberes necessários à prática educativa*. Rio de Janeiro: Paz e Terra, 1996.
+* **PAPERT, Seymour.** *Logo: computadores e educação*. Tradução de José Armando Valente. São Paulo: Brasiliense, 1985.
+* **WING, Jeannette M.** Computational thinking. *Communications of the ACM*, Nova York, v. 49, n. 3, p. 33-35, mar. 2006. DOI: 10.1145/1118168.1118215.
 
 ---
 
