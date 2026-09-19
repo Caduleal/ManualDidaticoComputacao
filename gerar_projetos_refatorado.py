@@ -1998,3 +1998,6 @@ if __name__ == "__main__":
         arq_json="projetos_estrutura.txt",
         arq_destino="Manual_Completo_Atualizado.html"
     )
+
+    import shutil
+    shutil.copy("Manual_Completo_Atualizado.html", "index.html")
