@@ -1711,7 +1711,7 @@ def tornar_tabelas_modulos_interativas(mains_modulos: List[Any], projetos_map: D
 
 def executar_automacao(
     arq_origem: str = "Manual.html",
-    arq_json: str = "projetos_estruturas.txt",
+    arq_json: str = "projetos_estrutura.txt",
     arq_destino: str = "Manual.html"
 ) -> None:
     """
@@ -1859,23 +1859,104 @@ def executar_automacao(
     # Botão Flutuante de PDF
     html_botao_pdf = HTMLTemplates.BOTAO_IMPRESSAO_PDF.substitute()
 
+    html_contracapa = """
+    <main class="a4-page page-break" id="secao-contracapa">
+        <div class="flex flex-col h-full items-center text-center">
+            <h2 class="font-heading font-bold text-2xl text-brand-900 mt-20 mb-4">METODOLOGIA E MONTAGEM PARA LABORATÓRIOS DE INFORMÁTICA ESCOLAR:</h2>
+            <p class="text-brand-800 text-lg mb-20 font-medium">Desenvolvimento de manual didático para o ensino estrutural da computação na Educação Básica</p>
+            
+            <div class="w-full flex justify-end mt-10">
+                <p class="text-brand-800 text-sm max-w-sm text-justify font-medium">Trabalho de Conclusão de Curso submetido ao Curso de Tecnologia em Sistemas de Computação da Universidade Federal Fluminense como requisito parcial para obtenção do título de Tecnólogo em Sistemas de Computação.</p>
+            </div>
+            
+            <div class="w-full flex justify-center mt-10">
+                <p class="text-brand-800 text-sm font-medium text-center">Orientadora: Carla Alves do Nascimento dos Santos</p>
+            </div>
+
+            <div class="mt-auto mb-10">
+                <p class="text-brand-900 font-bold uppercase tracking-widest">NITERÓI</p>
+            </div>
+        </div>
+    </main>
+    """
+
+    html_agradecimentos = """
+    <main class="a4-page page-break" id="secao-agradecimentos">
+        <div class="secao-texto-continuo">
+            <header class="border-b-2 border-brand-800 pb-1.5 mb-6 avoid-break">
+                <h2 class="font-heading font-bold text-xl text-brand-900 leading-tight">
+                    Agradecimentos
+                </h2>
+            </header>
+            <p class="mb-4 text-brand-800 text-justify !text-sm leading-relaxed">
+                [Insira o texto de agradecimentos aqui...]
+            </p>
+        </div>
+    </main>
+    """
+
+    html_epigrafe = """
+    <main class="a4-page page-break" id="secao-epigrafe">
+        <div class="flex flex-col h-full justify-end items-end text-right px-12 pb-12">
+            <blockquote class="italic text-brand-800 text-sm max-w-md text-justify border-l-4 border-brand-300 pl-4 mb-4">
+                “Em muitas escolas, atualmente, a frase ‘instrução ajudada por computador’ [...] significa fazer com que o computador ensine a criança. Pode-se dizer que o computador está sendo usado para “programar” a criança. Na minha perspectiva, é a criança que deve programar o computador e, ao fazê-lo, adquire um sentimento de domínio sobre um dos mais modernos e poderosos equipamentos e estabelece um contato íntimo com algumas das ideias mais profundas da ciência, da matemática e da arte de construir modelos intelectuais.”
+            </blockquote>
+            <p class="font-bold text-brand-900 text-sm">
+                (Papert, 1985, p. 10)
+            </p>
+        </div>
+    </main>
+    """
+
+    html_referencias = """
+    <main class="a4-page page-break" id="secao-referencias">
+        <div class="page-top-header">
+            <span class="page-header-title">Manual Didático de Computação • Referências</span>
+        </div>
+        <div class="w-full">
+            <header class="border-b-2 border-brand-800 pb-1.5 mb-6 avoid-break">
+                <h2 class="font-heading font-bold text-xl text-brand-900 leading-tight">
+                    Referências Bibliográficas
+                </h2>
+            </header>
+            <div class="secao-texto-continuo space-y-4 text-[11px] text-brand-900">
+                <p class="pl-8 -indent-8 m-0 leading-relaxed">
+                    FREIRE, Paulo. <i>Pedagogia da autonomia: saberes necessários à prática educativa</i>. Rio de Janeiro: Paz e Terra, 1996.
+                </p>
+                <p class="pl-8 -indent-8 m-0 leading-relaxed">
+                    PAPERT, Seymour. <i>Logo: computadores e educação</i>. Tradução de José Armando Valente. São Paulo: Brasiliense, 1985.
+                </p>
+                <p class="pl-8 -indent-8 m-0 leading-relaxed">
+                    WING, Jeannette M. Computational thinking. <i>Communications of the ACM</i>, Nova York, v. 49, n. 3, p. 33-35, mar. 2006. DOI: 10.1145/1118168.1118215.
+                </p>
+            </div>
+        </div>
+    </main>
+    """
+
     # Reconstrução na sequência estrita de LIVRO DIDÁTICO:
     # 1. Capa (Pág. 01)
+    # Pré-textuais (Contracapa, Agradecimentos, Epígrafe)
     # 2. Sumário Formal (Pág. 02)
     # 3. Introdução (Pág. 03)
     # 4. Estrutura Didática dos Projetos (Pág. 04)
     # 5. Fluxograma Geral Integrado com Progressão Multinível (Pág. 05)
     # 6. Módulos I a IV com tabelas interativas (Páginas 06 a 09)
     # 7. Projetos Práticos Sequenciais (Páginas 10+)
+    # Pós-textual (Referências)
     elementos_ordenados = [
         html_botao_pdf,
         str(capa_preservada),
+        html_contracapa,
+        html_agradecimentos,
+        html_epigrafe,
         html_sumario,
         html_introducao,
         html_didatica,
         html_fluxograma,
         "\n".join(str(m) for m in modulos_preservados),
-        "\n".join(novos_htmls)
+        "\n".join(novos_htmls),
+        html_referencias
     ]
 
     conteudo_reconstruido = "\n".join(elementos_ordenados)
@@ -1904,8 +1985,16 @@ def executar_automacao(
 
 
 if __name__ == "__main__":
+    print("\\n--- GERANDO MANUAL REDUZIDO ---")
     executar_automacao(
         arq_origem="Manual.html",
         arq_json="projetos_estruturas.txt",
         arq_destino="Manual.html"
+    )
+
+    print("\\n--- GERANDO MANUAL COMPLETO ---")
+    executar_automacao(
+        arq_origem="Manual.html",
+        arq_json="projetos_estrutura.txt",
+        arq_destino="Manual_Completo_Atualizado.html"
     )
