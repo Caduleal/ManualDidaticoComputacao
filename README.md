@@ -13,7 +13,7 @@
 [![Hardware](https://img.shields.io/badge/Hardware-Arduino%20%7C%20ESP32-orange.svg)](#arquitetura-e-ecossistema-de-ferramentas)
 [![Simuladores](https://img.shields.io/badge/Simulação-Tinkercad%20%7C%20Wokwi-teal.svg)](#arquitetura-e-ecossistema-de-ferramentas)
 [![Status](https://img.shields.io/badge/Status-Em%20Produção-blue.svg)](#)
-[![Vercel](https://img.shields.io/badge/Vercel-Deploy%20Ativo-black?logo=vercel)](#)
+[![Vercel](https://img.shields.io/badge/Vercel-Deploy%20Ativo-black?logo=vercel)](https://manual-didatico-computacao.vercel.app/)
 
 </div>
 
@@ -23,7 +23,7 @@
 
 O manual completo e iterativo está hospedado e pode ser acessado diretamente pelo navegador sem a necessidade de baixar os arquivos HTML:
 
-👉 **[Acessar o Manual Completo Online](https://seulink-vercel.vercel.app)** *(Substitua este link pela URL gerada no seu painel da Vercel após importar o projeto)*
+👉 **[Acessar o Manual Completo Online](https://manual-didatico-computacao.vercel.app/)**
 
 ---
 

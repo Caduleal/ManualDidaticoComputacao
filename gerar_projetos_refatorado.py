@@ -2000,4 +2000,4 @@ if __name__ == "__main__":
     )
 
     import shutil
-    shutil.copy("Manual_Completo_Atualizado.html", "index.html")
+    shutil.copy("Manual.html", "index.html")
