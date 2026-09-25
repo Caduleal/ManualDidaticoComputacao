@@ -10,8 +10,10 @@
       "Corrente Elétrica e Circuitos Fechados"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
-      "COMPETENCIA": "",
-      "BNCC_CODIGO": ""
+      "COMPETENCIA": "Ciências / Lógica",
+      "BNCC_CODIGO": "EI03CO07",
+      "EIXO": "Mundo Digital",
+      "BNCC_GERAL": "EI03ET02"
     },
     "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
     "FLUXO_ESTRUTURA_CODIGO": [],
@@ -40,8 +42,10 @@
       "Agrupamento por Atributos e Filtros"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
-      "COMPETENCIA": "",
-      "BNCC_CODIGO": ""
+      "COMPETENCIA": "Matemática",
+      "BNCC_CODIGO": "EI03CO01",
+      "EIXO": "Pensamento Computacional",
+      "BNCC_GERAL": "EI03ET05"
     },
     "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
     "FLUXO_ESTRUTURA_CODIGO": [],
@@ -70,8 +74,10 @@
       "Algoritmos Sequenciais e Sequenciamento"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
-      "COMPETENCIA": "",
-      "BNCC_CODIGO": ""
+      "COMPETENCIA": "Matemática",
+      "BNCC_CODIGO": "EI03CO01",
+      "EIXO": "Pensamento Computacional",
+      "BNCC_GERAL": "EI03ET07"
     },
     "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
     "FLUXO_ESTRUTURA_CODIGO": [],
@@ -100,8 +106,10 @@
       "Fita de Cobre, LEDs e Conectividade"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
-      "COMPETENCIA": "",
-      "BNCC_CODIGO": ""
+      "COMPETENCIA": "Ciências / Lógica",
+      "BNCC_CODIGO": "EI03CO01",
+      "EIXO": "Pensamento Computacional",
+      "BNCC_GERAL": "EI03ET02"
     },
     "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
     "FLUXO_ESTRUTURA_CODIGO": [],
@@ -130,8 +138,10 @@
       "Lógica Booleana Básica (AND/OR Desplugado)"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
-      "COMPETENCIA": "",
-      "BNCC_CODIGO": ""
+      "COMPETENCIA": "Ciências / Lógica",
+      "BNCC_CODIGO": "EI03CO01",
+      "EIXO": "Pensamento Computacional",
+      "BNCC_GERAL": "EI03ET05"
     },
     "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
     "FLUXO_ESTRUTURA_CODIGO": [],
@@ -160,8 +170,10 @@
       "Atuadores, Motores DC e Circuito de Potência"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
-      "COMPETENCIA": "",
-      "BNCC_CODIGO": ""
+      "COMPETENCIA": "Ciências / Lógica",
+      "BNCC_CODIGO": "EI03CO07",
+      "EIXO": "Mundo Digital",
+      "BNCC_GERAL": "EI03ET02"
     },
     "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
     "FLUXO_ESTRUTURA_CODIGO": [],
@@ -190,8 +202,10 @@
       "Condicionais e Árvore de Decisão"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
-      "COMPETENCIA": "",
-      "BNCC_CODIGO": ""
+      "COMPETENCIA": "Ciências / Lógica",
+      "BNCC_CODIGO": "EI03CO01",
+      "EIXO": "Pensamento Computacional",
+      "BNCC_GERAL": "EI03ET01"
     },
     "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
     "FLUXO_ESTRUTURA_CODIGO": [],
@@ -220,8 +234,10 @@
       "Mapeamento de Entradas e Saídas Sonoras"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
-      "COMPETENCIA": "",
-      "BNCC_CODIGO": ""
+      "COMPETENCIA": "Ciências / Lógica",
+      "BNCC_CODIGO": "EI03CO01",
+      "EIXO": "Pensamento Computacional",
+      "BNCC_GERAL": "EI03TS01"
     },
     "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
     "FLUXO_ESTRUTURA_CODIGO": [],
@@ -250,8 +266,10 @@
       "Variáveis, Temporização e Delays"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
-      "COMPETENCIA": "",
-      "BNCC_CODIGO": ""
+      "COMPETENCIA": "Ciências / Lógica",
+      "BNCC_CODIGO": "EF01CO02",
+      "EIXO": "Pensamento Computacional",
+      "BNCC_GERAL": "EF02MA18"
     },
     "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
     "FLUXO_ESTRUTURA_CODIGO": [],
@@ -280,8 +298,10 @@
       "Variáveis Temp., Contadores, Operadores"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
-      "COMPETENCIA": "",
-      "BNCC_CODIGO": ""
+      "COMPETENCIA": "Ciências / Lógica",
+      "BNCC_CODIGO": "EF01CO02",
+      "EIXO": "Pensamento Computacional",
+      "BNCC_GERAL": "EF03MA01"
     },
     "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
     "FLUXO_ESTRUTURA_CODIGO": [],
@@ -310,8 +330,10 @@
       "Ultrassom, Servomotor, Condicionais"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
-      "COMPETENCIA": "",
-      "BNCC_CODIGO": ""
+      "COMPETENCIA": "Ciências / Lógica",
+      "BNCC_CODIGO": "EF01CO02",
+      "EIXO": "Pensamento Computacional",
+      "BNCC_GERAL": "EF01MA11"
     },
     "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
     "FLUXO_ESTRUTURA_CODIGO": [],
@@ -340,8 +362,10 @@
       "Sensor de Proximidade e Atuação Mecânica"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
-      "COMPETENCIA": "",
-      "BNCC_CODIGO": ""
+      "COMPETENCIA": "Física / Ciências da Natureza",
+      "BNCC_CODIGO": "EF02CO04",
+      "EIXO": "Mundo Digital",
+      "BNCC_GERAL": "EF05CI01"
     },
     "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
     "FLUXO_ESTRUTURA_CODIGO": [],
@@ -370,8 +394,10 @@
       "Captura Digital e Disparo por Hardware"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
-      "COMPETENCIA": "",
-      "BNCC_CODIGO": ""
+      "COMPETENCIA": "Ciências / Lógica",
+      "BNCC_CODIGO": "EF02CO04",
+      "EIXO": "Mundo Digital",
+      "BNCC_GERAL": "EF15AR26"
     },
     "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
     "FLUXO_ESTRUTURA_CODIGO": [],
@@ -400,8 +426,10 @@
       "Comunicação Serial RX/TX"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
-      "COMPETENCIA": "",
-      "BNCC_CODIGO": ""
+      "COMPETENCIA": "Ciências / Lógica",
+      "BNCC_CODIGO": "EF01CO02",
+      "EIXO": "Pensamento Computacional",
+      "BNCC_GERAL": "EF04MA13"
     },
     "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
     "FLUXO_ESTRUTURA_CODIGO": [],
@@ -430,8 +458,10 @@
       "Sensor de Temperatura e Mapeamento Analógico"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
-      "COMPETENCIA": "",
-      "BNCC_CODIGO": ""
+      "COMPETENCIA": "Física / Ciências da Natureza",
+      "BNCC_CODIGO": "EF02CO04",
+      "EIXO": "Mundo Digital",
+      "BNCC_GERAL": "EF04CI02"
     },
     "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
     "FLUXO_ESTRUTURA_CODIGO": [],
@@ -460,8 +490,10 @@
       "Sensor de Umidade do Solo e Relés"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
-      "COMPETENCIA": "",
-      "BNCC_CODIGO": ""
+      "COMPETENCIA": "Física / Ciências da Natureza",
+      "BNCC_CODIGO": "EF02CO04",
+      "EIXO": "Mundo Digital",
+      "BNCC_GERAL": "EF02CI05"
     },
     "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
     "FLUXO_ESTRUTURA_CODIGO": [],
@@ -490,8 +522,10 @@
       "Ponte H, Motores DC e Algoritmo de Esquiva"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
-      "COMPETENCIA": "",
-      "BNCC_CODIGO": ""
+      "COMPETENCIA": "Ciências / Lógica",
+      "BNCC_CODIGO": "EF01CO02",
+      "EIXO": "Pensamento Computacional",
+      "BNCC_GERAL": "EF01MA11"
     },
     "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
     "FLUXO_ESTRUTURA_CODIGO": [],
@@ -521,7 +555,10 @@
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
       "MATEMATICA": "Medidas de tempo e operadores relacionais.",
-      "BNCC_CODIGO": ""
+      "BNCC_CODIGO": "EF01CO02",
+      "EIXO": "Pensamento Computacional",
+      "COMPETENCIA": "Matematica (Medidas de tempo e operadores relacionais.)",
+      "BNCC_GERAL": "EF06MA24"
     },
     "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Jogos de reflexo medem o tempo de reação humano. Como podemos utilizar um microcontrolador para gerar um evento aleatório e medir milissegundos?",
     "FLUXO_ESTRUTURA_CODIGO": [],
@@ -563,7 +600,10 @@
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
       "FISICA": "Sistemas tecnológicos e eficiência energética.",
-      "BNCC_CODIGO": ""
+      "BNCC_CODIGO": "EF02CO04",
+      "EIXO": "Mundo Digital",
+      "COMPETENCIA": "Fisica (Sistemas tecnológicos e eficiência energética.)",
+      "BNCC_GERAL": "EF08CI01"
     },
     "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Iluminação pública ativa durante o dia gera desperdício de energia. Como automatizar o acendimento das lâmpadas com base na luz natural?",
     "FLUXO_ESTRUTURA_CODIGO": [],
@@ -608,8 +648,10 @@
       "Módulo RTC, Alarmes e Sinalização Sonora"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
-      "COMPETENCIA": "",
-      "BNCC_CODIGO": ""
+      "COMPETENCIA": "Ciências / Lógica",
+      "BNCC_CODIGO": "EF01CO02",
+      "EIXO": "Pensamento Computacional",
+      "BNCC_GERAL": "EF06MA24"
     },
     "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
     "FLUXO_ESTRUTURA_CODIGO": [],
@@ -638,8 +680,10 @@
       "Multissensores e Transmissão de Dados"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
-      "COMPETENCIA": "",
-      "BNCC_CODIGO": ""
+      "COMPETENCIA": "Física / Ciências da Natureza",
+      "BNCC_CODIGO": "EF02CO04",
+      "EIXO": "Mundo Digital",
+      "BNCC_GERAL": "EF08CI15"
     },
     "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
     "FLUXO_ESTRUTURA_CODIGO": [],
@@ -668,8 +712,10 @@
       "Displays de 7 Segmentos e Sensores Ópticos"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
-      "COMPETENCIA": "",
-      "BNCC_CODIGO": ""
+      "COMPETENCIA": "Física / Ciências da Natureza",
+      "BNCC_CODIGO": "EF02CO04",
+      "EIXO": "Mundo Digital",
+      "BNCC_GERAL": "EF06MA03"
     },
     "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
     "FLUXO_ESTRUTURA_CODIGO": [],
@@ -698,8 +744,10 @@
       "Sensores de Barreira Infravermelha"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
-      "COMPETENCIA": "",
-      "BNCC_CODIGO": ""
+      "COMPETENCIA": "Física / Ciências da Natureza",
+      "BNCC_CODIGO": "EF02CO04",
+      "EIXO": "Mundo Digital",
+      "BNCC_GERAL": "EF09CI04"
     },
     "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
     "FLUXO_ESTRUTURA_CODIGO": [],
@@ -728,8 +776,10 @@
       "Mapeamento de Arquivos em Cartão SD"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
-      "COMPETENCIA": "",
-      "BNCC_CODIGO": ""
+      "COMPETENCIA": "Ciências / Lógica",
+      "BNCC_CODIGO": "EF01CO02",
+      "EIXO": "Pensamento Computacional",
+      "BNCC_GERAL": "EF09CI04"
     },
     "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
     "FLUXO_ESTRUTURA_CODIGO": [],
@@ -758,8 +808,10 @@
       "Protocolo HTTP e Requisições POST"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
-      "COMPETENCIA": "",
-      "BNCC_CODIGO": ""
+      "COMPETENCIA": "Ciências / Lógica",
+      "BNCC_CODIGO": "EF02CO04",
+      "EIXO": "Cultura Digital",
+      "BNCC_GERAL": "EF09CI05"
     },
     "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
     "FLUXO_ESTRUTURA_CODIGO": [],
@@ -788,8 +840,10 @@
       "Transceptores RF/LoRa e Pacotes de Dados"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
-      "COMPETENCIA": "",
-      "BNCC_CODIGO": ""
+      "COMPETENCIA": "Ciências / Lógica",
+      "BNCC_CODIGO": "EF01CO02",
+      "EIXO": "Pensamento Computacional",
+      "BNCC_GERAL": "EF09CI06"
     },
     "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
     "FLUXO_ESTRUTURA_CODIGO": [],
@@ -818,8 +872,10 @@
       "Calibração de Sensores Químicos e ADC"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
-      "COMPETENCIA": "",
-      "BNCC_CODIGO": ""
+      "COMPETENCIA": "Física / Ciências da Natureza",
+      "BNCC_CODIGO": "EF02CO04",
+      "EIXO": "Mundo Digital",
+      "BNCC_GERAL": "EF09CI02"
     },
     "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
     "FLUXO_ESTRUTURA_CODIGO": [],
@@ -848,8 +904,10 @@
       "Temporizadores de Precisão e Servomecanismo"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
-      "COMPETENCIA": "",
-      "BNCC_CODIGO": ""
+      "COMPETENCIA": "Ciências / Lógica",
+      "BNCC_CODIGO": "EF01CO02",
+      "EIXO": "Pensamento Computacional",
+      "BNCC_GERAL": "EF06MA24"
     },
     "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
     "FLUXO_ESTRUTURA_CODIGO": [],
@@ -878,8 +936,10 @@
       "Sensores Reflexivos IR e Algoritmo PID"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
-      "COMPETENCIA": "",
-      "BNCC_CODIGO": ""
+      "COMPETENCIA": "Física / Ciências da Natureza",
+      "BNCC_CODIGO": "EF02CO04",
+      "EIXO": "Mundo Digital",
+      "BNCC_GERAL": "EF09CI04"
     },
     "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
     "FLUXO_ESTRUTURA_CODIGO": [],
@@ -908,8 +968,10 @@
       "Teclado Matricial e Displays LCD"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
-      "COMPETENCIA": "",
-      "BNCC_CODIGO": ""
+      "COMPETENCIA": "Matemática",
+      "BNCC_CODIGO": "EM13CO01",
+      "EIXO": "Pensamento Computacional",
+      "BNCC_GERAL": "EM13MAT315"
     },
     "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
     "FLUXO_ESTRUTURA_CODIGO": [],
@@ -938,8 +1000,10 @@
       "Máquinas de Estado e Memória EEPROM/Flash"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
-      "COMPETENCIA": "",
-      "BNCC_CODIGO": ""
+      "COMPETENCIA": "Ciências / Lógica",
+      "BNCC_CODIGO": "EM13CO01",
+      "EIXO": "Pensamento Computacional",
+      "BNCC_GERAL": "EM13CHS605"
     },
     "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
     "FLUXO_ESTRUTURA_CODIGO": [],
@@ -968,8 +1032,10 @@
       "Varredura Angular e Renderização Gráfica"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
-      "COMPETENCIA": "",
-      "BNCC_CODIGO": ""
+      "COMPETENCIA": "Ciências / Lógica",
+      "BNCC_CODIGO": "EM13CO01",
+      "EIXO": "Pensamento Computacional",
+      "BNCC_GERAL": "EM13MAT306"
     },
     "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
     "FLUXO_ESTRUTURA_CODIGO": [],
@@ -998,8 +1064,10 @@
       "Comunicação SPI/I2C e Leitura RFID/NFC"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
-      "COMPETENCIA": "",
-      "BNCC_CODIGO": ""
+      "COMPETENCIA": "Ciências / Lógica",
+      "BNCC_CODIGO": "EM13CO01",
+      "EIXO": "Pensamento Computacional",
+      "BNCC_GERAL": "EM13CNT103"
     },
     "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
     "FLUXO_ESTRUTURA_CODIGO": [],
@@ -1028,8 +1096,10 @@
       "Web Server Embarcado e Arquivos Estáticos"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
-      "COMPETENCIA": "",
-      "BNCC_CODIGO": ""
+      "COMPETENCIA": "Ciências / Lógica",
+      "BNCC_CODIGO": "EM13CO07",
+      "EIXO": "Cultura Digital",
+      "BNCC_GERAL": "EM13CNT302"
     },
     "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
     "FLUXO_ESTRUTURA_CODIGO": [],
@@ -1058,8 +1128,10 @@
       "Streaming MJPEG e Protocolo WebSocket"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
-      "COMPETENCIA": "",
-      "BNCC_CODIGO": ""
+      "COMPETENCIA": "Ciências / Lógica",
+      "BNCC_CODIGO": "EM13CO07",
+      "EIXO": "Cultura Digital",
+      "BNCC_GERAL": "EM13CNT103"
     },
     "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
     "FLUXO_ESTRUTURA_CODIGO": [],
@@ -1088,8 +1160,10 @@
       "Módulos Relé, Cargas AC e Protocolo MQTT"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
-      "COMPETENCIA": "",
-      "BNCC_CODIGO": ""
+      "COMPETENCIA": "Ciências / Lógica",
+      "BNCC_CODIGO": "EM13CO01",
+      "EIXO": "Pensamento Computacional",
+      "BNCC_GERAL": "EM13CNT106"
     },
     "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
     "FLUXO_ESTRUTURA_CODIGO": [],
@@ -1118,8 +1192,10 @@
       "Lógica Fuzzy e Processamento de Imagens"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
-      "COMPETENCIA": "",
-      "BNCC_CODIGO": ""
+      "COMPETENCIA": "Ciências / Lógica",
+      "BNCC_CODIGO": "EM13CO01",
+      "EIXO": "Pensamento Computacional",
+      "BNCC_GERAL": "EM13MAT406"
     },
     "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
     "FLUXO_ESTRUTURA_CODIGO": [],
@@ -1149,7 +1225,10 @@
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
       "FISICA": "Transformação e otimização de energia renovável.",
-      "BNCC_CODIGO": ""
+      "BNCC_CODIGO": "EM13CO01",
+      "EIXO": "Pensamento Computacional",
+      "COMPETENCIA": "Fisica (Transformação e otimização de energia renovável.)",
+      "BNCC_GERAL": "EM13CNT106"
     },
     "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Painéis solares fixos perdem até 40% de eficiência ao longo do dia. Como criar um mecanismo rotacional que acompanhe a incidência da luz solar em tempo real?",
     "FLUXO_ESTRUTURA_CODIGO": [],
@@ -1199,8 +1278,10 @@
       "Teleoperação via Wi-Fi/Bluetooth e Gamepad"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
-      "COMPETENCIA": "",
-      "BNCC_CODIGO": ""
+      "COMPETENCIA": "Ciências / Lógica",
+      "BNCC_CODIGO": "EM13CO01",
+      "EIXO": "Pensamento Computacional",
+      "BNCC_GERAL": "EM13CNT103"
     },
     "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
     "FLUXO_ESTRUTURA_CODIGO": [],

@@ -1,0 +1,367 @@
+================================================================================
+SEÇÃO 1: BASE DE CONHECIMENTO CURRICULAR EXTRAÍDA
+================================================================================
+
+[DOCUMENTO]: LDB
+[EIXO/ÁREA]: Educação Básica
+[ETAPA/ANO]: Ensino Fundamental e Médio
+[CÓDIGO/DISPOSITIVO LEGAL]: Art. 26 da LDB
+[DESCRIÇÃO]: Os currículos da educação infantil, do ensino fundamental e do ensino médio devem ter base nacional comum, a ser complementada, em cada sistema de ensino e em cada estabelecimento escolar, por uma parte diversificada.
+[OBJETOS DE CONHECIMENTO]: Currículo, Base Nacional Comum.
+
+[DOCUMENTO]: LDB
+[EIXO/ÁREA]: Educação Básica
+[ETAPA/ANO]: Ensino Fundamental
+[CÓDIGO/DISPOSITIVO LEGAL]: Art. 32 da LDB
+[DESCRIÇÃO]: O ensino fundamental obrigatório, com duração de 9 anos, gratuito na escola pública, iniciando-se aos 6 anos de idade, terá por objetivo a formação básica do cidadão.
+[OBJETOS DE CONHECIMENTO]: Formação básica, Cidadania.
+
+[DOCUMENTO]: LDB
+[EIXO/ÁREA]: Educação Básica
+[ETAPA/ANO]: Ensino Médio
+[CÓDIGO/DISPOSITIVO LEGAL]: Art. 35-A da LDB
+[DESCRIÇÃO]: A Base Nacional Comum Curricular definirá direitos e objetivos de aprendizagem do ensino médio, conforme diretrizes do Conselho Nacional de Educação.
+[OBJETOS DE CONHECIMENTO]: Direitos e objetivos de aprendizagem.
+
+[DOCUMENTO]: BNCC_GERAL
+[EIXO/ÁREA]: Competências Gerais da Educação Básica
+[ETAPA/ANO]: Educação Básica
+[CÓDIGO/DISPOSITIVO LEGAL]: Competência Geral 2
+[DESCRIÇÃO]: Exercitar a curiosidade intelectual e recorrer à abordagem própria das ciências, incluindo a investigação, a reflexão, a análise crítica, a imaginação e a criatividade, para investigar causas, elaborar e testar hipóteses, formular e resolver problemas e criar soluções (inclusive tecnológicas) com base nos conhecimentos das diferentes áreas.
+[OBJETOS DE CONHECIMENTO]: Pensamento Científico, Crítico e Criativo.
+
+[DOCUMENTO]: BNCC_GERAL
+[EIXO/ÁREA]: Competências Gerais da Educação Básica
+[ETAPA/ANO]: Educação Básica
+[CÓDIGO/DISPOSITIVO LEGAL]: Competência Geral 4
+[DESCRIÇÃO]: Utilizar diferentes linguagens (verbal, corporal, visual, sonora e digital), bem como conhecimentos das linguagens artística, matemática e científica, para se expressar e partilhar informações, experiências, ideias e sentimentos.
+[OBJETOS DE CONHECIMENTO]: Comunicação.
+
+[DOCUMENTO]: BNCC_GERAL
+[EIXO/ÁREA]: Competências Gerais da Educação Básica
+[ETAPA/ANO]: Educação Básica
+[CÓDIGO/DISPOSITIVO LEGAL]: Competência Geral 5
+[DESCRIÇÃO]: Compreender, utilizar e criar tecnologias digitais de informação e comunicação de forma crítica, significativa, reflexiva e ética nas diversas práticas sociais (incluindo escolares) para se comunicar, acessar e disseminar informações.
+[OBJETOS DE CONHECIMENTO]: Cultura Digital.
+
+[DOCUMENTO]: BNCC_COMPUTACAO
+[EIXO/ÁREA]: Pensamento Computacional
+[ETAPA/ANO]: Educação Infantil
+[CÓDIGO/DISPOSITIVO LEGAL]: EI03CO01
+[DESCRIÇÃO]: Reconhecer padrão de repetição em sequência de sons, movimentos, desenhos.
+[OBJETOS DE CONHECIMENTO]: Reconhecimento de Padrões.
+
+[DOCUMENTO]: BNCC_COMPUTACAO
+[EIXO/ÁREA]: Pensamento Computacional
+[ETAPA/ANO]: Anos Iniciais
+[CÓDIGO/DISPOSITIVO LEGAL]: EF01CO01
+[DESCRIÇÃO]: Organizar objetos físicos ou digitais considerando diferentes características para esta organização, explicitando semelhanças (padrões) e diferenças.
+[OBJETOS DE CONHECIMENTO]: Algoritmos, Organização.
+
+[DOCUMENTO]: BNCC_COMPUTACAO
+[EIXO/ÁREA]: Pensamento Computacional
+[ETAPA/ANO]: Anos Finais
+[CÓDIGO/DISPOSITIVO LEGAL]: EF06CO03
+[DESCRIÇÃO]: Descrever com precisão a solução de um problema, construindo o programa que implementa a solução descrita.
+[OBJETOS DE CONHECIMENTO]: Algoritmos, Decomposição, Programação.
+
+[DOCUMENTO]: BNCC_COMPUTACAO
+[EIXO/ÁREA]: Mundo Digital
+[ETAPA/ANO]: Anos Finais
+[CÓDIGO/DISPOSITIVO LEGAL]: EF06CO07
+[DESCRIÇÃO]: Entender o processo de transmissão de dados, como a informação é quebrada em pedaços, transmitida em pacotes através de múltiplos equipamentos e reconstruída no destino.
+[OBJETOS DE CONHECIMENTO]: Redes, Transmissão de Dados.
+
+[DOCUMENTO]: BNCC_COMPUTACAO
+[EIXO/ÁREA]: Cultura Digital
+[ETAPA/ANO]: Anos Finais
+[CÓDIGO/DISPOSITIVO LEGAL]: EF06CO11
+[DESCRIÇÃO]: Apresentar conduta e linguagem apropriadas ao se comunicar em ambiente digital, considerando a ética e o respeito.
+[OBJETOS DE CONHECIMENTO]: Cidadania Digital, Ética.
+
+[DOCUMENTO]: BNCC_COMPUTACAO
+[EIXO/ÁREA]: Pensamento Computacional
+[ETAPA/ANO]: Ensino Médio
+[CÓDIGO/DISPOSITIVO LEGAL]: EM13CO01
+[DESCRIÇÃO]: Explorar e construir a solução de problemas por meio da reutilização de partes de soluções existentes.
+[OBJETOS DE CONHECIMENTO]: Algoritmos, Abstração.
+
+---
+
+================================================================================
+SEÇÃO 2: MATRIZ DE RELACIONAMENTO E INTERDISCIPLINARIDADE DO TCC
+================================================================================
+
+[PROJETO/SISTEMA TCC]: PRJ 1.1 - Circuito com massa de modelar condutiva
+[FUNCIONALIDADE/ARTEFATO]: Corrente Elétrica e Circuitos Fechados
+[HABILIDADE BNCC COMPUTAÇÃO CORRELATA]: EI03CO07
+[COMPETÊNCIA GERAL / LDB CORRELATA]: Competência Geral 2, 4 ou 5 / Art. 26 da LDB
+[INTERDISCIPLINARIDADE]: Ciências / Lógica
+[JUSTIFICATIVA PEDAGÓGICA]: Desenvolve a capacidade de compreender corrente elétrica e circuitos fechados no contexto de Mundo Digital.
+
+[PROJETO/SISTEMA TCC]: PRJ 1.2 - Classificação
+[FUNCIONALIDADE/ARTEFATO]: Agrupamento por Atributos e Filtros
+[HABILIDADE BNCC COMPUTAÇÃO CORRELATA]: EI03CO01
+[COMPETÊNCIA GERAL / LDB CORRELATA]: Competência Geral 2, 4 ou 5 / Art. 26 da LDB
+[INTERDISCIPLINARIDADE]: Matemática
+[JUSTIFICATIVA PEDAGÓGICA]: Desenvolve a capacidade de compreender agrupamento por atributos e filtros no contexto de Pensamento Computacional.
+
+[PROJETO/SISTEMA TCC]: PRJ 1.3 - Ordenação
+[FUNCIONALIDADE/ARTEFATO]: Algoritmos Sequenciais e Sequenciamento
+[HABILIDADE BNCC COMPUTAÇÃO CORRELATA]: EI03CO01
+[COMPETÊNCIA GERAL / LDB CORRELATA]: Competência Geral 2, 4 ou 5 / Art. 26 da LDB
+[INTERDISCIPLINARIDADE]: Matemática
+[JUSTIFICATIVA PEDAGÓGICA]: Desenvolve a capacidade de compreender algoritmos sequenciais e sequenciamento no contexto de Pensamento Computacional.
+
+[PROJETO/SISTEMA TCC]: PRJ 1.4 - Cartões com circuitos de papel
+[FUNCIONALIDADE/ARTEFATO]: Fita de Cobre, LEDs e Conectividade
+[HABILIDADE BNCC COMPUTAÇÃO CORRELATA]: EI03CO01
+[COMPETÊNCIA GERAL / LDB CORRELATA]: Competência Geral 2, 4 ou 5 / Art. 26 da LDB
+[INTERDISCIPLINARIDADE]: Ciências / Lógica
+[JUSTIFICATIVA PEDAGÓGICA]: Desenvolve a capacidade de compreender fita de cobre, leds e conectividade no contexto de Pensamento Computacional.
+
+[PROJETO/SISTEMA TCC]: PRJ 1.5 - Simulação de portas lógicas
+[FUNCIONALIDADE/ARTEFATO]: Lógica Booleana Básica (AND/OR Desplugado)
+[HABILIDADE BNCC COMPUTAÇÃO CORRELATA]: EI03CO01
+[COMPETÊNCIA GERAL / LDB CORRELATA]: Competência Geral 2, 4 ou 5 / Art. 26 da LDB
+[INTERDISCIPLINARIDADE]: Ciências / Lógica
+[JUSTIFICATIVA PEDAGÓGICA]: Desenvolve a capacidade de compreender lógica booleana básica (and/or desplugado) no contexto de Pensamento Computacional.
+
+[PROJETO/SISTEMA TCC]: PRJ 1.6 - Ventilador de bancada com motor DC
+[FUNCIONALIDADE/ARTEFATO]: Atuadores, Motores DC e Circuito de Potência
+[HABILIDADE BNCC COMPUTAÇÃO CORRELATA]: EI03CO07
+[COMPETÊNCIA GERAL / LDB CORRELATA]: Competência Geral 2, 4 ou 5 / Art. 26 da LDB
+[INTERDISCIPLINARIDADE]: Ciências / Lógica
+[JUSTIFICATIVA PEDAGÓGICA]: Desenvolve a capacidade de compreender atuadores, motores dc e circuito de potência no contexto de Mundo Digital.
+
+[PROJETO/SISTEMA TCC]: PRJ 1.7 - Labirinto e lógica de decisão
+[FUNCIONALIDADE/ARTEFATO]: Condicionais e Árvore de Decisão
+[HABILIDADE BNCC COMPUTAÇÃO CORRELATA]: EI03CO01
+[COMPETÊNCIA GERAL / LDB CORRELATA]: Competência Geral 2, 4 ou 5 / Art. 26 da LDB
+[INTERDISCIPLINARIDADE]: Ciências / Lógica
+[JUSTIFICATIVA PEDAGÓGICA]: Desenvolve a capacidade de compreender condicionais e árvore de decisão no contexto de Pensamento Computacional.
+
+[PROJETO/SISTEMA TCC]: PRJ 1.8 - Que animal é? Sons
+[FUNCIONALIDADE/ARTEFATO]: Mapeamento de Entradas e Saídas Sonoras
+[HABILIDADE BNCC COMPUTAÇÃO CORRELATA]: EI03CO01
+[COMPETÊNCIA GERAL / LDB CORRELATA]: Competência Geral 2, 4 ou 5 / Art. 26 da LDB
+[INTERDISCIPLINARIDADE]: Ciências / Lógica
+[JUSTIFICATIVA PEDAGÓGICA]: Desenvolve a capacidade de compreender mapeamento de entradas e saídas sonoras no contexto de Pensamento Computacional.
+
+[PROJETO/SISTEMA TCC]: PRJ 2.1 - Semáforo
+[FUNCIONALIDADE/ARTEFATO]: Variáveis, Temporização e Delays
+[HABILIDADE BNCC COMPUTAÇÃO CORRELATA]: EF01CO02
+[COMPETÊNCIA GERAL / LDB CORRELATA]: Competência Geral 2, 4 ou 5 / Art. 32 da LDB
+[INTERDISCIPLINARIDADE]: Ciências / Lógica
+[JUSTIFICATIVA PEDAGÓGICA]: Desenvolve a capacidade de compreender variáveis, temporização e delays no contexto de Pensamento Computacional.
+
+[PROJETO/SISTEMA TCC]: PRJ 2.2 - Jogo de reflexo (Acerte o Botão)
+[FUNCIONALIDADE/ARTEFATO]: Variáveis Temp., Contadores, Operadores
+[HABILIDADE BNCC COMPUTAÇÃO CORRELATA]: EF01CO02
+[COMPETÊNCIA GERAL / LDB CORRELATA]: Competência Geral 2, 4 ou 5 / Art. 32 da LDB
+[INTERDISCIPLINARIDADE]: Ciências / Lógica
+[JUSTIFICATIVA PEDAGÓGICA]: Desenvolve a capacidade de compreender variáveis temp., contadores, operadores no contexto de Pensamento Computacional.
+
+[PROJETO/SISTEMA TCC]: PRJ 2.3 - Portão automático com sensor ultrassônico
+[FUNCIONALIDADE/ARTEFATO]: Ultrassom, Servomotor, Condicionais
+[HABILIDADE BNCC COMPUTAÇÃO CORRELATA]: EF01CO02
+[COMPETÊNCIA GERAL / LDB CORRELATA]: Competência Geral 2, 4 ou 5 / Art. 32 da LDB
+[INTERDISCIPLINARIDADE]: Ciências / Lógica
+[JUSTIFICATIVA PEDAGÓGICA]: Desenvolve a capacidade de compreender ultrassom, servomotor, condicionais no contexto de Pensamento Computacional.
+
+[PROJETO/SISTEMA TCC]: PRJ 2.4 - Lixeira automática
+[FUNCIONALIDADE/ARTEFATO]: Sensor de Proximidade e Atuação Mecânica
+[HABILIDADE BNCC COMPUTAÇÃO CORRELATA]: EF02CO04
+[COMPETÊNCIA GERAL / LDB CORRELATA]: Competência Geral 2, 4 ou 5 / Art. 32 da LDB
+[INTERDISCIPLINARIDADE]: Física / Ciências da Natureza
+[JUSTIFICATIVA PEDAGÓGICA]: Desenvolve a capacidade de compreender sensor de proximidade e atuação mecânica no contexto de Mundo Digital.
+
+[PROJETO/SISTEMA TCC]: PRJ 2.5 - Fotos com microcontroladores
+[FUNCIONALIDADE/ARTEFATO]: Captura Digital e Disparo por Hardware
+[HABILIDADE BNCC COMPUTAÇÃO CORRELATA]: EF02CO04
+[COMPETÊNCIA GERAL / LDB CORRELATA]: Competência Geral 2, 4 ou 5 / Art. 32 da LDB
+[INTERDISCIPLINARIDADE]: Ciências / Lógica
+[JUSTIFICATIVA PEDAGÓGICA]: Desenvolve a capacidade de compreender captura digital e disparo por hardware no contexto de Mundo Digital.
+
+[PROJETO/SISTEMA TCC]: PRJ 2.6 - Comunicação com outros controladores
+[FUNCIONALIDADE/ARTEFATO]: Comunicação Serial RX/TX
+[HABILIDADE BNCC COMPUTAÇÃO CORRELATA]: EF01CO02
+[COMPETÊNCIA GERAL / LDB CORRELATA]: Competência Geral 2, 4 ou 5 / Art. 32 da LDB
+[INTERDISCIPLINARIDADE]: Ciências / Lógica
+[JUSTIFICATIVA PEDAGÓGICA]: Desenvolve a capacidade de compreender comunicação serial rx/tx no contexto de Pensamento Computacional.
+
+[PROJETO/SISTEMA TCC]: PRJ 2.7 - Termômetro escolar
+[FUNCIONALIDADE/ARTEFATO]: Sensor de Temperatura e Mapeamento Analógico
+[HABILIDADE BNCC COMPUTAÇÃO CORRELATA]: EF02CO04
+[COMPETÊNCIA GERAL / LDB CORRELATA]: Competência Geral 2, 4 ou 5 / Art. 32 da LDB
+[INTERDISCIPLINARIDADE]: Física / Ciências da Natureza
+[JUSTIFICATIVA PEDAGÓGICA]: Desenvolve a capacidade de compreender sensor de temperatura e mapeamento analógico no contexto de Mundo Digital.
+
+[PROJETO/SISTEMA TCC]: PRJ 2.8 - Automação de regagem de plantas
+[FUNCIONALIDADE/ARTEFATO]: Sensor de Umidade do Solo e Relés
+[HABILIDADE BNCC COMPUTAÇÃO CORRELATA]: EF02CO04
+[COMPETÊNCIA GERAL / LDB CORRELATA]: Competência Geral 2, 4 ou 5 / Art. 32 da LDB
+[INTERDISCIPLINARIDADE]: Física / Ciências da Natureza
+[JUSTIFICATIVA PEDAGÓGICA]: Desenvolve a capacidade de compreender sensor de umidade do solo e relés no contexto de Mundo Digital.
+
+[PROJETO/SISTEMA TCC]: PRJ 2.9 - Robô com desvio de proximidade
+[FUNCIONALIDADE/ARTEFATO]: Ponte H, Motores DC e Algoritmo de Esquiva
+[HABILIDADE BNCC COMPUTAÇÃO CORRELATA]: EF01CO02
+[COMPETÊNCIA GERAL / LDB CORRELATA]: Competência Geral 2, 4 ou 5 / Art. 32 da LDB
+[INTERDISCIPLINARIDADE]: Ciências / Lógica
+[JUSTIFICATIVA PEDAGÓGICA]: Desenvolve a capacidade de compreender ponte h, motores dc e algoritmo de esquiva no contexto de Pensamento Computacional.
+
+[PROJETO/SISTEMA TCC]: PRJ 3.1 - Jogo da Memória com LEDs
+[FUNCIONALIDADE/ARTEFATO]: Arrays, Funções, Loops e Randomização
+[HABILIDADE BNCC COMPUTAÇÃO CORRELATA]: EF01CO02
+[COMPETÊNCIA GERAL / LDB CORRELATA]: Competência Geral 2, 4 ou 5 / Art. 32 da LDB
+[INTERDISCIPLINARIDADE]: Matematica (Medidas de tempo e operadores relacionais.)
+[JUSTIFICATIVA PEDAGÓGICA]: Jogos de reflexo medem o tempo de reação humano. Como podemos utilizar um microcontrolador para gerar um evento aleatório e medir milissegundos?
+
+[PROJETO/SISTEMA TCC]: PRJ 3.2 - Lâmpada noturna automática
+[FUNCIONALIDADE/ARTEFATO]: Sensor LDR, Leitura Analógica e Histese
+[HABILIDADE BNCC COMPUTAÇÃO CORRELATA]: EF02CO04
+[COMPETÊNCIA GERAL / LDB CORRELATA]: Competência Geral 2, 4 ou 5 / Art. 32 da LDB
+[INTERDISCIPLINARIDADE]: Fisica (Sistemas tecnológicos e eficiência energética.)
+[JUSTIFICATIVA PEDAGÓGICA]: Iluminação pública ativa durante o dia gera desperdício de energia. Como automatizar o acendimento das lâmpadas com base na luz natural?
+
+[PROJETO/SISTEMA TCC]: PRJ 3.3 - Despertador com sensores
+[FUNCIONALIDADE/ARTEFATO]: Módulo RTC, Alarmes e Sinalização Sonora
+[HABILIDADE BNCC COMPUTAÇÃO CORRELATA]: EF01CO02
+[COMPETÊNCIA GERAL / LDB CORRELATA]: Competência Geral 2, 4 ou 5 / Art. 32 da LDB
+[INTERDISCIPLINARIDADE]: Ciências / Lógica
+[JUSTIFICATIVA PEDAGÓGICA]: Desenvolve a capacidade de compreender módulo rtc, alarmes e sinalização sonora no contexto de Pensamento Computacional.
+
+[PROJETO/SISTEMA TCC]: PRJ 3.4 - Estação de telemetria
+[FUNCIONALIDADE/ARTEFATO]: Multissensores e Transmissão de Dados
+[HABILIDADE BNCC COMPUTAÇÃO CORRELATA]: EF02CO04
+[COMPETÊNCIA GERAL / LDB CORRELATA]: Competência Geral 2, 4 ou 5 / Art. 32 da LDB
+[INTERDISCIPLINARIDADE]: Física / Ciências da Natureza
+[JUSTIFICATIVA PEDAGÓGICA]: Desenvolve a capacidade de compreender multissensores e transmissão de dados no contexto de Mundo Digital.
+
+[PROJETO/SISTEMA TCC]: PRJ 3.5 - Estacionamento com contador de vagas
+[FUNCIONALIDADE/ARTEFATO]: Displays de 7 Segmentos e Sensores Ópticos
+[HABILIDADE BNCC COMPUTAÇÃO CORRELATA]: EF02CO04
+[COMPETÊNCIA GERAL / LDB CORRELATA]: Competência Geral 2, 4 ou 5 / Art. 32 da LDB
+[INTERDISCIPLINARIDADE]: Física / Ciências da Natureza
+[JUSTIFICATIVA PEDAGÓGICA]: Desenvolve a capacidade de compreender displays de 7 segmentos e sensores ópticos no contexto de Mundo Digital.
+
+[PROJETO/SISTEMA TCC]: PRJ 3.6 - Contador de pessoas
+[FUNCIONALIDADE/ARTEFATO]: Sensores de Barreira Infravermelha
+[HABILIDADE BNCC COMPUTAÇÃO CORRELATA]: EF02CO04
+[COMPETÊNCIA GERAL / LDB CORRELATA]: Competência Geral 2, 4 ou 5 / Art. 32 da LDB
+[INTERDISCIPLINARIDADE]: Física / Ciências da Natureza
+[JUSTIFICATIVA PEDAGÓGICA]: Desenvolve a capacidade de compreender sensores de barreira infravermelha no contexto de Mundo Digital.
+
+[PROJETO/SISTEMA TCC]: PRJ 3.7 - Câmera fotográfica
+[FUNCIONALIDADE/ARTEFATO]: Mapeamento de Arquivos em Cartão SD
+[HABILIDADE BNCC COMPUTAÇÃO CORRELATA]: EF01CO02
+[COMPETÊNCIA GERAL / LDB CORRELATA]: Competência Geral 2, 4 ou 5 / Art. 32 da LDB
+[INTERDISCIPLINARIDADE]: Ciências / Lógica
+[JUSTIFICATIVA PEDAGÓGICA]: Desenvolve a capacidade de compreender mapeamento de arquivos em cartão sd no contexto de Pensamento Computacional.
+
+[PROJETO/SISTEMA TCC]: PRJ 3.8 - Enviando fotos pela rede
+[FUNCIONALIDADE/ARTEFATO]: Protocolo HTTP e Requisições POST
+[HABILIDADE BNCC COMPUTAÇÃO CORRELATA]: EF02CO04
+[COMPETÊNCIA GERAL / LDB CORRELATA]: Competência Geral 2, 4 ou 5 / Art. 32 da LDB
+[INTERDISCIPLINARIDADE]: Ciências / Lógica
+[JUSTIFICATIVA PEDAGÓGICA]: Desenvolve a capacidade de compreender protocolo http e requisições post no contexto de Cultura Digital.
+
+[PROJETO/SISTEMA TCC]: PRJ 3.9 - Comunicação Via Rádio
+[FUNCIONALIDADE/ARTEFATO]: Transceptores RF/LoRa e Pacotes de Dados
+[HABILIDADE BNCC COMPUTAÇÃO CORRELATA]: EF01CO02
+[COMPETÊNCIA GERAL / LDB CORRELATA]: Competência Geral 2, 4 ou 5 / Art. 32 da LDB
+[INTERDISCIPLINARIDADE]: Ciências / Lógica
+[JUSTIFICATIVA PEDAGÓGICA]: Desenvolve a capacidade de compreender transceptores rf/lora e pacotes de dados no contexto de Pensamento Computacional.
+
+[PROJETO/SISTEMA TCC]: PRJ 3.10 - Estação de Monitoramento de pH
+[FUNCIONALIDADE/ARTEFATO]: Calibração de Sensores Químicos e ADC
+[HABILIDADE BNCC COMPUTAÇÃO CORRELATA]: EF02CO04
+[COMPETÊNCIA GERAL / LDB CORRELATA]: Competência Geral 2, 4 ou 5 / Art. 32 da LDB
+[INTERDISCIPLINARIDADE]: Física / Ciências da Natureza
+[JUSTIFICATIVA PEDAGÓGICA]: Desenvolve a capacidade de compreender calibração de sensores químicos e adc no contexto de Mundo Digital.
+
+[PROJETO/SISTEMA TCC]: PRJ 3.11 - Comedor Pet Automático
+[FUNCIONALIDADE/ARTEFATO]: Temporizadores de Precisão e Servomecanismo
+[HABILIDADE BNCC COMPUTAÇÃO CORRELATA]: EF01CO02
+[COMPETÊNCIA GERAL / LDB CORRELATA]: Competência Geral 2, 4 ou 5 / Art. 32 da LDB
+[INTERDISCIPLINARIDADE]: Ciências / Lógica
+[JUSTIFICATIVA PEDAGÓGICA]: Desenvolve a capacidade de compreender temporizadores de precisão e servomecanismo no contexto de Pensamento Computacional.
+
+[PROJETO/SISTEMA TCC]: PRJ 3.12 - Robô seguidor de linha
+[FUNCIONALIDADE/ARTEFATO]: Sensores Reflexivos IR e Algoritmo PID
+[HABILIDADE BNCC COMPUTAÇÃO CORRELATA]: EF02CO04
+[COMPETÊNCIA GERAL / LDB CORRELATA]: Competência Geral 2, 4 ou 5 / Art. 32 da LDB
+[INTERDISCIPLINARIDADE]: Física / Ciências da Natureza
+[JUSTIFICATIVA PEDAGÓGICA]: Desenvolve a capacidade de compreender sensores reflexivos ir e algoritmo pid no contexto de Mundo Digital.
+
+[PROJETO/SISTEMA TCC]: PRJ 4.1 - Calculadora
+[FUNCIONALIDADE/ARTEFATO]: Teclado Matricial e Displays LCD
+[HABILIDADE BNCC COMPUTAÇÃO CORRELATA]: EM13CO01
+[COMPETÊNCIA GERAL / LDB CORRELATA]: Competência Geral 2, 4 ou 5 / Art. 35-A da LDB
+[INTERDISCIPLINARIDADE]: Matemática
+[JUSTIFICATIVA PEDAGÓGICA]: Desenvolve a capacidade de compreender teclado matricial e displays lcd no contexto de Pensamento Computacional.
+
+[PROJETO/SISTEMA TCC]: PRJ 4.2 - Urna eletrônica
+[FUNCIONALIDADE/ARTEFATO]: Máquinas de Estado e Memória EEPROM/Flash
+[HABILIDADE BNCC COMPUTAÇÃO CORRELATA]: EM13CO01
+[COMPETÊNCIA GERAL / LDB CORRELATA]: Competência Geral 2, 4 ou 5 / Art. 35-A da LDB
+[INTERDISCIPLINARIDADE]: Ciências / Lógica
+[JUSTIFICATIVA PEDAGÓGICA]: Desenvolve a capacidade de compreender máquinas de estado e memória eeprom/flash no contexto de Pensamento Computacional.
+
+[PROJETO/SISTEMA TCC]: PRJ 4.3 - Radar Sonar
+[FUNCIONALIDADE/ARTEFATO]: Varredura Angular e Renderização Gráfica
+[HABILIDADE BNCC COMPUTAÇÃO CORRELATA]: EM13CO01
+[COMPETÊNCIA GERAL / LDB CORRELATA]: Competência Geral 2, 4 ou 5 / Art. 35-A da LDB
+[INTERDISCIPLINARIDADE]: Ciências / Lógica
+[JUSTIFICATIVA PEDAGÓGICA]: Desenvolve a capacidade de compreender varredura angular e renderização gráfica no contexto de Pensamento Computacional.
+
+[PROJETO/SISTEMA TCC]: PRJ 4.4 - Controle de Acesso (NFC)
+[FUNCIONALIDADE/ARTEFATO]: Comunicação SPI/I2C e Leitura RFID/NFC
+[HABILIDADE BNCC COMPUTAÇÃO CORRELATA]: EM13CO01
+[COMPETÊNCIA GERAL / LDB CORRELATA]: Competência Geral 2, 4 ou 5 / Art. 35-A da LDB
+[INTERDISCIPLINARIDADE]: Ciências / Lógica
+[JUSTIFICATIVA PEDAGÓGICA]: Desenvolve a capacidade de compreender comunicação spi/i2c e leitura rfid/nfc no contexto de Pensamento Computacional.
+
+[PROJETO/SISTEMA TCC]: PRJ 4.5 - Servidor com fotos
+[FUNCIONALIDADE/ARTEFATO]: Web Server Embarcado e Arquivos Estáticos
+[HABILIDADE BNCC COMPUTAÇÃO CORRELATA]: EM13CO07
+[COMPETÊNCIA GERAL / LDB CORRELATA]: Competência Geral 2, 4 ou 5 / Art. 35-A da LDB
+[INTERDISCIPLINARIDADE]: Ciências / Lógica
+[JUSTIFICATIVA PEDAGÓGICA]: Desenvolve a capacidade de compreender web server embarcado e arquivos estáticos no contexto de Cultura Digital.
+
+[PROJETO/SISTEMA TCC]: PRJ 4.6 - Câmera de monitoramento
+[FUNCIONALIDADE/ARTEFATO]: Streaming MJPEG e Protocolo WebSocket
+[HABILIDADE BNCC COMPUTAÇÃO CORRELATA]: EM13CO07
+[COMPETÊNCIA GERAL / LDB CORRELATA]: Competência Geral 2, 4 ou 5 / Art. 35-A da LDB
+[INTERDISCIPLINARIDADE]: Ciências / Lógica
+[JUSTIFICATIVA PEDAGÓGICA]: Desenvolve a capacidade de compreender streaming mjpeg e protocolo websocket no contexto de Cultura Digital.
+
+[PROJETO/SISTEMA TCC]: PRJ 4.7 - Automação Elétrica
+[FUNCIONALIDADE/ARTEFATO]: Módulos Relé, Cargas AC e Protocolo MQTT
+[HABILIDADE BNCC COMPUTAÇÃO CORRELATA]: EM13CO01
+[COMPETÊNCIA GERAL / LDB CORRELATA]: Competência Geral 2, 4 ou 5 / Art. 35-A da LDB
+[INTERDISCIPLINARIDADE]: Ciências / Lógica
+[JUSTIFICATIVA PEDAGÓGICA]: Desenvolve a capacidade de compreender módulos relé, cargas ac e protocolo mqtt no contexto de Pensamento Computacional.
+
+[PROJETO/SISTEMA TCC]: PRJ 4.8 - Sistema autônomo de estacionamento
+[FUNCIONALIDADE/ARTEFATO]: Lógica Fuzzy e Processamento de Imagens
+[HABILIDADE BNCC COMPUTAÇÃO CORRELATA]: EM13CO01
+[COMPETÊNCIA GERAL / LDB CORRELATA]: Competência Geral 2, 4 ou 5 / Art. 35-A da LDB
+[INTERDISCIPLINARIDADE]: Ciências / Lógica
+[JUSTIFICATIVA PEDAGÓGICA]: Desenvolve a capacidade de compreender lógica fuzzy e processamento de imagens no contexto de Pensamento Computacional.
+
+[PROJETO/SISTEMA TCC]: PRJ 4.9 - Rastreador Solar
+[FUNCIONALIDADE/ARTEFATO]: Malha fechada, Ponte Divisora LDR, Motores Servo
+[HABILIDADE BNCC COMPUTAÇÃO CORRELATA]: EM13CO01
+[COMPETÊNCIA GERAL / LDB CORRELATA]: Competência Geral 2, 4 ou 5 / Art. 35-A da LDB
+[INTERDISCIPLINARIDADE]: Fisica (Transformação e otimização de energia renovável.)
+[JUSTIFICATIVA PEDAGÓGICA]: Painéis solares fixos perdem até 40% de eficiência ao longo do dia. Como criar um mecanismo rotacional que acompanhe a incidência da luz solar em tempo real?
+
+[PROJETO/SISTEMA TCC]: PRJ 4.10 - Robô com controle a distância
+[FUNCIONALIDADE/ARTEFATO]: Teleoperação via Wi-Fi/Bluetooth e Gamepad
+[HABILIDADE BNCC COMPUTAÇÃO CORRELATA]: EM13CO01
+[COMPETÊNCIA GERAL / LDB CORRELATA]: Competência Geral 2, 4 ou 5 / Art. 35-A da LDB
+[INTERDISCIPLINARIDADE]: Ciências / Lógica
+[JUSTIFICATIVA PEDAGÓGICA]: Desenvolve a capacidade de compreender teleoperação via wi-fi/bluetooth e gamepad no contexto de Pensamento Computacional.
+
