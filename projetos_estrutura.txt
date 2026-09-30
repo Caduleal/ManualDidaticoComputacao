@@ -895,7 +895,7 @@
   },
   {
     "PROJETO": "PRJ 3.11",
-    "TITULO": "Comedor Pet Automático",
+    "TITULO": "Comedouro Pet Automático",
     "MODULO": "Módulo III - Ensino Fundamental II",
     "COMPLEXIDADE": "Avançado",
     "TEMPO_ESTIMADO": "2 h/aula (100 min)",

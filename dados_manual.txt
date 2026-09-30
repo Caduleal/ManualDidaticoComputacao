@@ -210,7 +210,7 @@
         },
         {
           "codigo": "PRJ 3.11",
-          "nome": "Comedor Pet Automático",
+          "nome": "Comedouro Pet Automático",
           "conceitos": "Temporizadores de Precisão e Servomecanismo",
           "nivel": "Avançado"
         },
