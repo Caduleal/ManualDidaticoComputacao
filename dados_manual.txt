@@ -83,7 +83,7 @@
         {
           "codigo": "PRJ 2.1",
           "nome": "Semáforo",
-          "conceitos": "Variáveis, Temporização e Delays",
+          "conceitos": "Variáveis e Delays",
           "nivel": "Básico"
         },
         {
@@ -150,14 +150,14 @@
       "projetos_matriz": [
         {
           "codigo": "PRJ 3.1",
-          "nome": "Jogo da Memória com LEDs",
-          "conceitos": "Arrays, Funções, Loops e Randomização",
+          "nome": "Lâmpada noturna automática",
+          "conceitos": "Sensor LDR, Leitura Analógica e Histese",
           "nivel": "Básico"
         },
         {
           "codigo": "PRJ 3.2",
-          "nome": "Lâmpada noturna automática",
-          "conceitos": "Sensor LDR, Leitura Analógica e Histese",
+          "nome": "Jogo da Memória com LEDs",
+          "conceitos": "Arrays, Funções, Loops e Randomização",
           "nivel": "Básico"
         },
         {

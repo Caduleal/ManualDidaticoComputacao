@@ -140,7 +140,7 @@ graph LR
 
 | Esquema Elétrico na Protoboard | Fluxograma Lógico-Algorítmico |
 | :---: | :---: |
-| <img src="projetos/PRJ_3_1_esquema.png" alt="Esquema Elétrico PRJ 3.1" width="450"/> | <img src="projetos/PRJ_3_1_Fluxograma.png" alt="Fluxograma PRJ 3.1" width="450"/> |
+| <img src="projetos/PRJ_3_1_Esquema.png" alt="Esquema Elétrico PRJ 3.1" width="450"/> | <img src="projetos/PRJ_3_1_Fluxograma.png" alt="Fluxograma PRJ 3.1" width="450"/> |
 | *Conexão dos 4 LEDs (D2-D5), 4 botões (D8-D11) com pull-down e buzzer (D12).* | *Estrutura de decisão, amostragem de ruído em A0 e verificação da sequência.* |
 
 </div>
@@ -218,7 +218,7 @@ A documentação da aplicação adota o princípio de **Fonte Única da Verdade 
 ├── Projetos.png                   # Infográfico do Fluxograma Panorâmico
 ├── Capa.png                       # Arte editorial da capa acadêmica
 └── projetos/                      # Diagramas elétricos e fluxogramas individuais
-    ├── PRJ_3_1_esquema.png
+    ├── PRJ_3_1_Esquema.png
     └── PRJ_3_1_Fluxograma.png
 ```
 

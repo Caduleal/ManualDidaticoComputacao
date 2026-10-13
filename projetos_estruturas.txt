@@ -1,6 +1,107 @@
 [
   {
-    "PROJETO": "PRJ 3.1",
+    "PROJETO": "PRJ 2.1",
+    "TITULO": "Semáforo",
+    "MODULO": "Módulo II - Ensino Fundamental I",
+    "COMPLEXIDADE": "Básico",
+    "TEMPO_ESTIMADO": "1 h/aula (60 min)",
+    "PRE_REQUISITOS": "Conceitos básicos de eletricidade (circuito fechado, tensão e corrente), polaridade de LEDs e identificação de pinos digitais no Arduino.",
+    "HABILIDADES_DE_COMPUTACAO": [
+      "Variáveis e Delays",
+      "Sequenciamento Linear de Instruções",
+      "Abstração de Hardware Básico",
+      "Controle de Saídas Digitais"
+    ],
+    "COMPETENCIA_INTERDISCIPLINARES": {
+      "HISTORIA_E_SOCIEDADE": "A evolução da sinalização urbana e o primeiro semáforo elétrico instalado em Cleveland, Ohio, em 1914. A importância da automação para a segurança no trânsito e o ordenamento do fluxo de pedestres e veículos nas metrópoles modernas.",
+      "MATEMATICA": "Noções de proporção temporal, contagem regressiva e intervalos de tempo lineares."
+    },
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Como as cidades controlam o tráfego de milhares de veículos e pedestres de forma segura e autônoma? Utilizando um microcontrolador para ciclar estados de iluminação (Vermelho, Amarelo e Verde) em tempos pré-determinados, simulamos o comportamento de um semáforo de trânsito real.",
+    "FLUXO_ESTRUTURA_CODIGO": [
+      "Definição de Pinos",
+      "Setup",
+      "Liga LED Vermelho",
+      "Delay",
+      "Desliga Vermelho",
+      "Liga LED Amarelo",
+      "Delay",
+      "Desliga Amarelo",
+      "Liga LED Verde",
+      "Delay",
+      "Loop"
+    ],
+    "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
+      "BOM": [
+        {
+          "qtd": "1x",
+          "componente": "Placa Arduino Uno R3"
+        },
+        {
+          "qtd": "1x",
+          "componente": "LED Vermelho 5mm"
+        },
+        {
+          "qtd": "1x",
+          "componente": "LED Amarelo 5mm"
+        },
+        {
+          "qtd": "1x",
+          "componente": "LED Verde 5mm"
+        },
+        {
+          "qtd": "3x",
+          "componente": "Resistores 220Ω 1/4W (limitação de corrente dos LEDs)"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Protoboard 830 pontos"
+        },
+        {
+          "qtd": "6x",
+          "componente": "Cabos Jumpers Macho-Macho"
+        }
+      ],
+      "MAPEAMENTO_PINOS": [
+        "D10 → LED Vermelho (Anodo via resistor 220Ω)",
+        "D9 → LED Amarelo (Anodo via resistor 220Ω)",
+        "D8 → LED Verde (Anodo via resistor 220Ω)"
+      ],
+      "IMAGEM_ESQUEMA": "projetos/PRJ_2_1_Esquema.png",
+      "TITULO_ESQUEMA": "FIGURA 1: ESQUEMA DO CIRCUITO DO SEMÁFORO",
+      "LINK_THINKERCAD": "https://www.tinkercad.com/things/66hrvqjr0HT-jogo-da-memoria?sharecode=7-SX2pF2aCBu4g14pAuLQF0axR53FBzI9UjHQ8CZ5nE"
+    },
+    "MODELAGEM_LOGICO_ALGORITMA": {
+      "NOME_PASSO": "Fluxograma Lógico",
+      "TIPO_PASSO": "IMAGEM",
+      "ARQUIVO": "projetos/PRJ_2_1_Fluxograma.png",
+      "CODIGO_FONTE": "//Semáforo// ==========================\n// Pinos Arduino\n// ==========================\nconst int LED_VERMELHO = 11;\nconst int LED_AMARELO = 12;\nconst int LED_VERDE = 13;\n\nvoid setup() {\n  // Configura os pinos dos LEDs como saídas digitais\n  pinMode(LED_VERMELHO, OUTPUT);\n  pinMode(LED_AMARELO, OUTPUT);\n  pinMode(LED_VERDE, OUTPUT);\n}\n\nvoid loop() {\n  // Estado 1: Vermelho aceso (Pare)\n  digitalWrite(LED_VERMELHO, HIGH);\n  digitalWrite(LED_AMARELO, LOW);\n  digitalWrite(LED_VERDE, LOW);\n  delay(5000); // Mantém por 5 segundos\n\n  // Estado 2: Verde aceso (Siga)\n  digitalWrite(LED_VERMELHO, LOW);\n  digitalWrite(LED_AMARELO, LOW);\n  digitalWrite(LED_VERDE, HIGH);\n  delay(5000); // Mantém por 5 segundos\n\n  // Estado 3: Amarelo aceso (Atenção)\n  digitalWrite(LED_VERMELHO, LOW);\n  digitalWrite(LED_AMARELO, HIGH);\n  digitalWrite(LED_VERDE, LOW);\n  delay(3000); // Mantém por 3 segundos\n}"
+    },
+    "ROTEIRO_PRATICO_DE_EXECUCAO": [
+      "1. Conecte os resistores de 220Ω nos anodos dos LEDs Vermelho, Amarelo e Verde, ligando-os respectivamente aos pinos digitais D10, D9 e D8 do Arduino.",
+      "2. Conecte os catodos de todos os LEDs ao barramento de GND da protoboard e puxe um jumper para o GND da placa Arduino.",
+      "3. Verifique a polaridade correta dos componentes (a perna maior do LED é o anodo e a menor é o catodo).",
+      "4. Conecte o Arduino ao computador via cabo USB.",
+      "5. Abra a IDE do Arduino, cole o código fonte correspondente ao ciclo do semáforo e selecione a porta correta.",
+      "6. Carregue o programa na placa e observe a alternância cíclica das luzes."
+    ],
+    "ARTICULACAO_E_APROFUNDAMENTO": "1) Controle de Portas Digitais: A função `digitalWrite()` envia sinais de nível lógico Alto (HIGH / 5V) ou Baixo (LOW / 0V) para os pinos configurados como saída (`OUTPUT`), controlando o fluxo de corrente pelos LEDs.\n\n2) O Papel do Resistor de Limitação: O resistor de 220Ω é indispensável para limitar a corrente elétrica que passa pelo LED, evitando a queima do componente devido à diferença de potencial direta da placa.\n\n3) Temporização Sequencial: O uso da função `delay()` pausa a execução do programa em milissegundos, criando a cadência visual temporal necessária para imitar o funcionamento de um semáforo urbano convencional.\n\n4) Lógica de Estados: O ciclo demonstra como transições ordenadas de ligar e desligar criam um padrão repetitivo previsível e automatizado.",
+    "DESAFIOS_DE_EXPANSAO": [
+      {
+        "nivel": "Fácil",
+        "descricao": "Adicionar um botão de pedestre (Push Button) que, ao ser pressionado, altera imediatamente o semáforo para o estado de travessia segura."
+      },
+      {
+        "nivel": "Intermediário",
+        "descricao": "Incluir um buzzer para emitir um sinal sonoro intermitente exclusivo para orientar pedestres com deficiência visual durante o sinal verde."
+      },
+      {
+        "nivel": "Avançado",
+        "descricao": "Substituir o comando `delay()` por uma abordagem baseada em temporização não-bloqueante utilizando a função `millis()`, permitindo que o sistema execute outras tarefas em paralelo sem congelar o fluxo."
+      }
+    ]
+  },
+  {
+    "PROJETO": "PRJ 3.2",
     "TITULO": "Jogo da Memória com LEDs (Genius / Simon)",
     "MODULO": "Módulo III - Ensino Fundamental II",
     "COMPLEXIDADE": "Intermediário",
@@ -18,7 +119,7 @@
       "HISTORIA_E_SOCIEDADE": "Origem dos jogos eletrônicos na Segunda Era dos Microprocessadores (década de 1970). O surgimento do brinquedo Simon (lançado no Brasil pela Estrela como Genius em 1980), desenhado por Ralph Baer e Howard Morrison, representando a transição dos brinquedos analógicos e mecânicos para os brinquedos embarcados com microcontroladores dedicados de 4 bits.",
       "MATEMATICA": "Geração de números pseudoaleatórios via distribuição uniforme."
     },
-    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Lançado no final da década de 1970 no Studio 54 em Nova York, o Simon (Genius no Brasil) tornou-se um marco da cultura pop e da engenharia de computação ao provar que sistemas microcontrolados simples podiam criar interações complexas de memória e padrão auditivo-visual. Como modelar a lógica de geração de sequências dinâmicas, o armazenamento em filas indexadas de vetores e a validação em tempo real das entradas do usuário utilizando um microcontrolador moderno como o Arduino?",
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "A automação e o gerenciamento de fluxos em sistemas de mobilidade urbana — abrangendo vias rodoviárias, faixas de pedestres, ciclovias, cruzamentos rodoferroviários e redes de transporte multimodal — exigem sistemas embarcados determinísticos e tolerantes a falhas para garantir a segurança pública. Como modelar computacionalmente a lógica de temporização de estados, priorização de tráfego, intertravamento (interlocking) de sinais e o tratamento síncrono de entradas em tempo real utilizando microcontroladores aplicados à infraestrutura de controle de tráfego?",
     "FLUXO_ESTRUTURA_CODIGO": [
       "Definição de Pinos",
       "Setup",
@@ -84,7 +185,7 @@
         "D12 → Buzzer Passivo",
         "A0 → Pino Analógico Desconectado (Semente de Entropia para randomSeed)"
       ],
-      "IMAGEM_ESQUEMA": "projetos/PRJ_3_1_esquema.png",
+      "IMAGEM_ESQUEMA": "projetos/PRJ_3_1_Esquema.png",
       "TITULO_ESQUEMA": "FIGURA 1: ESQUEMA DO CIRCUITO ELETRÔNICO",
       "LINK_THINKERCAD": "https://www.tinkercad.com/things/66hrvqjr0HT-jogo-da-memoria?sharecode=7-SX2pF2aCBu4g14pAuLQF0axR53FBzI9UjHQ8CZ5nE"
     },

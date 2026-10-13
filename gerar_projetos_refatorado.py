@@ -745,7 +745,7 @@ class HTMLTemplates:
         </h3>
         <div class="border border-brand-900 rounded-lg overflow-hidden shadow-xs mb-2">
             <div class="bg-brand-900 px-3.5 py-1.5 flex items-center justify-between">
-                <span class="text-brand-100 font-mono text-[10px] font-semibold tracking-wide">${subtitulo}</span>
+                <span class="text-brand-100 font-mono text-[10px] font-semibold tracking-wide">${titulo}</span>
                 <span class="text-[9px] font-mono text-brand-300 font-medium">C++ / Arduino</span>
             </div>
             ${html_exp}
@@ -782,7 +782,7 @@ class HTMLTemplates:
     DIAGRAMA_ESQUEMA = Template("""
     <div class="bg-slate-100 rounded-xl p-3 text-center avoid-break mb-3">
         <img src="${img_src}" alt="Esquema do Circuito" class="max-h-60 mx-auto object-contain rounded mb-1.5" />
-        <span class="font-mono text-[9px] font-bold text-slate-500 uppercase tracking-wider block">FIGURA 1: ESQUEMA DO CIRCUITO ELETRÔNICO</span>
+        <span class="font-mono text-[9px] font-bold text-slate-500 uppercase tracking-wider block">${titulo_esquema}</span>
     </div>
     """)
 
@@ -1153,10 +1153,13 @@ def formatar_articulacao_teorica(art_raw: str) -> str:
     return "\n".join(items_html)
 
 
-def renderizar_trecho_codigo_fonte(logica_data: Optional[Dict[str, Any]]) -> Tuple[Dict[str, Any], List[Dict[str, str]]]:
+def renderizar_trecho_codigo_fonte(
+    logica_data: Optional[Dict[str, Any]],
+    titulo_projeto: Optional[str] = None
+) -> Tuple[Dict[str, Any], List[Dict[str, str]]]:
     """
     Renderiza com precisão editorial apenas o trecho central/mais relevante da lógica (Loop Principal),
-    com título padronizado 'TRECHO DO CÓDIGO-FONTE', subtítulo descritivo no header escuro
+    com título padronizado 'TRECHO DO CÓDIGO-FONTE', título dinâmico do projeto no header escuro
     e caixa de aviso pedagógica com QR Code logo abaixo.
     """
     if not isinstance(logica_data, dict):
@@ -1201,11 +1204,16 @@ def renderizar_trecho_codigo_fonte(logica_data: Optional[Dict[str, Any]]) -> Tup
     codigo_str = str(trecho_escolhido.get("codigo", "")).strip()
     exp_str = str(trecho_escolhido.get("explicacao", "")).strip()
 
-    # Subtítulo preciso da função
+    # Subtítulo preciso da função como fallback
     if "loop" in nome_orig.lower():
         subtitulo = "Loop Principal - Lógica de Controle do Jogo"
     else:
         subtitulo = f"{nome_orig} - Lógica de Controle"
+
+    if titulo_projeto is None and isinstance(logica_data, dict):
+        titulo_projeto = logica_data.get("TITULO")
+
+    titulo_final = str(titulo_projeto).strip() if (titulo_projeto and str(titulo_projeto).strip()) else subtitulo
 
     linhas = codigo_str.split("\n")
     if len(linhas) > 35:
@@ -1219,7 +1227,8 @@ def renderizar_trecho_codigo_fonte(logica_data: Optional[Dict[str, Any]]) -> Tup
     )
 
     html_bloco = HTMLTemplates.SECAO_TRECHO_CODIGO.substitute(
-        subtitulo=html.escape(subtitulo),
+        titulo=html.escape(titulo_final),
+        subtitulo=html.escape(titulo_final),
         html_exp=html_exp,
         codigo=html.escape(codigo_str)
     )
@@ -1234,9 +1243,12 @@ def renderizar_trecho_codigo_fonte(logica_data: Optional[Dict[str, Any]]) -> Tup
     return bloco_resultado, lista_codigos
 
 
-def renderizar_blocos_codigo(logica_data: Optional[Dict[str, Any]]) -> Tuple[List[Dict[str, Any]], List[Dict[str, str]]]:
+def renderizar_blocos_codigo(
+    logica_data: Optional[Dict[str, Any]],
+    titulo_projeto: Optional[str] = None
+) -> Tuple[List[Dict[str, Any]], List[Dict[str, str]]]:
     """Função de compatibilidade retroativa que delega para renderizar_trecho_codigo_fonte."""
-    bloco, lista = renderizar_trecho_codigo_fonte(logica_data)
+    bloco, lista = renderizar_trecho_codigo_fonte(logica_data, titulo_projeto=titulo_projeto)
     return [bloco], lista
 
 
@@ -1244,7 +1256,11 @@ def renderizar_blocos_codigo(logica_data: Optional[Dict[str, Any]]) -> Tuple[Lis
 # GERAÇÃO DAS PÁGINAS EDITORIAIS
 # ==============================================================================
 
-def gerar_html_sumario_formal(projetos_info: List[Dict[str, Any]], num_pagina: int = 2) -> str:
+def gerar_html_sumario_formal(
+    projetos_info: List[Dict[str, Any]],
+    num_pagina: int = 2,
+    pagina_referencias: Optional[int] = None
+) -> str:
     """
     Gera o Sumário Formal do Livro (Table of Contents) imediatamente após a Capa.
     """
@@ -1308,7 +1324,18 @@ def gerar_html_sumario_formal(projetos_info: List[Dict[str, Any]], num_pagina: i
     if not html_prj:
         html_prj.append("<p class='text-gray-400 italic text-[11px] pl-1'>Nenhum projeto cadastrado.</p>")
 
-    itens_todos = html_fund + html_mod + html_prj
+    # 4. Pós-textual: Referências Bibliográficas
+    pag_ref_str = f"Pág. {pagina_referencias:02d}" if pagina_referencias is not None else "Pág. --"
+    html_ref = [
+        HTMLTemplates.SUMARIO_ITEM_LINHA.substitute(
+            prefixo="REF.",
+            titulo="Referências Bibliográficas",
+            link_ancora="#secao-referencias",
+            pagina=pag_ref_str
+        )
+    ]
+
+    itens_todos = html_fund + html_mod + html_prj + html_ref
 
     return HTMLTemplates.PAGINA_SUMARIO_FORMAL_A4.substitute(
         header_superior=header_sup,
@@ -1421,7 +1448,6 @@ def gerar_html_projeto(
     contexto = html.escape(str(prj.get("CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL", "A preencher")))
     bom_items = hw_data.get("BOM", [])
     pinos_items = hw_data.get("MAPEAMENTO_PINOS", [])
-    img_esquema = html.escape(str(hw_data.get("IMAGEM_ESQUEMA", "")))
 
     bom_rows = ""
     for item in bom_items:
@@ -1435,12 +1461,39 @@ def gerar_html_projeto(
         bom_rows = '<tr class="border-b border-sky-200/60"><td colspan="2" class="py-1.5 px-2 text-center text-slate-400 text-[10px]">A preencher</td></tr>'
 
     pinos_lis = renderizar_lista(pinos_items)
+
+    # Resolução e padronização da imagem do Esquema elétrico
+    raw_img_esquema = str(hw_data.get("IMAGEM_ESQUEMA", "")).strip()
+    if raw_img_esquema:
+        raw_img_esquema = re.sub(r'esquema\.png$', 'Esquema.png', raw_img_esquema, flags=re.IGNORECASE)
+    else:
+        codigo_formatado = re.sub(r'[^a-zA-Z0-9]+', '_', codigo).strip('_')
+        for cand in [
+            Path(base_dir) / "projetos" / f"{codigo_formatado}_Esquema.png",
+            Path(base_dir) / "projetos" / f"{slug_id.replace('-', '_').upper()}_Esquema.png",
+        ]:
+            if cand.exists():
+                raw_img_esquema = f"projetos/{cand.name}"
+                break
+    img_esquema = html.escape(raw_img_esquema)
+
+    titulo_esquema = html.escape(str(hw_data.get("TITULO_ESQUEMA") or "FIGURA 1: ESQUEMA DO CIRCUITO ELETRÔNICO"))
+
+    # Resolução e padronização da imagem do Fluxograma algorítmico
     logica_data = prj.get("MODELAGEM_LOGICO_ALGORITMA", {})
-    img_fluxograma = (
-        html.escape(str(logica_data.get("ARQUIVO", "")))
-        if isinstance(logica_data, dict)
-        else ""
-    )
+    raw_img_fluxo = str(logica_data.get("ARQUIVO", "")).strip() if isinstance(logica_data, dict) else ""
+    if raw_img_fluxo:
+        raw_img_fluxo = re.sub(r'fluxograma\.png$', 'Fluxograma.png', raw_img_fluxo, flags=re.IGNORECASE)
+    else:
+        codigo_formatado = re.sub(r'[^a-zA-Z0-9]+', '_', codigo).strip('_')
+        for cand in [
+            Path(base_dir) / "projetos" / f"{codigo_formatado}_Fluxograma.png",
+            Path(base_dir) / "projetos" / f"{slug_id.replace('-', '_').upper()}_Fluxograma.png",
+        ]:
+            if cand.exists():
+                raw_img_fluxo = f"projetos/{cand.name}"
+                break
+    img_fluxograma = html.escape(raw_img_fluxo)
 
     roteiro_items = prj.get("ROTEIRO_PRATICO_DE_EXECUCAO", [])
     roteiro_lis = renderizar_lista(roteiro_items, remover_numeracao=True)
@@ -1452,7 +1505,7 @@ def gerar_html_projeto(
     html_desafios = renderizar_desafios(desafios_items)
 
     html_img_esquema = (
-        HTMLTemplates.DIAGRAMA_ESQUEMA.substitute(img_src=img_esquema)
+        HTMLTemplates.DIAGRAMA_ESQUEMA.substitute(img_src=img_esquema, titulo_esquema=titulo_esquema)
         if img_esquema
         else ""
     )
@@ -1463,7 +1516,10 @@ def gerar_html_projeto(
     )
 
     # Processamento do trecho central de código e fluxo em setas
-    bloco_codigo, secoes_raw = renderizar_trecho_codigo_fonte(logica_data if isinstance(logica_data, dict) else {})
+    bloco_codigo, secoes_raw = renderizar_trecho_codigo_fonte(
+        logica_data if isinstance(logica_data, dict) else {},
+        titulo_projeto=prj.get("TITULO", "")
+    )
     html_fluxo_setas = renderizar_fluxo_setas(prj, secoes_raw)
     bloco_github = gerar_bloco_github(prj, slug_id, base_dir)
 
@@ -1824,7 +1880,11 @@ def executar_automacao(
         pagina_corrente += total_pags
 
     # 3. Sumário Formal do Livro (Página 02 - imediatamente após a Capa)
-    html_sumario = gerar_html_sumario_formal(projetos_info, num_pagina=2)
+    html_sumario = gerar_html_sumario_formal(
+        projetos_info,
+        num_pagina=2,
+        pagina_referencias=pagina_corrente
+    )
 
     # 4. Introdução e Contexto Histórico (Página 03)
     html_introducao = gerar_html_introducao(num_pagina=3)
@@ -1908,11 +1968,14 @@ def executar_automacao(
     </main>
     """
 
-    html_referencias = """
+    header_referencias = HTMLTemplates.HEADER_PAGINACAO_SUPERIOR.substitute(
+        titulo_secao="Manual Didático de Computação • Referências",
+        num_pagina=f"{pagina_corrente:02d}"
+    )
+
+    html_referencias = f"""
     <main class="a4-page page-break" id="secao-referencias">
-        <div class="page-top-header">
-            <span class="page-header-title">Manual Didático de Computação • Referências</span>
-        </div>
+        {header_referencias}
         <div class="w-full">
             <header class="border-b-2 border-brand-800 pb-1.5 mb-6 avoid-break">
                 <h2 class="font-heading font-bold text-xl text-brand-900 leading-tight">
