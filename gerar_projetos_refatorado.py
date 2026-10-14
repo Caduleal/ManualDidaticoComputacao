@@ -723,18 +723,13 @@ class HTMLTemplates:
     DESAFIOS_CONTAINER = DESAFIOS_DE_EXPANSAO
 
     ESTIMULO_POS_FLUXOGRAMA = Template("""
-    <div class="bg-emerald-50/80 border border-emerald-200 border-l-4 border-l-emerald-600 p-2.5 rounded-sm mb-3 avoid-break">
-        <div class="flex items-start gap-2">
-            <span class="text-sm shrink-0 leading-none mt-0.5"></span>
-            <div>
-                <span class="font-heading font-bold text-emerald-950 text-[10.5px] uppercase tracking-wide block mb-0.5">
-                    Explore e Modifique
-                </span>
-                <p class="text-[10px] text-emerald-900 leading-relaxed m-0">
-                    O fluxograma e o código fornecidos são a base do projeto. Incentive os estudantes a alterarem trechos do algoritmo (como intervalos de tempo, frequências sonoras, padrões de repetição e limites lógicos) e a proporem novas funcionalidades, estimulando a criatividade, a experimentação ativa e a autonomia investigativa.
-                </p>
-            </div>
-        </div>
+    <div class="bg-[#188C79]/5 border-l-4 border-[#188C79] p-3 rounded-r-md mb-2 avoid-break">
+        <h4 class="font-heading font-bold text-[#193A57] text-[10.5px] uppercase tracking-wider block mb-1">
+            Explore e Modifique
+        </h4>
+        <p class="text-[10px] text-slate-700 leading-relaxed m-0">
+            O fluxograma e o código fornecidos são a base do projeto. Incentive os estudantes a alterarem trechos do algoritmo (como intervalos de tempo, frequências sonoras, padrões de repetição e limites lógicos) e a proporem novas funcionalidades, estimulando a criatividade, a experimentação ativa e a autonomia investigativa.
+        </p>
     </div>
     """)
 
@@ -753,10 +748,12 @@ class HTMLTemplates:
                 <pre class="m-0"><code class="text-black text-[9.5px] font-mono leading-relaxed whitespace-pre-wrap break-words">${codigo}</code></pre>
             </div>
         </div>
-        <div class="bg-amber-50/90 border border-amber-200 rounded-md p-2.5 flex items-start gap-2 text-amber-950">
-            <span class="text-sm shrink-0 leading-none mt-0.5"></span>
-            <p class="text-[9.5px] leading-relaxed m-0 font-normal">
-                <strong>Nota:</strong> Por motivos didáticos e de síntese visual, exibimos acima apenas o trecho principal da lógica do algoritmo. O código-fonte integral em C++ (com todas as rotinas auxiliares, mapeamentos de pinos e laço de setup) está disponível para consulta e download via QR Code do Repositório GitHub.
+        <div class="bg-amber-50 border-l-4 border-amber-500 p-3 rounded-r-md mb-2 avoid-break">
+            <h4 class="font-heading font-bold text-[#193A57] text-[10.5px] uppercase tracking-wider block mb-1">
+                Nota
+            </h4>
+            <p class="text-[9.5px] text-slate-700 leading-relaxed m-0">
+                Por motivos didáticos e de síntese visual, exibimos acima apenas o trecho principal da lógica do algoritmo. O código-fonte integral em C++ (com todas as rotinas auxiliares, mapeamentos de pinos e laço de setup) está disponível para consulta e download via QR Code do Repositório GitHub.
             </p>
         </div>
     </section>
@@ -800,20 +797,22 @@ class HTMLTemplates:
     """)
 
     ROTEIRO_PRATICO = Template("""
-    <section class="bg-sky-50/70 border border-sky-200 p-3.5 rounded-lg avoid-break mb-3.5">
-        <h3 class="font-heading font-bold text-sky-950 text-[11.5px] uppercase tracking-wide mb-2 pb-1 border-b border-sky-200">
+    <section class="bg-white mb-4 avoid-break">
+        <h3 class="font-heading font-bold text-[#193A57] text-[11px] uppercase tracking-wider mb-2.5 pb-1 border-b border-slate-200">
             ROTEIRO PRÁTICO DE EXECUÇÃO
         </h3>
-        <ol class="list-decimal pl-4 space-y-2 text-[10px] text-slate-800 leading-[1.6]">${roteiro_lis}</ol>
+        <ol class="list-none p-0 m-0">
+            ${roteiro_lis}
+        </ol>
     </section>
     """)
 
     ARTICULACAO_APROFUNDAMENTO = Template("""
-    <section class="bg-emerald-50/70 border border-emerald-200 p-3.5 rounded-lg mb-3.5 avoid-break">
-        <h3 class="font-heading font-bold text-emerald-950 text-[11.5px] uppercase tracking-wide mb-2 pb-1 border-b border-emerald-200">
+    <section class="bg-white mb-4 avoid-break">
+        <h3 class="font-heading font-bold text-[#193A57] text-[11px] uppercase tracking-wider mb-2.5 pb-1 border-b border-slate-200">
             ARTICULAÇÃO E APROFUNDAMENTO TEÓRICO
         </h3>
-        <div class="pl-4 space-y-2 text-[10px] text-slate-800 leading-[1.6] m-0">
+        <div class="space-y-2.5 text-[10px] text-slate-800 leading-relaxed m-0">
             ${articulacao}
         </div>
     </section>
@@ -1066,6 +1065,39 @@ def renderizar_lista(val: Union[List[Any], str, None], remover_numeracao: bool =
     return "<li class='text-gray-400 italic'>A preencher</li>"
 
 
+def renderizar_roteiro_pratico(items: Union[List[Any], str, None]) -> str:
+    """
+    Renderiza os passos do Roteiro Prático de Execução com numeração discreta em pequenos
+    círculos azul-marinho (#193A57), divisórias cinza-claro e texto sobre fundo branco.
+    """
+    if not items:
+        return "<li class='text-gray-400 italic text-[10px] py-1.5'>A preencher</li>"
+
+    if isinstance(items, str):
+        linhas = [l.strip() for l in items.split("\n") if l.strip()]
+    elif isinstance(items, list):
+        linhas = items
+    else:
+        linhas = [str(items)]
+
+    html_items = []
+    for idx, item in enumerate(linhas, start=1):
+        if isinstance(item, dict):
+            texto = str(item.get("descricao") or item.get("texto") or "")
+        else:
+            texto = str(item)
+        texto = re.sub(r"^\s*\d+[\.\)\-]\s*", "", texto).strip()
+        texto_esc = html.escape(texto)
+        html_items.append(
+            f'<li class="flex items-start gap-2.5 py-1.5 border-b border-slate-100 last:border-b-0">'
+            f'<span class="w-4.5 h-4.5 min-w-[18px] min-h-[18px] rounded-full bg-[#193A57] text-white flex items-center justify-center text-[9.5px] font-bold shrink-0 mt-0.5">{idx}</span>'
+            f'<span class="text-[10px] text-slate-800 leading-relaxed flex-1">{texto_esc}</span>'
+            f'</li>'
+        )
+
+    return "\n".join(html_items)
+
+
 def renderizar_desafios(val: Union[List[Any], str, None]) -> str:
     """Renderiza os Desafios de Expansão com a dificuldade centralizada à direita."""
     if not val:
@@ -1133,7 +1165,8 @@ def dividir_codigo_por_comentarios(codigo: str) -> List[Dict[str, str]]:
 
 def formatar_articulacao_teorica(art_raw: str) -> str:
     """
-    Formata os tópicos da articulação teórica com recuo pl-4, space-y-2 e tópicos em negrito.
+    Formata os tópicos da articulação teórica em blocos textuais sobre fundo branco,
+    com subtítulos em negrito e divisão uniforme por espaçamento.
     """
     if not art_raw or not art_raw.strip():
         return "<p class='text-gray-400 italic text-[10px] m-0'>A preencher</p>"
@@ -1145,10 +1178,10 @@ def formatar_articulacao_teorica(art_raw: str) -> str:
         # Identifica tópicos no formato "1) Título: resto" ou "1. Título: resto"
         match = re.match(r"^\d+[\)\.]\s*([^:]+:)(.*)$", p_esc, re.DOTALL)
         if match:
-            topico, resto = match.group(1), match.group(2)
-            items_html.append(f'<p class="m-0"><strong class="font-bold text-slate-900">{topico}</strong>{resto}</p>')
+            topico, resto = match.group(1).strip(), match.group(2)
+            items_html.append(f'<p class="m-0 leading-relaxed"><strong class="font-bold text-slate-900">{topico}</strong>{resto}</p>')
         else:
-            items_html.append(f'<p class="m-0">{p_esc}</p>')
+            items_html.append(f'<p class="m-0 leading-relaxed">{p_esc}</p>')
 
     return "\n".join(items_html)
 
@@ -1496,7 +1529,7 @@ def gerar_html_projeto(
     img_fluxograma = html.escape(raw_img_fluxo)
 
     roteiro_items = prj.get("ROTEIRO_PRATICO_DE_EXECUCAO", [])
-    roteiro_lis = renderizar_lista(roteiro_items, remover_numeracao=True)
+    roteiro_lis = renderizar_roteiro_pratico(roteiro_items)
 
     art_raw = str(prj.get("ARTICULACAO_E_APROFUNDAMENTO", "A preencher"))
     articulacao = formatar_articulacao_teorica(art_raw)
@@ -1568,12 +1601,12 @@ def gerar_html_projeto(
 
     if roteiro_items:
         html_roteiro = HTMLTemplates.ROTEIRO_PRATICO.substitute(roteiro_lis=roteiro_lis)
-        peso_roteiro = 4 + (len(roteiro_items) * 2)
+        peso_roteiro = 3 + (len(roteiro_items) * 2)
         elementos_dinamicos.append({"html": html_roteiro, "linhas_peso": peso_roteiro})
 
     if articulacao:
         html_art = HTMLTemplates.ARTICULACAO_APROFUNDAMENTO.substitute(articulacao=articulacao)
-        peso_articulacao = 4 + (len(art_raw) // 130)
+        peso_articulacao = 3 + (len(art_raw) // 140)
         elementos_dinamicos.append({"html": html_art, "linhas_peso": peso_articulacao})
 
     if desafios_items:
@@ -1581,7 +1614,7 @@ def gerar_html_projeto(
         peso_desafios = 4 + (len(desafios_items) * 3)
         elementos_dinamicos.append({"html": html_des, "linhas_peso": peso_desafios})
 
-    if html_img_fluxograma:
+    if html_img_fluxograma or roteiro_items:
         elementos_dinamicos.append({"html": HTMLTemplates.ESTIMULO_POS_FLUXOGRAMA.substitute(), "linhas_peso": 4})
 
     if bloco_codigo:

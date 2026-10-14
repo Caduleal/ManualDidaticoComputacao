@@ -2363,55 +2363,85 @@
    </div>
    <div>
     <section>
-     <section class="bg-sky-50/70 border border-sky-200 p-3.5 rounded-lg avoid-break mb-3.5">
-      <h3 class="font-heading font-bold text-sky-950 text-[11.5px] uppercase tracking-wide mb-2 pb-1 border-b border-sky-200">
+     <section class="bg-white mb-4 avoid-break">
+      <h3 class="font-heading font-bold text-[#193A57] text-[11px] uppercase tracking-wider mb-2.5 pb-1 border-b border-slate-200">
        ROTEIRO PRÁTICO DE EXECUÇÃO
       </h3>
-      <ol class="list-decimal pl-4 space-y-2 text-[10px] text-slate-800 leading-[1.6]">
-       <li>
-        Conecte os resistores de 220Ω nos anodos dos LEDs Vermelho, Amarelo e Verde, ligando-os respectivamente aos pinos digitais D10, D9 e D8 do Arduino.
+      <ol class="list-none p-0 m-0">
+       <li class="flex items-start gap-2.5 py-1.5 border-b border-slate-100 last:border-b-0">
+        <span class="w-4.5 h-4.5 min-w-[18px] min-h-[18px] rounded-full bg-[#193A57] text-white flex items-center justify-center text-[9.5px] font-bold shrink-0 mt-0.5">
+         1
+        </span>
+        <span class="text-[10px] text-slate-800 leading-relaxed flex-1">
+         Conecte os resistores de 220Ω nos anodos dos LEDs Vermelho, Amarelo e Verde, ligando-os respectivamente aos pinos digitais D10, D9 e D8 do Arduino.
+        </span>
        </li>
-       <li>
-        Conecte os catodos de todos os LEDs ao barramento de GND da protoboard e puxe um jumper para o GND da placa Arduino.
+       <li class="flex items-start gap-2.5 py-1.5 border-b border-slate-100 last:border-b-0">
+        <span class="w-4.5 h-4.5 min-w-[18px] min-h-[18px] rounded-full bg-[#193A57] text-white flex items-center justify-center text-[9.5px] font-bold shrink-0 mt-0.5">
+         2
+        </span>
+        <span class="text-[10px] text-slate-800 leading-relaxed flex-1">
+         Conecte os catodos de todos os LEDs ao barramento de GND da protoboard e puxe um jumper para o GND da placa Arduino.
+        </span>
        </li>
-       <li>
-        Verifique a polaridade correta dos componentes (a perna maior do LED é o anodo e a menor é o catodo).
+       <li class="flex items-start gap-2.5 py-1.5 border-b border-slate-100 last:border-b-0">
+        <span class="w-4.5 h-4.5 min-w-[18px] min-h-[18px] rounded-full bg-[#193A57] text-white flex items-center justify-center text-[9.5px] font-bold shrink-0 mt-0.5">
+         3
+        </span>
+        <span class="text-[10px] text-slate-800 leading-relaxed flex-1">
+         Verifique a polaridade correta dos componentes (a perna maior do LED é o anodo e a menor é o catodo).
+        </span>
        </li>
-       <li>
-        Conecte o Arduino ao computador via cabo USB.
+       <li class="flex items-start gap-2.5 py-1.5 border-b border-slate-100 last:border-b-0">
+        <span class="w-4.5 h-4.5 min-w-[18px] min-h-[18px] rounded-full bg-[#193A57] text-white flex items-center justify-center text-[9.5px] font-bold shrink-0 mt-0.5">
+         4
+        </span>
+        <span class="text-[10px] text-slate-800 leading-relaxed flex-1">
+         Conecte o Arduino ao computador via cabo USB.
+        </span>
        </li>
-       <li>
-        Abra a IDE do Arduino, cole o código fonte correspondente ao ciclo do semáforo e selecione a porta correta.
+       <li class="flex items-start gap-2.5 py-1.5 border-b border-slate-100 last:border-b-0">
+        <span class="w-4.5 h-4.5 min-w-[18px] min-h-[18px] rounded-full bg-[#193A57] text-white flex items-center justify-center text-[9.5px] font-bold shrink-0 mt-0.5">
+         5
+        </span>
+        <span class="text-[10px] text-slate-800 leading-relaxed flex-1">
+         Abra a IDE do Arduino, cole o código fonte correspondente ao ciclo do semáforo e selecione a porta correta.
+        </span>
        </li>
-       <li>
-        Carregue o programa na placa e observe a alternância cíclica das luzes.
+       <li class="flex items-start gap-2.5 py-1.5 border-b border-slate-100 last:border-b-0">
+        <span class="w-4.5 h-4.5 min-w-[18px] min-h-[18px] rounded-full bg-[#193A57] text-white flex items-center justify-center text-[9.5px] font-bold shrink-0 mt-0.5">
+         6
+        </span>
+        <span class="text-[10px] text-slate-800 leading-relaxed flex-1">
+         Carregue o programa na placa e observe a alternância cíclica das luzes.
+        </span>
        </li>
       </ol>
      </section>
-     <section class="bg-emerald-50/70 border border-emerald-200 p-3.5 rounded-lg mb-3.5 avoid-break">
-      <h3 class="font-heading font-bold text-emerald-950 text-[11.5px] uppercase tracking-wide mb-2 pb-1 border-b border-emerald-200">
+     <section class="bg-white mb-4 avoid-break">
+      <h3 class="font-heading font-bold text-[#193A57] text-[11px] uppercase tracking-wider mb-2.5 pb-1 border-b border-slate-200">
        ARTICULAÇÃO E APROFUNDAMENTO TEÓRICO
       </h3>
-      <div class="pl-4 space-y-2 text-[10px] text-slate-800 leading-[1.6] m-0">
-       <p class="m-0">
+      <div class="space-y-2.5 text-[10px] text-slate-800 leading-relaxed m-0">
+       <p class="m-0 leading-relaxed">
         <strong class="font-bold text-slate-900">
          Controle de Portas Digitais:
         </strong>
         A função `digitalWrite()` envia sinais de nível lógico Alto (HIGH / 5V) ou Baixo (LOW / 0V) para os pinos configurados como saída (`OUTPUT`), controlando o fluxo de corrente pelos LEDs.
        </p>
-       <p class="m-0">
+       <p class="m-0 leading-relaxed">
         <strong class="font-bold text-slate-900">
          O Papel do Resistor de Limitação:
         </strong>
         O resistor de 220Ω é indispensável para limitar a corrente elétrica que passa pelo LED, evitando a queima do componente devido à diferença de potencial direta da placa.
        </p>
-       <p class="m-0">
+       <p class="m-0 leading-relaxed">
         <strong class="font-bold text-slate-900">
          Temporização Sequencial:
         </strong>
         O uso da função `delay()` pausa a execução do programa em milissegundos, criando a cadência visual temporal necessária para imitar o funcionamento de um semáforo urbano convencional.
        </p>
-       <p class="m-0">
+       <p class="m-0 leading-relaxed">
         <strong class="font-bold text-slate-900">
          Lógica de Estados:
         </strong>
@@ -2450,19 +2480,13 @@
        </div>
       </div>
      </section>
-     <div class="bg-emerald-50/80 border border-emerald-200 border-l-4 border-l-emerald-600 p-2.5 rounded-sm mb-3 avoid-break">
-      <div class="flex items-start gap-2">
-       <span class="text-sm shrink-0 leading-none mt-0.5">
-       </span>
-       <div>
-        <span class="font-heading font-bold text-emerald-950 text-[10.5px] uppercase tracking-wide block mb-0.5">
-         Explore e Modifique
-        </span>
-        <p class="text-[10px] text-emerald-900 leading-relaxed m-0">
-         O fluxograma e o código fornecidos são a base do projeto. Incentive os estudantes a alterarem trechos do algoritmo (como intervalos de tempo, frequências sonoras, padrões de repetição e limites lógicos) e a proporem novas funcionalidades, estimulando a criatividade, a experimentação ativa e a autonomia investigativa.
-        </p>
-       </div>
-      </div>
+     <div class="bg-[#188C79]/5 border-l-4 border-[#188C79] p-3 rounded-r-md mb-2 avoid-break">
+      <h4 class="font-heading font-bold text-[#193A57] text-[10.5px] uppercase tracking-wider block mb-1">
+       Explore e Modifique
+      </h4>
+      <p class="text-[10px] text-slate-700 leading-relaxed m-0">
+       O fluxograma e o código fornecidos são a base do projeto. Incentive os estudantes a alterarem trechos do algoritmo (como intervalos de tempo, frequências sonoras, padrões de repetição e limites lógicos) e a proporem novas funcionalidades, estimulando a criatividade, a experimentação ativa e a autonomia investigativa.
+      </p>
      </div>
     </section>
    </div>
@@ -2524,13 +2548,11 @@ void loop() {
 }</code></pre>
        </div>
       </div>
-      <div class="bg-amber-50/90 border border-amber-200 rounded-md p-2.5 flex items-start gap-2 text-amber-950">
-       <span class="text-sm shrink-0 leading-none mt-0.5">
-       </span>
-       <p class="text-[9.5px] leading-relaxed m-0 font-normal">
-        <strong>
-         Nota:
-        </strong>
+      <div class="bg-amber-50 border-l-4 border-amber-500 p-3 rounded-r-md mb-2 avoid-break">
+       <h4 class="font-heading font-bold text-[#193A57] text-[10.5px] uppercase tracking-wider block mb-1">
+        Nota
+       </h4>
+       <p class="text-[9.5px] text-slate-700 leading-relaxed m-0">
         Por motivos didáticos e de síntese visual, exibimos acima apenas o trecho principal da lógica do algoritmo. O código-fonte integral em C++ (com todas as rotinas auxiliares, mapeamentos de pinos e laço de setup) está disponível para consulta e download via QR Code do Repositório GitHub.
        </p>
       </div>
@@ -2909,55 +2931,85 @@ void loop() {
    </div>
    <div>
     <section>
-     <section class="bg-sky-50/70 border border-sky-200 p-3.5 rounded-lg avoid-break mb-3.5">
-      <h3 class="font-heading font-bold text-sky-950 text-[11.5px] uppercase tracking-wide mb-2 pb-1 border-b border-sky-200">
+     <section class="bg-white mb-4 avoid-break">
+      <h3 class="font-heading font-bold text-[#193A57] text-[11px] uppercase tracking-wider mb-2.5 pb-1 border-b border-slate-200">
        ROTEIRO PRÁTICO DE EXECUÇÃO
       </h3>
-      <ol class="list-decimal pl-4 space-y-2 text-[10px] text-slate-800 leading-[1.6]">
-       <li>
-        Monte os quatro LEDs (Vermelho, Amarelo, Azul e Verde) nos pinos digitais D5, D4, D3 e D2 respectivamente. O anodo de cada LED deve se conectar ao pino digital e o catodo deve se ligar ao GND passando por um resistor de 220Ω.
+      <ol class="list-none p-0 m-0">
+       <li class="flex items-start gap-2.5 py-1.5 border-b border-slate-100 last:border-b-0">
+        <span class="w-4.5 h-4.5 min-w-[18px] min-h-[18px] rounded-full bg-[#193A57] text-white flex items-center justify-center text-[9.5px] font-bold shrink-0 mt-0.5">
+         1
+        </span>
+        <span class="text-[10px] text-slate-800 leading-relaxed flex-1">
+         Monte os quatro LEDs (Vermelho, Amarelo, Azul e Verde) nos pinos digitais D5, D4, D3 e D2 respectivamente. O anodo de cada LED deve se conectar ao pino digital e o catodo deve se ligar ao GND passando por um resistor de 220Ω.
+        </span>
        </li>
-       <li>
-        Monte os quatro botões no barramento da protoboard. Conecte um lado das chaves à linha de 5V. No outro lado, conecte o pino do Arduino correspondente (D8, D9, D10 e D11) acompanhado de um resistor de 220Ω ligado ao GND (configuração Active-High com Pull-Down externo).
+       <li class="flex items-start gap-2.5 py-1.5 border-b border-slate-100 last:border-b-0">
+        <span class="w-4.5 h-4.5 min-w-[18px] min-h-[18px] rounded-full bg-[#193A57] text-white flex items-center justify-center text-[9.5px] font-bold shrink-0 mt-0.5">
+         2
+        </span>
+        <span class="text-[10px] text-slate-800 leading-relaxed flex-1">
+         Monte os quatro botões no barramento da protoboard. Conecte um lado das chaves à linha de 5V. No outro lado, conecte o pino do Arduino correspondente (D8, D9, D10 e D11) acompanhado de um resistor de 220Ω ligado ao GND (configuração Active-High com Pull-Down externo).
+        </span>
        </li>
-       <li>
-        Conecte o pino positivo do buzzer passivo ao pino D12 do Arduino e o polo negativo diretamente ao barramento de GND.
+       <li class="flex items-start gap-2.5 py-1.5 border-b border-slate-100 last:border-b-0">
+        <span class="w-4.5 h-4.5 min-w-[18px] min-h-[18px] rounded-full bg-[#193A57] text-white flex items-center justify-center text-[9.5px] font-bold shrink-0 mt-0.5">
+         3
+        </span>
+        <span class="text-[10px] text-slate-800 leading-relaxed flex-1">
+         Conecte o pino positivo do buzzer passivo ao pino D12 do Arduino e o polo negativo diretamente ao barramento de GND.
+        </span>
        </li>
-       <li>
-        Deixe a entrada analógica A0 completamente desconectada de fios ou componentes para garantir a amostragem de ruído térmico/eletromagnético ambiente.
+       <li class="flex items-start gap-2.5 py-1.5 border-b border-slate-100 last:border-b-0">
+        <span class="w-4.5 h-4.5 min-w-[18px] min-h-[18px] rounded-full bg-[#193A57] text-white flex items-center justify-center text-[9.5px] font-bold shrink-0 mt-0.5">
+         4
+        </span>
+        <span class="text-[10px] text-slate-800 leading-relaxed flex-1">
+         Deixe a entrada analógica A0 completamente desconectada de fios ou componentes para garantir a amostragem de ruído térmico/eletromagnético ambiente.
+        </span>
        </li>
-       <li>
-        Configure o pino dos botões como INPUT simples no setup() para evitar a ativação do pull-up interno e prevenir flutuações de tensão no divisor de resistor.
+       <li class="flex items-start gap-2.5 py-1.5 border-b border-slate-100 last:border-b-0">
+        <span class="w-4.5 h-4.5 min-w-[18px] min-h-[18px] rounded-full bg-[#193A57] text-white flex items-center justify-center text-[9.5px] font-bold shrink-0 mt-0.5">
+         5
+        </span>
+        <span class="text-[10px] text-slate-800 leading-relaxed flex-1">
+         Configure o pino dos botões como INPUT simples no setup() para evitar a ativação do pull-up interno e prevenir flutuações de tensão no divisor de resistor.
+        </span>
        </li>
-       <li>
-        Carregue o firmware na Placa Arduino Uno, inicie o Monitor Serial a 9600 baud para acompanhar o rastreamento dos índices e jogue.
+       <li class="flex items-start gap-2.5 py-1.5 border-b border-slate-100 last:border-b-0">
+        <span class="w-4.5 h-4.5 min-w-[18px] min-h-[18px] rounded-full bg-[#193A57] text-white flex items-center justify-center text-[9.5px] font-bold shrink-0 mt-0.5">
+         6
+        </span>
+        <span class="text-[10px] text-slate-800 leading-relaxed flex-1">
+         Carregue o firmware na Placa Arduino Uno, inicie o Monitor Serial a 9600 baud para acompanhar o rastreamento dos índices e jogue.
+        </span>
        </li>
       </ol>
      </section>
-     <section class="bg-emerald-50/70 border border-emerald-200 p-3.5 rounded-lg mb-3.5 avoid-break">
-      <h3 class="font-heading font-bold text-emerald-950 text-[11.5px] uppercase tracking-wide mb-2 pb-1 border-b border-emerald-200">
+     <section class="bg-white mb-4 avoid-break">
+      <h3 class="font-heading font-bold text-[#193A57] text-[11px] uppercase tracking-wider mb-2.5 pb-1 border-b border-slate-200">
        ARTICULAÇÃO E APROFUNDAMENTO TEÓRICO
       </h3>
-      <div class="pl-4 space-y-2 text-[10px] text-slate-800 leading-[1.6] m-0">
-       <p class="m-0">
+      <div class="space-y-2.5 text-[10px] text-slate-800 leading-relaxed m-0">
+       <p class="m-0 leading-relaxed">
         <strong class="font-bold text-slate-900">
          Estrutura do Circuito Pull-Down:
         </strong>
         O botão fica conectado entre os 5V e o pino digital. Um resistor de 220Ω liga o pino ao GND. Em repouso, o resistor drenará qualquer carga, garantindo nível lógico LOW (0V). Ao pressionar o botão, o circuito fecha diretamente com os 5V, elevando o pino a HIGH (sinal Active-High).
        </p>
-       <p class="m-0">
+       <p class="m-0 leading-relaxed">
         <strong class="font-bold text-slate-900">
          Mapeamento por Índices Paralelos:
         </strong>
         A lógica utiliza o mesmo índice `i` para correlacionar três vetores de hardware (`leds[i]`, `botoes[i]` e `simonTones[i]`). O vetor `filaOriginal` atua como um buffer linear indexado do histórico do jogo.
        </p>
-       <p class="m-0">
+       <p class="m-0 leading-relaxed">
         <strong class="font-bold text-slate-900">
          Entropia via Pino Analógico Flutuante:
         </strong>
         Computadores são determinísticos. A chamada `randomSeed(analogRead(A0))` amostra o ruído eletromagnético do pino A0 desconectado para inicializar o gerador pseudoaleatório (PRNG) com uma semente imprevisível.
        </p>
-       <p class="m-0">
+       <p class="m-0 leading-relaxed">
         <strong class="font-bold text-slate-900">
          Controle de Fluxo por Polling:
         </strong>
@@ -2996,19 +3048,13 @@ void loop() {
        </div>
       </div>
      </section>
-     <div class="bg-emerald-50/80 border border-emerald-200 border-l-4 border-l-emerald-600 p-2.5 rounded-sm mb-3 avoid-break">
-      <div class="flex items-start gap-2">
-       <span class="text-sm shrink-0 leading-none mt-0.5">
-       </span>
-       <div>
-        <span class="font-heading font-bold text-emerald-950 text-[10.5px] uppercase tracking-wide block mb-0.5">
-         Explore e Modifique
-        </span>
-        <p class="text-[10px] text-emerald-900 leading-relaxed m-0">
-         O fluxograma e o código fornecidos são a base do projeto. Incentive os estudantes a alterarem trechos do algoritmo (como intervalos de tempo, frequências sonoras, padrões de repetição e limites lógicos) e a proporem novas funcionalidades, estimulando a criatividade, a experimentação ativa e a autonomia investigativa.
-        </p>
-       </div>
-      </div>
+     <div class="bg-[#188C79]/5 border-l-4 border-[#188C79] p-3 rounded-r-md mb-2 avoid-break">
+      <h4 class="font-heading font-bold text-[#193A57] text-[10.5px] uppercase tracking-wider block mb-1">
+       Explore e Modifique
+      </h4>
+      <p class="text-[10px] text-slate-700 leading-relaxed m-0">
+       O fluxograma e o código fornecidos são a base do projeto. Incentive os estudantes a alterarem trechos do algoritmo (como intervalos de tempo, frequências sonoras, padrões de repetição e limites lógicos) e a proporem novas funcionalidades, estimulando a criatividade, a experimentação ativa e a autonomia investigativa.
+      </p>
      </div>
     </section>
    </div>
@@ -3077,13 +3123,11 @@ void loop() {
 // ... (código completo disponível no GitHub)</code></pre>
        </div>
       </div>
-      <div class="bg-amber-50/90 border border-amber-200 rounded-md p-2.5 flex items-start gap-2 text-amber-950">
-       <span class="text-sm shrink-0 leading-none mt-0.5">
-       </span>
-       <p class="text-[9.5px] leading-relaxed m-0 font-normal">
-        <strong>
-         Nota:
-        </strong>
+      <div class="bg-amber-50 border-l-4 border-amber-500 p-3 rounded-r-md mb-2 avoid-break">
+       <h4 class="font-heading font-bold text-[#193A57] text-[10.5px] uppercase tracking-wider block mb-1">
+        Nota
+       </h4>
+       <p class="text-[9.5px] text-slate-700 leading-relaxed m-0">
         Por motivos didáticos e de síntese visual, exibimos acima apenas o trecho principal da lógica do algoritmo. O código-fonte integral em C++ (com todas as rotinas auxiliares, mapeamentos de pinos e laço de setup) está disponível para consulta e download via QR Code do Repositório GitHub.
        </p>
       </div>
