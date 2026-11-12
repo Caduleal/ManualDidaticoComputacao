@@ -233,9 +233,9 @@ def atualizar_manual_html(caminho_html_origem, caminho_json, caminho_html_destin
     """
     diretorio_base = Path(__file__).parent.resolve()
 
-    caminho_origem = diretorio_base / caminho_html_origem
-    caminho_json_file = diretorio_base / caminho_json
-    caminho_destino = diretorio_base / caminho_html_destino
+    caminho_origem = diretorio_base / caminho_html_origem if not Path(caminho_html_origem).is_absolute() else Path(caminho_html_origem)
+    caminho_json_file = diretorio_base / caminho_json if not Path(caminho_json).is_absolute() else Path(caminho_json)
+    caminho_destino = diretorio_base / caminho_html_destino if not Path(caminho_html_destino).is_absolute() else Path(caminho_html_destino)
 
     # Carrega dados do arquivo JSON/TXT
     dados = carregar_dados_json(caminho_json_file)
@@ -277,7 +277,7 @@ def atualizar_manual_html(caminho_html_origem, caminho_json, caminho_html_destin
 
 if __name__ == "__main__":
     atualizar_manual_html(
-        caminho_html_origem="Manual.html",
-        caminho_json="dados_manual.txt",
-        caminho_html_destino="Manual.html"
+        caminho_html_origem="index.html",
+        caminho_json="projetos/dados_manual.txt",
+        caminho_html_destino="index.html"
     )

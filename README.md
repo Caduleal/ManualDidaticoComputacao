@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![Capa do Manual](Capa.png)
+![Capa do Manual](imagens/Capa.png)
 
 <p align="center">
   <strong>Guia Prático, Modular e Interdisciplinar para o Ensino de Ciência da Computação e Sistemas Embarcados na Educação Básica</strong>
@@ -46,7 +46,7 @@ Este manual rompe com essa visão tecnicista. Alinhado às diretrizes da **Base 
 A sequência didática organiza-se de forma progressiva e contínua em **4 Módulos Curriculares**, respeitando as fases de maturação cognitiva desde a Educação Infantil até o Ensino Médio:
 
 <div align="center">
-  <img src="Projetos.png" alt="Fluxograma Geral Integrado dos Projetos" width="95%" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border: 1px solid #e2e8f0; margin: 15px 0;">
+  <img src="imagens/Projetos.png" alt="Fluxograma Geral Integrado dos Projetos" width="95%" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border: 1px solid #e2e8f0; margin: 15px 0;">
 </div>
 
 <br>
@@ -203,24 +203,32 @@ void loop() {
 
 ## ⚙️ Arquitetura dos Geradores e Engenharia do Projeto
 
-A documentação da aplicação adota o princípio de **Fonte Única da Verdade (SSOT)** associado a geradores em lote escritos em Python:
+A documentação da aplicação adota as melhores práticas de organização de diretórios e o princípio de **Fonte Única da Verdade (SSOT)**, associados a geradores em lote escritos em Python:
 
 ```text
 .
-├── Manual.html                    # [SSOT] Fonte Única da Verdade (Documentação de Referência)
-├── Manual_Completo_Atualizado.html# Manual Consolidado com a grade completa (39 projetos)
-├── style.css                      # Estilos rigorosos para visualização de tela e impressão A4
-├── gerar_projetos_refatorado.py   # Motor de diagramação, paginação e compilação do livro
+├── index.html                     # [SSOT / Vercel] Ponto de entrada web e documento principal do manual
+├── Manual_Completo_Atualizado.html# Compilação estendida (39 projetos - versão completa)
+├── style.css                      # Folha de estilos para visualização em tela e impressão A4
+├── gerar_projetos.py              # Motor único de automação, diagramação e compilação do manual
 ├── atualizar_manual.py            # Processador de matrizes curriculares e competências
-├── dados_manual.txt               # Base de dados estruturada dos 4 Módulos Curriculares
-├── projetos_estrutura.txt         # Banco de dados com os 39 projetos detalhados
-├── projetos_estruturas.txt        # Base canônica reduzida (projeto piloto)
-├── Projetos.png                   # Infográfico do Fluxograma Panorâmico
-├── Capa.png                       # Arte editorial da capa acadêmica
-└── projetos/                      # Diagramas elétricos e fluxogramas individuais
-    ├── PRJ_3_1_Esquema.png
-    └── PRJ_3_1_Fluxograma.png
+├── imagens/                       # Identidade visual e infográficos gerais
+│   ├── Capa.png                   # Arte editorial da capa acadêmica
+│   └── Projetos.png               # Infográfico do fluxograma panorâmico
+├── projetos/                      # Bases de dados estruturadas e esquemas técnicos dos projetos
+│   ├── dados_manual.txt           # Base de dados dos 4 Módulos Curriculares
+│   ├── projetos_estrutura.txt     # Banco de dados com os 39 projetos detalhados
+│   ├── projetos_estruturas.txt    # Base canônica reduzida (projetos piloto)
+│   ├── PRJ_2_1_Esquema.png        # Esquema elétrico do PRJ 2.1
+│   ├── PRJ_2_1_Fluxograma.png     # Fluxograma lógico do PRJ 2.1
+│   ├── PRJ_3_1_Esquema.png        # Esquema elétrico do PRJ 3.1
+│   └── PRJ_3_1_Fluxograma.png     # Fluxograma lógico do PRJ 3.1
+└── README.md                      # Documentação completa do projeto
 ```
+
+### 🌐 Por que manter o `index.html`?
+
+Em servidores web e plataformas de hospedagem moderna (como a **Vercel**), o arquivo `index.html` é o documento raiz padrão servido na URL base (`/`). A unificação elimina duplicidades desnecessárias (como o antigo `Manual.html`, que era uma cópia redundante), garantindo que as alterações geradas pela automação reflitam instantaneamente no deploy de produção sem necessidade de redirecionamentos adicionais.
 
 ### 🚀 Como Compilar e Gerar os Manuais
 
@@ -230,16 +238,16 @@ Certifique-se de possuir o Python 3.10+ e a biblioteca `beautifulsoup4` instalad
 pip install beautifulsoup4
 ```
 
-#### Gerar os Manuais (Piloto e Completo Automáticos):
+#### Gerar os Manuais (Canônico e Completo):
 ```bash
-python gerar_projetos_refatorado.py
+python gerar_projetos.py
 ```
-O script compilará duas versões de forma automática:
-1. **Manual.html** (apenas com o projeto piloto da estrutura base)
-2. **Manual_Completo_Atualizado.html** (Manual consolidado completo com os 39 projetos)
+O script compilará as versões automaticamente:
+1. **index.html** (manual didático canônico, integrado para deploy na Vercel)
+2. **Manual_Completo_Atualizado.html** (versão consolidada completa com os 39 projetos)
 
 #### Exportar para PDF:
-Abra qualquer um dos arquivos `.html` gerados no navegador (Chrome, Edge ou Firefox) e clique no botão flutuante **"Gerar PDF / Imprimir"** ou pressione `Ctrl + P`. O layout `@media print` já está estritamente ajustado para folha A4 com margens simétricas.
+Abra o arquivo `index.html` gerado no navegador (Chrome, Edge ou Firefox) e clique no botão flutuante **"Gerar PDF / Imprimir"** ou pressione `Ctrl + P`. O layout `@media print` já está estritamente ajustado para folha A4 com margens simétricas.
 
 ---
 
