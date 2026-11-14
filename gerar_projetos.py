@@ -872,10 +872,10 @@ class HTMLTemplates:
                     </h3>
                 </div>
                 <div class="p-3">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="grid grid-cols-2 gap-4">
                         <div>
                             <h4 class="font-heading font-bold text-slate-900 text-[10.5px] uppercase tracking-wide mb-1.5 pb-0.5 border-b border-sky-200">
-                                Lista de Materiais (BOM)
+                                Lista de Materiais
                             </h4>
                             <table class="w-full text-left border-collapse">
                                 <thead>

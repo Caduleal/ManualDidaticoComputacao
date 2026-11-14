@@ -1,11 +1,11 @@
 [
   {
     "PROJETO": "PRJ 1.1",
-    "TITULO": "Circuito com massa de modelar condutiva",
+    "TITULO": "Circuitos Simples",
     "MODULO": "Módulo I - Ensino Infantil",
     "COMPLEXIDADE": "Básico",
-    "TEMPO_ESTIMADO": "2 h/aula (100 min)",
-    "PRE_REQUISITOS": "",
+    "TEMPO_ESTIMADO": "1 h/aula (60 min)",
+    "PRE_REQUISITOS": "Noções introdutórias de lógica e manuseio seguro de componentes.",
     "HABILIDADES_DE_COMPUTACAO": [
       "Corrente Elétrica e Circuitos Fechados"
     ],
@@ -15,7 +15,7 @@
       "EIXO": "Mundo Digital",
       "BNCC_GERAL": "EI03ET02"
     },
-    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Exploração prática do projeto Circuitos Simples aplicado ao desenvolvimento de habilidades do Módulo I - Ensino Infantil.",
     "FLUXO_ESTRUTURA_CODIGO": [],
     "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
       "BOM": [],
@@ -33,13 +33,13 @@
   },
   {
     "PROJETO": "PRJ 1.2",
-    "TITULO": "Classificação",
+    "TITULO": "Botão on/off",
     "MODULO": "Módulo I - Ensino Infantil",
     "COMPLEXIDADE": "Básico",
-    "TEMPO_ESTIMADO": "2 h/aula (100 min)",
-    "PRE_REQUISITOS": "",
+    "TEMPO_ESTIMADO": "1 h/aula (60 min)",
+    "PRE_REQUISITOS": "Noções introdutórias de lógica e manuseio seguro de componentes.",
     "HABILIDADES_DE_COMPUTACAO": [
-      "Agrupamento por Atributos e Filtros"
+      "Estados Binários (Ligado/Desligado) e Chaveamento"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
       "COMPETENCIA": "Matemática",
@@ -47,7 +47,7 @@
       "EIXO": "Pensamento Computacional",
       "BNCC_GERAL": "EI03ET05"
     },
-    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Exploração prática do projeto Botão on/off aplicado ao desenvolvimento de habilidades do Módulo I - Ensino Infantil.",
     "FLUXO_ESTRUTURA_CODIGO": [],
     "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
       "BOM": [],
@@ -65,13 +65,13 @@
   },
   {
     "PROJETO": "PRJ 1.3",
-    "TITULO": "Ordenação",
+    "TITULO": "Circuitos em Folhas de Papel",
     "MODULO": "Módulo I - Ensino Infantil",
     "COMPLEXIDADE": "Básico",
-    "TEMPO_ESTIMADO": "2 h/aula (100 min)",
-    "PRE_REQUISITOS": "",
+    "TEMPO_ESTIMADO": "1 h/aula (60 min)",
+    "PRE_REQUISITOS": "Noções introdutórias de lógica e manuseio seguro de componentes.",
     "HABILIDADES_DE_COMPUTACAO": [
-      "Algoritmos Sequenciais e Sequenciamento"
+      "Fita de Cobre, LEDs e Condutividade"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
       "COMPETENCIA": "Matemática",
@@ -79,7 +79,7 @@
       "EIXO": "Pensamento Computacional",
       "BNCC_GERAL": "EI03ET07"
     },
-    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Exploração prática do projeto Circuitos em Folhas de Papel aplicado ao desenvolvimento de habilidades do Módulo I - Ensino Infantil.",
     "FLUXO_ESTRUTURA_CODIGO": [],
     "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
       "BOM": [],
@@ -97,13 +97,13 @@
   },
   {
     "PROJETO": "PRJ 1.4",
-    "TITULO": "Cartões com circuitos de papel",
+    "TITULO": "Ventilador",
     "MODULO": "Módulo I - Ensino Infantil",
     "COMPLEXIDADE": "Básico",
-    "TEMPO_ESTIMADO": "2 h/aula (100 min)",
-    "PRE_REQUISITOS": "",
+    "TEMPO_ESTIMADO": "1 h/aula (60 min)",
+    "PRE_REQUISITOS": "Noções introdutórias de lógica e manuseio seguro de componentes.",
     "HABILIDADES_DE_COMPUTACAO": [
-      "Fita de Cobre, LEDs e Conectividade"
+      "Atuadores, Motores DC e Circuito Elementar"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
       "COMPETENCIA": "Ciências / Lógica",
@@ -111,135 +111,7 @@
       "EIXO": "Pensamento Computacional",
       "BNCC_GERAL": "EI03ET02"
     },
-    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
-    "FLUXO_ESTRUTURA_CODIGO": [],
-    "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
-      "BOM": [],
-      "MAPEAMENTO_PINOS": [],
-      "IMAGEM_ESQUEMA": "",
-      "LINK_THINKERCAD": ""
-    },
-    "MODELAGEM_LOGICO_ALGORITMA": {
-      "ARQUIVO": "",
-      "CODIGO_FONTE": ""
-    },
-    "ROTEIRO_PRATICO_DE_EXECUCAO": [],
-    "ARTICULACAO_E_APROFUNDAMENTO": "",
-    "DESAFIOS_DE_EXPANSAO": []
-  },
-  {
-    "PROJETO": "PRJ 1.5",
-    "TITULO": "Simulação de portas lógicas",
-    "MODULO": "Módulo I - Ensino Infantil",
-    "COMPLEXIDADE": "Intermediário",
-    "TEMPO_ESTIMADO": "2 h/aula (100 min)",
-    "PRE_REQUISITOS": "",
-    "HABILIDADES_DE_COMPUTACAO": [
-      "Lógica Booleana Básica (AND/OR Desplugado)"
-    ],
-    "COMPETENCIA_INTERDISCIPLINARES": {
-      "COMPETENCIA": "Ciências / Lógica",
-      "BNCC_CODIGO": "EI03CO01",
-      "EIXO": "Pensamento Computacional",
-      "BNCC_GERAL": "EI03ET05"
-    },
-    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
-    "FLUXO_ESTRUTURA_CODIGO": [],
-    "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
-      "BOM": [],
-      "MAPEAMENTO_PINOS": [],
-      "IMAGEM_ESQUEMA": "",
-      "LINK_THINKERCAD": ""
-    },
-    "MODELAGEM_LOGICO_ALGORITMA": {
-      "ARQUIVO": "",
-      "CODIGO_FONTE": ""
-    },
-    "ROTEIRO_PRATICO_DE_EXECUCAO": [],
-    "ARTICULACAO_E_APROFUNDAMENTO": "",
-    "DESAFIOS_DE_EXPANSAO": []
-  },
-  {
-    "PROJETO": "PRJ 1.6",
-    "TITULO": "Ventilador de bancada com motor DC",
-    "MODULO": "Módulo I - Ensino Infantil",
-    "COMPLEXIDADE": "Intermediário",
-    "TEMPO_ESTIMADO": "2 h/aula (100 min)",
-    "PRE_REQUISITOS": "",
-    "HABILIDADES_DE_COMPUTACAO": [
-      "Atuadores, Motores DC e Circuito de Potência"
-    ],
-    "COMPETENCIA_INTERDISCIPLINARES": {
-      "COMPETENCIA": "Ciências / Lógica",
-      "BNCC_CODIGO": "EI03CO07",
-      "EIXO": "Mundo Digital",
-      "BNCC_GERAL": "EI03ET02"
-    },
-    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
-    "FLUXO_ESTRUTURA_CODIGO": [],
-    "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
-      "BOM": [],
-      "MAPEAMENTO_PINOS": [],
-      "IMAGEM_ESQUEMA": "",
-      "LINK_THINKERCAD": ""
-    },
-    "MODELAGEM_LOGICO_ALGORITMA": {
-      "ARQUIVO": "",
-      "CODIGO_FONTE": ""
-    },
-    "ROTEIRO_PRATICO_DE_EXECUCAO": [],
-    "ARTICULACAO_E_APROFUNDAMENTO": "",
-    "DESAFIOS_DE_EXPANSAO": []
-  },
-  {
-    "PROJETO": "PRJ 1.7",
-    "TITULO": "Labirinto e lógica de decisão",
-    "MODULO": "Módulo I - Ensino Infantil",
-    "COMPLEXIDADE": "Intermediário",
-    "TEMPO_ESTIMADO": "2 h/aula (100 min)",
-    "PRE_REQUISITOS": "",
-    "HABILIDADES_DE_COMPUTACAO": [
-      "Condicionais e Árvore de Decisão"
-    ],
-    "COMPETENCIA_INTERDISCIPLINARES": {
-      "COMPETENCIA": "Ciências / Lógica",
-      "BNCC_CODIGO": "EI03CO01",
-      "EIXO": "Pensamento Computacional",
-      "BNCC_GERAL": "EI03ET01"
-    },
-    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
-    "FLUXO_ESTRUTURA_CODIGO": [],
-    "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
-      "BOM": [],
-      "MAPEAMENTO_PINOS": [],
-      "IMAGEM_ESQUEMA": "",
-      "LINK_THINKERCAD": ""
-    },
-    "MODELAGEM_LOGICO_ALGORITMA": {
-      "ARQUIVO": "",
-      "CODIGO_FONTE": ""
-    },
-    "ROTEIRO_PRATICO_DE_EXECUCAO": [],
-    "ARTICULACAO_E_APROFUNDAMENTO": "",
-    "DESAFIOS_DE_EXPANSAO": []
-  },
-  {
-    "PROJETO": "PRJ 1.8",
-    "TITULO": "Que animal é? Sons",
-    "MODULO": "Módulo I - Ensino Infantil",
-    "COMPLEXIDADE": "Intermediário",
-    "TEMPO_ESTIMADO": "2 h/aula (100 min)",
-    "PRE_REQUISITOS": "",
-    "HABILIDADES_DE_COMPUTACAO": [
-      "Mapeamento de Entradas e Saídas Sonoras"
-    ],
-    "COMPETENCIA_INTERDISCIPLINARES": {
-      "COMPETENCIA": "Ciências / Lógica",
-      "BNCC_CODIGO": "EI03CO01",
-      "EIXO": "Pensamento Computacional",
-      "BNCC_GERAL": "EI03TS01"
-    },
-    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Exploração prática do projeto Ventilador aplicado ao desenvolvimento de habilidades do Módulo I - Ensino Infantil.",
     "FLUXO_ESTRUTURA_CODIGO": [],
     "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
       "BOM": [],
@@ -260,42 +132,111 @@
     "TITULO": "Semáforo",
     "MODULO": "Módulo II - Ensino Fundamental I",
     "COMPLEXIDADE": "Básico",
-    "TEMPO_ESTIMADO": "2 h/aula (100 min)",
-    "PRE_REQUISITOS": "",
+    "TEMPO_ESTIMADO": "1 h/aula (60 min)",
+    "PRE_REQUISITOS": "Conceitos básicos de eletricidade (circuito fechado, tensão e corrente), polaridade de LEDs e identificação de pinos digitais no Arduino.",
     "HABILIDADES_DE_COMPUTACAO": [
-      "Variáveis, Temporização e Delays"
+      "Variáveis e Delays",
+      "Sequenciamento Linear de Instruções",
+      "Abstração de Hardware Básico",
+      "Controle de Saídas Digitais"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
-      "COMPETENCIA": "Ciências / Lógica",
-      "BNCC_CODIGO": "EF01CO02",
-      "EIXO": "Pensamento Computacional",
-      "BNCC_GERAL": "EF02MA18"
+      "HISTORIA_E_SOCIEDADE": "A evolução da sinalização urbana e o primeiro semáforo elétrico instalado em Cleveland, Ohio, em 1914. A importância da automação para a segurança no trânsito e o ordenamento do fluxo de pedestres e veículos nas metrópoles modernas.",
+      "MATEMATICA": "Noções de proporção temporal, contagem regressiva e intervalos de tempo lineares."
     },
-    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
-    "FLUXO_ESTRUTURA_CODIGO": [],
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Como as cidades controlam o tráfego de milhares de veículos e pedestres de forma segura e autônoma? Utilizando um microcontrolador para ciclar estados de iluminação (Vermelho, Amarelo e Verde) em tempos pré-determinados, simulamos o comportamento de um semáforo de trânsito real.",
+    "FLUXO_ESTRUTURA_CODIGO": [
+      "Definição de Pinos",
+      "Setup",
+      "Liga LED Vermelho",
+      "Delay",
+      "Desliga Vermelho",
+      "Liga LED Amarelo",
+      "Delay",
+      "Desliga Amarelo",
+      "Liga LED Verde",
+      "Delay",
+      "Loop"
+    ],
     "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
-      "BOM": [],
-      "MAPEAMENTO_PINOS": [],
-      "IMAGEM_ESQUEMA": "",
-      "LINK_THINKERCAD": ""
+      "BOM": [
+        {
+          "qtd": "1x",
+          "componente": "Placa Arduino Uno R3"
+        },
+        {
+          "qtd": "1x",
+          "componente": "LED Vermelho 5mm"
+        },
+        {
+          "qtd": "1x",
+          "componente": "LED Amarelo 5mm"
+        },
+        {
+          "qtd": "1x",
+          "componente": "LED Verde 5mm"
+        },
+        {
+          "qtd": "3x",
+          "componente": "Resistores 220Ω 1/4W (limitação de corrente dos LEDs)"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Protoboard 830 pontos"
+        },
+        {
+          "qtd": "6x",
+          "componente": "Cabos Jumpers Macho-Macho"
+        }
+      ],
+      "MAPEAMENTO_PINOS": [
+        "D10 → LED Vermelho (Anodo via resistor 220Ω)",
+        "D9 → LED Amarelo (Anodo via resistor 220Ω)",
+        "D8 → LED Verde (Anodo via resistor 220Ω)"
+      ],
+      "IMAGEM_ESQUEMA": "projetos/PRJ_2_1_Esquema.png",
+      "TITULO_ESQUEMA": "FIGURA 1: ESQUEMA DO CIRCUITO DO SEMÁFORO",
+      "LINK_THINKERCAD": "https://www.tinkercad.com/things/66hrvqjr0HT-jogo-da-memoria?sharecode=7-SX2pF2aCBu4g14pAuLQF0axR53FBzI9UjHQ8CZ5nE"
     },
     "MODELAGEM_LOGICO_ALGORITMA": {
-      "ARQUIVO": "",
-      "CODIGO_FONTE": ""
+      "NOME_PASSO": "Fluxograma Lógico",
+      "TIPO_PASSO": "IMAGEM",
+      "ARQUIVO": "projetos/PRJ_2_1_Fluxograma.png",
+      "CODIGO_FONTE": "//Semáforo// ==========================\n// Pinos Arduino\n// ==========================\nconst int LED_VERMELHO = 11;\nconst int LED_AMARELO = 12;\nconst int LED_VERDE = 13;\n\nvoid setup() {\n  // Configura os pinos dos LEDs como saídas digitais\n  pinMode(LED_VERMELHO, OUTPUT);\n  pinMode(LED_AMARELO, OUTPUT);\n  pinMode(LED_VERDE, OUTPUT);\n}\n\nvoid loop() {\n  // Estado 1: Vermelho aceso (Pare)\n  digitalWrite(LED_VERMELHO, HIGH);\n  digitalWrite(LED_AMARELO, LOW);\n  digitalWrite(LED_VERDE, LOW);\n  delay(5000); // Mantém por 5 segundos\n\n  // Estado 2: Verde aceso (Siga)\n  digitalWrite(LED_VERMELHO, LOW);\n  digitalWrite(LED_AMARELO, LOW);\n  digitalWrite(LED_VERDE, HIGH);\n  delay(5000); // Mantém por 5 segundos\n\n  // Estado 3: Amarelo aceso (Atenção)\n  digitalWrite(LED_VERMELHO, LOW);\n  digitalWrite(LED_AMARELO, HIGH);\n  digitalWrite(LED_VERDE, LOW);\n  delay(3000); // Mantém por 3 segundos\n}"
     },
-    "ROTEIRO_PRATICO_DE_EXECUCAO": [],
-    "ARTICULACAO_E_APROFUNDAMENTO": "",
-    "DESAFIOS_DE_EXPANSAO": []
+    "ROTEIRO_PRATICO_DE_EXECUCAO": [
+      "1. Conecte os resistores de 220Ω nos anodos dos LEDs Vermelho, Amarelo e Verde, ligando-os respectivamente aos pinos digitais D10, D9 e D8 do Arduino.",
+      "2. Conecte os catodos de todos os LEDs ao barramento de GND da protoboard e puxe um jumper para o GND da placa Arduino.",
+      "3. Verifique a polaridade correta dos componentes (a perna maior do LED é o anodo e a menor é o catodo).",
+      "4. Conecte o Arduino ao computador via cabo USB.",
+      "5. Abra a IDE do Arduino, cole o código fonte correspondente ao ciclo do semáforo e selecione a porta correta.",
+      "6. Carregue o programa na placa e observe a alternância cíclica das luzes."
+    ],
+    "ARTICULACAO_E_APROFUNDAMENTO": "1) Controle de Portas Digitais: A função `digitalWrite()` envia sinais de nível lógico Alto (HIGH / 5V) ou Baixo (LOW / 0V) para os pinos configurados como saída (`OUTPUT`), controlando o fluxo de corrente pelos LEDs.\n\n2) O Papel do Resistor de Limitação: O resistor de 220Ω é indispensável para limitar a corrente elétrica que passa pelo LED, evitando a queima do componente devido à diferença de potencial direta da placa.\n\n3) Temporização Sequencial: O uso da função `delay()` pausa a execução do programa em milissegundos, criando a cadência visual temporal necessária para imitar o funcionamento de um semáforo urbano convencional.\n\n4) Lógica de Estados: O ciclo demonstra como transições ordenadas de ligar e desligar criam um padrão repetitivo previsível e automatizado.",
+    "DESAFIOS_DE_EXPANSAO": [
+      {
+        "nivel": "Fácil",
+        "descricao": "Adicionar um botão de pedestre (Push Button) que, ao ser pressionado, altera imediatamente o semáforo para o estado de travessia segura."
+      },
+      {
+        "nivel": "Intermediário",
+        "descricao": "Incluir um buzzer para emitir um sinal sonoro intermitente exclusivo para orientar pedestres com deficiência visual durante o sinal verde."
+      },
+      {
+        "nivel": "Avançado",
+        "descricao": "Substituir o comando `delay()` por uma abordagem baseada em temporização não-bloqueante utilizando a função `millis()`, permitindo que o sistema execute outras tarefas em paralelo sem congelar o fluxo."
+      }
+    ]
   },
   {
     "PROJETO": "PRJ 2.2",
-    "TITULO": "Jogo de reflexo (Acerte o Botão)",
+    "TITULO": "Jogo do reflexo",
     "MODULO": "Módulo II - Ensino Fundamental I",
     "COMPLEXIDADE": "Básico",
-    "TEMPO_ESTIMADO": "2 h/aula (100 min)",
-    "PRE_REQUISITOS": "",
+    "TEMPO_ESTIMADO": "1 h/aula (60 min)",
+    "PRE_REQUISITOS": "Noções introdutórias de lógica e manuseio seguro de componentes.",
     "HABILIDADES_DE_COMPUTACAO": [
-      "Variáveis Temp., Contadores, Operadores"
+      "Leitura de Botões, Variáveis, Condicionais e Tempo de Reação"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
       "COMPETENCIA": "Ciências / Lógica",
@@ -303,7 +244,7 @@
       "EIXO": "Pensamento Computacional",
       "BNCC_GERAL": "EF03MA01"
     },
-    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Exploração prática do projeto Jogo do reflexo aplicado ao desenvolvimento de habilidades do Módulo II - Ensino Fundamental I.",
     "FLUXO_ESTRUTURA_CODIGO": [],
     "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
       "BOM": [],
@@ -321,13 +262,13 @@
   },
   {
     "PROJETO": "PRJ 2.3",
-    "TITULO": "Portão automático com sensor ultrassônico",
+    "TITULO": "Batalha dos Botões",
     "MODULO": "Módulo II - Ensino Fundamental I",
-    "COMPLEXIDADE": "Intermediário",
-    "TEMPO_ESTIMADO": "2 h/aula (100 min)",
-    "PRE_REQUISITOS": "",
+    "COMPLEXIDADE": "Básico",
+    "TEMPO_ESTIMADO": "1 h/aula (60 min)",
+    "PRE_REQUISITOS": "Noções introdutórias de lógica e manuseio seguro de componentes.",
     "HABILIDADES_DE_COMPUTACAO": [
-      "Ultrassom, Servomotor, Condicionais"
+      "Entradas Digitais, Contadores, Comparação e Condicionais"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
       "COMPETENCIA": "Ciências / Lógica",
@@ -335,7 +276,7 @@
       "EIXO": "Pensamento Computacional",
       "BNCC_GERAL": "EF01MA11"
     },
-    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Exploração prática do projeto Batalha dos Botões aplicado ao desenvolvimento de habilidades do Módulo II - Ensino Fundamental I.",
     "FLUXO_ESTRUTURA_CODIGO": [],
     "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
       "BOM": [],
@@ -353,13 +294,13 @@
   },
   {
     "PROJETO": "PRJ 2.4",
-    "TITULO": "Lixeira automática",
+    "TITULO": "Contador de Pessoas",
     "MODULO": "Módulo II - Ensino Fundamental I",
-    "COMPLEXIDADE": "Intermediário",
-    "TEMPO_ESTIMADO": "2 h/aula (100 min)",
-    "PRE_REQUISITOS": "",
+    "COMPLEXIDADE": "Básico",
+    "TEMPO_ESTIMADO": "1 h/aula (60 min)",
+    "PRE_REQUISITOS": "Noções introdutórias de lógica e manuseio seguro de componentes.",
     "HABILIDADES_DE_COMPUTACAO": [
-      "Sensor de Proximidade e Atuação Mecânica"
+      "Sensores, Variáveis Acumuladoras e Contadores"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
       "COMPETENCIA": "Física / Ciências da Natureza",
@@ -367,7 +308,7 @@
       "EIXO": "Mundo Digital",
       "BNCC_GERAL": "EF05CI01"
     },
-    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Exploração prática do projeto Contador de Pessoas aplicado ao desenvolvimento de habilidades do Módulo II - Ensino Fundamental I.",
     "FLUXO_ESTRUTURA_CODIGO": [],
     "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
       "BOM": [],
@@ -385,13 +326,13 @@
   },
   {
     "PROJETO": "PRJ 2.5",
-    "TITULO": "Fotos com microcontroladores",
+    "TITULO": "Portão Automático",
     "MODULO": "Módulo II - Ensino Fundamental I",
     "COMPLEXIDADE": "Intermediário",
     "TEMPO_ESTIMADO": "2 h/aula (100 min)",
-    "PRE_REQUISITOS": "",
+    "PRE_REQUISITOS": "Familiaridade com circuitos eletrônicos básicos, variáveis e estruturas de decisão.",
     "HABILIDADES_DE_COMPUTACAO": [
-      "Captura Digital e Disparo por Hardware"
+      "Sensor Ultrassônico, Servomotor e Microcontrolador"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
       "COMPETENCIA": "Ciências / Lógica",
@@ -399,7 +340,7 @@
       "EIXO": "Mundo Digital",
       "BNCC_GERAL": "EF15AR26"
     },
-    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Exploração prática do projeto Portão Automático aplicado ao desenvolvimento de habilidades do Módulo II - Ensino Fundamental I.",
     "FLUXO_ESTRUTURA_CODIGO": [],
     "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
       "BOM": [],
@@ -417,13 +358,13 @@
   },
   {
     "PROJETO": "PRJ 2.6",
-    "TITULO": "Comunicação com outros controladores",
+    "TITULO": "Termômetro",
     "MODULO": "Módulo II - Ensino Fundamental I",
     "COMPLEXIDADE": "Intermediário",
     "TEMPO_ESTIMADO": "2 h/aula (100 min)",
-    "PRE_REQUISITOS": "",
+    "PRE_REQUISITOS": "Familiaridade com circuitos eletrônicos básicos, variáveis e estruturas de decisão.",
     "HABILIDADES_DE_COMPUTACAO": [
-      "Comunicação Serial RX/TX"
+      "Sensores de Temperatura, Leitura Analógica e Exibição de Dados"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
       "COMPETENCIA": "Ciências / Lógica",
@@ -431,7 +372,7 @@
       "EIXO": "Pensamento Computacional",
       "BNCC_GERAL": "EF04MA13"
     },
-    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Exploração prática do projeto Termômetro aplicado ao desenvolvimento de habilidades do Módulo II - Ensino Fundamental I.",
     "FLUXO_ESTRUTURA_CODIGO": [],
     "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
       "BOM": [],
@@ -449,13 +390,13 @@
   },
   {
     "PROJETO": "PRJ 2.7",
-    "TITULO": "Termômetro escolar",
+    "TITULO": "Ventilador",
     "MODULO": "Módulo II - Ensino Fundamental I",
     "COMPLEXIDADE": "Intermediário",
     "TEMPO_ESTIMADO": "2 h/aula (100 min)",
-    "PRE_REQUISITOS": "",
+    "PRE_REQUISITOS": "Familiaridade com circuitos eletrônicos básicos, variáveis e estruturas de decisão.",
     "HABILIDADES_DE_COMPUTACAO": [
-      "Sensor de Temperatura e Mapeamento Analógico"
+      "Sensores de Temperatura, Estruturas Condicionais e Motores DC"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
       "COMPETENCIA": "Física / Ciências da Natureza",
@@ -463,7 +404,7 @@
       "EIXO": "Mundo Digital",
       "BNCC_GERAL": "EF04CI02"
     },
-    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Exploração prática do projeto Ventilador aplicado ao desenvolvimento de habilidades do Módulo II - Ensino Fundamental I.",
     "FLUXO_ESTRUTURA_CODIGO": [],
     "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
       "BOM": [],
@@ -481,13 +422,13 @@
   },
   {
     "PROJETO": "PRJ 2.8",
-    "TITULO": "Automação de regagem de plantas",
+    "TITULO": "Dado Eletrônico",
     "MODULO": "Módulo II - Ensino Fundamental I",
-    "COMPLEXIDADE": "Avançado",
+    "COMPLEXIDADE": "Intermediário",
     "TEMPO_ESTIMADO": "2 h/aula (100 min)",
-    "PRE_REQUISITOS": "",
+    "PRE_REQUISITOS": "Familiaridade com circuitos eletrônicos básicos, variáveis e estruturas de decisão.",
     "HABILIDADES_DE_COMPUTACAO": [
-      "Sensor de Umidade do Solo e Relés"
+      "Números Pseudoaleatórios, Variáveis e Representação"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
       "COMPETENCIA": "Física / Ciências da Natureza",
@@ -495,7 +436,7 @@
       "EIXO": "Mundo Digital",
       "BNCC_GERAL": "EF02CI05"
     },
-    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Exploração prática do projeto Dado Eletrônico aplicado ao desenvolvimento de habilidades do Módulo II - Ensino Fundamental I.",
     "FLUXO_ESTRUTURA_CODIGO": [],
     "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
       "BOM": [],
@@ -513,13 +454,13 @@
   },
   {
     "PROJETO": "PRJ 2.9",
-    "TITULO": "Robô com desvio de proximidade",
+    "TITULO": "Pedra, Papel e Tesoura",
     "MODULO": "Módulo II - Ensino Fundamental I",
-    "COMPLEXIDADE": "Avançado",
+    "COMPLEXIDADE": "Intermediário",
     "TEMPO_ESTIMADO": "2 h/aula (100 min)",
-    "PRE_REQUISITOS": "",
+    "PRE_REQUISITOS": "Familiaridade com circuitos eletrônicos básicos, variáveis e estruturas de decisão.",
     "HABILIDADES_DE_COMPUTACAO": [
-      "Ponte H, Motores DC e Algoritmo de Esquiva"
+      "Operadores Lógicos, Estruturas Condicionais e Regras de Decisão"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
       "COMPETENCIA": "Ciências / Lógica",
@@ -527,7 +468,103 @@
       "EIXO": "Pensamento Computacional",
       "BNCC_GERAL": "EF01MA11"
     },
-    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Exploração prática do projeto Pedra, Papel e Tesoura aplicado ao desenvolvimento de habilidades do Módulo II - Ensino Fundamental I.",
+    "FLUXO_ESTRUTURA_CODIGO": [],
+    "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
+      "BOM": [],
+      "MAPEAMENTO_PINOS": [],
+      "IMAGEM_ESQUEMA": "",
+      "LINK_THINKERCAD": ""
+    },
+    "MODELAGEM_LOGICO_ALGORITMA": {
+      "ARQUIVO": "",
+      "CODIGO_FONTE": ""
+    },
+    "ROTEIRO_PRATICO_DE_EXECUCAO": [],
+    "ARTICULACAO_E_APROFUNDAMENTO": "",
+    "DESAFIOS_DE_EXPANSAO": []
+  },
+  {
+    "PROJETO": "PRJ 2.10",
+    "TITULO": "Relógio Digital",
+    "MODULO": "Módulo II - Ensino Fundamental I",
+    "COMPLEXIDADE": "Avançado",
+    "TEMPO_ESTIMADO": "3 h/aula (150 min)",
+    "PRE_REQUISITOS": "Domínio de programação em C++, manipulação de sensores complexos e controle de fluxo.",
+    "HABILIDADES_DE_COMPUTACAO": [
+      "Leitura de Horários, Temporização e Displays"
+    ],
+    "COMPETENCIA_INTERDISCIPLINARES": {
+      "COMPETENCIA": "Ciências / Lógica",
+      "BNCC_CODIGO": "A definir",
+      "EIXO": "Pensamento Computacional",
+      "BNCC_GERAL": "A definir"
+    },
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Exploração prática do projeto Relógio Digital aplicado ao desenvolvimento de habilidades do Módulo II - Ensino Fundamental I.",
+    "FLUXO_ESTRUTURA_CODIGO": [],
+    "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
+      "BOM": [],
+      "MAPEAMENTO_PINOS": [],
+      "IMAGEM_ESQUEMA": "",
+      "LINK_THINKERCAD": ""
+    },
+    "MODELAGEM_LOGICO_ALGORITMA": {
+      "ARQUIVO": "",
+      "CODIGO_FONTE": ""
+    },
+    "ROTEIRO_PRATICO_DE_EXECUCAO": [],
+    "ARTICULACAO_E_APROFUNDAMENTO": "",
+    "DESAFIOS_DE_EXPANSAO": []
+  },
+  {
+    "PROJETO": "PRJ 2.11",
+    "TITULO": "Regagem Automática",
+    "MODULO": "Módulo II - Ensino Fundamental I",
+    "COMPLEXIDADE": "Avançado",
+    "TEMPO_ESTIMADO": "3 h/aula (150 min)",
+    "PRE_REQUISITOS": "Domínio de programação em C++, manipulação de sensores complexos e controle de fluxo.",
+    "HABILIDADES_DE_COMPUTACAO": [
+      "Sensores de Umidade do Solo, Leitura Analógica e Bombas/Relés"
+    ],
+    "COMPETENCIA_INTERDISCIPLINARES": {
+      "COMPETENCIA": "Ciências / Lógica",
+      "BNCC_CODIGO": "A definir",
+      "EIXO": "Pensamento Computacional",
+      "BNCC_GERAL": "A definir"
+    },
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Exploração prática do projeto Regagem Automática aplicado ao desenvolvimento de habilidades do Módulo II - Ensino Fundamental I.",
+    "FLUXO_ESTRUTURA_CODIGO": [],
+    "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
+      "BOM": [],
+      "MAPEAMENTO_PINOS": [],
+      "IMAGEM_ESQUEMA": "",
+      "LINK_THINKERCAD": ""
+    },
+    "MODELAGEM_LOGICO_ALGORITMA": {
+      "ARQUIVO": "",
+      "CODIGO_FONTE": ""
+    },
+    "ROTEIRO_PRATICO_DE_EXECUCAO": [],
+    "ARTICULACAO_E_APROFUNDAMENTO": "",
+    "DESAFIOS_DE_EXPANSAO": []
+  },
+  {
+    "PROJETO": "PRJ 2.12",
+    "TITULO": "Robô Esquiva Objetos",
+    "MODULO": "Módulo II - Ensino Fundamental I",
+    "COMPLEXIDADE": "Avançado",
+    "TEMPO_ESTIMADO": "3 h/aula (150 min)",
+    "PRE_REQUISITOS": "Domínio de programação em C++, manipulação de sensores complexos e controle de fluxo.",
+    "HABILIDADES_DE_COMPUTACAO": [
+      "Ponte H, Motores DC e Algoritmo de Esquiva"
+    ],
+    "COMPETENCIA_INTERDISCIPLINARES": {
+      "COMPETENCIA": "Ciências / Lógica",
+      "BNCC_CODIGO": "A definir",
+      "EIXO": "Pensamento Computacional",
+      "BNCC_GERAL": "A definir"
+    },
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Exploração prática do projeto Robô Esquiva Objetos aplicado ao desenvolvimento de habilidades do Módulo II - Ensino Fundamental I.",
     "FLUXO_ESTRUTURA_CODIGO": [],
     "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
       "BOM": [],
@@ -545,13 +582,13 @@
   },
   {
     "PROJETO": "PRJ 3.1",
-    "TITULO": "Lâmpada noturna automática",
+    "TITULO": "Lâmpada Automática",
     "MODULO": "Módulo III - Ensino Fundamental II",
     "COMPLEXIDADE": "Básico",
-    "TEMPO_ESTIMADO": "2 h/aula (100 min)",
-    "PRE_REQUISITOS": "",
+    "TEMPO_ESTIMADO": "1 h/aula (60 min)",
+    "PRE_REQUISITOS": "Noções introdutórias de lógica e manuseio seguro de componentes.",
     "HABILIDADES_DE_COMPUTACAO": [
-      "Sensor LDR, Leitura Analógica e Histese"
+      "Sensor LDR, Leitura Analógica e Histerese"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
       "FISICA": "Sistemas tecnológicos e eficiência energética.",
@@ -560,27 +597,11 @@
       "COMPETENCIA": "Fisica (Sistemas tecnológicos e eficiência energética.)",
       "BNCC_GERAL": "EF08CI01"
     },
-    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Iluminação pública ativa durante o dia gera desperdício de energia. Como automatizar o acendimento das lâmpadas com base na luz natural?",
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Exploração prática do projeto Lâmpada Automática aplicado ao desenvolvimento de habilidades do Módulo III - Ensino Fundamental II.",
     "FLUXO_ESTRUTURA_CODIGO": [],
     "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
-      "BOM": [
-        {
-          "qtd": "1x",
-          "componente": "Arduino Uno"
-        },
-        {
-          "qtd": "1x",
-          "componente": "Fotoresistor LDR 5mm"
-        },
-        {
-          "qtd": "1x",
-          "componente": "Resistor 10kΩ e LED Difuso"
-        }
-      ],
-      "MAPEAMENTO_PINOS": [
-        "A0: Entrada Analógica (ADC Sensor LDR)",
-        "9: Saída Digital/PWM (Atuador LED)"
-      ],
+      "BOM": [],
+      "MAPEAMENTO_PINOS": [],
       "IMAGEM_ESQUEMA": "",
       "LINK_THINKERCAD": ""
     },
@@ -594,58 +615,132 @@
   },
   {
     "PROJETO": "PRJ 3.2",
-    "TITULO": "Jogo da Memória com LEDs",
+    "TITULO": "Jogo da Memória com LEDs (Genius / Simon)",
     "MODULO": "Módulo III - Ensino Fundamental II",
-    "COMPLEXIDADE": "Básico",
+    "COMPLEXIDADE": "Intermediário",
     "TEMPO_ESTIMADO": "2 h/aula (100 min)",
-    "PRE_REQUISITOS": "",
+    "PRE_REQUISITOS": "Estruturas de controle de fluxo (if/else, while), arrays unidimensionais, funções com parâmetros e retorno, conceitos de sinais digitais (Active-High) e leitura de entradas analógicas flutuantes.",
     "HABILIDADES_DE_COMPUTACAO": [
-      "Arrays, Funções, Loops e Randomização"
+      "Arrays Unidimensionais e Indexação",
+      "Funções e Abstração de Modulardade",
+      "Estruturas de Repetição (For e While)",
+      "Randomização Pseudoaleatória e Entropia Eletrônica",
+      "Abstração de Hardware ",
+      "Lógica de Varredura de Entradas (Polling)"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
-      "MATEMATICA": "Medidas de tempo e operadores relacionais.",
-      "BNCC_CODIGO": "EF01CO02",
-      "EIXO": "Pensamento Computacional",
-      "COMPETENCIA": "Matematica (Medidas de tempo e operadores relacionais.)",
-      "BNCC_GERAL": "EF06MA24"
+      "HISTORIA_E_SOCIEDADE": "Origem dos jogos eletrônicos na Segunda Era dos Microprocessadores (década de 1970). O surgimento do brinquedo Simon (lançado no Brasil pela Estrela como Genius em 1980), desenhado por Ralph Baer e Howard Morrison, representando a transição dos brinquedos analógicos e mecânicos para os brinquedos embarcados com microcontroladores dedicados de 4 bits.",
+      "MATEMATICA": "Geração de números pseudoaleatórios via distribuição uniforme."
     },
-    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Jogos de reflexo medem o tempo de reação humano. Como podemos utilizar um microcontrolador para gerar um evento aleatório e medir milissegundos?",
-    "FLUXO_ESTRUTURA_CODIGO": [],
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "A automação e o gerenciamento de fluxos em sistemas de mobilidade urbana — abrangendo vias rodoviárias, faixas de pedestres, ciclovias, cruzamentos rodoferroviários e redes de transporte multimodal — exigem sistemas embarcados determinísticos e tolerantes a falhas para garantir a segurança pública. Como modelar computacionalmente a lógica de temporização de estados, priorização de tráfego, intertravamento (interlocking) de sinais e o tratamento síncrono de entradas em tempo real utilizando microcontroladores aplicados à infraestrutura de controle de tráfego?",
+    "FLUXO_ESTRUTURA_CODIGO": [
+      "Definição de Pinos",
+      "Setup",
+      "Liga LED",
+      "Desligar LED",
+      "Sequenciar LEDs",
+      "Start",
+      "Game Over",
+      "Loop"
+    ],
     "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
       "BOM": [
         {
           "qtd": "1x",
-          "componente": "Arduino Uno"
+          "componente": "Placa Arduino Uno R3"
         },
         {
-          "qtd": "2x",
-          "componente": "LEDs e Resistores 330Ω"
+          "qtd": "1x",
+          "componente": "LED Vermelho 5mm"
+        },
+        {
+          "qtd": "1x",
+          "componente": "LED Amarelo 5mm"
+        },
+        {
+          "qtd": "1x",
+          "componente": "LED Azul 5mm"
+        },
+        {
+          "qtd": "1x",
+          "componente": "LED Verde 5mm"
+        },
+        {
+          "qtd": "4x",
+          "componente": "Push Buttons / Chaves Táctil 4 Pinos"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Buzzer Passivo 5V"
+        },
+        {
+          "qtd": "8x",
+          "componente": "Resistores 220Ω 1/4W (4x limitação dos LEDs e 4x Pull-Down dos botões)"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Protoboard 830 pontos"
+        },
+        {
+          "qtd": "16x",
+          "componente": "Cabos Jumpers Macho-Macho"
         }
       ],
       "MAPEAMENTO_PINOS": [
-        "Pino 2: Entrada Digital (Botão)",
-        "Pino 8: Saída Digital (LED)"
+        "D2 → LED Verde (Anodo via resistor 220Ω)",
+        "D3 → LED Azul (Anodo via resistor 220Ω)",
+        "D4 → LED Amarelo (Anodo via resistor 220Ω)",
+        "D5 → LED Vermelho (Anodo via resistor 220Ω)",
+        "D8 → Botão Vermelho (Active-High com Pull-Down de 220Ω)",
+        "D9 → Botão Amarelo (Active-High com Pull-Down de 220Ω)",
+        "D10 → Botão Azul (Active-High com Pull-Down de 220Ω)",
+        "D11 → Botão Verde (Active-High com Pull-Down de 220Ω)",
+        "D12 → Buzzer Passivo",
+        "A0 → Pino Analógico Desconectado (Semente de Entropia para randomSeed)"
       ],
-      "IMAGEM_ESQUEMA": "",
-      "LINK_THINKERCAD": ""
+      "IMAGEM_ESQUEMA": "projetos/PRJ_3_1_Esquema.png",
+      "TITULO_ESQUEMA": "FIGURA 1: ESQUEMA DO CIRCUITO ELETRÔNICO",
+      "LINK_THINKERCAD": "https://www.tinkercad.com/things/66hrvqjr0HT-jogo-da-memoria?sharecode=7-SX2pF2aCBu4g14pAuLQF0axR53FBzI9UjHQ8CZ5nE"
     },
     "MODELAGEM_LOGICO_ALGORITMA": {
-      "ARQUIVO": "",
-      "CODIGO_FONTE": ""
+      "NOME_PASSO": "Fluxograma Lógico",
+      "TIPO_PASSO": "IMAGEM",
+      "ARQUIVO": "projetos/PRJ_3_1_Fluxograma.png",
+      "CODIGO_FONTE": " //==========================\n// Loop Principal\n// ==========================\nvoid loop() {\n  if (!jogoInciado) {\n    start();\n    randomSeed(analogRead(A0));\n    jogoInciado = true;\n    delay(500);\n  }\n\n  filaOriginal[nivel - 1] = random(0, numPares);\n  reproduzirSequencia();\n  delay(100);\n\n  for (uint16_t i = 0; i < nivel; i++) {\n    int botaoPressionado = -1;\n\n    while (botaoPressionado == -1) {\n      botaoPressionado = espelharBotoesNosLeds();\n    }\n\n    delay(40); // Debounce por filtro de tempo para estabilização mecânica\n\n    if (botaoPressionado != filaOriginal[i]) {\n      Serial.println(\"-> Erro: Game Over\");\n      gameOver();\n      return;\n    }\n\n    while (espelharBotoesNosLeds() != -1) {\n      delay(10);\n    }\n  }\n\n  Serial.println(\"-> Sequencia correta. Proximo nivel.\");\n  nivel++;\n  delay(1000);\n}"
     },
-    "ROTEIRO_PRATICO_DE_EXECUCAO": [],
-    "ARTICULACAO_E_APROFUNDAMENTO": "",
-    "DESAFIOS_DE_EXPANSAO": []
+    "ROTEIRO_PRATICO_DE_EXECUCAO": [
+      "1. Monte os quatro LEDs (Vermelho, Amarelo, Azul e Verde) nos pinos digitais D5, D4, D3 e D2 respectivamente. O anodo de cada LED deve se conectar ao pino digital e o catodo deve se ligar ao GND passando por um resistor de 220Ω.",
+      "2. Monte os quatro botões no barramento da protoboard. Conecte um lado das chaves à linha de 5V. No outro lado, conecte o pino do Arduino correspondente (D8, D9, D10 e D11) acompanhado de um resistor de 220Ω ligado ao GND (configuração Active-High com Pull-Down externo).",
+      "3. Conecte o pino positivo do buzzer passivo ao pino D12 do Arduino e o polo negativo diretamente ao barramento de GND.",
+      "4. Deixe a entrada analógica A0 completamente desconectada de fios ou componentes para garantir a amostragem de ruído térmico/eletromagnético ambiente.",
+      "5. Configure o pino dos botões como INPUT simples no setup() para evitar a ativação do pull-up interno e prevenir flutuações de tensão no divisor de resistor.",
+      "6. Carregue o firmware na Placa Arduino Uno, inicie o Monitor Serial a 9600 baud para acompanhar o rastreamento dos índices e jogue."
+    ],
+    "ARTICULACAO_E_APROFUNDAMENTO": "1) Estrutura do Circuito Pull-Down: O botão fica conectado entre os 5V e o pino digital. Um resistor de 220Ω liga o pino ao GND. Em repouso, o resistor drenará qualquer carga, garantindo nível lógico LOW (0V). Ao pressionar o botão, o circuito fecha diretamente com os 5V, elevando o pino a HIGH (sinal Active-High).\n\n2) Mapeamento por Índices Paralelos: A lógica utiliza o mesmo índice `i` para correlacionar três vetores de hardware (`leds[i]`, `botoes[i]` e `simonTones[i]`). O vetor `filaOriginal` atua como um buffer linear indexado do histórico do jogo.\n\n3) Entropia via Pino Analógico Flutuante: Computadores são determinísticos. A chamada `randomSeed(analogRead(A0))` amostra o ruído eletromagnético do pino A0 desconectado para inicializar o gerador pseudoaleatório (PRNG) com uma semente imprevisível.\n\n4) Controle de Fluxo por Polling: O firmware intercala laços `for` determinísticos para reproduzir a sequência armazenada com laços `while` bloqueantes para varredura do estado das entradas até a confirmação do clique e soltura da tecla.",
+    "DESAFIOS_DE_EXPANSAO": [
+      {
+        "nivel": "Fácil",
+        "descricao": "Implementar aceleração progressiva do tempo de exibição dos LEDs à medida que o nível aumenta, diminuindo o delay de exibição da sequência dinamicamente a cada rodada."
+      },
+      {
+        "nivel": "Intermediário",
+        "descricao": "Armazenar e recuperar o recorde histórico de nível (High Score) na memória EEPROM não-volátil do Arduino, mantendo o valor salvo mesmo após desligar a placa da energia."
+      },
+      {
+        "nivel": "Avançado",
+        "descricao": "Mudar a dinâmica do projeto para que a montagem da estrutura física do jogo seja realizada integralmente pelos próprios alunos. Eles deverão projetar o circuito do zero a partir do esquemático, planejar o dimensionamento dos resistores de limitação e pull-down, e implementar uma máquina de estados finitos (FSM) por software para controlar as fases de 'Standby', 'Exibição', 'Entrada do Jogador' e 'Game Over'."
+      }
+    ]
   },
   {
     "PROJETO": "PRJ 3.3",
-    "TITULO": "Despertador com sensores",
+    "TITULO": "Alarme de Incêndio",
     "MODULO": "Módulo III - Ensino Fundamental II",
     "COMPLEXIDADE": "Intermediário",
     "TEMPO_ESTIMADO": "2 h/aula (100 min)",
-    "PRE_REQUISITOS": "",
+    "PRE_REQUISITOS": "Familiaridade com circuitos eletrônicos básicos, variáveis e estruturas de decisão.",
     "HABILIDADES_DE_COMPUTACAO": [
-      "Módulo RTC, Alarmes e Sinalização Sonora"
+      "Sensores de Gás/Chama, Comparação e Alarmes Sonoros"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
       "COMPETENCIA": "Ciências / Lógica",
@@ -653,7 +748,7 @@
       "EIXO": "Pensamento Computacional",
       "BNCC_GERAL": "EF06MA24"
     },
-    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Exploração prática do projeto Alarme de Incêndio aplicado ao desenvolvimento de habilidades do Módulo III - Ensino Fundamental II.",
     "FLUXO_ESTRUTURA_CODIGO": [],
     "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
       "BOM": [],
@@ -671,13 +766,13 @@
   },
   {
     "PROJETO": "PRJ 3.4",
-    "TITULO": "Estação de telemetria",
+    "TITULO": "Lixeira Automática",
     "MODULO": "Módulo III - Ensino Fundamental II",
     "COMPLEXIDADE": "Intermediário",
     "TEMPO_ESTIMADO": "2 h/aula (100 min)",
-    "PRE_REQUISITOS": "",
+    "PRE_REQUISITOS": "Familiaridade com circuitos eletrônicos básicos, variáveis e estruturas de decisão.",
     "HABILIDADES_DE_COMPUTACAO": [
-      "Multissensores e Transmissão de Dados"
+      "Sensor de Proximidade e Atuação Mecânica com Servo"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
       "COMPETENCIA": "Física / Ciências da Natureza",
@@ -685,7 +780,7 @@
       "EIXO": "Mundo Digital",
       "BNCC_GERAL": "EF08CI15"
     },
-    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Exploração prática do projeto Lixeira Automática aplicado ao desenvolvimento de habilidades do Módulo III - Ensino Fundamental II.",
     "FLUXO_ESTRUTURA_CODIGO": [],
     "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
       "BOM": [],
@@ -703,13 +798,13 @@
   },
   {
     "PROJETO": "PRJ 3.5",
-    "TITULO": "Estacionamento com contador de vagas",
+    "TITULO": "Estacionamento",
     "MODULO": "Módulo III - Ensino Fundamental II",
     "COMPLEXIDADE": "Intermediário",
     "TEMPO_ESTIMADO": "2 h/aula (100 min)",
-    "PRE_REQUISITOS": "",
+    "PRE_REQUISITOS": "Familiaridade com circuitos eletrônicos básicos, variáveis e estruturas de decisão.",
     "HABILIDADES_DE_COMPUTACAO": [
-      "Displays de 7 Segmentos e Sensores Ópticos"
+      "Controle de Vagas, Displays e Sensores Ópticos"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
       "COMPETENCIA": "Física / Ciências da Natureza",
@@ -717,7 +812,7 @@
       "EIXO": "Mundo Digital",
       "BNCC_GERAL": "EF06MA03"
     },
-    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Exploração prática do projeto Estacionamento aplicado ao desenvolvimento de habilidades do Módulo III - Ensino Fundamental II.",
     "FLUXO_ESTRUTURA_CODIGO": [],
     "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
       "BOM": [],
@@ -735,13 +830,13 @@
   },
   {
     "PROJETO": "PRJ 3.6",
-    "TITULO": "Contador de pessoas",
+    "TITULO": "Tapete Inteligente",
     "MODULO": "Módulo III - Ensino Fundamental II",
     "COMPLEXIDADE": "Intermediário",
     "TEMPO_ESTIMADO": "2 h/aula (100 min)",
-    "PRE_REQUISITOS": "",
+    "PRE_REQUISITOS": "Familiaridade com circuitos eletrônicos básicos, variáveis e estruturas de decisão.",
     "HABILIDADES_DE_COMPUTACAO": [
-      "Sensores de Barreira Infravermelha"
+      "Sensores de Pressão/Contato e Monitoramento de Presença"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
       "COMPETENCIA": "Física / Ciências da Natureza",
@@ -749,7 +844,7 @@
       "EIXO": "Mundo Digital",
       "BNCC_GERAL": "EF09CI04"
     },
-    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Exploração prática do projeto Tapete Inteligente aplicado ao desenvolvimento de habilidades do Módulo III - Ensino Fundamental II.",
     "FLUXO_ESTRUTURA_CODIGO": [],
     "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
       "BOM": [],
@@ -767,13 +862,13 @@
   },
   {
     "PROJETO": "PRJ 3.7",
-    "TITULO": "Câmera fotográfica",
+    "TITULO": "Comedouro Pet",
     "MODULO": "Módulo III - Ensino Fundamental II",
     "COMPLEXIDADE": "Intermediário",
     "TEMPO_ESTIMADO": "2 h/aula (100 min)",
-    "PRE_REQUISITOS": "",
+    "PRE_REQUISITOS": "Familiaridade com circuitos eletrônicos básicos, variáveis e estruturas de decisão.",
     "HABILIDADES_DE_COMPUTACAO": [
-      "Mapeamento de Arquivos em Cartão SD"
+      "Temporizadores de Precisão, Servomecanismo e Automação"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
       "COMPETENCIA": "Ciências / Lógica",
@@ -781,7 +876,7 @@
       "EIXO": "Pensamento Computacional",
       "BNCC_GERAL": "EF09CI04"
     },
-    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Exploração prática do projeto Comedouro Pet aplicado ao desenvolvimento de habilidades do Módulo III - Ensino Fundamental II.",
     "FLUXO_ESTRUTURA_CODIGO": [],
     "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
       "BOM": [],
@@ -799,13 +894,13 @@
   },
   {
     "PROJETO": "PRJ 3.8",
-    "TITULO": "Enviando fotos pela rede",
+    "TITULO": "Jogo da Velha",
     "MODULO": "Módulo III - Ensino Fundamental II",
-    "COMPLEXIDADE": "Avançado",
+    "COMPLEXIDADE": "Intermediário",
     "TEMPO_ESTIMADO": "2 h/aula (100 min)",
-    "PRE_REQUISITOS": "",
+    "PRE_REQUISITOS": "Familiaridade com circuitos eletrônicos básicos, variáveis e estruturas de decisão.",
     "HABILIDADES_DE_COMPUTACAO": [
-      "Protocolo HTTP e Requisições POST"
+      "Matrizes Bidimensionais, Lógica de Estados e Verificação"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
       "COMPETENCIA": "Ciências / Lógica",
@@ -813,7 +908,7 @@
       "EIXO": "Cultura Digital",
       "BNCC_GERAL": "EF09CI05"
     },
-    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Exploração prática do projeto Jogo da Velha aplicado ao desenvolvimento de habilidades do Módulo III - Ensino Fundamental II.",
     "FLUXO_ESTRUTURA_CODIGO": [],
     "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
       "BOM": [],
@@ -831,13 +926,13 @@
   },
   {
     "PROJETO": "PRJ 3.9",
-    "TITULO": "Comunicação Via Rádio",
+    "TITULO": "Jogo do Dinossauro",
     "MODULO": "Módulo III - Ensino Fundamental II",
     "COMPLEXIDADE": "Avançado",
-    "TEMPO_ESTIMADO": "2 h/aula (100 min)",
-    "PRE_REQUISITOS": "",
+    "TEMPO_ESTIMADO": "3 h/aula (150 min)",
+    "PRE_REQUISITOS": "Domínio de programação em C++, manipulação de sensores complexos e controle de fluxo.",
     "HABILIDADES_DE_COMPUTACAO": [
-      "Transceptores RF/LoRa e Pacotes de Dados"
+      "Displays Gráficos/LCD, Detecção de Colisão e Interrupções"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
       "COMPETENCIA": "Ciências / Lógica",
@@ -845,7 +940,7 @@
       "EIXO": "Pensamento Computacional",
       "BNCC_GERAL": "EF09CI06"
     },
-    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Exploração prática do projeto Jogo do Dinossauro aplicado ao desenvolvimento de habilidades do Módulo III - Ensino Fundamental II.",
     "FLUXO_ESTRUTURA_CODIGO": [],
     "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
       "BOM": [],
@@ -863,13 +958,13 @@
   },
   {
     "PROJETO": "PRJ 3.10",
-    "TITULO": "Estação de Monitoramento de pH",
+    "TITULO": "Estação Telemétrica",
     "MODULO": "Módulo III - Ensino Fundamental II",
     "COMPLEXIDADE": "Avançado",
-    "TEMPO_ESTIMADO": "2 h/aula (100 min)",
-    "PRE_REQUISITOS": "",
+    "TEMPO_ESTIMADO": "3 h/aula (150 min)",
+    "PRE_REQUISITOS": "Domínio de programação em C++, manipulação de sensores complexos e controle de fluxo.",
     "HABILIDADES_DE_COMPUTACAO": [
-      "Calibração de Sensores Químicos e ADC"
+      "Multissensores, Transmissão e Aquisição de Dados"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
       "COMPETENCIA": "Física / Ciências da Natureza",
@@ -877,7 +972,7 @@
       "EIXO": "Mundo Digital",
       "BNCC_GERAL": "EF09CI02"
     },
-    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Exploração prática do projeto Estação Telemétrica aplicado ao desenvolvimento de habilidades do Módulo III - Ensino Fundamental II.",
     "FLUXO_ESTRUTURA_CODIGO": [],
     "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
       "BOM": [],
@@ -895,13 +990,13 @@
   },
   {
     "PROJETO": "PRJ 3.11",
-    "TITULO": "Comedouro Pet Automático",
+    "TITULO": "Comunicação via Rádio",
     "MODULO": "Módulo III - Ensino Fundamental II",
     "COMPLEXIDADE": "Avançado",
-    "TEMPO_ESTIMADO": "2 h/aula (100 min)",
-    "PRE_REQUISITOS": "",
+    "TEMPO_ESTIMADO": "3 h/aula (150 min)",
+    "PRE_REQUISITOS": "Domínio de programação em C++, manipulação de sensores complexos e controle de fluxo.",
     "HABILIDADES_DE_COMPUTACAO": [
-      "Temporizadores de Precisão e Servomecanismo"
+      "Transceptores RF/LoRa e Pacotes de Dados"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
       "COMPETENCIA": "Ciências / Lógica",
@@ -909,7 +1004,7 @@
       "EIXO": "Pensamento Computacional",
       "BNCC_GERAL": "EF06MA24"
     },
-    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Exploração prática do projeto Comunicação via Rádio aplicado ao desenvolvimento de habilidades do Módulo III - Ensino Fundamental II.",
     "FLUXO_ESTRUTURA_CODIGO": [],
     "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
       "BOM": [],
@@ -927,13 +1022,13 @@
   },
   {
     "PROJETO": "PRJ 3.12",
-    "TITULO": "Robô seguidor de linha",
+    "TITULO": "Robô Seguidor de Linha",
     "MODULO": "Módulo III - Ensino Fundamental II",
     "COMPLEXIDADE": "Avançado",
-    "TEMPO_ESTIMADO": "2 h/aula (100 min)",
-    "PRE_REQUISITOS": "",
+    "TEMPO_ESTIMADO": "3 h/aula (150 min)",
+    "PRE_REQUISITOS": "Domínio de programação em C++, manipulação de sensores complexos e controle de fluxo.",
     "HABILIDADES_DE_COMPUTACAO": [
-      "Sensores Reflexivos IR e Algoritmo PID"
+      "Sensores Reflexivos IR e Algoritmo de Malha Fechada / PID"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
       "COMPETENCIA": "Física / Ciências da Natureza",
@@ -941,7 +1036,7 @@
       "EIXO": "Mundo Digital",
       "BNCC_GERAL": "EF09CI04"
     },
-    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Exploração prática do projeto Robô Seguidor de Linha aplicado ao desenvolvimento de habilidades do Módulo III - Ensino Fundamental II.",
     "FLUXO_ESTRUTURA_CODIGO": [],
     "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
       "BOM": [],
@@ -959,13 +1054,13 @@
   },
   {
     "PROJETO": "PRJ 4.1",
-    "TITULO": "Calculadora",
+    "TITULO": "Jogo Caça-LEDs",
     "MODULO": "Módulo IV - Ensino Médio",
     "COMPLEXIDADE": "Básico",
-    "TEMPO_ESTIMADO": "2 h/aula (100 min)",
-    "PRE_REQUISITOS": "",
+    "TEMPO_ESTIMADO": "1 h/aula (60 min)",
+    "PRE_REQUISITOS": "Noções introdutórias de lógica e manuseio seguro de componentes.",
     "HABILIDADES_DE_COMPUTACAO": [
-      "Teclado Matricial e Displays LCD"
+      "Multiplexação, Temporização e Reação Rápida"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
       "COMPETENCIA": "Matemática",
@@ -973,7 +1068,7 @@
       "EIXO": "Pensamento Computacional",
       "BNCC_GERAL": "EM13MAT315"
     },
-    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Exploração prática do projeto Jogo Caça-LEDs aplicado ao desenvolvimento de habilidades do Módulo IV - Ensino Médio.",
     "FLUXO_ESTRUTURA_CODIGO": [],
     "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
       "BOM": [],
@@ -991,13 +1086,13 @@
   },
   {
     "PROJETO": "PRJ 4.2",
-    "TITULO": "Urna eletrônica",
+    "TITULO": "Calculadora",
     "MODULO": "Módulo IV - Ensino Médio",
     "COMPLEXIDADE": "Básico",
-    "TEMPO_ESTIMADO": "2 h/aula (100 min)",
-    "PRE_REQUISITOS": "",
+    "TEMPO_ESTIMADO": "1 h/aula (60 min)",
+    "PRE_REQUISITOS": "Noções introdutórias de lógica e manuseio seguro de componentes.",
     "HABILIDADES_DE_COMPUTACAO": [
-      "Máquinas de Estado e Memória EEPROM/Flash"
+      "Teclado Matricial, Parsers e Display LCD"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
       "COMPETENCIA": "Ciências / Lógica",
@@ -1005,7 +1100,7 @@
       "EIXO": "Pensamento Computacional",
       "BNCC_GERAL": "EM13CHS605"
     },
-    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Exploração prática do projeto Calculadora aplicado ao desenvolvimento de habilidades do Módulo IV - Ensino Médio.",
     "FLUXO_ESTRUTURA_CODIGO": [],
     "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
       "BOM": [],
@@ -1023,13 +1118,13 @@
   },
   {
     "PROJETO": "PRJ 4.3",
-    "TITULO": "Radar Sonar",
+    "TITULO": "Urna Eletrônica",
     "MODULO": "Módulo IV - Ensino Médio",
-    "COMPLEXIDADE": "Intermediário",
-    "TEMPO_ESTIMADO": "2 h/aula (100 min)",
-    "PRE_REQUISITOS": "",
+    "COMPLEXIDADE": "Básico",
+    "TEMPO_ESTIMADO": "1 h/aula (60 min)",
+    "PRE_REQUISITOS": "Noções introdutórias de lógica e manuseio seguro de componentes.",
     "HABILIDADES_DE_COMPUTACAO": [
-      "Varredura Angular e Renderização Gráfica"
+      "Máquinas de Estado, Validação e Armazenamento Seguro"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
       "COMPETENCIA": "Ciências / Lógica",
@@ -1037,7 +1132,7 @@
       "EIXO": "Pensamento Computacional",
       "BNCC_GERAL": "EM13MAT306"
     },
-    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Exploração prática do projeto Urna Eletrônica aplicado ao desenvolvimento de habilidades do Módulo IV - Ensino Médio.",
     "FLUXO_ESTRUTURA_CODIGO": [],
     "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
       "BOM": [],
@@ -1055,13 +1150,13 @@
   },
   {
     "PROJETO": "PRJ 4.4",
-    "TITULO": "Controle de Acesso (NFC)",
+    "TITULO": "Cofre Digital",
     "MODULO": "Módulo IV - Ensino Médio",
     "COMPLEXIDADE": "Intermediário",
     "TEMPO_ESTIMADO": "2 h/aula (100 min)",
-    "PRE_REQUISITOS": "",
+    "PRE_REQUISITOS": "Familiaridade com circuitos eletrônicos básicos, variáveis e estruturas de decisão.",
     "HABILIDADES_DE_COMPUTACAO": [
-      "Comunicação SPI/I2C e Leitura RFID/NFC"
+      "Autenticação por Senha, Bloqueio Lógico e Solenoide"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
       "COMPETENCIA": "Ciências / Lógica",
@@ -1069,7 +1164,7 @@
       "EIXO": "Pensamento Computacional",
       "BNCC_GERAL": "EM13CNT103"
     },
-    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Exploração prática do projeto Cofre Digital aplicado ao desenvolvimento de habilidades do Módulo IV - Ensino Médio.",
     "FLUXO_ESTRUTURA_CODIGO": [],
     "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
       "BOM": [],
@@ -1087,13 +1182,13 @@
   },
   {
     "PROJETO": "PRJ 4.5",
-    "TITULO": "Servidor com fotos",
+    "TITULO": "Acesso por NFC",
     "MODULO": "Módulo IV - Ensino Médio",
     "COMPLEXIDADE": "Intermediário",
     "TEMPO_ESTIMADO": "2 h/aula (100 min)",
-    "PRE_REQUISITOS": "",
+    "PRE_REQUISITOS": "Familiaridade com circuitos eletrônicos básicos, variáveis e estruturas de decisão.",
     "HABILIDADES_DE_COMPUTACAO": [
-      "Web Server Embarcado e Arquivos Estáticos"
+      "Comunicação SPI/I2C, Leitura RFID/NFC e Criptografia"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
       "COMPETENCIA": "Ciências / Lógica",
@@ -1101,7 +1196,7 @@
       "EIXO": "Cultura Digital",
       "BNCC_GERAL": "EM13CNT302"
     },
-    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Exploração prática do projeto Acesso por NFC aplicado ao desenvolvimento de habilidades do Módulo IV - Ensino Médio.",
     "FLUXO_ESTRUTURA_CODIGO": [],
     "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
       "BOM": [],
@@ -1119,13 +1214,13 @@
   },
   {
     "PROJETO": "PRJ 4.6",
-    "TITULO": "Câmera de monitoramento",
+    "TITULO": "Radar de Velocidade",
     "MODULO": "Módulo IV - Ensino Médio",
-    "COMPLEXIDADE": "Avançado",
+    "COMPLEXIDADE": "Intermediário",
     "TEMPO_ESTIMADO": "2 h/aula (100 min)",
-    "PRE_REQUISITOS": "",
+    "PRE_REQUISITOS": "Familiaridade com circuitos eletrônicos básicos, variáveis e estruturas de decisão.",
     "HABILIDADES_DE_COMPUTACAO": [
-      "Streaming MJPEG e Protocolo WebSocket"
+      "Cálculo de Delta Tempo, Sensor Doppler/Ultrassom e Telemetria"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
       "COMPETENCIA": "Ciências / Lógica",
@@ -1133,7 +1228,7 @@
       "EIXO": "Cultura Digital",
       "BNCC_GERAL": "EM13CNT103"
     },
-    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Exploração prática do projeto Radar de Velocidade aplicado ao desenvolvimento de habilidades do Módulo IV - Ensino Médio.",
     "FLUXO_ESTRUTURA_CODIGO": [],
     "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
       "BOM": [],
@@ -1151,13 +1246,13 @@
   },
   {
     "PROJETO": "PRJ 4.7",
-    "TITULO": "Automação Elétrica",
+    "TITULO": "Câmera Fotográfica",
     "MODULO": "Módulo IV - Ensino Médio",
-    "COMPLEXIDADE": "Avançado",
+    "COMPLEXIDADE": "Intermediário",
     "TEMPO_ESTIMADO": "2 h/aula (100 min)",
-    "PRE_REQUISITOS": "",
+    "PRE_REQUISITOS": "Familiaridade com circuitos eletrônicos básicos, variáveis e estruturas de decisão.",
     "HABILIDADES_DE_COMPUTACAO": [
-      "Módulos Relé, Cargas AC e Protocolo MQTT"
+      "Captura de Imagem Digital e Armazenamento em Cartão SD"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
       "COMPETENCIA": "Ciências / Lógica",
@@ -1165,7 +1260,7 @@
       "EIXO": "Pensamento Computacional",
       "BNCC_GERAL": "EM13CNT106"
     },
-    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Exploração prática do projeto Câmera Fotográfica aplicado ao desenvolvimento de habilidades do Módulo IV - Ensino Médio.",
     "FLUXO_ESTRUTURA_CODIGO": [],
     "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
       "BOM": [],
@@ -1183,13 +1278,13 @@
   },
   {
     "PROJETO": "PRJ 4.8",
-    "TITULO": "Sistema autônomo de estacionamento",
+    "TITULO": "Piano Digital",
     "MODULO": "Módulo IV - Ensino Médio",
-    "COMPLEXIDADE": "Avançado",
+    "COMPLEXIDADE": "Intermediário",
     "TEMPO_ESTIMADO": "2 h/aula (100 min)",
-    "PRE_REQUISITOS": "",
+    "PRE_REQUISITOS": "Familiaridade com circuitos eletrônicos básicos, variáveis e estruturas de decisão.",
     "HABILIDADES_DE_COMPUTACAO": [
-      "Lógica Fuzzy e Processamento de Imagens"
+      "Síntese Sonora, Frequências PWM e Interrupções de Teclado"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
       "COMPETENCIA": "Ciências / Lógica",
@@ -1197,7 +1292,7 @@
       "EIXO": "Pensamento Computacional",
       "BNCC_GERAL": "EM13MAT406"
     },
-    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Exploração prática do projeto Piano Digital aplicado ao desenvolvimento de habilidades do Módulo IV - Ensino Médio.",
     "FLUXO_ESTRUTURA_CODIGO": [],
     "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
       "BOM": [],
@@ -1215,13 +1310,13 @@
   },
   {
     "PROJETO": "PRJ 4.9",
-    "TITULO": "Rastreador Solar",
+    "TITULO": "Jogo da Cobrinha",
     "MODULO": "Módulo IV - Ensino Médio",
     "COMPLEXIDADE": "Avançado",
-    "TEMPO_ESTIMADO": "4 h/aula (200 min)",
-    "PRE_REQUISITOS": "",
+    "TEMPO_ESTIMADO": "3 h/aula (150 min)",
+    "PRE_REQUISITOS": "Domínio de programação em C++, manipulação de sensores complexos e controle de fluxo.",
     "HABILIDADES_DE_COMPUTACAO": [
-      "Malha fechada, Ponte Divisora LDR, Motores Servo"
+      "Matriz de LEDs, Estruturas de Dados Dinâmicas e Vetores"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
       "FISICA": "Transformação e otimização de energia renovável.",
@@ -1230,32 +1325,11 @@
       "COMPETENCIA": "Fisica (Transformação e otimização de energia renovável.)",
       "BNCC_GERAL": "EM13CNT106"
     },
-    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Painéis solares fixos perdem até 40% de eficiência ao longo do dia. Como criar um mecanismo rotacional que acompanhe a incidência da luz solar em tempo real?",
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Exploração prática do projeto Jogo da Cobrinha aplicado ao desenvolvimento de habilidades do Módulo IV - Ensino Médio.",
     "FLUXO_ESTRUTURA_CODIGO": [],
     "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
-      "BOM": [
-        {
-          "qtd": "1x",
-          "componente": "Arduino Uno / Nano"
-        },
-        {
-          "qtd": "2x",
-          "componente": "Fotoresistores LDR"
-        },
-        {
-          "qtd": "1x",
-          "componente": "Servomotor SG90"
-        },
-        {
-          "qtd": "2x",
-          "componente": "Resistores 10kΩ"
-        }
-      ],
-      "MAPEAMENTO_PINOS": [
-        "A0: Entrada Analógica (LDR Esquerda)",
-        "A1: Entrada Analógica (LDR Direita)",
-        "9: Saída PWM (Sinal Servomotor)"
-      ],
+      "BOM": [],
+      "MAPEAMENTO_PINOS": [],
       "IMAGEM_ESQUEMA": "",
       "LINK_THINKERCAD": ""
     },
@@ -1269,13 +1343,13 @@
   },
   {
     "PROJETO": "PRJ 4.10",
-    "TITULO": "Robô com controle a distância",
+    "TITULO": "Estação de pH",
     "MODULO": "Módulo IV - Ensino Médio",
     "COMPLEXIDADE": "Avançado",
-    "TEMPO_ESTIMADO": "2 h/aula (100 min)",
-    "PRE_REQUISITOS": "",
+    "TEMPO_ESTIMADO": "3 h/aula (150 min)",
+    "PRE_REQUISITOS": "Domínio de programação em C++, manipulação de sensores complexos e controle de fluxo.",
     "HABILIDADES_DE_COMPUTACAO": [
-      "Teleoperação via Wi-Fi/Bluetooth e Gamepad"
+      "Calibração de Sensores Químicos, Conversão ADC e Telemetria"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
       "COMPETENCIA": "Ciências / Lógica",
@@ -1283,7 +1357,71 @@
       "EIXO": "Pensamento Computacional",
       "BNCC_GERAL": "EM13CNT103"
     },
-    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "",
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Exploração prática do projeto Estação de pH aplicado ao desenvolvimento de habilidades do Módulo IV - Ensino Médio.",
+    "FLUXO_ESTRUTURA_CODIGO": [],
+    "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
+      "BOM": [],
+      "MAPEAMENTO_PINOS": [],
+      "IMAGEM_ESQUEMA": "",
+      "LINK_THINKERCAD": ""
+    },
+    "MODELAGEM_LOGICO_ALGORITMA": {
+      "ARQUIVO": "",
+      "CODIGO_FONTE": ""
+    },
+    "ROTEIRO_PRATICO_DE_EXECUCAO": [],
+    "ARTICULACAO_E_APROFUNDAMENTO": "",
+    "DESAFIOS_DE_EXPANSAO": []
+  },
+  {
+    "PROJETO": "PRJ 4.11",
+    "TITULO": "Rastreador Solar",
+    "MODULO": "Módulo IV - Ensino Médio",
+    "COMPLEXIDADE": "Avançado",
+    "TEMPO_ESTIMADO": "3 h/aula (150 min)",
+    "PRE_REQUISITOS": "Domínio de programação em C++, manipulação de sensores complexos e controle de fluxo.",
+    "HABILIDADES_DE_COMPUTACAO": [
+      "Malha Fechada, Servomotores de Eixo Duplo e Algoritmo MPPT"
+    ],
+    "COMPETENCIA_INTERDISCIPLINARES": {
+      "COMPETENCIA": "Ciências / Lógica",
+      "BNCC_CODIGO": "A definir",
+      "EIXO": "Pensamento Computacional",
+      "BNCC_GERAL": "A definir"
+    },
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Exploração prática do projeto Rastreador Solar aplicado ao desenvolvimento de habilidades do Módulo IV - Ensino Médio.",
+    "FLUXO_ESTRUTURA_CODIGO": [],
+    "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
+      "BOM": [],
+      "MAPEAMENTO_PINOS": [],
+      "IMAGEM_ESQUEMA": "",
+      "LINK_THINKERCAD": ""
+    },
+    "MODELAGEM_LOGICO_ALGORITMA": {
+      "ARQUIVO": "",
+      "CODIGO_FONTE": ""
+    },
+    "ROTEIRO_PRATICO_DE_EXECUCAO": [],
+    "ARTICULACAO_E_APROFUNDAMENTO": "",
+    "DESAFIOS_DE_EXPANSAO": []
+  },
+  {
+    "PROJETO": "PRJ 4.12",
+    "TITULO": "Robô de Controle Remoto",
+    "MODULO": "Módulo IV - Ensino Médio",
+    "COMPLEXIDADE": "Avançado",
+    "TEMPO_ESTIMADO": "3 h/aula (150 min)",
+    "PRE_REQUISITOS": "Domínio de programação em C++, manipulação de sensores complexos e controle de fluxo.",
+    "HABILIDADES_DE_COMPUTACAO": [
+      "Teleoperação sem Fio (Wi-Fi/Bluetooth) e Ponte H"
+    ],
+    "COMPETENCIA_INTERDISCIPLINARES": {
+      "COMPETENCIA": "Ciências / Lógica",
+      "BNCC_CODIGO": "A definir",
+      "EIXO": "Pensamento Computacional",
+      "BNCC_GERAL": "A definir"
+    },
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Exploração prática do projeto Robô de Controle Remoto aplicado ao desenvolvimento de habilidades do Módulo IV - Ensino Médio.",
     "FLUXO_ESTRUTURA_CODIGO": [],
     "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
       "BOM": [],

@@ -20,51 +20,27 @@
       "projetos_matriz": [
         {
           "codigo": "PRJ 1.1",
-          "nome": "Circuito com massa de modelar condutiva",
+          "nome": "Circuitos Simples",
           "conceitos": "Corrente Elétrica e Circuitos Fechados",
           "nivel": "Básico"
         },
         {
           "codigo": "PRJ 1.2",
-          "nome": "Classificação",
-          "conceitos": "Agrupamento por Atributos e Filtros",
+          "nome": "Botão on/off",
+          "conceitos": "Estados Binários (Ligado/Desligado) e Chaveamento",
           "nivel": "Básico"
         },
         {
           "codigo": "PRJ 1.3",
-          "nome": "Ordenação",
-          "conceitos": "Algoritmos Sequenciais e Sequenciamento",
+          "nome": "Circuitos em Folhas de Papel",
+          "conceitos": "Fita de Cobre, LEDs e Condutividade",
           "nivel": "Básico"
         },
         {
           "codigo": "PRJ 1.4",
-          "nome": "Cartões com circuitos de papel",
-          "conceitos": "Fita de Cobre, LEDs e Conectividade",
+          "nome": "Ventilador",
+          "conceitos": "Atuadores, Motores DC e Circuito Elementar",
           "nivel": "Básico"
-        },
-        {
-          "codigo": "PRJ 1.5",
-          "nome": "Simulação de portas lógicas",
-          "conceitos": "Lógica Booleana Básica (AND/OR Desplugado)",
-          "nivel": "Intermediário"
-        },
-        {
-          "codigo": "PRJ 1.6",
-          "nome": "Ventilador de bancada com motor DC",
-          "conceitos": "Atuadores, Motores DC e Circuito de Potência",
-          "nivel": "Intermediário"
-        },
-        {
-          "codigo": "PRJ 1.7",
-          "nome": "Labirinto e lógica de decisão",
-          "conceitos": "Condicionais e Árvore de Decisão",
-          "nivel": "Intermediário"
-        },
-        {
-          "codigo": "PRJ 1.8",
-          "nome": "Que animal é? Sons",
-          "conceitos": "Mapeamento de Entradas e Saídas Sonoras",
-          "nivel": "Intermediário"
         }
       ]
     },
@@ -83,54 +59,72 @@
         {
           "codigo": "PRJ 2.1",
           "nome": "Semáforo",
-          "conceitos": "Variáveis e Delays",
+          "conceitos": "Sequenciamento de Instruções, Temporização e LEDs",
           "nivel": "Básico"
         },
         {
           "codigo": "PRJ 2.2",
-          "nome": "Jogo de reflexo (Acerte o Botão)",
-          "conceitos": "Variáveis Temp., Contadores, Operadores",
+          "nome": "Jogo do reflexo",
+          "conceitos": "Leitura de Botões, Variáveis, Condicionais e Tempo de Reação",
           "nivel": "Básico"
         },
         {
           "codigo": "PRJ 2.3",
-          "nome": "Portão automático com sensor ultrassônico",
-          "conceitos": "Ultrassom, Servomotor, Condicionais",
-          "nivel": "Intermediário"
+          "nome": "Batalha dos Botões",
+          "conceitos": "Entradas Digitais, Contadores, Comparação e Condicionais",
+          "nivel": "Básico"
         },
         {
           "codigo": "PRJ 2.4",
-          "nome": "Lixeira automática",
-          "conceitos": "Sensor de Proximidade e Atuação Mecânica",
-          "nivel": "Intermediário"
+          "nome": "Contador de Pessoas",
+          "conceitos": "Sensores, Variáveis Acumuladoras e Contadores",
+          "nivel": "Básico"
         },
         {
           "codigo": "PRJ 2.5",
-          "nome": "Fotos com microcontroladores",
-          "conceitos": "Captura Digital e Disparo por Hardware",
+          "nome": "Portão Automático",
+          "conceitos": "Sensor Ultrassônico, Servomotor e Microcontrolador",
           "nivel": "Intermediário"
         },
         {
           "codigo": "PRJ 2.6",
-          "nome": "Comunicação com outros controladores",
-          "conceitos": "Comunicação Serial RX/TX",
+          "nome": "Termômetro",
+          "conceitos": "Sensores de Temperatura, Leitura Analógica e Exibição de Dados",
           "nivel": "Intermediário"
         },
         {
           "codigo": "PRJ 2.7",
-          "nome": "Termômetro escolar",
-          "conceitos": "Sensor de Temperatura e Mapeamento Analógico",
+          "nome": "Ventilador",
+          "conceitos": "Sensores de Temperatura, Estruturas Condicionais e Motores DC",
           "nivel": "Intermediário"
         },
         {
           "codigo": "PRJ 2.8",
-          "nome": "Automação de regagem de plantas",
-          "conceitos": "Sensor de Umidade do Solo e Relés",
-          "nivel": "Avançado"
+          "nome": "Dado Eletrônico",
+          "conceitos": "Números Pseudoaleatórios, Variáveis e Representação",
+          "nivel": "Intermediário"
         },
         {
           "codigo": "PRJ 2.9",
-          "nome": "Robô com desvio de proximidade",
+          "nome": "Pedra, Papel e Tesoura",
+          "conceitos": "Operadores Lógicos, Estruturas Condicionais e Regras de Decisão",
+          "nivel": "Intermediário"
+        },
+        {
+          "codigo": "PRJ 2.10",
+          "nome": "Relógio Digital",
+          "conceitos": "Leitura de Horários, Temporização e Displays",
+          "nivel": "Avançado"
+        },
+        {
+          "codigo": "PRJ 2.11",
+          "nome": "Regagem Automática",
+          "conceitos": "Sensores de Umidade do Solo, Leitura Analógica e Bombas/Relés",
+          "nivel": "Avançado"
+        },
+        {
+          "codigo": "PRJ 2.12",
+          "nome": "Robô Esquiva Objetos",
           "conceitos": "Ponte H, Motores DC e Algoritmo de Esquiva",
           "nivel": "Avançado"
         }
@@ -150,74 +144,74 @@
       "projetos_matriz": [
         {
           "codigo": "PRJ 3.1",
-          "nome": "Lâmpada noturna automática",
-          "conceitos": "Sensor LDR, Leitura Analógica e Histese",
+          "nome": "Lâmpada Automática",
+          "conceitos": "Sensor LDR, Leitura Analógica e Histerese",
           "nivel": "Básico"
         },
         {
           "codigo": "PRJ 3.2",
-          "nome": "Jogo da Memória com LEDs",
+          "nome": "Jogo da Memória",
           "conceitos": "Arrays, Funções, Loops e Randomização",
           "nivel": "Básico"
         },
         {
           "codigo": "PRJ 3.3",
-          "nome": "Despertador com sensores",
-          "conceitos": "Módulo RTC, Alarmes e Sinalização Sonora",
+          "nome": "Alarme de Incêndio",
+          "conceitos": "Sensores de Gás/Chama, Comparação e Alarmes Sonoros",
           "nivel": "Intermediário"
         },
         {
           "codigo": "PRJ 3.4",
-          "nome": "Estação de telemetria",
-          "conceitos": "Multissensores e Transmissão de Dados",
+          "nome": "Lixeira Automática",
+          "conceitos": "Sensor de Proximidade e Atuação Mecânica com Servo",
           "nivel": "Intermediário"
         },
         {
           "codigo": "PRJ 3.5",
-          "nome": "Estacionamento com contador de vagas",
-          "conceitos": "Displays de 7 Segmentos e Sensores Ópticos",
+          "nome": "Estacionamento",
+          "conceitos": "Controle de Vagas, Displays e Sensores Ópticos",
           "nivel": "Intermediário"
         },
         {
           "codigo": "PRJ 3.6",
-          "nome": "Contador de pessoas",
-          "conceitos": "Sensores de Barreira Infravermelha",
+          "nome": "Tapete Inteligente",
+          "conceitos": "Sensores de Pressão/Contato e Monitoramento de Presença",
           "nivel": "Intermediário"
         },
         {
           "codigo": "PRJ 3.7",
-          "nome": "Câmera fotográfica",
-          "conceitos": "Mapeamento de Arquivos em Cartão SD",
+          "nome": "Comedouro Pet",
+          "conceitos": "Temporizadores de Precisão, Servomecanismo e Automação",
           "nivel": "Intermediário"
         },
         {
           "codigo": "PRJ 3.8",
-          "nome": "Enviando fotos pela rede",
-          "conceitos": "Protocolo HTTP e Requisições POST",
-          "nivel": "Avançado"
+          "nome": "Jogo da Velha",
+          "conceitos": "Matrizes Bidimensionais, Lógica de Estados e Verificação",
+          "nivel": "Intermediário"
         },
         {
           "codigo": "PRJ 3.9",
-          "nome": "Comunicação Via Rádio",
-          "conceitos": "Transceptores RF/LoRa e Pacotes de Dados",
+          "nome": "Jogo do Dinossauro",
+          "conceitos": "Displays Gráficos/LCD, Detecção de Colisão e Interrupções",
           "nivel": "Avançado"
         },
         {
           "codigo": "PRJ 3.10",
-          "nome": "Estação de Monitoramento de pH",
-          "conceitos": "Calibração de Sensores Químicos e ADC",
+          "nome": "Estação Telemétrica",
+          "conceitos": "Multissensores, Transmissão e Aquisição de Dados",
           "nivel": "Avançado"
         },
         {
           "codigo": "PRJ 3.11",
-          "nome": "Comedouro Pet Automático",
-          "conceitos": "Temporizadores de Precisão e Servomecanismo",
+          "nome": "Comunicação via Rádio",
+          "conceitos": "Transceptores RF/LoRa e Pacotes de Dados",
           "nivel": "Avançado"
         },
         {
           "codigo": "PRJ 3.12",
-          "nome": "Robô seguidor de linha",
-          "conceitos": "Sensores Reflexivos IR e Algoritmo PID",
+          "nome": "Robô Seguidor de Linha",
+          "conceitos": "Sensores Reflexivos IR e Algoritmo de Malha Fechada / PID",
           "nivel": "Avançado"
         }
       ]
@@ -235,62 +229,74 @@
       "projetos_matriz": [
         {
           "codigo": "PRJ 4.1",
-          "nome": "Calculadora",
-          "conceitos": "Teclado Matricial e Displays LCD",
+          "nome": "Jogo Caça-LEDs",
+          "conceitos": "Multiplexação, Temporização e Reação Rápida",
           "nivel": "Básico"
         },
         {
           "codigo": "PRJ 4.2",
-          "nome": "Urna eletrônica",
-          "conceitos": "Máquinas de Estado e Memória EEPROM/Flash",
+          "nome": "Calculadora",
+          "conceitos": "Teclado Matricial, Parsers e Display LCD",
           "nivel": "Básico"
         },
         {
           "codigo": "PRJ 4.3",
-          "nome": "Radar Sonar",
-          "conceitos": "Varredura Angular e Renderização Gráfica",
-          "nivel": "Intermediário"
+          "nome": "Urna Eletrônica",
+          "conceitos": "Máquinas de Estado, Validação e Armazenamento Seguro",
+          "nivel": "Básico"
         },
         {
           "codigo": "PRJ 4.4",
-          "nome": "Controle de Acesso (NFC)",
-          "conceitos": "Comunicação SPI/I2C e Leitura RFID/NFC",
+          "nome": "Cofre Digital",
+          "conceitos": "Autenticação por Senha, Bloqueio Lógico e Solenoide",
           "nivel": "Intermediário"
         },
         {
           "codigo": "PRJ 4.5",
-          "nome": "Servidor com fotos",
-          "conceitos": "Web Server Embarcado e Arquivos Estáticos",
+          "nome": "Acesso por NFC",
+          "conceitos": "Comunicação SPI/I2C, Leitura RFID/NFC e Criptografia",
           "nivel": "Intermediário"
         },
         {
           "codigo": "PRJ 4.6",
-          "nome": "Câmera de monitoramento",
-          "conceitos": "Streaming MJPEG e Protocolo WebSocket",
-          "nivel": "Avançado"
+          "nome": "Radar de Velocidade",
+          "conceitos": "Cálculo de Delta Tempo, Sensor Doppler/Ultrassom e Telemetria",
+          "nivel": "Intermediário"
         },
         {
           "codigo": "PRJ 4.7",
-          "nome": "Automação Elétrica",
-          "conceitos": "Módulos Relé, Cargas AC e Protocolo MQTT",
-          "nivel": "Avançado"
+          "nome": "Câmera Fotográfica",
+          "conceitos": "Captura de Imagem Digital e Armazenamento em Cartão SD",
+          "nivel": "Intermediário"
         },
         {
           "codigo": "PRJ 4.8",
-          "nome": "Sistema autônomo de estacionamento",
-          "conceitos": "Lógica Fuzzy e Processamento de Imagens",
-          "nivel": "Avançado"
+          "nome": "Piano Digital",
+          "conceitos": "Síntese Sonora, Frequências PWM e Interrupções de Teclado",
+          "nivel": "Intermediário"
         },
         {
           "codigo": "PRJ 4.9",
-          "nome": "Rastreador Solar",
-          "conceitos": "Malha Fechada e Algoritmo de Ponto de Máxima Potência",
+          "nome": "Jogo da Cobrinha",
+          "conceitos": "Matriz de LEDs, Estruturas de Dados Dinâmicas e Vetores",
           "nivel": "Avançado"
         },
         {
           "codigo": "PRJ 4.10",
-          "nome": "Robô com controle a distância",
-          "conceitos": "Teleoperação via Wi-Fi/Bluetooth e Gamepad",
+          "nome": "Estação de pH",
+          "conceitos": "Calibração de Sensores Químicos, Conversão ADC e Telemetria",
+          "nivel": "Avançado"
+        },
+        {
+          "codigo": "PRJ 4.11",
+          "nome": "Rastreador Solar",
+          "conceitos": "Malha Fechada, Servomotores de Eixo Duplo e Algoritmo MPPT",
+          "nivel": "Avançado"
+        },
+        {
+          "codigo": "PRJ 4.12",
+          "nome": "Robô de Controle Remoto",
+          "conceitos": "Teleoperação sem Fio (Wi-Fi/Bluetooth) e Ponte H",
           "nivel": "Avançado"
         }
       ]
