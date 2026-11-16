@@ -1,67 +1,117 @@
 [
   {
     "PROJETO": "PRJ 1.1",
-    "TITULO": "Circuitos Simples",
-    "MODULO": "Módulo I - Ensino Infantil",
+    "TITULO": "Circuito Simples",
+    "MODULO": "Módulo I - Educação Infantil",
     "COMPLEXIDADE": "Básico",
     "TEMPO_ESTIMADO": "1 h/aula (60 min)",
-    "PRE_REQUISITOS": "Noções introdutórias de lógica e manuseio seguro de componentes.",
+    "PRE_REQUISITOS": "Reconhecer cores, comparar objetos e seguir instruções com o professor. Não exige leitura, programação ou estudo prévio de eletricidade.",
     "HABILIDADES_DE_COMPUTACAO": [
-      "Corrente Elétrica e Circuitos Fechados"
+      "Sequenciamento de ações de montagem",
+      "Reconhecimento de estados: aceso e apagado",
+      "Previsão e observação de causa e efeito",
+      "Identificação de falhas por comparação com um modelo"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
-      "COMPETENCIA": "Ciências / Lógica",
-      "BNCC_CODIGO": "EI03CO07",
-      "EIXO": "Mundo Digital",
-      "BNCC_GERAL": "EI03ET02"
+      "HISTORIA_E_SOCIEDADE": "A iluminação elétrica mudou como as pessoas usam os espaços quando escurece. Lanternas levam luz a lugares sem tomada. Neste circuito, a turma observa como uma bateria alimenta uma pequena luz e conversa sobre seus usos no cotidiano.",
+      "MATEMATICA": "Contar bateria, resistor e LED; comparar os terminais do LED e ordenar a montagem com imagens."
     },
-    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Exploração prática do projeto Circuitos Simples aplicado ao desenvolvimento de habilidades do Módulo I - Ensino Infantil.",
-    "FLUXO_ESTRUTURA_CODIGO": [],
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Como acender uma luz longe de uma tomada? Uma lanterna resolve essa necessidade com uma bateria e um caminho elétrico fechado. A turma monta um modelo com LED e resistor, observando que a luz depende das conexões. Ao abrir esse caminho, o LED apaga, tornando visível a relação entre ligação e funcionamento.",
     "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
-      "BOM": [],
-      "MAPEAMENTO_PINOS": [],
-      "IMAGEM_ESQUEMA": "",
-      "LINK_THINKERCAD": ""
+      "BOM": [
+        {
+          "qtd": "1x",
+          "componente": "Bateria de 3 V: CR2032 nas imagens; BR2016 no PDF. Usar suporte compatível."
+        },
+        {
+          "qtd": "1x",
+          "componente": "LED, identificado como D1 no esquemático"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Resistor de 220 Ω, identificado como R1 no esquemático"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Suporte da bateria com terminais positivo e negativo, mostrado nas imagens"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Conjunto de fios para unir bateria, resistor e LED; quantidade não especificada"
+        }
+      ],
+      "IMAGEM_ESQUEMA": "Projetos_TCC/Educação Infantil/PRJ 1.1 Circuito Simples/PRJ 1.1 Esquema.png",
+      "TITULO_ESQUEMA": "FIGURA 1: ESQUEMA DO CIRCUITO SIMPLES",
+      "LINK_THINKERCAD": "https://www.tinkercad.com/"
     },
-    "MODELAGEM_LOGICO_ALGORITMA": {
-      "ARQUIVO": "",
-      "CODIGO_FONTE": ""
-    },
-    "ROTEIRO_PRATICO_DE_EXECUCAO": [],
-    "ARTICULACAO_E_APROFUNDAMENTO": "",
-    "DESAFIOS_DE_EXPANSAO": []
+    "ROTEIRO_PRATICO_DE_EXECUCAO": [
+      "1. Mostre as imagens e localize com a turma a bateria, o LED e o resistor. O professor mantém a bateria no suporte, fora do alcance das crianças: sua ingestão é perigosa.",
+      "2. Com a bateria desconectada, identifique os terminais do suporte. Confira a bateria: CR2032 de 3 V nas imagens e BR2016 no PDF. Use suporte compatível.",
+      "3. Conecte o terminal positivo do suporte a uma extremidade do resistor de 220 Ω e a outra extremidade ao anodo do LED vermelho. O resistor não tem polaridade; a perna maior do LED costuma indicar o anodo.",
+      "4. Ligue o catodo do LED ao terminal negativo do suporte. Confira a montagem antes de inserir a bateria. Não una seus polos diretamente; mantenha o resistor em série.",
+      "5. O professor conecta a bateria e convida a turma a observar a luz. Se não acender, desconecte a alimentação e confira os contatos e a polaridade do LED. Não há código-fonte nem Arduino nesta pasta; CODIGO_FONTE permanece vazio.",
+      "6. Abra uma conexão e peça às crianças que descrevam o resultado; depois reconecte e compare. Registre os estados com desenhos de uma luz acesa e outra apagada. Sem fluxograma fornecido, ARQUIVO permanece vazio. Ao terminar, retire a bateria e guarde as peças."
+    ],
+    "ARTICULACAO_E_APROFUNDAMENTO": "1) Caminho Fechado: A bateria fornece energia ao circuito. O LED acende quando as conexões formam um caminho contínuo entre seus terminais, com polaridade correta; abrir um contato interrompe a corrente.\n\n2) Orientação do LED: O LED possui anodo e catodo e precisa ser conectado no sentido indicado. A turma pode comparar suas pernas com ajuda do professor, sem exigir nomes técnicos na fala das crianças.\n\n3) Função do Resistor: O resistor de 220 Ω limita a corrente que atravessa o LED. Ele permanece em série durante toda a experiência; sua função pode ser apresentada como um cuidado para proteger a pequena luz.\n\n4) Sequência e Observação: Não existe software neste projeto. Montar, prever, observar e revisar introduz o pensamento computacional por ações concretas e prepara a turma para atividades futuras com comandos."
   },
   {
     "PROJETO": "PRJ 1.2",
-    "TITULO": "Botão on/off",
-    "MODULO": "Módulo I - Ensino Infantil",
+    "TITULO": "Botão On Off",
+    "MODULO": "Módulo I - Educação Infantil",
     "COMPLEXIDADE": "Básico",
     "TEMPO_ESTIMADO": "1 h/aula (60 min)",
-    "PRE_REQUISITOS": "Noções introdutórias de lógica e manuseio seguro de componentes.",
+    "PRE_REQUISITOS": "Reconhecer cores e acompanhar uma sequência curta com o professor. Retomar a experiência de circuito aberto e fechado do projeto 1.1; não exige leitura ou programação.",
     "HABILIDADES_DE_COMPUTACAO": [
-      "Estados Binários (Ligado/Desligado) e Chaveamento"
+      "Sequenciamento de ações",
+      "Reconhecimento dos estados ligado e desligado",
+      "Relação de causa e efeito",
+      "Previsão e verificação de resultados"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
-      "COMPETENCIA": "Matemática",
-      "BNCC_CODIGO": "EI03CO01",
-      "EIXO": "Pensamento Computacional",
-      "BNCC_GERAL": "EI03ET05"
+      "HISTORIA_E_SOCIEDADE": "Interruptores permitem que as pessoas controlem quando uma luz fica acesa. Esse comando aparece em luminárias e brinquedos que as crianças conhecem. Ao experimentar duas posições de uma chave, a turma percebe que um pequeno gesto pode mudar o funcionamento de um objeto.",
+      "MATEMATICA": "Comparar duas posições da chave, contar os componentes e representar os estados com pares de cartões: ligado/desligado e aberto/fechado."
     },
-    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Exploração prática do projeto Botão on/off aplicado ao desenvolvimento de habilidades do Módulo I - Ensino Infantil.",
-    "FLUXO_ESTRUTURA_CODIGO": [],
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Como ligar e desligar uma luz sem retirar sua bateria? O circuito acrescenta uma chave deslizante ao caminho entre bateria, resistor e LED verde. Em uma posição a passagem de corrente é interrompida; na outra, o caminho se fecha e a luz pode acender. A experiência modela o comando manual de uma pequena luminária.",
     "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
-      "BOM": [],
-      "MAPEAMENTO_PINOS": [],
-      "IMAGEM_ESQUEMA": "",
-      "LINK_THINKERCAD": ""
+      "BOM": [
+        {
+          "qtd": "1x",
+          "componente": "Bateria tipo moeda de 3 V: CR2032 na imagem e BR2016 no PDF; conferir o modelo"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Suporte compatível com a bateria mostrada na imagem"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Resistor R1 de 220 Ω"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Conjunto de fios de ligação"
+        },
+        {
+          "qtd": "1x",
+          "componente": "LED verde D1"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Chave deslizante S1 de três terminais, usando comum e um contato lateral"
+        }
+      ],
+      "IMAGEM_ESQUEMA": "Projetos_TCC/Educação Infantil/PRJ 1.2 Botao On Off/PRJ 1.2 Esquema.png",
+      "TITULO_ESQUEMA": "FIGURA 1: ESQUEMA DO CIRCUITO",
+      "LINK_THINKERCAD": "https://www.tinkercad.com/"
     },
-    "MODELAGEM_LOGICO_ALGORITMA": {
-      "ARQUIVO": "",
-      "CODIGO_FONTE": ""
-    },
-    "ROTEIRO_PRATICO_DE_EXECUCAO": [],
-    "ARTICULACAO_E_APROFUNDAMENTO": "",
-    "DESAFIOS_DE_EXPANSAO": []
+    "ROTEIRO_PRATICO_DE_EXECUCAO": [
+      "1. Mostre os componentes e retome a ideia de caminho fechado. O professor manipula a bateria tipo moeda e a mantém protegida no suporte, pois sua ingestão é perigosa.",
+      "2. Com a bateria retirada, identifique o terminal comum da chave e o contato lateral indicado na imagem. Não una diretamente os polos da bateria.",
+      "3. Ligue o positivo do suporte ao comum da chave. Ligue o contato lateral ao resistor de 220 Ω e o resistor ao anodo do LED verde.",
+      "4. Ligue o catodo do LED ao negativo do suporte. Confira a orientação do LED e as conexões com a imagem antes de alimentar.",
+      "5. O professor insere a bateria. Mova a chave entre as duas posições e peça que as crianças expliquem quando o caminho está fechado.",
+      "6. Registre os estados com desenhos. Não há código-fonte, Arduino nem fluxograma fornecidos; esses campos ficam vazios. Retire e guarde a bateria ao terminar."
+    ],
+    "ARTICULACAO_E_APROFUNDAMENTO": "1) Chave e Continuidade: A chave deslizante une seu terminal comum a um dos contatos laterais. Usar apenas um contato lateral produz uma posição ligada e outra desligada, tornando a decisão física fácil de observar.\n\n2) Proteção do LED: O resistor de 220 Ω permanece em série com o LED verde e limita a corrente. A chave controla o contato, mas não substitui a função do resistor nem permite retirar essa proteção.\n\n3) Polaridade e Fonte: O LED precisa de orientação correta. A imagem mostra CR2032 e o PDF nomeia BR2016; a escolha da bateria e do suporte deve ser conferida pelo professor, sem tratar os modelos como uma peça idêntica.\n\n4) Pensamento Sequencial: Antes de mover a chave, a criança prevê o estado da luz e depois compara sua previsão com o resultado. O controle é elétrico e manual; não existe programa escondido nesta montagem."
   },
   {
     "PROJETO": "PRJ 1.3",
@@ -80,52 +130,72 @@
       "BNCC_GERAL": "EI03ET07"
     },
     "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Exploração prática do projeto Circuitos em Folhas de Papel aplicado ao desenvolvimento de habilidades do Módulo I - Ensino Infantil.",
-    "FLUXO_ESTRUTURA_CODIGO": [],
     "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
       "BOM": [],
-      "MAPEAMENTO_PINOS": [],
       "IMAGEM_ESQUEMA": "",
       "LINK_THINKERCAD": ""
     },
-    "MODELAGEM_LOGICO_ALGORITMA": {
-      "ARQUIVO": "",
-      "CODIGO_FONTE": ""
-    },
     "ROTEIRO_PRATICO_DE_EXECUCAO": [],
-    "ARTICULACAO_E_APROFUNDAMENTO": "",
-    "DESAFIOS_DE_EXPANSAO": []
+    "ARTICULACAO_E_APROFUNDAMENTO": ""
   },
   {
     "PROJETO": "PRJ 1.4",
     "TITULO": "Ventilador",
-    "MODULO": "Módulo I - Ensino Infantil",
+    "MODULO": "Módulo I - Educação Infantil",
     "COMPLEXIDADE": "Básico",
     "TEMPO_ESTIMADO": "1 h/aula (60 min)",
-    "PRE_REQUISITOS": "Noções introdutórias de lógica e manuseio seguro de componentes.",
+    "PRE_REQUISITOS": "Comparar objetos parados e em movimento, reconhecer o comando de uma chave e acompanhar a montagem demonstrativa do professor. Não exige programação.",
     "HABILIDADES_DE_COMPUTACAO": [
-      "Atuadores, Motores DC e Circuito Elementar"
+      "Sequência de acionamento",
+      "Identificação de entrada e efeito",
+      "Comparação entre previsão e observação",
+      "Representação dos estados parado e girando"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
-      "COMPETENCIA": "Ciências / Lógica",
-      "BNCC_CODIGO": "EI03CO01",
-      "EIXO": "Pensamento Computacional",
-      "BNCC_GERAL": "EI03ET02"
+      "HISTORIA_E_SOCIEDADE": "Ventiladores movimentam o ar para melhorar a sensação de conforto. Diferentes objetos usam motores para transformar energia elétrica em movimento. A turma observa um modelo pequeno e conversa sobre onde encontra hélices, percebendo que movimento e luz são efeitos diferentes da eletricidade.",
+      "MATEMATICA": "Contar as pás visíveis e os componentes, comparar parado e girando e ordenar as ações necessárias para ligar e desligar a chave."
     },
-    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Exploração prática do projeto Ventilador aplicado ao desenvolvimento de habilidades do Módulo I - Ensino Infantil.",
-    "FLUXO_ESTRUTURA_CODIGO": [],
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Como produzir movimento com uma pequena fonte de energia? O material mostra bateria, chave, resistor e motor com hélice em um circuito em série. Quando a chave fecha o caminho, o motor recebe energia, mas a bateria e o resistor podem limitar a corrente e impedir a partida. A atividade deve começar pela observação do modelo e pela verificação do professor.",
     "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
-      "BOM": [],
-      "MAPEAMENTO_PINOS": [],
-      "IMAGEM_ESQUEMA": "",
-      "LINK_THINKERCAD": ""
+      "BOM": [
+        {
+          "qtd": "1x",
+          "componente": "Bateria tipo moeda de 3 V: CR2032 na imagem e BR2016 no PDF; conferir o modelo"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Suporte compatível com a bateria mostrada na imagem"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Resistor R1 de 220 Ω"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Conjunto de fios de ligação"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Motor CC M1 com hélice, modelo e corrente não informados"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Chave deslizante S1"
+        }
+      ],
+      "IMAGEM_ESQUEMA": "Projetos_TCC/Educação Infantil/PRJ 1.4 Ventilador/PRJ 1.4 Esquema.png",
+      "TITULO_ESQUEMA": "FIGURA 1: ESQUEMA DO CIRCUITO",
+      "LINK_THINKERCAD": "https://www.tinkercad.com/"
     },
-    "MODELAGEM_LOGICO_ALGORITMA": {
-      "ARQUIVO": "",
-      "CODIGO_FONTE": ""
-    },
-    "ROTEIRO_PRATICO_DE_EXECUCAO": [],
-    "ARTICULACAO_E_APROFUNDAMENTO": "",
-    "DESAFIOS_DE_EXPANSAO": []
+    "ROTEIRO_PRATICO_DE_EXECUCAO": [
+      "1. Apresente o circuito como modelo de movimento. O professor mantém a bateria no suporte e a hélice afastada de mãos, cabelos e rosto.",
+      "2. Com a bateria retirada, confira a chave, o resistor de 220 Ω e os dois terminais do motor. A imagem mostra CR2032 e o PDF identifica BR2016.",
+      "3. Reproduza apenas a sequência documentada entre positivo, chave, resistor e motor; ligue o outro terminal do motor ao negativo do suporte.",
+      "4. Antes do teste físico, confira a compatibilidade do motor com a fonte. O resistor de 220 Ω e a bateria tipo moeda podem não fornecer corrente de partida; não elimine o resistor para forçar o funcionamento.",
+      "5. Faça um acionamento breve sob controle do professor e observe se há rotação. Se o motor não partir, desligue e registre a limitação, sem afirmar que a montagem foi validada.",
+      "6. Compare as posições da chave e desenhe o que foi observado. Não há código nem fluxograma; os campos ficam vazios. Desconecte a bateria ao encerrar."
+    ],
+    "ARTICULACAO_E_APROFUNDAMENTO": "1) Energia e Movimento: O motor transforma parte da energia elétrica em movimento de rotação. A turma pode comparar esse efeito com a luz do LED dos projetos anteriores, usando apenas observações concretas.\n\n2) Circuito em Série: A chave, o resistor e o motor estão no mesmo caminho da corrente. Abrir uma conexão interrompe o circuito; a presença de uma bateria, por si só, não garante que o motor consiga iniciar o movimento.\n\n3) Limite da Montagem: Os arquivos mostram resistor de 220 Ω e bateria tipo moeda, mas não especificam o consumo do motor. Essa combinação exige verificação antes do uso físico e pode ser trabalhada inicialmente como simulação.\n\n4) Controle Manual: O comando ocorre na chave e não em software. Registrar parado, tentando partir e girando ajuda a distinguir o resultado esperado do resultado realmente observado durante a experiência."
   },
   {
     "PROJETO": "PRJ 2.1",
@@ -133,29 +203,30 @@
     "MODULO": "Módulo II - Ensino Fundamental I",
     "COMPLEXIDADE": "Básico",
     "TEMPO_ESTIMADO": "1 h/aula (60 min)",
-    "PRE_REQUISITOS": "Conceitos básicos de eletricidade (circuito fechado, tensão e corrente), polaridade de LEDs e identificação de pinos digitais no Arduino.",
+    "PRE_REQUISITOS": "Circuito fechado, polaridade de LEDs, uso de resistores e identificação dos pinos digitais. Reconhecer as cores da sinalização com exemplos do entorno da escola.",
     "HABILIDADES_DE_COMPUTACAO": [
-      "Variáveis e Delays",
-      "Sequenciamento Linear de Instruções",
-      "Abstração de Hardware Básico",
-      "Controle de Saídas Digitais"
+      "Variáveis e constantes",
+      "Sequenciamento linear de instruções",
+      "Temporização com delay()",
+      "Controle de saídas digitais"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
-      "HISTORIA_E_SOCIEDADE": "A evolução da sinalização urbana e o primeiro semáforo elétrico instalado em Cleveland, Ohio, em 1914. A importância da automação para a segurança no trânsito e o ordenamento do fluxo de pedestres e veículos nas metrópoles modernas.",
-      "MATEMATICA": "Noções de proporção temporal, contagem regressiva e intervalos de tempo lineares."
+      "HISTORIA_E_SOCIEDADE": "A sinalização organiza o encontro entre pessoas e veículos nas ruas. O uso de luzes permite comunicar regras a muitos usuários ao mesmo tempo. Na escola, uma maquete ajuda a discutir respeito à travessia e mostra como uma sequência automática precisa ser compreendida por todos.",
+      "MATEMATICA": "Converter milissegundos em segundos, somar os intervalos de um ciclo e comparar a duração das três luzes: 5 s, 5 s e 3 s."
     },
-    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Como as cidades controlam o tráfego de milhares de veículos e pedestres de forma segura e autônoma? Utilizando um microcontrolador para ciclar estados de iluminação (Vermelho, Amarelo e Verde) em tempos pré-determinados, simulamos o comportamento de um semáforo de trânsito real.",
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Como repetir uma sequência de sinais sem alguém ligar cada luz? O Arduino acende vermelho, verde e amarelo em intervalos definidos no programa. Cada LED representa um estado, e apenas uma cor deve permanecer acesa por vez. O circuito modela a temporização de um semáforo em uma maquete, permitindo discutir o tempo reservado para cada movimento.",
     "FLUXO_ESTRUTURA_CODIGO": [
-      "Definição de Pinos",
+      "Defição dos Pinos",
       "Setup",
-      "Liga LED Vermelho",
+      "Acender LED vermelho ",
       "Delay",
-      "Desliga Vermelho",
-      "Liga LED Amarelo",
+      "Desligar LED Vermelho",
+      "Acender LED verde",
       "Delay",
-      "Desliga Amarelo",
-      "Liga LED Verde",
+      "Deslgiar LED Verde",
+      "Acender LED Amarelo",
       "Delay",
+      "Desligar LED Amarelo",
       "Loop"
     ],
     "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
@@ -166,99 +237,177 @@
         },
         {
           "qtd": "1x",
-          "componente": "LED Vermelho 5mm"
+          "componente": "Cabo USB compatível"
         },
         {
           "qtd": "1x",
-          "componente": "LED Amarelo 5mm"
+          "componente": "LED vermelho"
         },
         {
           "qtd": "1x",
-          "componente": "LED Verde 5mm"
+          "componente": "LED amarelo"
+        },
+        {
+          "qtd": "1x",
+          "componente": "LED verde"
         },
         {
           "qtd": "3x",
-          "componente": "Resistores 220Ω 1/4W (limitação de corrente dos LEDs)"
+          "componente": "Resistores de 220 Ω, um em série com cada LED"
         },
         {
           "qtd": "1x",
-          "componente": "Protoboard 830 pontos"
+          "componente": "Protoboard, conforme a imagem da montagem"
         },
         {
-          "qtd": "6x",
-          "componente": "Cabos Jumpers Macho-Macho"
+          "qtd": "1x",
+          "componente": "Conjunto de jumpers; quantidade individual não especificada"
         }
       ],
       "MAPEAMENTO_PINOS": [
-        "D10 → LED Vermelho (Anodo via resistor 220Ω)",
-        "D9 → LED Amarelo (Anodo via resistor 220Ω)",
-        "D8 → LED Verde (Anodo via resistor 220Ω)"
+        "D11 → anodo do LED vermelho via resistor de 220 Ω (LED_VERMELHO)",
+        "D12 → anodo do LED amarelo via resistor de 220 Ω (LED_AMARELO)",
+        "D13 → anodo do LED verde via resistor de 220 Ω (LED_VERDE)",
+        "GND → catodos dos três LEDs"
       ],
-      "IMAGEM_ESQUEMA": "projetos/PRJ_2_1_Esquema.png",
-      "TITULO_ESQUEMA": "FIGURA 1: ESQUEMA DO CIRCUITO DO SEMÁFORO",
-      "LINK_THINKERCAD": "https://www.tinkercad.com/things/66hrvqjr0HT-jogo-da-memoria?sharecode=7-SX2pF2aCBu4g14pAuLQF0axR53FBzI9UjHQ8CZ5nE"
+      "IMAGEM_ESQUEMA": "Projetos_TCC/Ensino Fundamental I/PRJ 2.1 Semaforo/PRJ 2.1 Esquema.png",
+      "TITULO_ESQUEMA": "FIGURA 1: ESQUEMA DO CIRCUITO",
+      "LINK_THINKERCAD": "https://www.tinkercad.com/",
+      "LINK_GITHUB": ""
     },
     "MODELAGEM_LOGICO_ALGORITMA": {
       "NOME_PASSO": "Fluxograma Lógico",
       "TIPO_PASSO": "IMAGEM",
-      "ARQUIVO": "projetos/PRJ_2_1_Fluxograma.png",
-      "CODIGO_FONTE": "//Semáforo// ==========================\n// Pinos Arduino\n// ==========================\nconst int LED_VERMELHO = 11;\nconst int LED_AMARELO = 12;\nconst int LED_VERDE = 13;\n\nvoid setup() {\n  // Configura os pinos dos LEDs como saídas digitais\n  pinMode(LED_VERMELHO, OUTPUT);\n  pinMode(LED_AMARELO, OUTPUT);\n  pinMode(LED_VERDE, OUTPUT);\n}\n\nvoid loop() {\n  // Estado 1: Vermelho aceso (Pare)\n  digitalWrite(LED_VERMELHO, HIGH);\n  digitalWrite(LED_AMARELO, LOW);\n  digitalWrite(LED_VERDE, LOW);\n  delay(5000); // Mantém por 5 segundos\n\n  // Estado 2: Verde aceso (Siga)\n  digitalWrite(LED_VERMELHO, LOW);\n  digitalWrite(LED_AMARELO, LOW);\n  digitalWrite(LED_VERDE, HIGH);\n  delay(5000); // Mantém por 5 segundos\n\n  // Estado 3: Amarelo aceso (Atenção)\n  digitalWrite(LED_VERMELHO, LOW);\n  digitalWrite(LED_AMARELO, HIGH);\n  digitalWrite(LED_VERDE, LOW);\n  delay(3000); // Mantém por 3 segundos\n}"
+      "ARQUIVO": "Projetos_TCC/Ensino Fundamental I/PRJ 2.1 Semaforo/PRJ 2.1 Fluxograma.png",
+      "CODIGO_FONTE": "void loop() {\n  digitalWrite(LED_VERMELHO, HIGH);\n  digitalWrite(LED_AMARELO, LOW);\n  digitalWrite(LED_VERDE, LOW);\n  delay(5000);\n  digitalWrite(LED_VERMELHO, LOW);\n  digitalWrite(LED_AMARELO, LOW);\n  digitalWrite(LED_VERDE, HIGH);\n  delay(5000);\n  digitalWrite(LED_VERMELHO, LOW);\n  digitalWrite(LED_AMARELO, HIGH);\n  digitalWrite(LED_VERDE, LOW);\n  delay(3000);\n}"
     },
     "ROTEIRO_PRATICO_DE_EXECUCAO": [
-      "1. Conecte os resistores de 220Ω nos anodos dos LEDs Vermelho, Amarelo e Verde, ligando-os respectivamente aos pinos digitais D10, D9 e D8 do Arduino.",
-      "2. Conecte os catodos de todos os LEDs ao barramento de GND da protoboard e puxe um jumper para o GND da placa Arduino.",
-      "3. Verifique a polaridade correta dos componentes (a perna maior do LED é o anodo e a menor é o catodo).",
-      "4. Conecte o Arduino ao computador via cabo USB.",
-      "5. Abra a IDE do Arduino, cole o código fonte correspondente ao ciclo do semáforo e selecione a porta correta.",
-      "6. Carregue o programa na placa e observe a alternância cíclica das luzes."
+      "1. Com o USB desligado, separe os três LEDs e os resistores de 220 Ω. Confira anodo e catodo antes de inserir as peças na protoboard.",
+      "2. Ligue vermelho a D11, amarelo a D12 e verde a D13, sempre por meio de um resistor em série. Esses são os pinos presentes no .ino e na imagem.",
+      "3. Conecte os catodos ao GND comum. Confira se cada LED ocupa conexões independentes e se o resistor não foi desviado por um jumper.",
+      "4. Abra o .ino original na IDE, selecione Arduino Uno e a porta da placa. Não são necessárias bibliotecas adicionais. O campo CODIGO_FONTE é um recorte didático de até 20 linhas, sobre ciclo das três luzes; para executar, use PRJ 2.1 Semaforo.ino completo (trecho nas linhas 16–34).",
+      "5. Carregue o programa e observe a ordem vermelho, verde e amarelo. Cronometre os intervalos de 5, 5 e 3 segundos; alguns comentários do fonte descrevem durações diferentes dos valores executados.",
+      "6. Registre a duração total de 13 segundos e explique cada troca de estado. O código original foi preservado, incluindo seus comentários; desligue a placa antes de alterar conexões."
     ],
-    "ARTICULACAO_E_APROFUNDAMENTO": "1) Controle de Portas Digitais: A função `digitalWrite()` envia sinais de nível lógico Alto (HIGH / 5V) ou Baixo (LOW / 0V) para os pinos configurados como saída (`OUTPUT`), controlando o fluxo de corrente pelos LEDs.\n\n2) O Papel do Resistor de Limitação: O resistor de 220Ω é indispensável para limitar a corrente elétrica que passa pelo LED, evitando a queima do componente devido à diferença de potencial direta da placa.\n\n3) Temporização Sequencial: O uso da função `delay()` pausa a execução do programa em milissegundos, criando a cadência visual temporal necessária para imitar o funcionamento de um semáforo urbano convencional.\n\n4) Lógica de Estados: O ciclo demonstra como transições ordenadas de ligar e desligar criam um padrão repetitivo previsível e automatizado.",
+    "ARTICULACAO_E_APROFUNDAMENTO": "1) Saídas Digitais: pinMode() prepara os pinos como OUTPUT e digitalWrite() define HIGH ou LOW. No circuito com catodos no GND, o nível alto permite a passagem de corrente pelo resistor e pelo LED correspondente.\n\n2) Resistores e Polaridade: Cada LED recebe seu próprio resistor de 220 Ω para limitar a corrente. Inverter o LED pode impedir seu acendimento, por isso a orientação dos terminais faz parte da conferência da montagem.\n\n3) Tempo Executado: delay() usa milissegundos, e os valores do arquivo são 5000, 5000 e 3000. Os comentários com outros tempos foram mantidos por fidelidade ao fonte, mas a análise do comportamento deve usar os valores reais.\n\n4) Estados e Repetição: O loop organiza os estados vermelho, verde e amarelo e reinicia continuamente. O modelo não possui botão de pedestre nem sensor; essas entradas só passam a existir se forem acrescentadas em uma expansão.",
     "DESAFIOS_DE_EXPANSAO": [
       {
         "nivel": "Fácil",
-        "descricao": "Adicionar um botão de pedestre (Push Button) que, ao ser pressionado, altera imediatamente o semáforo para o estado de travessia segura."
+        "descricao": "Alterar um intervalo e calcular a nova duração total do ciclo antes de testar."
       },
       {
         "nivel": "Intermediário",
-        "descricao": "Incluir um buzzer para emitir um sinal sonoro intermitente exclusivo para orientar pedestres com deficiência visual durante o sinal verde."
-      },
-      {
-        "nivel": "Avançado",
-        "descricao": "Substituir o comando `delay()` por uma abordagem baseada em temporização não-bloqueante utilizando a função `millis()`, permitindo que o sistema execute outras tarefas em paralelo sem congelar o fluxo."
+        "descricao": "Acrescentar um buzzer para produzir um aviso sonoro."
       }
     ]
   },
   {
     "PROJETO": "PRJ 2.2",
-    "TITULO": "Jogo do reflexo",
+    "TITULO": "Jogo do Reflexo",
     "MODULO": "Módulo II - Ensino Fundamental I",
-    "COMPLEXIDADE": "Básico",
-    "TEMPO_ESTIMADO": "1 h/aula (60 min)",
-    "PRE_REQUISITOS": "Noções introdutórias de lógica e manuseio seguro de componentes.",
+    "COMPLEXIDADE": "Intermediário",
+    "TEMPO_ESTIMADO": "2 h/aula (120 min)",
+    "PRE_REQUISITOS": "Botões, LEDs e estados ligado/desligado. Comparar intervalos de tempo e acompanhar a leitura de um mostrador com apoio do professor.",
     "HABILIDADES_DE_COMPUTACAO": [
-      "Leitura de Botões, Variáveis, Condicionais e Tempo de Reação"
+      "Máquina de estados",
+      "Medição de tempo com millis()",
+      "Detecção de transição do botão",
+      "Comparação com uma margem de tolerância"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
-      "COMPETENCIA": "Ciências / Lógica",
-      "BNCC_CODIGO": "EF01CO02",
-      "EIXO": "Pensamento Computacional",
-      "BNCC_GERAL": "EF03MA01"
+      "HISTORIA_E_SOCIEDADE": "Jogos com cronômetros transformam a percepção de tempo em um desafio compartilhado. Mostradores eletrônicos permitem comparar tentativas usando a mesma regra. A turma pode alternar jogadores e discutir que um resultado depende da atenção, da prática e também do modo como o botão responde.",
+      "MATEMATICA": "Converter milissegundos em segundos e comparar a tentativa com 5,0 s. A margem de 200 ms aceita resultados entre 4,8 s e 5,2 s, incluindo os limites."
     },
-    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Exploração prática do projeto Jogo do reflexo aplicado ao desenvolvimento de habilidades do Módulo II - Ensino Fundamental I.",
-    "FLUXO_ESTRUTURA_CODIGO": [],
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Como parar uma contagem o mais perto possível de cinco segundos? O primeiro comando inicia três piscadas e depois o cronômetro; outro comando congela o tempo. O programa compara a diferença com uma margem de 0,2 segundo e usa vermelho ou verde para mostrar o resultado. O projeto exercita estimativa temporal, embora o nome sugira uma medição de reflexo a um estímulo surpresa.",
+    "FLUXO_ESTRUTURA_CODIGO": [
+      "Inicializar mostrador I2C",
+      "Aguardar botão",
+      "Piscar vermelho",
+      "Guardar início",
+      "Atualizar tempo",
+      "Congelar na próxima transição",
+      "Comparar diferença com 200 ms",
+      "Acerto em verde",
+      "Erro em vermelho",
+      "Aguardar nova jogada"
+    ],
     "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
-      "BOM": [],
-      "MAPEAMENTO_PINOS": [],
-      "IMAGEM_ESQUEMA": "",
-      "LINK_THINKERCAD": ""
+      "BOM": [
+        {
+          "qtd": "1x",
+          "componente": "Placa Arduino Uno R3"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Cabo USB compatível"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Mostrador de quatro dígitos e sete segmentos com backpack HT16K33, I2C 0x70"
+        },
+        {
+          "qtd": "1x",
+          "componente": "LED RGB de catodo comum"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Botão de pressão"
+        },
+        {
+          "qtd": "4x",
+          "componente": "Resistores de 220 Ω indicados no PDF: três canais RGB e circuito do botão"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Protoboard, conforme a imagem da montagem"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Conjunto de jumpers; quantidade individual não especificada"
+        }
+      ],
+      "MAPEAMENTO_PINOS": [
+        "A3 → leitura do botão (pinoBotao, INPUT)",
+        "D3 → canal vermelho do LED RGB via resistor (pinoLedVermelho)",
+        "D5 → canal verde do LED RGB via resistor (pinoLedVerde)",
+        "D4 → canal azul via resistor na imagem; o programa não controla esse canal",
+        "A4/SDA e A5/SCL → mostrador HT16K33, endereço 0x70",
+        "5V e GND → alimentação do mostrador e circuito; comum do RGB → GND"
+      ],
+      "IMAGEM_ESQUEMA": "Projetos_TCC/Ensino Fundamental I/PRJ 2.2 Jogo do Reflexo/PRJ 2.2 Esquema.png",
+      "TITULO_ESQUEMA": "FIGURA 1: ESQUEMA DO CIRCUITO",
+      "LINK_THINKERCAD": "https://www.tinkercad.com/",
+      "LINK_GITHUB": ""
     },
     "MODELAGEM_LOGICO_ALGORITMA": {
-      "ARQUIVO": "",
-      "CODIGO_FONTE": ""
+      "NOME_PASSO": "Fluxograma Lógico",
+      "TIPO_PASSO": "IMAGEM",
+      "ARQUIVO": "Projetos_TCC/Ensino Fundamental I/PRJ 2.2 Jogo do Reflexo/PRJ 2.2 Fluxograma.png",
+      "CODIGO_FONTE": "long diferenca = (long)tempoFinalParcial - (long)TEMPO_ALVO_MS;\nif (abs(diferenca) <= TOLERANCIA_MS) {\n  digitalWrite(pinoLedVermelho, LOW);\n  digitalWrite(pinoLedVerde, HIGH);\n} else {\n  digitalWrite(pinoLedVermelho, HIGH);\n  digitalWrite(pinoLedVerde, LOW);\n}\nfloat segundosFinais = tempoFinalParcial / 1000.0;\nmatrix.printFloat(segundosFinais, 2);\nmatrix.writeDisplay();"
     },
-    "ROTEIRO_PRATICO_DE_EXECUCAO": [],
-    "ARTICULACAO_E_APROFUNDAMENTO": "",
-    "DESAFIOS_DE_EXPANSAO": []
+    "ROTEIRO_PRATICO_DE_EXECUCAO": [
+      "1. Confira o mostrador HT16K33, o botão e o RGB. Faça as ligações com USB desligado, usando um resistor em cada canal do LED.",
+      "2. Ligue os canais vermelho e verde a D3 e D5. O canal azul aparece em D4 na imagem, mas não é usado no .ino; mantenha essa distinção ao explicar a montagem.",
+      "3. Ligue o sinal do botão a A3 e confira a rede resistiva antes do teste. A imagem mostra resistor ao positivo e botão ao GND; o código detecta LOW para HIGH, podendo registrar a soltura.",
+      "4. Ligue VCC/GND e SDA/SCL do mostrador. Instale Adafruit GFX Library e Adafruit LED Backpack Library e suas dependências; abra o fonte original com Wire.h. O campo CODIGO_FONTE é um recorte didático de até 20 linhas, sobre tolerância de acerto e resultado congelado; para executar, use PRJ 2.2 Jogo do Reflexo.ino completo (trecho nas linhas 95–110).",
+      "5. Carregue no Uno e observe qual movimento do botão gera o comando. Após as três piscadas, tente congelar a contagem perto de 5,00 s; o display registra o resultado.",
+      "6. Compare tentativas dentro e fora de 4,8–5,2 s. A transição usada pelo programa foi preservada; registre a diferença entre apertar e soltar antes de interpretar o desempenho dos jogadores."
+    ],
+    "ARTICULACAO_E_APROFUNDAMENTO": "1) Estados do Jogo: AGUARDANDO_INICIO, PISCAR_INICIAL, CRONOMETRO_RODANDO e FIM_JOGADA separam as fases. Isso evita misturar a atualização do tempo com a decisão de acerto e torna o fluxo mais fácil de acompanhar.\n\n2) Tempo e Tolerância: millis() marca o início e a subtração fornece o tempo decorrido. O valor absoluto da diferença para 5000 ms precisa ser menor ou igual a 200 ms; não se exige um resultado exatamente igual a cinco segundos.\n\n3) Botão e Transição: O programa procura a passagem de LOW para HIGH e usa delay(50) como espera de estabilização. Como a imagem apresenta polarização ao positivo, o evento pode corresponder à soltura, aspecto que deve ser testado e explicado.\n\n4) Mostrador I2C: O backpack recebe os números pelo barramento em 0x70, em vez de exigir um fio por segmento. O resultado fica congelado até um novo comando, permitindo registrar as tentativas sem depender apenas da memória do jogador.",
+    "DESAFIOS_DE_EXPANSAO": [
+      {
+        "nivel": "Fácil",
+        "descricao": "Alterar TEMPO_ALVO_MS e TOLERANCIA_MS."
+      },
+      {
+        "nivel": "Intermediário",
+        "descricao": "Anotar cinco tentativas e identificar a mais próxima de 5 segundos."
+      },
+      {
+        "nivel": "Avançado",
+        "descricao": "Contabiliza três tentativas seguidas antes de encerrar a partida, exibindo a média de precisão do jogador no final."
+      }
+    ]
   },
   {
     "PROJETO": "PRJ 2.3",
@@ -296,193 +445,607 @@
     "PROJETO": "PRJ 2.4",
     "TITULO": "Contador de Pessoas",
     "MODULO": "Módulo II - Ensino Fundamental I",
-    "COMPLEXIDADE": "Básico",
-    "TEMPO_ESTIMADO": "1 h/aula (60 min)",
-    "PRE_REQUISITOS": "Noções introdutórias de lógica e manuseio seguro de componentes.",
+    "COMPLEXIDADE": "Intermediário",
+    "TEMPO_ESTIMADO": "2 h/aula (120 min)",
+    "PRE_REQUISITOS": "Contagem, comparação de distâncias e noção de entrada e saída. Retomar sensores como entradas e mostradores como saídas, com leitura do código mediada pelo professor.",
     "HABILIDADES_DE_COMPUTACAO": [
-      "Sensores, Variáveis Acumuladoras e Contadores"
+      "Leitura alternada de sensores",
+      "Contagem condicionada por sequência",
+      "Máquina de estados",
+      "Medição de intervalos com micros() e millis()"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
-      "COMPETENCIA": "Física / Ciências da Natureza",
-      "BNCC_CODIGO": "EF02CO04",
-      "EIXO": "Mundo Digital",
-      "BNCC_GERAL": "EF05CI01"
+      "HISTORIA_E_SOCIEDADE": "Bibliotecas e salas de atividades precisam saber quantas pessoas estão presentes. Uma contagem manual pode perder eventos quando entradas e saídas acontecem rapidamente. O modelo permite discutir por que a ordem de passagem importa e por que uma leitura isolada não descreve todo o movimento de alguém.",
+      "MATEMATICA": "Somar entradas, subtrair saídas sem permitir total negativo e comparar distâncias sucessivas. Explorar velocidade como variação de posição por intervalo, com apoio de exemplos concretos."
     },
-    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Exploração prática do projeto Contador de Pessoas aplicado ao desenvolvimento de habilidades do Módulo II - Ensino Fundamental I.",
-    "FLUXO_ESTRUTURA_CODIGO": [],
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Como atualizar a quantidade de pessoas quando alguém atravessa uma passagem? Dois sensores observam aproximações em sequência: S1 seguido de S2 soma uma entrada; a ordem inversa registra uma saída. O LCD mostra o total e o estado da passagem. Trata-se de uma maquete que exige posicionamento e testes, pois movimentos simultâneos não são identificados individualmente.",
+    "FLUXO_ESTRUTURA_CODIGO": [
+      "Inicializar LCD e dois sensores",
+      "Alternar medições a cada 30000 µs",
+      "Descartar distância inválida",
+      "Comparar distância com leitura anterior",
+      "Detectar aproximação de pelo menos 0,10 m/s",
+      "Aguardar o segundo sensor",
+      "Somar entrada ou subtrair saída",
+      "Exibir resultado e liberar nova sequência"
+    ],
     "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
-      "BOM": [],
-      "MAPEAMENTO_PINOS": [],
-      "IMAGEM_ESQUEMA": "",
-      "LINK_THINKERCAD": ""
+      "BOM": [
+        {
+          "qtd": "1x",
+          "componente": "Placa Arduino Uno R3"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Cabo USB compatível"
+        },
+        {
+          "qtd": "1x",
+          "componente": "LCD 16x2 I2C compatível com Adafruit_LiquidCrystal, configurado com deslocamento 0 em relação a 0x20"
+        },
+        {
+          "qtd": "2x",
+          "componente": "Sensores ultrassônicos HC-SR04"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Conjunto de jumpers; quantidade individual não especificada"
+        }
+      ],
+      "MAPEAMENTO_PINOS": [
+        "D3 → TRIG de S1; D2 → ECHO de S1 (índice 0)",
+        "D4 → TRIG de S2; D5 → ECHO de S2 (índice 1)",
+        "A4/SDA → SDA do módulo I2C; A5/SCL → SCL do módulo I2C (Arduino Uno)",
+        "5V → VCC dos módulos de 5 V; GND → referência comum, conferindo as ligações da montagem"
+      ],
+      "IMAGEM_ESQUEMA": "Projetos_TCC/Ensino Fundamental I/PRJ 2.4 Contador de Pessoas/PRJ 2.4 Esquema.png",
+      "TITULO_ESQUEMA": "FIGURA 1: ESQUEMA DO CIRCUITO",
+      "LINK_THINKERCAD": "https://www.tinkercad.com/",
+      "LINK_GITHUB": ""
     },
     "MODELAGEM_LOGICO_ALGORITMA": {
+      "NOME_PASSO": "Fluxograma Lógico",
+      "TIPO_PASSO": "IMAGEM",
       "ARQUIVO": "",
-      "CODIGO_FONTE": ""
+      "CODIGO_FONTE": "if (estado == LIVRE) {\n  inicioSequencia = ultimoMovimento;\n  estado = (i == 0) ? ESPERA_S2 : ESPERA_S1;\n  exibindo = false;\n  mostrarTotal(i == 0 ? \"Aguardando S2\" : \"Aguardando S1\");\n} else if (estado == ESPERA_S2 && i == 1) {\n  ++pessoas;\n  mostrarTotal(\"Entrada\");\n  estado = FINALIZADA;\n} else if (estado == ESPERA_S1 && i == 0) {\n  if (pessoas > 0) --pessoas;\n  mostrarTotal(\"Saida\");\n  estado = FINALIZADA;\n} else {\n  return;\n}"
     },
-    "ROTEIRO_PRATICO_DE_EXECUCAO": [],
-    "ARTICULACAO_E_APROFUNDAMENTO": "",
-    "DESAFIOS_DE_EXPANSAO": []
+    "ROTEIRO_PRATICO_DE_EXECUCAO": [
+      "1. Organize os dois sensores em uma passagem de maquete, identificando S1 e S2. Monte com o USB desligado e evite apontar os sensores diretamente um para o outro.",
+      "2. Ligue S1 com TRIG em D3 e ECHO em D2; ligue S2 com TRIG em D4 e ECHO em D5. Compartilhe 5V e GND conforme os módulos.",
+      "3. Ligue o LCD I2C ao barramento SDA/SCL do Uno. O PDF está nomeado PRJ 2.3, mas foi encontrado nesta pasta 2.4; use os pinos do .ino como referência funcional.",
+      "4. Instale Adafruit LiquidCrystal e abra o .ino completo da pasta. Selecione Uno e a porta correta; o trecho no JSON destaca apenas a decisão de entrada e saída. O campo CODIGO_FONTE é um recorte didático de até 20 linhas, sobre ordem dos sensores determina entrada ou saída; para executar, use PRJ 2.4 Contador de Pessoas.ino completo (trecho nas linhas 54–69).",
+      "5. Carregue e abra o Monitor Serial a 115200 baud. Aproxime um objeto de S1 e depois de S2; repita na ordem inversa e observe a atualização do total.",
+      "6. Teste uma sequência incompleta e uma saída com total zero. Registre que o programa usa prazo de 20 s, pausa de 800 ms após o movimento final e não deixa a contagem ficar negativa. Não há fluxograma fornecido; ARQUIVO permanece vazio."
+    ],
+    "ARTICULACAO_E_APROFUNDAMENTO": "1) Direção por Ordem: A função registrarAproximacao() guarda qual sensor iniciou a passagem. O segundo evento define entrada ou saída; usar dois pontos de observação diferencia esse projeto de um simples detector de presença.\n\n2) Movimento Calculado: O programa compara duas distâncias e o intervalo entre elas. Apenas aproximações com módulo de velocidade de pelo menos 0,10 m/s acionam o registro, portanto colocar um objeto parado diante do sensor não equivale a atravessar.\n\n3) Estados e Prazos: LIVRE, ESPERA_S1, ESPERA_S2 e FINALIZADA organizam a sequência. Um prazo de 20 segundos cancela a espera incompleta, e a pausa após o movimento reduz a repetição imediata de uma mesma passagem.\n\n4) Limites da Contagem: O total fica na memória RAM e é perdido ao reiniciar. Duas pessoas lado a lado ou leituras com eco ruim podem gerar resultados incorretos; a turma deve comparar o LCD com uma contagem manual durante os testes.",
+    "DESAFIOS_DE_EXPANSAO": [
+      {
+        "nivel": "Fácil",
+        "descricao": "Criar uma tabela com a ordem dos sensores e a mudança esperada no total."
+      },
+      {
+        "nivel": "Intermediário",
+        "descricao": "Testar diferentes posições dos sensores e comparar os acertos com uma contagem manual."
+      },
+      {
+        "nivel": "Avançado",
+        "descricao": "Adicionar, em uma cópia do programa e com pino livre, um botão para zerar a contagem, evitando que um botão mantido pressionado gere comandos repetidos."
+      }
+    ]
   },
   {
     "PROJETO": "PRJ 2.5",
     "TITULO": "Portão Automático",
     "MODULO": "Módulo II - Ensino Fundamental I",
     "COMPLEXIDADE": "Intermediário",
-    "TEMPO_ESTIMADO": "2 h/aula (100 min)",
-    "PRE_REQUISITOS": "Familiaridade com circuitos eletrônicos básicos, variáveis e estruturas de decisão.",
+    "TEMPO_ESTIMADO": "2 h/aula (120 min)",
+    "PRE_REQUISITOS": "LEDs com resistor, leitura de distância e comparação de números. Reconhecer que um servo recebe um comando de posição e precisa de alimentação adequada.",
     "HABILIDADES_DE_COMPUTACAO": [
-      "Sensor Ultrassônico, Servomotor e Microcontrolador"
+      "Funções com parâmetros",
+      "Decisão if/else",
+      "Conversão do tempo de eco em distância",
+      "Controle coordenado de servo, LED e buzzer"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
-      "COMPETENCIA": "Ciências / Lógica",
-      "BNCC_CODIGO": "EF02CO04",
-      "EIXO": "Mundo Digital",
-      "BNCC_GERAL": "EF15AR26"
+      "HISTORIA_E_SOCIEDADE": "Portões automatizados combinam movimento e avisos para indicar quando uma passagem está sendo aberta. Luz e som ajudam as pessoas a perceber uma mudança no ambiente. Uma maquete permite observar essas funções e discutir por que um mecanismo real precisa de proteções que vão além de um único sensor.",
+      "MATEMATICA": "Comparar distâncias com o limite de 100 cm, reconhecer posições de 0° e 90° e relacionar bipes de 150 ms com pausas de igual duração."
     },
-    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Exploração prática do projeto Portão Automático aplicado ao desenvolvimento de habilidades do Módulo II - Ensino Fundamental I.",
-    "FLUXO_ESTRUTURA_CODIGO": [],
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Como abrir uma passagem quando um objeto se aproxima? O sensor mede a distância e o programa compara o resultado com 100 cm. Abaixo desse limite, o servo vai a 90° e LED e buzzer alternam avisos; caso contrário, o servo volta a 0°. O modelo representa um portão de papelão e não incorpora as proteções de uma instalação real.",
+    "FLUXO_ESTRUTURA_CODIGO": [
+      "Inicializar servo e pinos",
+      "Medir o tempo de eco",
+      "Calcular distância em centímetros",
+      "Comparar distância com 100 cm",
+      "Abrir a 90° e emitir avisos",
+      "Alternar sinal a cada 150 ms",
+      "Fechar a 0° quando afastado",
+      "Repetir a leitura"
+    ],
     "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
-      "BOM": [],
-      "MAPEAMENTO_PINOS": [],
-      "IMAGEM_ESQUEMA": "",
-      "LINK_THINKERCAD": ""
+      "BOM": [
+        {
+          "qtd": "1x",
+          "componente": "Placa Arduino Uno R3"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Cabo USB compatível"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Sensor ultrassônico HC-SR04"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Microservo"
+        },
+        {
+          "qtd": "1x",
+          "componente": "LED amarelo"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Resistor de 220 Ω"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Buzzer ou piezo"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Protoboard, conforme a imagem da montagem"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Conjunto de jumpers; quantidade individual não especificada"
+        }
+      ],
+      "MAPEAMENTO_PINOS": [
+        "D2 → TRIG; D3 → ECHO do HC-SR04",
+        "D4 → anodo do LED via resistor de 220 Ω",
+        "D5 → positivo do buzzer/piezo",
+        "A0 → sinal do servo, usado como saída digital",
+        "5V → alimentação dos módulos compatíveis; GND → referência comum, catodo do LED e negativo do piezo"
+      ],
+      "IMAGEM_ESQUEMA": "Projetos_TCC/Ensino Fundamental I/PRJ 2.5 Portao Automatico/PRJ 2.5 Esquema.png",
+      "TITULO_ESQUEMA": "FIGURA 1: ESQUEMA DO CIRCUITO",
+      "LINK_THINKERCAD": "https://www.tinkercad.com/",
+      "LINK_GITHUB": ""
     },
     "MODELAGEM_LOGICO_ALGORITMA": {
-      "ARQUIVO": "",
-      "CODIGO_FONTE": ""
+      "NOME_PASSO": "Fluxograma Lógico",
+      "TIPO_PASSO": "IMAGEM",
+      "ARQUIVO": "Projetos_TCC/Ensino Fundamental I/PRJ 2.5 Portao Automatico/PRJ 2.5 Fluxograma.png",
+      "CODIGO_FONTE": "if (dist < 100) {\n  pos = 90;\n  myservo.write(pos);\n  digitalWrite(ledPin, HIGH);\n  tone(buzzerPin, 1200);\n  delay(150);\n  digitalWrite(ledPin, LOW);\n  noTone(buzzerPin);\n  delay(150);\n} else {\n  pos = 0;\n  myservo.write(pos);\n  digitalWrite(ledPin, LOW);\n  noTone(buzzerPin);\n  delay(15);\n}"
     },
-    "ROTEIRO_PRATICO_DE_EXECUCAO": [],
-    "ARTICULACAO_E_APROFUNDAMENTO": "",
-    "DESAFIOS_DE_EXPANSAO": []
+    "ROTEIRO_PRATICO_DE_EXECUCAO": [
+      "1. Fixe o microservo a uma pequena cancela de papelão, sem carga pesada. Com USB desligado, identifique os três fios do servo e os quatro pinos do sensor.",
+      "2. Conecte TRIG a D2, ECHO a D3 e sinal do servo a A0. Confira a alimentação do servo e o GND comum; use fonte de 5 V adequada se a alimentação da placa for insuficiente.",
+      "3. Ligue o LED amarelo a D4 por resistor de 220 Ω e o piezo a D5, com retornos ao GND. Não use os pinos RX/TX para esses avisos.",
+      "4. Abra o .ino completo, que utiliza Servo.h, selecione Uno e carregue. O trecho do JSON destaca a abertura com avisos, sem substituir o programa completo. O campo CODIGO_FONTE é um recorte didático de até 20 linhas, sobre abertura com avisos e fechamento por distância; para executar, use PRJ 2.5 Portao Automatico.ino completo (trecho nas linhas 24–45).",
+      "5. Abra o Monitor Serial a 9600 baud e mova um objeto para distâncias abaixo e acima de 100 cm. Observe 90° na abertura e 0° no fechamento.",
+      "6. Teste também ausência de eco e registre o comportamento: pulseIn() não recebe timeout explícito e um retorno zero pode ser interpretado como distância próxima. Mantenha mãos fora do mecanismo."
+    ],
+    "ARTICULACAO_E_APROFUNDAMENTO": "1) Distância por Eco: CalcDist() gera um pulso de disparo e mede o retorno com pulseIn(). O fator de conversão considera a viagem de ida e volta do som; o resultado inteiro em centímetros alimenta a decisão.\n\n2) Posição do Servo: Servo.h produz o sinal de controle no pino A0. Os comandos de 0° e 90° representam posições da maquete, mas a geometria da alavanca e o esforço mecânico precisam ser conferidos antes de prender a cancela.\n\n3) Avisos Coordenados: Na abertura, digitalWrite() e tone() ligam LED e piezo por 150 ms, seguidos de uma pausa igual. Esses delays também limitam a frequência com que o programa consegue realizar novas medições.\n\n4) Limitação da Leitura: O código original não distingue explicitamente a falta de eco de um objeto muito próximo. Esse ponto deve ser observado nos testes; acrescentar validação é uma expansão, não uma característica já existente.",
+    "DESAFIOS_DE_EXPANSAO": [
+      {
+        "nivel": "Fácil",
+        "descricao": "Alterar o limite de distância para uma maquete menor e prever a nova região de acionamento."
+      },
+      {
+        "nivel": "Intermediário",
+        "descricao": "Modificar a frequência e a duração dos bipes, mantendo LED e servo nos mesmos pinos."
+      },
+      {
+        "nivel": "Avançado",
+        "descricao": "Em uma cópia do fonte, acrescentar timeout e validação de eco e substituir as pausas dos avisos por millis()."
+      }
+    ]
   },
   {
     "PROJETO": "PRJ 2.6",
     "TITULO": "Termômetro",
     "MODULO": "Módulo II - Ensino Fundamental I",
     "COMPLEXIDADE": "Intermediário",
-    "TEMPO_ESTIMADO": "2 h/aula (100 min)",
-    "PRE_REQUISITOS": "Familiaridade com circuitos eletrônicos básicos, variáveis e estruturas de decisão.",
+    "TEMPO_ESTIMADO": "2 h/aula (120 min)",
+    "PRE_REQUISITOS": "Leitura de números decimais, comparação de valores e noção de temperatura. Identificar sensor, LED RGB e LCD com auxílio do professor.",
     "HABILIDADES_DE_COMPUTACAO": [
-      "Sensores de Temperatura, Leitura Analógica e Exibição de Dados"
+      "Leitura analógica",
+      "Conversão de escala",
+      "Decisões encadeadas",
+      "Exibição de dados em texto e cores"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
-      "COMPETENCIA": "Ciências / Lógica",
-      "BNCC_CODIGO": "EF01CO02",
-      "EIXO": "Pensamento Computacional",
-      "BNCC_GERAL": "EF04MA13"
+      "HISTORIA_E_SOCIEDADE": "Medir a temperatura ajuda a comparar ambientes e perceber mudanças ao longo do dia. Mostradores e cores tornam uma informação numérica mais fácil de acompanhar. Na atividade escolar, as crianças relacionam medidas ao ambiente sem confundir as faixas escolhidas no programa com uma classificação universal de conforto.",
+      "MATEMATICA": "Ler valores decimais, converter uma leitura de 0 a 1023 em tensão e comparar temperaturas com os limites de 20 °C e 30 °C."
     },
-    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Exploração prática do projeto Termômetro aplicado ao desenvolvimento de habilidades do Módulo II - Ensino Fundamental I.",
-    "FLUXO_ESTRUTURA_CODIGO": [],
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Como mostrar uma temperatura de forma numérica e visual? O Arduino lê o TMP36 e converte a tensão em graus Celsius. Abaixo de 20 °C acende azul; de 20 °C a 30 °C combina vermelho e verde para produzir amarelo; acima de 30 °C acende vermelho. O LCD apresenta o valor e a faixa escolhida, criando um indicador ambiental didático.",
+    "FLUXO_ESTRUTURA_CODIGO": [
+      "Ler TMP36 em A0",
+      "Converter leitura em tensão",
+      "Calcular temperatura Celsius",
+      "Comparar com 20 °C e 30 °C",
+      "Selecionar azul, amarelo ou vermelho",
+      "Atualizar LCD e Monitor Serial",
+      "Aguardar 1000 ms",
+      "Repetir"
+    ],
     "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
-      "BOM": [],
-      "MAPEAMENTO_PINOS": [],
-      "IMAGEM_ESQUEMA": "",
-      "LINK_THINKERCAD": ""
+      "BOM": [
+        {
+          "qtd": "1x",
+          "componente": "Placa Arduino Uno R3"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Cabo USB compatível"
+        },
+        {
+          "qtd": "1x",
+          "componente": "LCD 16x2 I2C compatível com Adafruit_LiquidCrystal, configurado com deslocamento 0 em relação a 0x20"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Sensor de temperatura TMP36"
+        },
+        {
+          "qtd": "1x",
+          "componente": "LED RGB de catodo comum"
+        },
+        {
+          "qtd": "3x",
+          "componente": "Resistores de 220 Ω, um por canal RGB"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Protoboard, conforme a imagem da montagem"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Conjunto de jumpers; quantidade individual não especificada"
+        }
+      ],
+      "MAPEAMENTO_PINOS": [
+        "A0 → VOUT do TMP36; +VS → 5V; GND do sensor → GND",
+        "D2 → canal vermelho do RGB via resistor de 220 Ω",
+        "D3 → canal azul do RGB via resistor de 220 Ω",
+        "D4 → canal verde do RGB via resistor de 220 Ω; comum do RGB → GND",
+        "A4/SDA → SDA do módulo I2C; A5/SCL → SCL do módulo I2C (Arduino Uno)",
+        "5V → VCC dos módulos de 5 V; GND → referência comum, conferindo as ligações da montagem"
+      ],
+      "IMAGEM_ESQUEMA": "Projetos_TCC/Ensino Fundamental I/PRJ 2.6 Termometro/PRJ 2.6 Esquema.png",
+      "TITULO_ESQUEMA": "FIGURA 1: ESQUEMA DO CIRCUITO",
+      "LINK_THINKERCAD": "https://www.tinkercad.com/",
+      "LINK_GITHUB": ""
     },
     "MODELAGEM_LOGICO_ALGORITMA": {
-      "ARQUIVO": "",
-      "CODIGO_FONTE": ""
+      "NOME_PASSO": "Fluxograma Lógico",
+      "TIPO_PASSO": "IMAGEM",
+      "ARQUIVO": "Projetos_TCC/Ensino Fundamental I/PRJ 2.6 Termometro/PRJ 2.6 Fluxograma.png",
+      "CODIGO_FONTE": "if (temperatura < 20.0) {\n  controlarLED(false, false, true);\n  cor = \"AZUL\";\n  estado = \"FRIO\";\n}\nelse if (temperatura <= 30.0) {\n  controlarLED(true, true, false);\n  cor = \"AMARELO\";\n  estado = \"NORMAL\";\n}\nelse {\n  controlarLED(true, false, false);\n  cor = \"VERMELHO\";\n  estado = \"QUENTE\";\n}"
     },
-    "ROTEIRO_PRATICO_DE_EXECUCAO": [],
-    "ARTICULACAO_E_APROFUNDAMENTO": "",
-    "DESAFIOS_DE_EXPANSAO": []
+    "ROTEIRO_PRATICO_DE_EXECUCAO": [
+      "1. Identifique o TMP36 e confira seus terminais no componente usado, com alimentação desconectada. Não substitua por outro sensor sem revisar a conversão de temperatura.",
+      "2. Ligue VOUT a A0 e os terminais de alimentação ao 5V e GND. Monte os três canais do RGB com resistores individuais: vermelho D2, azul D3 e verde D4.",
+      "3. Conecte o LCD ao barramento I2C do Uno e à alimentação. Confira o GND comum antes de ligar o USB.",
+      "4. Instale Adafruit LiquidCrystal, abra o .ino completo com Wire.h e selecione placa e porta. O trecho no JSON destaca a classificação por faixas e as combinações do RGB. O campo CODIGO_FONTE é um recorte didático de até 20 linhas, sobre classificação por faixa e mistura das cores; para executar, use PRJ 2.6 Termometro.ino completo (trecho nas linhas 84–109).",
+      "5. Carregue e leia LCD e Monitor Serial a 9600 baud. Em simulação, varie a temperatura para testar abaixo de 20 °C, exatamente 20 °C, 30 °C e acima de 30 °C.",
+      "6. Registre valor e cor em uma tabela. No teste físico, observe apenas mudanças ambientais seguras, sem chama ou aquecimento direto; as faixas não representam medição clínica."
+    ],
+    "ARTICULACAO_E_APROFUNDAMENTO": "1) Conversão do TMP36: O programa usa tensão = leitura × 5/1023 e temperatura = (tensão − 0,5) × 100. A expressão depende do sensor TMP36 e da referência adotada, por isso não é uma fórmula genérica para qualquer termômetro.\n\n2) Faixas de Decisão: O primeiro teste usa temperatura menor que 20 e o segundo menor ou igual a 30. Assim, 20 °C e 30 °C pertencem à faixa NORMAL; testar os valores de fronteira ajuda a entender os operadores.\n\n3) Mistura de Cores: O amarelo é produzido ligando os canais vermelho e verde do RGB, e não por um quarto LED. controlarLED() recebe os estados dos canais e reúne as escritas digitais em uma função.\n\n4) Comunicação do Resultado: O LCD recebe o número e a descrição da faixa, e o Monitor Serial repete dados para conferência. O caractere de grau é desenhado em uma matriz de oito linhas; delay(1000) define a atualização aproximada.",
+    "DESAFIOS_DE_EXPANSAO": [
+      {
+        "nivel": "Fácil",
+        "descricao": "Registrar temperaturas de dois locais da sala e comparar as cores indicadas."
+      },
+      {
+        "nivel": "Intermediário",
+        "descricao": "Modificar os limites das faixas e elaborar uma tabela com os novos valores de fronteira."
+      },
+      {
+        "nivel": "Avançado",
+        "descricao": "Usar millis() para atualizar o LCD sem delay() e calcular uma média de poucas leituras, comparando a estabilidade com o programa original."
+      }
+    ]
   },
   {
     "PROJETO": "PRJ 2.7",
     "TITULO": "Ventilador",
     "MODULO": "Módulo II - Ensino Fundamental I",
     "COMPLEXIDADE": "Intermediário",
-    "TEMPO_ESTIMADO": "2 h/aula (100 min)",
-    "PRE_REQUISITOS": "Familiaridade com circuitos eletrônicos básicos, variáveis e estruturas de decisão.",
+    "TEMPO_ESTIMADO": "2 h/aula (120 min), após revisão técnica",
+    "PRE_REQUISITOS": "Comparar temperaturas, reconhecer LED RGB e sensor TMP36 e compreender que motores precisam de alimentação e acionamento adequados. O professor deve revisar o circuito antes da montagem física.",
     "HABILIDADES_DE_COMPUTACAO": [
-      "Sensores de Temperatura, Estruturas Condicionais e Motores DC"
+      "Identificação de entradas e saídas",
+      "Modelagem de uma regra de controle",
+      "Leitura de um esquema de conexões",
+      "Distinção entre circuito desenhado e software implementado"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
-      "COMPETENCIA": "Física / Ciências da Natureza",
-      "BNCC_CODIGO": "EF02CO04",
-      "EIXO": "Mundo Digital",
-      "BNCC_GERAL": "EF04CI02"
+      "HISTORIA_E_SOCIEDADE": "Ventiladores ajudam a movimentar o ar em ambientes ocupados. O acionamento automático associa uma medida a uma decisão, em vez de depender apenas de uma chave. A imagem deste projeto permite discutir essa ideia, mas a turma precisa distinguir o que está desenhado do que ainda depende de programa e revisão elétrica.",
+      "MATEMATICA": "Proposta de exploração: comparar temperaturas e representar uma regra por faixas. Não há limiar de acionamento, fórmula executada ou intervalo de atualização definidos no arquivo vazio."
     },
-    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Exploração prática do projeto Ventilador aplicado ao desenvolvimento de habilidades do Módulo II - Ensino Fundamental I.",
-    "FLUXO_ESTRUTURA_CODIGO": [],
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Como relacionar a temperatura ao funcionamento de um pequeno ventilador? A imagem reúne Arduino, sensor TMP36, RGB e motor, sugerindo um indicador e um acionamento por temperatura. Entretanto, o .ino está vazio e não confirma nenhuma regra de controle. Além disso, o motor aparece ligado a A1 por resistor, sem estágio de potência, o que exige revisão antes de um teste físico.",
+    "FLUXO_ESTRUTURA_CODIGO": [
+      "Ler a imagem e identificar TMP36, RGB e motor",
+      "Confirmar que o .ino está vazio",
+      "Revisar o acionamento elétrico do motor",
+      "Definir a regra somente após receber o programa",
+      "Validar entradas e saídas antes do teste"
+    ],
     "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
-      "BOM": [],
-      "MAPEAMENTO_PINOS": [],
-      "IMAGEM_ESQUEMA": "",
-      "LINK_THINKERCAD": ""
+      "BOM": [
+        {
+          "qtd": "1x",
+          "componente": "Placa Arduino Uno R3"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Cabo USB compatível"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Sensor TMP36 mostrado na imagem"
+        },
+        {
+          "qtd": "1x",
+          "componente": "LED RGB de catodo comum"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Motor CC com hélice, especificação não informada"
+        },
+        {
+          "qtd": "4x",
+          "componente": "Resistores de 220 Ω indicados no PDF"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Protoboard, conforme a imagem da montagem"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Conjunto de jumpers; quantidade individual não especificada"
+        }
+      ],
+      "MAPEAMENTO_PINOS": [
+        "Mapeamento visual, sem confirmação por código: arquivo .ino vazio",
+        "A0 → saída central do TMP36; alimentação do sensor em 5V/GND",
+        "D2, D3 e D4 → três canais do RGB por resistores de 220 Ω; comum → GND",
+        "A1 → resistor de 220 Ω → motor → GND, conforme a imagem; ligação não validada para montagem física",
+        "5V/GND → barramentos da protoboard; não há driver de motor visível"
+      ],
+      "IMAGEM_ESQUEMA": "Projetos_TCC/Ensino Fundamental I/PRJ 2.7 Ventilador/PRJ 2.7 Esquema.png",
+      "TITULO_ESQUEMA": "FIGURA 1: ESQUEMA DO CIRCUITO",
+      "LINK_THINKERCAD": "https://www.tinkercad.com/",
+      "LINK_GITHUB": ""
     },
     "MODELAGEM_LOGICO_ALGORITMA": {
+      "NOME_PASSO": "Fluxograma Lógico",
+      "TIPO_PASSO": "IMAGEM",
       "ARQUIVO": "",
       "CODIGO_FONTE": ""
     },
-    "ROTEIRO_PRATICO_DE_EXECUCAO": [],
-    "ARTICULACAO_E_APROFUNDAMENTO": "",
-    "DESAFIOS_DE_EXPANSAO": []
+    "ROTEIRO_PRATICO_DE_EXECUCAO": [
+      "1. Identifique na imagem o sensor de temperatura, o RGB e o motor. Confirme que o .ino tem zero bytes e não há programa para carregar.",
+      "2. Com a alimentação desligada, registre as conexões visíveis do TMP36 em A0 e do RGB nos pinos D2, D3 e D4.",
+      "3. Marque a ligação de A1 ao motor como pendência técnica. Não conecte o motor diretamente à saída do Uno, mesmo que haja resistor em série.",
+      "4. Antes de montar fisicamente, o professor deve definir um driver ou transistor, proteção contra retorno indutivo e fonte compatível; esses itens são adequações necessárias, não componentes confirmados nos arquivos.",
+      "5. Aguarde o programa para confirmar temperaturas, cores e condições de partida e parada. Discuta essas escolhas como proposta, sem inventar valores para preencher o código.",
+      "6. Após receber o fonte e revisar o hardware, teste primeiro sensor e RGB e depois o motor com acionamento adequado. CODIGO_FONTE e fluxograma ficam vazios nesta versão."
+    ],
+    "ARTICULACAO_E_APROFUNDAMENTO": "1) Entrada Analógica: O TMP36 aparece conectado a A0. Essa ligação sugere uma medida de temperatura, mas não confirma a fórmula ou os limites que seriam usados por um programa, pois o arquivo fornecido não contém instruções.\n\n2) Sinalização RGB: Três pinos digitais chegam ao LED por resistores individuais. Sem fonte, não é possível afirmar qual cor representa frio, normal ou quente; essas associações precisam ser explicitadas quando o projeto for completado.\n\n3) Motor e Potência: Um pino de sinal não substitui um estágio de acionamento de motor. A imagem não apresenta transistor, driver ou diodo de proteção; o resistor de 220 Ω desenhado não resolve essa lacuna de projeto.\n\n4) Regra Pendente: Comparar temperatura com um limiar seria uma possibilidade didática. A versão documentada não implementa essa comparação, portanto os testes funcionais e o trecho de código dependem de arquivos adicionais e revisão da montagem.",
+    "DESAFIOS_DE_EXPANSAO": [
+      {
+        "nivel": "Fácil",
+        "descricao": "Identificar em um desenho quais componentes medem, indicam e produzem movimento."
+      },
+      {
+        "nivel": "Intermediário",
+        "descricao": "Escrever uma tabela de faixas de temperatura como proposta a validar quando houver código."
+      },
+      {
+        "nivel": "Avançado",
+        "descricao": "Depois da revisão do acionamento e do fornecimento do fonte, testar dois limiares de ligar e desligar para evitar alternância perto de uma mesma temperatura."
+      }
+    ]
   },
   {
     "PROJETO": "PRJ 2.8",
     "TITULO": "Dado Eletrônico",
     "MODULO": "Módulo II - Ensino Fundamental I",
     "COMPLEXIDADE": "Intermediário",
-    "TEMPO_ESTIMADO": "2 h/aula (100 min)",
-    "PRE_REQUISITOS": "Familiaridade com circuitos eletrônicos básicos, variáveis e estruturas de decisão.",
+    "TEMPO_ESTIMADO": "2 h/aula (120 min)",
+    "PRE_REQUISITOS": "Contagem de 1 a 6, uso de botão e identificação de LEDs. Apresentar o display de sete segmentos e a ideia de um padrão que forma cada número.",
     "HABILIDADES_DE_COMPUTACAO": [
-      "Números Pseudoaleatórios, Variáveis e Representação"
+      "Vetores de padrões",
+      "Laços de repetição",
+      "Sorteio pseudoaleatório",
+      "Estabilização do botão e detecção de soltura"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
-      "COMPETENCIA": "Física / Ciências da Natureza",
-      "BNCC_CODIGO": "EF02CO04",
-      "EIXO": "Mundo Digital",
-      "BNCC_GERAL": "EF02CI05"
+      "HISTORIA_E_SOCIEDADE": "Dados são usados em jogos para produzir resultados que os participantes não escolhem diretamente. Uma versão eletrônica troca as faces físicas por números luminosos. A turma pode comparar sequências de lançamentos e discutir que obter resultados diferentes não significa que cada número aparecerá a mesma quantidade em poucas tentativas.",
+      "MATEMATICA": "Contar frequências de 1 a 6, comparar quantidades e representar resultados em um gráfico simples. Identificar sete segmentos que formam diferentes algarismos."
     },
-    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Exploração prática do projeto Dado Eletrônico aplicado ao desenvolvimento de habilidades do Módulo II - Ensino Fundamental I.",
-    "FLUXO_ESTRUTURA_CODIGO": [],
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Como sortear um número de um a seis usando um botão? O programa aguarda um comando, anima os segmentos e apresenta um resultado gerado por random(1, 7). A primeira jogada usa o instante do acionamento para iniciar a sequência pseudoaleatória. Outra jogada só é permitida depois que o botão for solto, evitando vários sorteios pelo mesmo aperto.",
+    "FLUXO_ESTRUTURA_CODIGO": [
+      "Configurar os sete segmentos",
+      "Mostrar zero por 1 s",
+      "Aguardar botão em HIGH",
+      "Confirmar estado após 25 ms",
+      "Semear o primeiro sorteio com micros()",
+      "Sortear de 1 a 6",
+      "Executar animação",
+      "Mostrar resultado",
+      "Aguardar soltura estável"
+    ],
     "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
-      "BOM": [],
-      "MAPEAMENTO_PINOS": [],
-      "IMAGEM_ESQUEMA": "",
-      "LINK_THINKERCAD": ""
+      "BOM": [
+        {
+          "qtd": "1x",
+          "componente": "Placa Arduino Uno R3"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Cabo USB compatível"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Display de sete segmentos de anodo comum"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Botão"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Resistor de 220 kΩ identificado como R1 no PDF, na rede do botão"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Resistor de 100 Ω identificado como R2 no PDF, no comum do display"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Protoboard, conforme a imagem da montagem"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Conjunto de jumpers; quantidade individual não especificada"
+        }
+      ],
+      "MAPEAMENTO_PINOS": [
+        "A0 → botão, INPUT com resistor externo para GND; pressionado = HIGH",
+        "D6 → segmento a; D5 → b; D4 → c; D2 → d",
+        "D3 → segmento e; D1 → f; D0 → g (ordem do vetor PINOS_SEGMENTOS)",
+        "Comum do display → positivo via resistor conforme a imagem; segmentos acendem em LOW",
+        "5V/GND → rede de alimentação; D0 e D1 também são RX/TX do Uno"
+      ],
+      "IMAGEM_ESQUEMA": "Projetos_TCC/Ensino Fundamental I/PRJ 2.8 Dado Eletronico/PRJ 2.8 Esquema.png",
+      "TITULO_ESQUEMA": "FIGURA 1: ESQUEMA DO CIRCUITO",
+      "LINK_THINKERCAD": "https://www.tinkercad.com/",
+      "LINK_GITHUB": ""
     },
     "MODELAGEM_LOGICO_ALGORITMA": {
+      "NOME_PASSO": "Fluxograma Lógico",
+      "TIPO_PASSO": "IMAGEM",
       "ARQUIVO": "",
-      "CODIGO_FONTE": ""
+      "CODIGO_FONTE": "if (primeiraJogada) {\n  randomSeed(micros());\n  primeiraJogada = false;\n}\nbyte resultado = random(1, 7);\nanimarDado();\nmostrarNumero(resultado);"
     },
-    "ROTEIRO_PRATICO_DE_EXECUCAO": [],
-    "ARTICULACAO_E_APROFUNDAMENTO": "",
-    "DESAFIOS_DE_EXPANSAO": []
+    "ROTEIRO_PRATICO_DE_EXECUCAO": [
+      "1. Identifique o display de anodo comum e os segmentos a até g. Confira no PDF os valores R1 = 220 kΩ e R2 = 100 Ω antes de comparar com o material físico.",
+      "2. Com USB desligado, siga a ordem do vetor: a em D6, b em D5, c em D4, d em D2, e em D3, f em D1 e g em D0.",
+      "3. Conecte o botão a A0 com polarização externa para GND e acionamento em HIGH. O desenho usa resistor no comum do display; antes da montagem física, revise a limitação de corrente por segmento.",
+      "4. Abra o .ino completo e carregue no Uno. Como D0 e D1 estão conectados ao display, se houver conflito no carregamento, desligue o USB, desconecte esses sinais, carregue e reconecte com a alimentação desligada. O campo CODIGO_FONTE é um recorte didático de até 20 linhas, sobre semente inicial e sorteio de 1 a 6; para executar, use PRJ 2.8 Dado Eletronico.ino completo (trecho nas linhas 55–62).",
+      "5. Pressione o botão, observe a animação e registre o resultado. Mantenha-o pressionado e verifique que o programa aguarda a soltura para aceitar outra jogada.",
+      "6. Faça uma série de lançamentos e conte os resultados. Não use Monitor Serial com D0 e D1 ligados aos segmentos; o programa original não inicializa a serial. Não há fluxograma fornecido; ARQUIVO permanece vazio."
+    ],
+    "ARTICULACAO_E_APROFUNDAMENTO": "1) Codificação dos Dígitos: DIGITOS guarda padrões de bits para os números. Como o display é de anodo comum, um bit zero acende o segmento; mostrarNumero() percorre os sete pinos e aplica o padrão correspondente.\n\n2) Sorteio e Animação: random(1, 7) produz valores inteiros de 1 a 6. A animação apenas percorre uma sequência visual fixa; ela não altera o resultado que já foi sorteado antes de ser exibido.\n\n3) Botão Estável: Duas verificações separadas por 25 ms ajudam a confirmar o aperto. Depois do resultado, a rotina espera uma soltura estável, evitando que um acionamento longo seja contado como várias jogadas.\n\n4) Conferência Elétrica: O PDF especifica 220 kΩ e 100 Ω, e a imagem limita o display pelo comum. A distribuição de corrente merece revisão física; D0 e D1 ainda compartilham funções com a serial e exigem cuidado na carga do programa.",
+    "DESAFIOS_DE_EXPANSAO": [
+      {
+        "nivel": "Fácil",
+        "descricao": "Registrar 30 resultados e montar um gráfico de quantas vezes cada número apareceu."
+      },
+      {
+        "nivel": "Intermediário",
+        "descricao": "Modificar a duração da animação e comparar a percepção dos jogadores sem mudar o intervalo do sorteio."
+      },
+      {
+        "nivel": "Avançado",
+        "descricao": "Em uma cópia do programa, remapear os segmentos de D0/D1 para pinos livres e revisar a proteção por segmento, liberando a serial para registrar resultados."
+      }
+    ]
   },
   {
     "PROJETO": "PRJ 2.9",
     "TITULO": "Pedra, Papel e Tesoura",
     "MODULO": "Módulo II - Ensino Fundamental I",
     "COMPLEXIDADE": "Intermediário",
-    "TEMPO_ESTIMADO": "2 h/aula (100 min)",
-    "PRE_REQUISITOS": "Familiaridade com circuitos eletrônicos básicos, variáveis e estruturas de decisão.",
+    "TEMPO_ESTIMADO": "2 h/aula (120 min)",
+    "PRE_REQUISITOS": "Conhecer as três jogadas e suas regras, identificar sensor e LCD e comparar distâncias. Distinguir uma resposta sorteada de uma leitura do gesto da mão.",
     "HABILIDADES_DE_COMPUTACAO": [
-      "Operadores Lógicos, Estruturas Condicionais e Regras de Decisão"
+      "Seleção pseudoaleatória em vetor",
+      "Detecção de aproximação",
+      "Controle de novo acionamento",
+      "Exibição de mensagens"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
-      "COMPETENCIA": "Ciências / Lógica",
-      "BNCC_CODIGO": "EF01CO02",
-      "EIXO": "Pensamento Computacional",
-      "BNCC_GERAL": "EF01MA11"
+      "HISTORIA_E_SOCIEDADE": "Pedra, papel e tesoura organiza uma disputa curta com três escolhas conhecidas pelos participantes. Uma versão eletrônica permite discutir como uma máquina seleciona uma resposta. A turma mantém a interpretação das regras e compara sua jogada com o texto sorteado, sem atribuir ao sensor a capacidade de reconhecer gestos.",
+      "MATEMATICA": "Relacionar três escolhas possíveis a índices 0, 1 e 2, contar frequências de sorteio e comparar os limites de aproximação de 200 cm e afastamento de 250 cm."
     },
-    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Exploração prática do projeto Pedra, Papel e Tesoura aplicado ao desenvolvimento de habilidades do Módulo II - Ensino Fundamental I.",
-    "FLUXO_ESTRUTURA_CODIGO": [],
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Como solicitar uma jogada da máquina sem apertar um botão? O sensor detecta um objeto entre 2 e 200 cm e o programa sorteia uma das três palavras para o LCD. O texto fica visível por cinco segundos; para repetir, o objeto deve se afastar além de 250 cm ou ocorrer ausência de eco. O circuito não identifica a mão como pedra, papel ou tesoura e não calcula o vencedor.",
+    "FLUXO_ESTRUTURA_CODIGO": [
+      "Mostrar convite no LCD",
+      "Medir distância com timeout",
+      "Verificar permissão de jogar",
+      "Detectar objeto entre 2 e 200 cm",
+      "Sortear índice de 0 a 2",
+      "Exibir palavra por 5 s",
+      "Voltar ao convite",
+      "Rearmar após afastamento ou ausência de eco"
+    ],
     "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
-      "BOM": [],
-      "MAPEAMENTO_PINOS": [],
-      "IMAGEM_ESQUEMA": "",
-      "LINK_THINKERCAD": ""
+      "BOM": [
+        {
+          "qtd": "1x",
+          "componente": "Placa Arduino Uno R3"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Cabo USB compatível"
+        },
+        {
+          "qtd": "1x",
+          "componente": "LCD 16x2 I2C compatível com Adafruit_LiquidCrystal, configurado com deslocamento 0 em relação a 0x20"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Sensor ultrassônico HC-SR04"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Conjunto de jumpers; quantidade não especificada"
+        }
+      ],
+      "MAPEAMENTO_PINOS": [
+        "D3 → TRIG; D2 → ECHO do HC-SR04",
+        "A4/SDA → SDA do módulo I2C; A5/SCL → SCL do módulo I2C (Arduino Uno)",
+        "5V → VCC dos módulos de 5 V; GND → referência comum, conferindo as ligações da montagem"
+      ],
+      "IMAGEM_ESQUEMA": "Projetos_TCC/Ensino Fundamental I/PRJ 2.9 Pedra, Papel e Tesoura/PRJ 2.9 Esquema.png",
+      "TITULO_ESQUEMA": "FIGURA 1: ESQUEMA DO CIRCUITO",
+      "LINK_THINKERCAD": "https://www.tinkercad.com/",
+      "LINK_GITHUB": ""
     },
     "MODELAGEM_LOGICO_ALGORITMA": {
+      "NOME_PASSO": "Fluxograma Lógico",
+      "TIPO_PASSO": "IMAGEM",
       "ARQUIVO": "",
-      "CODIGO_FONTE": ""
+      "CODIGO_FONTE": "void mostrarJogada() {\n  if (primeiroSorteio) {\n    randomSeed(micros());\n    primeiroSorteio = false;\n  }\n  byte escolha = random(3);\n  lcd.clear();\n  lcd.setCursor(0, 0);\n  lcd.print(respostas[escolha]);\n  Serial.print(\"Jogada: \");\n  Serial.println(respostas[escolha]);\n  delay(tempoResposta);\n  mostrarConvite();\n}"
     },
-    "ROTEIRO_PRATICO_DE_EXECUCAO": [],
-    "ARTICULACAO_E_APROFUNDAMENTO": "",
-    "DESAFIOS_DE_EXPANSAO": []
+    "ROTEIRO_PRATICO_DE_EXECUCAO": [
+      "1. Monte com USB desligado, identificando sensor e LCD. Ligue TRIG a D3 e ECHO a D2, além de 5V e GND.",
+      "2. Ligue o LCD a SDA/SCL do Uno e confira o retorno comum de alimentação. O projeto não usa câmera ou sensor de reconhecimento de gestos.",
+      "3. Instale Adafruit LiquidCrystal, abra o .ino completo com Wire.h e carregue na placa correta. O trecho exibido destaca o sorteio e a mensagem.",
+      "4. Abra o Monitor Serial a 9600 baud e aproxime um objeto entre 2 e 200 cm. Leia a palavra e compare-a manualmente com a jogada de um colega. O campo CODIGO_FONTE é um recorte didático de até 20 linhas, sobre sorteio de uma das três respostas; para executar, use PRJ 2.9 Pedra, Papel e Tesoura.ino completo (trecho nas linhas 42–59).",
+      "5. Aguarde os cinco segundos de exibição. Afaste o objeto além de 250 cm ou observe o rearme por ausência de eco antes de tentar novamente; em simulação, controle essas condições diretamente.",
+      "6. Registre as três respostas em várias tentativas. Discuta por que manter a mão parada não deve produzir uma nova jogada a cada leitura e por que o vencedor ainda depende da comparação feita pelos participantes. Não há fluxograma fornecido; ARQUIVO permanece vazio."
+    ],
+    "ARTICULACAO_E_APROFUNDAMENTO": "1) Distância e Presença: medirDistancia() usa pulseIn() com timeout e devolve −1 quando não recebe eco. Essa condição rearma o jogo; o sensor mede a posição de um obstáculo, sem identificar sua forma.\n\n2) Escolha em Vetor: respostas contém Pedra, Papel e Tesoura, e random(3) seleciona um índice válido. O primeiro sorteio inicializa randomSeed() com micros(), usando o instante do evento para variar a sequência.\n\n3) Rearme com Margem: O limite de jogar é 200 cm e o de rearmar é 250 cm. A diferença reduz novos comandos perto da mesma fronteira; podeJogar guarda se a próxima aproximação deve ser aceita.\n\n4) Escopo do Jogo: O LCD mostra a escolha da máquina durante delay(5000), período em que não há novas leituras no loop. Não existe variável para a jogada humana nem regra de vitória implementada no arquivo original.",
+    "DESAFIOS_DE_EXPANSAO": [
+      {
+        "nivel": "Fácil",
+        "descricao": "Contar quantas vezes cada palavra aparece em uma sequência de tentativas."
+      },
+      {
+        "nivel": "Intermediário",
+        "descricao": "Reduzir os dois limites para uma maquete de mesa, mantendo afastamento de rearme maior que o limite de jogar."
+      },
+      {
+        "nivel": "Avançado",
+        "descricao": "Acrescentar três botões em pinos livres para escolher a jogada humana e comparar as escolhas por uma tabela de regras, em uma cópia do fonte."
+      }
+    ]
   },
   {
     "PROJETO": "PRJ 2.10",
@@ -584,64 +1147,29 @@
     "PROJETO": "PRJ 3.1",
     "TITULO": "Lâmpada Automática",
     "MODULO": "Módulo III - Ensino Fundamental II",
-    "COMPLEXIDADE": "Básico",
-    "TEMPO_ESTIMADO": "1 h/aula (60 min)",
-    "PRE_REQUISITOS": "Noções introdutórias de lógica e manuseio seguro de componentes.",
-    "HABILIDADES_DE_COMPUTACAO": [
-      "Sensor LDR, Leitura Analógica e Histerese"
-    ],
-    "COMPETENCIA_INTERDISCIPLINARES": {
-      "FISICA": "Sistemas tecnológicos e eficiência energética.",
-      "BNCC_CODIGO": "EF02CO04",
-      "EIXO": "Mundo Digital",
-      "COMPETENCIA": "Fisica (Sistemas tecnológicos e eficiência energética.)",
-      "BNCC_GERAL": "EF08CI01"
-    },
-    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Exploração prática do projeto Lâmpada Automática aplicado ao desenvolvimento de habilidades do Módulo III - Ensino Fundamental II.",
-    "FLUXO_ESTRUTURA_CODIGO": [],
-    "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
-      "BOM": [],
-      "MAPEAMENTO_PINOS": [],
-      "IMAGEM_ESQUEMA": "",
-      "LINK_THINKERCAD": ""
-    },
-    "MODELAGEM_LOGICO_ALGORITMA": {
-      "ARQUIVO": "",
-      "CODIGO_FONTE": ""
-    },
-    "ROTEIRO_PRATICO_DE_EXECUCAO": [],
-    "ARTICULACAO_E_APROFUNDAMENTO": "",
-    "DESAFIOS_DE_EXPANSAO": []
-  },
-  {
-    "PROJETO": "PRJ 3.2",
-    "TITULO": "Jogo da Memória com LEDs (Genius / Simon)",
-    "MODULO": "Módulo III - Ensino Fundamental II",
     "COMPLEXIDADE": "Intermediário",
-    "TEMPO_ESTIMADO": "2 h/aula (100 min)",
-    "PRE_REQUISITOS": "Estruturas de controle de fluxo (if/else, while), arrays unidimensionais, funções com parâmetros e retorno, conceitos de sinais digitais (Active-High) e leitura de entradas analógicas flutuantes.",
+    "TEMPO_ESTIMADO": "2 h/aula (120 min), com revisão do acionamento",
+    "PRE_REQUISITOS": "Entradas e saídas digitais, uso de if/else e diferença entre circuito de controle e circuito da carga. Ler um esquema com sensor PIR e relé.",
     "HABILIDADES_DE_COMPUTACAO": [
-      "Arrays Unidimensionais e Indexação",
-      "Funções e Abstração de Modulardade",
-      "Estruturas de Repetição (For e While)",
-      "Randomização Pseudoaleatória e Entropia Eletrônica",
-      "Abstração de Hardware ",
-      "Lógica de Varredura de Entradas (Polling)"
+      "Leitura de presença em nível digital",
+      "Decisão condicional",
+      "Acionamento de saída",
+      "Diagnóstico pela comunicação serial"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
-      "HISTORIA_E_SOCIEDADE": "Origem dos jogos eletrônicos na Segunda Era dos Microprocessadores (década de 1970). O surgimento do brinquedo Simon (lançado no Brasil pela Estrela como Genius em 1980), desenhado por Ralph Baer e Howard Morrison, representando a transição dos brinquedos analógicos e mecânicos para os brinquedos embarcados com microcontroladores dedicados de 4 bits.",
-      "MATEMATICA": "Geração de números pseudoaleatórios via distribuição uniforme."
+      "HISTORIA_E_SOCIEDADE": "A iluminação automática aparece em passagens e locais de uso eventual. Detectar movimento pode reduzir o tempo em que uma luz permanece ligada sem necessidade. A atividade permite discutir economia de energia e as limitações de inferir ocupação apenas pela resposta de um sensor de movimento.",
+      "MATEMATICA": "Comparar tempos ligado e desligado, registrar eventos em uma tabela e estimar a diferença de tempo de uso em dois cenários de circulação."
     },
-    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "A automação e o gerenciamento de fluxos em sistemas de mobilidade urbana — abrangendo vias rodoviárias, faixas de pedestres, ciclovias, cruzamentos rodoferroviários e redes de transporte multimodal — exigem sistemas embarcados determinísticos e tolerantes a falhas para garantir a segurança pública. Como modelar computacionalmente a lógica de temporização de estados, priorização de tráfego, intertravamento (interlocking) de sinais e o tratamento síncrono de entradas em tempo real utilizando microcontroladores aplicados à infraestrutura de controle de tráfego?",
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Como acender uma luz quando há movimento em uma passagem? O PIR fornece um sinal digital ao Arduino, que comanda o relé conforme HIGH ou LOW. A imagem representa uma lâmpada alimentada por bateria de 9 V, sem rede elétrica. O desenho do relé precisa de revisão do acionamento antes da montagem física, pois o código sozinho não fornece a etapa de potência.",
     "FLUXO_ESTRUTURA_CODIGO": [
-      "Definição de Pinos",
-      "Setup",
-      "Liga LED",
-      "Desligar LED",
-      "Sequenciar LEDs",
-      "Start",
-      "Game Over",
-      "Loop"
+      "Configurar D13 como saída e A0 como entrada",
+      "Ler sinal do PIR",
+      "Se HIGH, acionar D13",
+      "Registrar movimento na serial",
+      "Aguardar 100 ms",
+      "Se LOW, desligar D13",
+      "Aguardar 300 ms",
+      "Repetir"
     ],
     "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
       "BOM": [
@@ -651,84 +1179,174 @@
         },
         {
           "qtd": "1x",
-          "componente": "LED Vermelho 5mm"
+          "componente": "Cabo USB compatível"
         },
         {
           "qtd": "1x",
-          "componente": "LED Amarelo 5mm"
+          "componente": "Sensor PIR"
         },
         {
           "qtd": "1x",
-          "componente": "LED Azul 5mm"
+          "componente": "Relé K1 mostrado sem módulo de acionamento na imagem"
         },
         {
           "qtd": "1x",
-          "componente": "LED Verde 5mm"
-        },
-        {
-          "qtd": "4x",
-          "componente": "Push Buttons / Chaves Táctil 4 Pinos"
+          "componente": "Lâmpada de baixa tensão compatível com a fonte de 9 V, a conferir"
         },
         {
           "qtd": "1x",
-          "componente": "Buzzer Passivo 5V"
-        },
-        {
-          "qtd": "8x",
-          "componente": "Resistores 220Ω 1/4W (4x limitação dos LEDs e 4x Pull-Down dos botões)"
+          "componente": "Bateria de 9 V BAT1"
         },
         {
           "qtd": "1x",
-          "componente": "Protoboard 830 pontos"
-        },
-        {
-          "qtd": "16x",
-          "componente": "Cabos Jumpers Macho-Macho"
+          "componente": "Conjunto de fios de ligação"
         }
       ],
       "MAPEAMENTO_PINOS": [
-        "D2 → LED Verde (Anodo via resistor 220Ω)",
-        "D3 → LED Azul (Anodo via resistor 220Ω)",
-        "D4 → LED Amarelo (Anodo via resistor 220Ω)",
-        "D5 → LED Vermelho (Anodo via resistor 220Ω)",
-        "D8 → Botão Vermelho (Active-High com Pull-Down de 220Ω)",
-        "D9 → Botão Amarelo (Active-High com Pull-Down de 220Ω)",
-        "D10 → Botão Azul (Active-High com Pull-Down de 220Ω)",
-        "D11 → Botão Verde (Active-High com Pull-Down de 220Ω)",
-        "D12 → Buzzer Passivo",
-        "A0 → Pino Analógico Desconectado (Semente de Entropia para randomSeed)"
+        "A0 → OUT do PIR (pinoPir); PIR VCC/GND → 5V/GND",
+        "D13 → comando do relé (pinoRele); imagem mostra relé avulso, sem driver",
+        "Contatos do relé → circuito separado com bateria de 9 V e lâmpada, conforme imagem",
+        "Acionamento da bobina e proteção precisam de revisão; não ligar a bobina diretamente ao pino nem usar rede elétrica"
       ],
-      "IMAGEM_ESQUEMA": "projetos/PRJ_3_1_Esquema.png",
-      "TITULO_ESQUEMA": "FIGURA 1: ESQUEMA DO CIRCUITO ELETRÔNICO",
-      "LINK_THINKERCAD": "https://www.tinkercad.com/things/66hrvqjr0HT-jogo-da-memoria?sharecode=7-SX2pF2aCBu4g14pAuLQF0axR53FBzI9UjHQ8CZ5nE"
+      "IMAGEM_ESQUEMA": "Projetos_TCC/Ensino Fundamental II/PRJ 3.1 Lampada Automatica/PRJ 3.1 Esquema.png",
+      "TITULO_ESQUEMA": "FIGURA 1: ESQUEMA DO CIRCUITO",
+      "LINK_THINKERCAD": "https://www.tinkercad.com/",
+      "LINK_GITHUB": ""
     },
     "MODELAGEM_LOGICO_ALGORITMA": {
       "NOME_PASSO": "Fluxograma Lógico",
       "TIPO_PASSO": "IMAGEM",
-      "ARQUIVO": "projetos/PRJ_3_1_Fluxograma.png",
-      "CODIGO_FONTE": " //==========================\n// Loop Principal\n// ==========================\nvoid loop() {\n  if (!jogoInciado) {\n    start();\n    randomSeed(analogRead(A0));\n    jogoInciado = true;\n    delay(500);\n  }\n\n  filaOriginal[nivel - 1] = random(0, numPares);\n  reproduzirSequencia();\n  delay(100);\n\n  for (uint16_t i = 0; i < nivel; i++) {\n    int botaoPressionado = -1;\n\n    while (botaoPressionado == -1) {\n      botaoPressionado = espelharBotoesNosLeds();\n    }\n\n    delay(40); // Debounce por filtro de tempo para estabilização mecânica\n\n    if (botaoPressionado != filaOriginal[i]) {\n      Serial.println(\"-> Erro: Game Over\");\n      gameOver();\n      return;\n    }\n\n    while (espelharBotoesNosLeds() != -1) {\n      delay(10);\n    }\n  }\n\n  Serial.println(\"-> Sequencia correta. Proximo nivel.\");\n  nivel++;\n  delay(1000);\n}"
+      "ARQUIVO": "",
+      "CODIGO_FONTE": "void loop() {\n  val = digitalRead(pinoPir);\n  if (val == HIGH) {\n    digitalWrite(pinoRele, HIGH);\n    Serial.println(\"Movimento detectado - Lampada LIGADA\");\n    delay(100);\n  } else {\n    digitalWrite(pinoRele, LOW);\n    delay(300);\n  }\n}"
     },
     "ROTEIRO_PRATICO_DE_EXECUCAO": [
-      "1. Monte os quatro LEDs (Vermelho, Amarelo, Azul e Verde) nos pinos digitais D5, D4, D3 e D2 respectivamente. O anodo de cada LED deve se conectar ao pino digital e o catodo deve se ligar ao GND passando por um resistor de 220Ω.",
-      "2. Monte os quatro botões no barramento da protoboard. Conecte um lado das chaves à linha de 5V. No outro lado, conecte o pino do Arduino correspondente (D8, D9, D10 e D11) acompanhado de um resistor de 220Ω ligado ao GND (configuração Active-High com Pull-Down externo).",
-      "3. Conecte o pino positivo do buzzer passivo ao pino D12 do Arduino e o polo negativo diretamente ao barramento de GND.",
-      "4. Deixe a entrada analógica A0 completamente desconectada de fios ou componentes para garantir a amostragem de ruído térmico/eletromagnético ambiente.",
-      "5. Configure o pino dos botões como INPUT simples no setup() para evitar a ativação do pull-up interno e prevenir flutuações de tensão no divisor de resistor.",
-      "6. Carregue o firmware na Placa Arduino Uno, inicie o Monitor Serial a 9600 baud para acompanhar o rastreamento dos índices e jogue."
+      "1. Compare o esquema e o .ino. Identifique PIR, relé, bateria de 9 V e lâmpada; use somente uma carga de baixa tensão nesta atividade.",
+      "2. Com tudo desligado, conecte OUT do PIR a A0 e confira VCC e GND. Aguarde a estabilização do sensor antes de interpretar os testes.",
+      "3. Não reproduza o comando direto de bobina do desenho. O professor deve selecionar módulo de relé ou driver com proteção adequado ao comando D13; esses itens são adequações, não materiais confirmados na imagem.",
+      "4. Mantenha os contatos do relé no circuito de bateria de 9 V e lâmpada compatível, conforme revisão do professor. Não conecte este projeto a uma tomada. O campo CODIGO_FONTE é um recorte didático de até 20 linhas, sobre presença comanda a saída do relé; para executar, use PRJ 3.1 Lampada Automatica.ino completo (trecho nas linhas 11–22).",
+      "5. Abra o .ino completo, selecione Uno e carregue. Observe no Monitor Serial a 9600 baud o sinal de movimento e confira se o módulo escolhido responde ao nível HIGH esperado pelo programa.",
+      "6. Compare movimento e repouso do PIR com o estado da luz. Registre o tempo de resposta do sensor; não há temporização prolongada de permanência implementada além das pausas de 100/300 ms. Não há fluxograma fornecido; ARQUIVO permanece vazio."
     ],
-    "ARTICULACAO_E_APROFUNDAMENTO": "1) Estrutura do Circuito Pull-Down: O botão fica conectado entre os 5V e o pino digital. Um resistor de 220Ω liga o pino ao GND. Em repouso, o resistor drenará qualquer carga, garantindo nível lógico LOW (0V). Ao pressionar o botão, o circuito fecha diretamente com os 5V, elevando o pino a HIGH (sinal Active-High).\n\n2) Mapeamento por Índices Paralelos: A lógica utiliza o mesmo índice `i` para correlacionar três vetores de hardware (`leds[i]`, `botoes[i]` e `simonTones[i]`). O vetor `filaOriginal` atua como um buffer linear indexado do histórico do jogo.\n\n3) Entropia via Pino Analógico Flutuante: Computadores são determinísticos. A chamada `randomSeed(analogRead(A0))` amostra o ruído eletromagnético do pino A0 desconectado para inicializar o gerador pseudoaleatório (PRNG) com uma semente imprevisível.\n\n4) Controle de Fluxo por Polling: O firmware intercala laços `for` determinísticos para reproduzir a sequência armazenada com laços `while` bloqueantes para varredura do estado das entradas até a confirmação do clique e soltura da tecla.",
+    "ARTICULACAO_E_APROFUNDAMENTO": "1) PIR como Entrada: A0 é lido por digitalRead(), portanto funciona como entrada digital neste projeto. O resultado indica o estado do módulo PIR e não uma medida numérica de distância ou uma identificação de pessoas.\n\n2) Regra de Acionamento: O if/else escreve HIGH em D13 quando a entrada está HIGH e LOW no caso contrário. Um módulo ativo em nível baixo produziria comportamento diferente, razão para conferir sua compatibilidade antes do teste.\n\n3) Relé e Carga: Os contatos comutam o circuito da lâmpada de 9 V. A bobina exige acionamento apropriado e proteção contra retorno indutivo; o relé avulso mostrado na imagem não deve ser tratado como um módulo pronto.\n\n4) Limite da Automação: O programa depende do sinal de movimento e não garante detectar alguém parado. O estudo pode comparar luz acesa e uso do espaço, deixando claro que economia depende da situação e da configuração do sensor.",
     "DESAFIOS_DE_EXPANSAO": [
       {
         "nivel": "Fácil",
-        "descricao": "Implementar aceleração progressiva do tempo de exibição dos LEDs à medida que o nível aumenta, diminuindo o delay de exibição da sequência dinamicamente a cada rodada."
+        "descricao": "Contar acionamentos do PIR em diferentes posições na sala, usando apenas sinalização de baixa tensão."
       },
       {
         "nivel": "Intermediário",
-        "descricao": "Armazenar e recuperar o recorde histórico de nível (High Score) na memória EEPROM não-volátil do Arduino, mantendo o valor salvo mesmo após desligar a placa da energia."
+        "descricao": "Adicionar um intervalo de permanência após o último movimento, com millis(), em uma cópia do programa."
       },
       {
         "nivel": "Avançado",
-        "descricao": "Mudar a dinâmica do projeto para que a montagem da estrutura física do jogo seja realizada integralmente pelos próprios alunos. Eles deverão projetar o circuito do zero a partir do esquemático, planejar o dimensionamento dos resistores de limitação e pull-down, e implementar uma máquina de estados finitos (FSM) por software para controlar as fases de 'Standby', 'Exibição', 'Entrada do Jogador' e 'Game Over'."
+        "descricao": "Acrescentar um LDR em pino livre para permitir acionamento somente no escuro, mantendo o circuito de carga em baixa tensão e com driver adequado."
+      }
+    ]
+  },
+  {
+    "PROJETO": "PRJ 3.2",
+    "TITULO": "Jogo da Memória",
+    "MODULO": "Módulo III - Ensino Fundamental II",
+    "COMPLEXIDADE": "Intermediário",
+    "TEMPO_ESTIMADO": "2 h/aula (120 min)",
+    "PRE_REQUISITOS": "Vetores, índices, repetição, botões com polarização externa e LEDs com resistor. Ler sequências de cores e reproduzi-las em ordem.",
+    "HABILIDADES_DE_COMPUTACAO": [
+      "Armazenamento e comparação de sequências",
+      "Laços com índices",
+      "Abstração em funções",
+      "Sinais sonoros associados a eventos"
+    ],
+    "COMPETENCIA_INTERDISCIPLINARES": {
+      "HISTORIA_E_SOCIEDADE": "Jogos de repetição de cores e sons oferecem um desafio de atenção e memória em regras curtas. Uma mesma sequência pode ser observada por todos e depois reproduzida individualmente. Na turma, o resultado permite conversar sobre estratégias de agrupamento e prática, sem tratar o desempenho em um jogo como medida geral de capacidade.",
+      "MATEMATICA": "Relacionar posições e índices, comparar sequências e representar o aumento de um elemento por rodada. Contar acertos e observar a progressão do nível."
+    },
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Como verificar se alguém repetiu corretamente uma sequência luminosa? O programa acrescenta um índice sorteado ao vetor e apresenta as cores com tons associados. Cada botão recebido é comparado com a posição esperada; um erro produz aviso e reinício. Ao acertar toda a sequência, o nível aumenta e a próxima rodada exige lembrar mais um elemento.",
+    "FLUXO_ESTRUTURA_CODIGO": [
+      "Executar animação inicial",
+      "Semear sorteio com analogRead(A0)",
+      "Acrescentar cor ao vetor",
+      "Reproduzir sequência com luz e som",
+      "Aguardar cada botão",
+      "Comparar índice com posição esperada",
+      "Reiniciar após erro",
+      "Aumentar nível após acerto"
+    ],
+    "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
+      "BOM": [
+        {
+          "qtd": "1x",
+          "componente": "Placa Arduino Uno R3"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Cabo USB compatível"
+        },
+        {
+          "qtd": "4x",
+          "componente": "LEDs: vermelho, amarelo, azul e verde"
+        },
+        {
+          "qtd": "4x",
+          "componente": "Botões de pressão"
+        },
+        {
+          "qtd": "8x",
+          "componente": "Resistores de 220 Ω no PDF: quatro para LEDs e quatro para as redes dos botões"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Buzzer/piezo"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Protoboard, conforme a imagem da montagem"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Conjunto de jumpers; quantidade individual não especificada"
+        }
+      ],
+      "MAPEAMENTO_PINOS": [
+        "D5 → LED vermelho; D8 → botão vermelho",
+        "D4 → LED amarelo; D9 → botão amarelo",
+        "D3 → LED azul; D10 → botão azul",
+        "D2 → LED verde; D11 → botão verde",
+        "D12 → buzzer/piezo; LEDs com resistores individuais e catodos ao GND",
+        "Botões: INPUT com resistores externos para GND; pressionado = HIGH",
+        "A0 → leitura para randomSeed(), sem sensor declarado; 5V/GND → alimentação comum"
+      ],
+      "IMAGEM_ESQUEMA": "Projetos_TCC/Ensino Fundamental II/PRJ 3.2 Jogo da Memoria/PRJ 3.2 Esquema.png",
+      "TITULO_ESQUEMA": "FIGURA 1: ESQUEMA DO CIRCUITO",
+      "LINK_THINKERCAD": "https://www.tinkercad.com/",
+      "LINK_GITHUB": ""
+    },
+    "MODELAGEM_LOGICO_ALGORITMA": {
+      "NOME_PASSO": "Fluxograma Lógico",
+      "TIPO_PASSO": "IMAGEM",
+      "ARQUIVO": "Projetos_TCC/Ensino Fundamental II/PRJ 3.2 Jogo da Memoria/PRJ 3.2 Fluxograma.png",
+      "CODIGO_FONTE": "for(uint16_t i = 0; i < nivel; i++){\n    int botaoPressionado = -1;\n    while (botaoPressionado == -1){\n        botaoPressionado = espelharBotoesNosLeds();\n    }\n    Serial.print(\"Posicao \");\n    Serial.print(i);\n    Serial.print(\" | Digitado: \");\n    Serial.println(botaoPressionado);\n    if (botaoPressionado != filaOriginal[i]){\n        Serial.println(\"-> Erro: Game Over\");\n        gameOver();\n        return;\n    }\n    while(espelharBotoesNosLeds() != -1){\n        delay(10);\n    }\n}"
+    },
+    "ROTEIRO_PRATICO_DE_EXECUCAO": [
+      "1. Com USB desligado, organize quatro pares de botão e LED por cor. Confira os resistores de 220 Ω documentados no esquema e as conexões da protoboard.",
+      "2. Conecte LEDs vermelho D5, amarelo D4, azul D3 e verde D2, sempre com resistor em série e retorno ao GND.",
+      "3. Conecte os botões nas entradas D8, D9, D10 e D11, na mesma ordem de cores, com polarização externa para GND. Ligue o piezo em D12 e GND.",
+      "4. Abra o .ino completo e carregue no Uno. Não há bibliotecas externas; A0 é lido para iniciar o sorteio e não corresponde a um componente de jogo confirmado. O campo CODIGO_FONTE é um recorte didático de até 20 linhas, sobre comparação da sequência e tratamento do erro; para executar, use PRJ 3.2 Jogo da Memoria.ino completo (trecho nas linhas 155–173).",
+      "5. Observe a sequência e pressione os botões na ordem exibida, soltando cada um antes do próximo. Use o Monitor Serial a 9600 baud para comparar índices e nível.",
+      "6. Provoque um erro e observe o reinício. O vetor possui 100 posições, mas não existe condição de encerramento no nível máximo; limite a exploração a rodadas curtas até revisar essa fronteira."
+    ],
+    "ARTICULACAO_E_APROFUNDAMENTO": "1) Sequência em Memória: filaOriginal armazena índices de zero a três. O índice seleciona tanto o LED como o tom no vetor correspondente, separando a regra do jogo dos números físicos dos pinos.\n\n2) Comparação Passo a Passo: O programa aguarda uma entrada em cada posição e compara o botão com filaOriginal[i]. Um resultado diferente chama gameOver(); somente uma sequência inteira correta permite incrementar nivel.\n\n3) Som e Resposta: tone() associa uma frequência a cada cor, e a rotina de erro combina som e piscadas. A espera pela soltura evita que um botão mantido pressionado preencha imediatamente todas as posições seguintes.\n\n4) Fronteira do Vetor: MAX_NIVEL define 100 posições, mas nivel continua crescendo após o acerto. Acessar uma posição além desse limite é uma lacuna do fonte original; acrescentar vitória ou reinício no limite deve ser feito como melhoria separada.",
+    "DESAFIOS_DE_EXPANSAO": [
+      {
+        "nivel": "Fácil",
+        "descricao": "Mudar os tempos de exibição e comparar a dificuldade sem alterar a ordem das cores."
+      },
+      {
+        "nivel": "Intermediário",
+        "descricao": "Criar uma tabela com os índices e as frequências dos quatro sons e experimentar outros tons."
+      },
+      {
+        "nivel": "Avançado",
+        "descricao": "Adicionar condição de vitória no limite do vetor e uma etapa de reinício, testando primeiro com MAX_NIVEL pequeno em uma cópia do código."
       }
     ]
   },
@@ -736,97 +1354,336 @@
     "PROJETO": "PRJ 3.3",
     "TITULO": "Alarme de Incêndio",
     "MODULO": "Módulo III - Ensino Fundamental II",
-    "COMPLEXIDADE": "Intermediário",
-    "TEMPO_ESTIMADO": "2 h/aula (100 min)",
-    "PRE_REQUISITOS": "Familiaridade com circuitos eletrônicos básicos, variáveis e estruturas de decisão.",
+    "COMPLEXIDADE": "Avançado",
+    "TEMPO_ESTIMADO": "3 h/aula (180 min), incluindo revisão da montagem",
+    "PRE_REQUISITOS": "Leitura analógica, conversão do TMP36, operadores lógicos e temporização com millis(). Distinguir um protótipo didático de um equipamento de proteção certificado.",
     "HABILIDADES_DE_COMPUTACAO": [
-      "Sensores de Gás/Chama, Comparação e Alarmes Sonoros"
+      "Histerese em decisões",
+      "Combinação lógica de sensores",
+      "Temporização sem delay() no ciclo principal",
+      "Diagnóstico de disponibilidade I2C"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
-      "COMPETENCIA": "Ciências / Lógica",
-      "BNCC_CODIGO": "EF01CO02",
-      "EIXO": "Pensamento Computacional",
-      "BNCC_GERAL": "EF06MA24"
+      "HISTORIA_E_SOCIEDADE": "Alertas visuais e sonoros ajudam a chamar atenção para uma condição que precisa ser verificada. A automação permite acompanhar mais de uma variável ao mesmo tempo. O projeto escolar usa esse princípio para discutir responsabilidade ao interpretar sensores, sem atribuir ao protótipo a confiabilidade de um sistema real de proteção contra incêndio.",
+      "MATEMATICA": "Comparar limiares de disparo e retorno, converter leitura do TMP36 em graus Celsius e relacionar intervalos de 200, 250 e 500 ms com tarefas diferentes."
     },
-    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Exploração prática do projeto Alarme de Incêndio aplicado ao desenvolvimento de habilidades do Módulo III - Ensino Fundamental II.",
-    "FLUXO_ESTRUTURA_CODIGO": [],
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Como sinalizar quando uma medida ultrapassa uma faixa escolhida? O programa combina leitura bruta de gás e temperatura, acionando luz e som se qualquer alarme estiver ativo. Limiares diferentes de disparo e retorno evitam alternância perto da fronteira. O próprio fonte informa problemas de GND e do resistor do sensor de gás; a montagem deve ser revisada antes de interpretar resultados.",
+    "FLUXO_ESTRUTURA_CODIGO": [
+      "Consultar LCD em 0x20",
+      "Ler gás A0 e TMP36 A1",
+      "Converter temperatura",
+      "Aplicar histerese dos dois sensores",
+      "Combinar alarmes com OU lógico",
+      "Alternar LED e piezo a cada 250 ms",
+      "Atualizar LCD e serial a cada 500 ms",
+      "Repetir leitura a cada 200 ms"
+    ],
     "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
-      "BOM": [],
-      "MAPEAMENTO_PINOS": [],
-      "IMAGEM_ESQUEMA": "",
-      "LINK_THINKERCAD": ""
+      "BOM": [
+        {
+          "qtd": "1x",
+          "componente": "Placa Arduino Uno R3"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Cabo USB compatível"
+        },
+        {
+          "qtd": "1x",
+          "componente": "LCD 16x2 I2C compatível com Adafruit_LiquidCrystal, configurado com deslocamento 0 em relação a 0x20"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Sensor TMP36"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Sensor de gás da montagem; modelo não confirmado no PDF"
+        },
+        {
+          "qtd": "1x",
+          "componente": "LED vermelho"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Resistor de 220 Ω para o LED"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Resistor de 4,7 kΩ indicado no circuito de gás"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Piezo/buzzer"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Protoboard, conforme a imagem da montagem"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Conjunto de jumpers; quantidade individual não especificada"
+        }
+      ],
+      "MAPEAMENTO_PINOS": [
+        "A0 → leitura de gás (PINO_GAS)",
+        "A1 → VOUT do TMP36 (PINO_TEMPERATURA)",
+        "A2 → LED vermelho via resistor de 220 Ω (PINO_LED, saída digital)",
+        "D6 → piezo (PINO_PIEZO)",
+        "A4/SDA e A5/SCL → LCD MCP23008, endereço 0x20",
+        "5V/GND → alimentação e referência a revisar: o fonte avisa ausência de GND comum e resistor de 4,7 kΩ ligado ao +5V"
+      ],
+      "IMAGEM_ESQUEMA": "Projetos_TCC/Ensino Fundamental II/PRJ 3.3 Alarme de Incendio/PRJ 3.3 Esquema.png",
+      "TITULO_ESQUEMA": "FIGURA 1: ESQUEMA DO CIRCUITO",
+      "LINK_THINKERCAD": "https://www.tinkercad.com/",
+      "LINK_GITHUB": ""
     },
     "MODELAGEM_LOGICO_ALGORITMA": {
+      "NOME_PASSO": "Fluxograma Lógico",
+      "TIPO_PASSO": "IMAGEM",
       "ARQUIVO": "",
-      "CODIGO_FONTE": ""
+      "CODIGO_FONTE": "void atualizarEstadoAlarme() {\n  if (temperaturaC >= TEMPERATURA_DISPARO_C) {\n    alarmeTemperatura = true;\n  } else if (temperaturaC <= TEMPERATURA_RETORNO_C) {\n    alarmeTemperatura = false;\n  }\n  if (leituraGas >= GAS_DISPARO) {\n    alarmeGas = true;\n  } else if (leituraGas <= GAS_RETORNO) {\n    alarmeGas = false;\n  }\n}"
     },
-    "ROTEIRO_PRATICO_DE_EXECUCAO": [],
-    "ARTICULACAO_E_APROFUNDAMENTO": "",
-    "DESAFIOS_DE_EXPANSAO": []
+    "ROTEIRO_PRATICO_DE_EXECUCAO": [
+      "1. Leia os avisos iniciais do .ino. Ele informa que a montagem original não une o negativo da protoboard ao GND e que o resistor de gás termina em +5V; não considere as leituras validadas.",
+      "2. Antes de alimentar, peça ao professor que revise GND comum e circuito de leitura do gás. O README citado pelo fonte não existe na pasta recebida; as limitações conhecidas estão registradas aqui.",
+      "3. Confira os sinais A0 gás, A1 TMP36, A2 LED por resistor e D6 piezo. Ligue LCD a SDA/SCL e verifique o endereço 0x20 e a alimentação.",
+      "4. Instale Adafruit LiquidCrystal e abra o .ino completo. O recorte no JSON mostra a histerese; ele não inclui toda a inicialização, leitura e exibição necessárias para executar. O campo CODIGO_FONTE é um recorte didático de até 20 linhas, sobre histerese de temperatura e gás; para executar, use PRJ 3.3 Alarme de Incendio.ino completo (trecho nas linhas 78–91).",
+      "5. Carregue e use Monitor Serial a 9600 baud. Em simulação, teste temperatura de disparo em 50 °C e retorno em 45 °C, gás em 400 e retorno em 350; esses valores não representam calibração.",
+      "6. Compare alarmes separados e simultâneos e observe o aviso intermitente. Não use fogo, fumaça ou liberação de gás para testar; trabalhe com os controles do simulador e mantenha o protótipo restrito ao estudo. Não há fluxograma fornecido; ARQUIVO permanece vazio."
+    ],
+    "ARTICULACAO_E_APROFUNDAMENTO": "1) Histerese: Temperatura liga em 50 °C e desliga em 45 °C; gás liga em leitura 400 e desliga em 350. Entre esses limites o estado anterior é mantido, reduzindo oscilações sem exigir novos componentes.\n\n2) Tarefas Temporizadas: millis() organiza leitura em 200 ms, alternância do aviso em 250 ms e exibição em 500 ms. A leitura de sensores, a sinalização e a atualização do LCD são tratadas em funções diferentes.\n\n3) Diagnóstico do LCD: O programa consulta 0x20 e só escreve no LCD se houver resposta. O Monitor Serial continua apresentando dados para diagnóstico, o que ajuda a separar uma falha do mostrador de uma condição dos sensores.\n\n4) Limites Documentados: A leitura bruta do gás não equivale a concentração calibrada. As falhas de GND e da rede resistiva são avisadas no fonte, e nenhum software corrige uma ligação elétrica incorreta; o protótipo não é um dispositivo de proteção.",
+    "DESAFIOS_DE_EXPANSAO": [
+      {
+        "nivel": "Fácil",
+        "descricao": "Em simulação, registrar os estados ao subir e descer a temperatura pelos dois limiares."
+      },
+      {
+        "nivel": "Intermediário",
+        "descricao": "Criar uma tabela com as quatro combinações dos alarmes e conferir o resultado do OU lógico."
+      },
+      {
+        "nivel": "Avançado",
+        "descricao": "Após revisão elétrica, acrescentar registro serial dos instantes de transição sem bloquear as tarefas, comparando leituras e eventos no simulador."
+      }
+    ]
   },
   {
     "PROJETO": "PRJ 3.4",
     "TITULO": "Lixeira Automática",
     "MODULO": "Módulo III - Ensino Fundamental II",
-    "COMPLEXIDADE": "Intermediário",
-    "TEMPO_ESTIMADO": "2 h/aula (100 min)",
-    "PRE_REQUISITOS": "Familiaridade com circuitos eletrônicos básicos, variáveis e estruturas de decisão.",
+    "COMPLEXIDADE": "Avançado",
+    "TEMPO_ESTIMADO": "3 h/aula (180 min)",
+    "PRE_REQUISITOS": "Controle de servo, leitura ultrassônica, saídas digitais e funções. Compreender alimentação compartilhada e testar um conjunto antes de repetir a montagem.",
     "HABILIDADES_DE_COMPUTACAO": [
-      "Sensor de Proximidade e Atuação Mecânica com Servo"
+      "Repetição de módulos de controle",
+      "Função parametrizada de distância",
+      "Associação entre sensor e atuador",
+      "Diagnóstico de limitações de leitura"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
-      "COMPETENCIA": "Física / Ciências da Natureza",
-      "BNCC_CODIGO": "EF02CO04",
-      "EIXO": "Mundo Digital",
-      "BNCC_GERAL": "EF08CI15"
+      "HISTORIA_E_SOCIEDADE": "Recipientes identificados ajudam a organizar a separação de materiais em um espaço coletivo. Abrir uma tampa por aproximação pode reduzir a necessidade de tocá-la. A maquete permite discutir sinalização e hábitos de descarte, lembrando que o circuito não reconhece o material colocado e depende da escolha feita pela pessoa.",
+      "MATEMATICA": "Associar quatro sensores a quatro tampas, comparar distâncias com 100 cm e relacionar posições de 0° e 90° ao movimento das alavancas."
     },
-    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Exploração prática do projeto Lixeira Automática aplicado ao desenvolvimento de habilidades do Módulo III - Ensino Fundamental II.",
-    "FLUXO_ESTRUTURA_CODIGO": [],
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Como abrir a tampa correspondente à aproximação de uma mão? O projeto possui quatro canais, cada um formado por sensor ultrassônico, servo e LED. Para uma distância menor que 100 cm, o programa abre o respectivo servo a 90° e acende seu LED; nos demais casos volta a 0°. O conjunto modela quatro recipientes de uma estação de descarte, sem classificar automaticamente os resíduos.",
+    "FLUXO_ESTRUTURA_CODIGO": [
+      "Inicializar quatro servos a 0°",
+      "Apagar os quatro LEDs",
+      "Medir distância do canal 1",
+      "Comparar com 100 cm e acionar servo/LED",
+      "Repetir para canais 2, 3 e 4",
+      "Registrar distâncias na serial",
+      "Reiniciar ciclo sequencial"
+    ],
     "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
-      "BOM": [],
-      "MAPEAMENTO_PINOS": [],
-      "IMAGEM_ESQUEMA": "",
-      "LINK_THINKERCAD": ""
+      "BOM": [
+        {
+          "qtd": "1x",
+          "componente": "Placa Arduino Uno R3"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Cabo USB compatível"
+        },
+        {
+          "qtd": "4x",
+          "componente": "Sensores ultrassônicos HC-SR04"
+        },
+        {
+          "qtd": "4x",
+          "componente": "Microservos"
+        },
+        {
+          "qtd": "4x",
+          "componente": "LEDs amarelo, verde, azul e vermelho"
+        },
+        {
+          "qtd": "4x",
+          "componente": "Resistores de 220 Ω para os LEDs"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Protoboard, conforme a imagem da montagem"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Conjunto de jumpers; quantidade individual não especificada"
+        }
+      ],
+      "MAPEAMENTO_PINOS": [
+        "Canal 1: D2 TRIG, D3 ECHO, D10 LED amarelo, A0 sinal do servo",
+        "Canal 2: D4 TRIG, D5 ECHO, D11 LED verde, A1 sinal do servo",
+        "Canal 3: D6 TRIG, D7 ECHO, D12 LED azul, A2 sinal do servo",
+        "Canal 4: D8 TRIG, D9 ECHO, D13 LED vermelho, A3 sinal do servo",
+        "LEDs via resistores de 220 Ω; catodos → GND",
+        "Sensores → 5V/GND; servos precisam de fonte de 5 V dimensionada para o conjunto e GND comum com o Uno"
+      ],
+      "IMAGEM_ESQUEMA": "Projetos_TCC/Ensino Fundamental II/PRJ 3.4 Lixeira Automatica/PRJ 3.4 Esquema.png",
+      "TITULO_ESQUEMA": "FIGURA 1: ESQUEMA DO CIRCUITO",
+      "LINK_THINKERCAD": "https://www.tinkercad.com/",
+      "LINK_GITHUB": ""
     },
     "MODELAGEM_LOGICO_ALGORITMA": {
-      "ARQUIVO": "",
-      "CODIGO_FONTE": ""
+      "NOME_PASSO": "Fluxograma Lógico",
+      "TIPO_PASSO": "IMAGEM",
+      "ARQUIVO": "Projetos_TCC/Ensino Fundamental II/PRJ 3.4 Lixeira Automatica/PRJ 3.4 Fluxograma.jpg",
+      "CODIGO_FONTE": "int dist1 = CalcDist(trigPin1, echoPin1);\nSerial.print(\"Distancia 1: \");\nSerial.println(dist1);\nif (dist1 < 100) {\n  pos = 90;\n  servo1.write(pos);\n  digitalWrite(ledPin1, HIGH);\n  delay(15);\n} else {\n  pos = 0;\n  servo1.write(pos);\n  digitalWrite(ledPin1, LOW);\n  delay(15);\n}"
     },
-    "ROTEIRO_PRATICO_DE_EXECUCAO": [],
-    "ARTICULACAO_E_APROFUNDAMENTO": "",
-    "DESAFIOS_DE_EXPANSAO": []
+    "ROTEIRO_PRATICO_DE_EXECUCAO": [
+      "1. Monte uma estação de papelão com tampas leves, identificando os quatro canais. Com alimentação desligada, teste primeiro um sensor, servo e LED antes de repetir o circuito.",
+      "2. Ligue os pares TRIG/ECHO D2/D3, D4/D5, D6/D7 e D8/D9. Posicione os sensores para reduzir a leitura de ecos de recipientes vizinhos.",
+      "3. Conecte sinais dos servos a A0–A3 e LEDs com resistores a D10–D13. Confira a correspondência de cada conjunto antes de prender as alavancas.",
+      "4. Use alimentação de servos dimensionada para quatro motores, com GND comum; não presuma que a saída de 5V do Uno sustenta todos. Abra o .ino completo com Servo.h e carregue. O campo CODIGO_FONTE é um recorte didático de até 20 linhas, sobre um canal de sensor, servo e led; para executar, use PRJ 3.4 Lixeira Automatica.ino.ino completo (trecho nas linhas 70–84).",
+      "5. Observe o Monitor Serial a 9600 baud e aproxime um objeto de cada canal. Confira abertura a 90°, retorno a 0° e LED do mesmo recipiente.",
+      "6. Teste a ausência de eco: CalcDist() usa pulseIn() sem timeout explícito e pode retornar distância zero. Registre essa limitação e mantenha mãos longe das articulações durante o movimento."
+    ],
+    "ARTICULACAO_E_APROFUNDAMENTO": "1) Canal Repetido: Cada sensor comanda seu próprio servo e LED. O trecho do JSON apresenta o primeiro conjunto; o programa completo repete a mesma decisão para os outros três canais, com seus respectivos pinos.\n\n2) Leitura Sequencial: As quatro medidas são feitas uma após outra e incluem pulseIn() e pausas. A resposta do conjunto não é simultânea, e um canal sem retorno pode atrasar o processamento dos seguintes.\n\n3) Alimentação dos Servos: Quatro motores podem exigir corrente significativa, especialmente ao iniciar ou travar. A montagem física precisa de fonte adequada e GND comum, além de tampas leves que não forcem a mecânica.\n\n4) Alcance e Limitações: O limiar de 100 cm pode ser grande para uma maquete de mesa. A função não valida ausência de eco, e o circuito não reconhece plástico, papel ou metal; a separação depende da identificação dos recipientes.",
+    "DESAFIOS_DE_EXPANSAO": [
+      {
+        "nivel": "Fácil",
+        "descricao": "Criar placas de identificação para os quatro recipientes e conferir o canal que abre cada tampa."
+      },
+      {
+        "nivel": "Intermediário",
+        "descricao": "Ajustar o limite de distância em uma cópia do fonte e testar acionamentos indesejados entre canais próximos."
+      },
+      {
+        "nivel": "Avançado",
+        "descricao": "Substituir a repetição por vetores e uma função por canal, incluindo timeout e rejeição de eco inválido, sem adicionar sensores ou servos."
+      }
+    ]
   },
   {
     "PROJETO": "PRJ 3.5",
     "TITULO": "Estacionamento",
     "MODULO": "Módulo III - Ensino Fundamental II",
-    "COMPLEXIDADE": "Intermediário",
-    "TEMPO_ESTIMADO": "2 h/aula (100 min)",
-    "PRE_REQUISITOS": "Familiaridade com circuitos eletrônicos básicos, variáveis e estruturas de decisão.",
+    "COMPLEXIDADE": "Avançado",
+    "TEMPO_ESTIMADO": "3 h/aula (180 min)",
+    "PRE_REQUISITOS": "Máquina de estados, vetores, ultrassom, servo e LCD I2C. Relacionar sequência de passagem, ocupação e capacidade de um espaço.",
     "HABILIDADES_DE_COMPUTACAO": [
-      "Controle de Vagas, Displays e Sensores Ópticos"
+      "Contagem com limites",
+      "Validação de leituras consecutivas",
+      "Controle por máquina de estados",
+      "Temporização de sinalização e liberação"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
-      "COMPETENCIA": "Física / Ciências da Natureza",
-      "BNCC_CODIGO": "EF02CO04",
-      "EIXO": "Mundo Digital",
-      "BNCC_GERAL": "EF06MA03"
+      "HISTORIA_E_SOCIEDADE": "Estacionamentos precisam informar vagas e organizar a passagem de veículos. Uma contagem correta depende de distinguir quem entrou de quem saiu. A maquete permite discutir como sensores, mensagens e avisos ajudam na operação, além de mostrar que uma leitura isolada pode ser insuficiente para confirmar uma passagem.",
+      "MATEMATICA": "Calcular vagas livres como 10 menos ocupadas, interpretar limites de 100 e 115 cm e comparar prazos de 1 s e 8 s para liberação da cancela."
     },
-    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Exploração prática do projeto Estacionamento aplicado ao desenvolvimento de habilidades do Módulo III - Ensino Fundamental II.",
-    "FLUXO_ESTRUTURA_CODIGO": [],
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Como abrir uma cancela e atualizar vagas somente depois de uma passagem confirmada? Dois sensores registram a ordem de chegada: S1–S2 confirma entrada, e S2–S1 confirma saída. O programa limita a capacidade a dez vagas e impede nova entrada quando a lotação é atingida. LED e buzzer indicam a cancela aberta, enquanto o LCD mostra vagas e mensagens do estado atual.",
+    "FLUXO_ESTRUTURA_CODIGO": [
+      "Inicializar capacidade de 10 vagas",
+      "Alternar sensores a cada 65 ms",
+      "Confirmar duas leituras próximas",
+      "Identificar direção pelo primeiro sensor",
+      "Abrir ou informar lotação",
+      "Confirmar passagem no segundo sensor",
+      "Atualizar vagas",
+      "Aguardar ambos livres e fechar",
+      "Atualizar avisos sem delay no ciclo principal"
+    ],
     "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
-      "BOM": [],
-      "MAPEAMENTO_PINOS": [],
-      "IMAGEM_ESQUEMA": "",
-      "LINK_THINKERCAD": ""
+      "BOM": [
+        {
+          "qtd": "1x",
+          "componente": "Placa Arduino Uno R3"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Cabo USB compatível"
+        },
+        {
+          "qtd": "1x",
+          "componente": "LCD 16x2 I2C compatível com Adafruit_LiquidCrystal, configurado com deslocamento 0 em relação a 0x20"
+        },
+        {
+          "qtd": "2x",
+          "componente": "Sensores HC-SR04"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Microservo"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Piezo/buzzer"
+        },
+        {
+          "qtd": "1x",
+          "componente": "LED vermelho"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Resistor de 220 kΩ indicado como R1 no PDF; valor deve ser conferido antes da montagem física"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Conjunto de jumpers; quantidade não especificada"
+        }
+      ],
+      "MAPEAMENTO_PINOS": [
+        "S1: D3 → TRIG; D2 → ECHO",
+        "S2: D4 → TRIG; D5 → ECHO",
+        "D6 → sinal do servo da cancela",
+        "D7 → piezo/buzzer; D8 → LED vermelho via resistor",
+        "Resistor do LED: PDF indica 220 kΩ; conferir valor e corrente no circuito físico",
+        "A4/SDA → SDA do módulo I2C; A5/SCL → SCL do módulo I2C (Arduino Uno)",
+        "5V → VCC dos módulos de 5 V; GND → referência comum, conferindo as ligações da montagem"
+      ],
+      "IMAGEM_ESQUEMA": "Projetos_TCC/Ensino Fundamental II/PRJ 3.5 Estacionamento/PRJ 3.5 Esquema.png",
+      "TITULO_ESQUEMA": "FIGURA 1: ESQUEMA DO CIRCUITO",
+      "LINK_THINKERCAD": "https://www.tinkercad.com/",
+      "LINK_GITHUB": ""
     },
     "MODELAGEM_LOGICO_ALGORITMA": {
+      "NOME_PASSO": "Fluxograma Lógico",
+      "TIPO_PASSO": "IMAGEM",
       "ARQUIVO": "",
-      "CODIGO_FONTE": ""
+      "CODIGO_FONTE": "void atualizarAlerta(unsigned long agora) {\n  static bool ligado = false;\n  bool aberto = estado == ENTRANDO || estado == SAINDO || estado == CONFIRMADO;\n  bool pulso = aberto && (agora / 150UL) % 2 == 0;\n  if (pulso == ligado) return;\n  ligado = pulso;\n  digitalWrite(LED, ligado ? HIGH : LOW);\n  if (ligado) tone(BUZZER, 1200);\n  else noTone(BUZZER);\n}"
     },
-    "ROTEIRO_PRATICO_DE_EXECUCAO": [],
-    "ARTICULACAO_E_APROFUNDAMENTO": "",
-    "DESAFIOS_DE_EXPANSAO": []
+    "ROTEIRO_PRATICO_DE_EXECUCAO": [
+      "1. Monte uma passagem de maquete com S1 e S2 identificados. Fixe o servo a uma cancela leve, com alimentação desligada durante as conexões.",
+      "2. Ligue TRIG/ECHO de S1 a D3/D2 e de S2 a D4/D5. Ligue sinal do servo em D6, buzzer em D7 e LED por resistor em D8.",
+      "3. Confira o resistor do LED: o PDF indica 220 kΩ, valor que pode produzir brilho muito baixo. Registre a divergência a revisar; não apresente uma troca de valor como parte do esquema original.",
+      "4. Conecte LCD I2C e alimentação com GND comum. Instale Adafruit LiquidCrystal e use Servo.h; abra o arquivo .ino.ino completo, que mantém essa extensão duplicada na pasta. O campo CODIGO_FONTE é um recorte didático de até 20 linhas, sobre aviso temporizado sem bloquear a passagem; para executar, use PRJ 3.5 Estacionamento.ino.ino completo (trecho nas linhas 101–110).",
+      "5. Carregue e teste S1 seguido de S2 e depois a ordem inversa, confirmando a atualização de vagas. A detecção exige duas leituras próximas; para liberar, ambos precisam registrar distância de pelo menos 115 cm dentro da faixa válida.",
+      "6. Simule dez entradas, tentativa com lotação, saída com total zero e passagem abandonada. Observe fechamento após 1 s com via livre em evento confirmado ou 8 s de via livre em espera incompleta. Não há fluxograma fornecido; ARQUIVO permanece vazio."
+    ],
+    "ARTICULACAO_E_APROFUNDAMENTO": "1) Confirmação de Presença: Duas leituras consecutivas abaixo de 100 cm confirmam a chegada. Para reconhecer via livre, são exigidas duas leituras entre 115 e 400 cm; ausência de eco não é tratada automaticamente como espaço livre.\n\n2) Direção e Capacidade: A ordem dos sensores escolhe ENTRANDO ou SAINDO. A contagem só muda com o segundo evento e permanece entre zero e dez; a condição LOTADO bloqueia uma nova entrada quando não há vaga.\n\n3) Liberação e Aviso: O fechamento depende de ambos os sensores livres por um prazo. millis() também alterna LED e buzzer em pulsos de 150 ms, permitindo sinalizar enquanto a lógica continua monitorando a passagem.\n\n4) Conferência do Protótipo: O PDF indica resistor de 220 kΩ para o LED e o LCD usa a biblioteca Adafruit. Os totais ficam na RAM e somem no reinício; este modelo não identifica placas, pessoas nem veículos individualmente.",
+    "DESAFIOS_DE_EXPANSAO": [
+      {
+        "nivel": "Fácil",
+        "descricao": "Criar uma tabela com entradas, saídas, ocupadas e vagas livres após cada passagem."
+      },
+      {
+        "nivel": "Intermediário",
+        "descricao": "Alterar CAPACIDADE para três em uma cópia do fonte e testar lotação e desistência com poucos eventos."
+      },
+      {
+        "nivel": "Avançado",
+        "descricao": "Registrar pela serial cada mudança de estado e sua duração, verificando falsas passagens sem adicionar novos componentes."
+      }
+    ]
   },
   {
     "PROJETO": "PRJ 3.6",
@@ -864,33 +1721,107 @@
     "PROJETO": "PRJ 3.7",
     "TITULO": "Comedouro Pet",
     "MODULO": "Módulo III - Ensino Fundamental II",
-    "COMPLEXIDADE": "Intermediário",
-    "TEMPO_ESTIMADO": "2 h/aula (100 min)",
-    "PRE_REQUISITOS": "Familiaridade com circuitos eletrônicos básicos, variáveis e estruturas de decisão.",
+    "COMPLEXIDADE": "Avançado",
+    "TEMPO_ESTIMADO": "3 h/aula (180 min)",
+    "PRE_REQUISITOS": "Sensor ultrassônico, servo, botão com polarização externa e LCD. Compreender contagem limitada, temporização e necessidade de calibrar uma referência de distância.",
     "HABILIDADES_DE_COMPUTACAO": [
-      "Temporizadores de Precisão, Servomecanismo e Automação"
+      "Calibração de referência",
+      "Detecção de chegada e ausência",
+      "Contagem limitada de eventos",
+      "Debounce e temporização com millis()"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
-      "COMPETENCIA": "Ciências / Lógica",
-      "BNCC_CODIGO": "EF01CO02",
-      "EIXO": "Pensamento Computacional",
-      "BNCC_GERAL": "EF09CI04"
+      "HISTORIA_E_SOCIEDADE": "Dispositivos automáticos podem executar tarefas repetitivas quando alguém se aproxima. Um alimentador precisa considerar quantidade, intervalos e supervisão, além do movimento de uma tampa. A maquete permite estudar esses controles com materiais inertes, sem usar a contagem do programa como orientação para alimentar um animal real.",
+      "MATEMATICA": "Contar de zero a cinco porções, comparar distância com uma referência de fundo e relacionar abertura de 1 s com o movimento entre 0° e 60°."
     },
-    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Exploração prática do projeto Comedouro Pet aplicado ao desenvolvimento de habilidades do Módulo III - Ensino Fundamental II.",
-    "FLUXO_ESTRUTURA_CODIGO": [],
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Como liberar uma dose de demonstração uma vez por aproximação? O programa observa o fundo ao iniciar e detecta uma mudança de distância de pelo menos 3 cm. Uma chegada abre o servo por um segundo e soma uma porção, com limite de cinco; é preciso detectar ausência para aceitar outra visita. O botão zera a contagem, e o LCD mostra o estado, mas a massa liberada não é medida.",
+    "FLUXO_ESTRUTURA_CODIGO": [
+      "Ler fundo durante inicialização",
+      "Disparar sensor a cada 65 ms",
+      "Comparar distância com referência",
+      "Detectar nova presença",
+      "Abrir servo a 60° por 1 s",
+      "Somar até cinco porções",
+      "Aguardar ausência por 350 ms",
+      "Tratar botão com debounce de 30 ms",
+      "Mostrar estado no LCD"
+    ],
     "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
-      "BOM": [],
-      "MAPEAMENTO_PINOS": [],
-      "IMAGEM_ESQUEMA": "",
-      "LINK_THINKERCAD": ""
+      "BOM": [
+        {
+          "qtd": "1x",
+          "componente": "Placa Arduino Uno R3"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Cabo USB compatível"
+        },
+        {
+          "qtd": "1x",
+          "componente": "LCD 16x2 I2C compatível com Adafruit_LiquidCrystal, configurado com deslocamento 0 em relação a 0x20"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Sensor HC-SR04"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Microservo"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Botão de pressão"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Resistor de 220 Ω para a rede do botão, conforme o PDF"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Conjunto de jumpers; quantidade não especificada"
+        }
+      ],
+      "MAPEAMENTO_PINOS": [
+        "D3 → TRIG; D2 → ECHO do HC-SR04",
+        "D4 → sinal do servo da tampa",
+        "A0 → botão com resistor externo para GND, pressionado = HIGH",
+        "A4/SDA → SDA do módulo I2C; A5/SCL → SCL do módulo I2C (Arduino Uno)",
+        "5V → VCC dos módulos de 5 V; GND → referência comum, conferindo as ligações da montagem"
+      ],
+      "IMAGEM_ESQUEMA": "Projetos_TCC/Ensino Fundamental II/PRJ 3.7 Comedouro Pet/PRJ 3.7 Esquema.png",
+      "TITULO_ESQUEMA": "FIGURA 1: ESQUEMA DO CIRCUITO",
+      "LINK_THINKERCAD": "https://www.tinkercad.com/",
+      "LINK_GITHUB": ""
     },
     "MODELAGEM_LOGICO_ALGORITMA": {
+      "NOME_PASSO": "Fluxograma Lógico",
+      "TIPO_PASSO": "IMAGEM",
       "ARQUIVO": "",
-      "CODIGO_FONTE": ""
+      "CODIGO_FONTE": "if (!aberto && porcoes < LIMITE_PORCOES) {\n  confirmarReset = false;\n  if (!tampa.attached()) tampa.attach(PINO_SERVO);\n  tampa.write(ANGULO_ABERTO);\n  inicioAbertura = agora;\n  aberto = true;\n  ++porcoes;\n  mostrar();\n}"
     },
-    "ROTEIRO_PRATICO_DE_EXECUCAO": [],
-    "ARTICULACAO_E_APROFUNDAMENTO": "",
-    "DESAFIOS_DE_EXPANSAO": []
+    "ROTEIRO_PRATICO_DE_EXECUCAO": [
+      "1. Monte uma pequena tampa ou comporta de papelão com peças leves, usando bolinhas de papel para representar a dose. Não teste o protótipo diretamente com animais.",
+      "2. Com alimentação desligada, ligue TRIG em D3, ECHO em D2, sinal do servo em D4 e botão em A0 com polarização externa para GND.",
+      "3. Ligue LCD a SDA/SCL e confira alimentação e GND comum. Instale Adafruit LiquidCrystal e abra o .ino completo com Servo.h.",
+      "4. Coloque um fundo estável diante do sensor e deixe a área sem aproximações ao ligar. O programa aprende uma referência inicial e não fixa um alcance absoluto de acionamento. O campo CODIGO_FONTE é um recorte didático de até 20 linhas, sobre limite de porções e abertura por evento; para executar, use PRJ 3.7 Comedouro Pet.ino completo (trecho nas linhas 85–93).",
+      "5. Aproxime um objeto o suficiente para reduzir a distância em pelo menos 3 cm. Observe uma abertura de 60° por um segundo; afaste o objeto e aguarde a confirmação de ausência para repetir.",
+      "6. Repita até cinco porções e confirme o bloqueio; pressione o botão para zerar. O fonte só associa o servo na primeira visita, sem comandar fechamento em setup(), portanto confira manualmente a posição inicial da comporta. Não há fluxograma fornecido; ARQUIVO permanece vazio."
+    ],
+    "ARTICULACAO_E_APROFUNDAMENTO": "1) Referência de Fundo: fundoCm guarda uma distância observada e pode acompanhar um alvo afastado. A comparação usa variação relativa, diferente de projetos que acionam apenas abaixo de uma distância fixa.\n\n2) Uma Visita por Evento: presente impede nova dose enquanto o mesmo objeto permanece detectado. A ausência por 350 ms permite rearmar; uma margem menor durante a presença ajuda a manter o estado sem alternância imediata.\n\n3) Porções e Temporização: O limite é cinco eventos de abertura e não uma massa de ração. millis() fecha o servo após um segundo e permite verificar o botão durante o funcionamento, sem pausa longa bloqueante.\n\n4) Inicialização Mecânica: O sinal começa em LOW e o servo só recebe attach() na primeira visita. Assim, não existe comando inicial para levar a tampa a 0°; a posição da maquete precisa ser conferida antes do teste.",
+    "DESAFIOS_DE_EXPANSAO": [
+      {
+        "nivel": "Fácil",
+        "descricao": "Registrar aproximações, aberturas e porções no LCD até alcançar o limite de cinco."
+      },
+      {
+        "nivel": "Intermediário",
+        "descricao": "Alterar o tempo de abertura em uma cópia do fonte e comparar a quantidade de bolinhas de papel liberadas."
+      },
+      {
+        "nivel": "Avançado",
+        "descricao": "Adicionar um fechamento controlado na inicialização e testar perda de eco e reset durante uma abertura, mantendo os mesmos componentes."
+      }
+    ]
   },
   {
     "PROJETO": "PRJ 3.8",
@@ -1088,97 +2019,289 @@
     "PROJETO": "PRJ 4.2",
     "TITULO": "Calculadora",
     "MODULO": "Módulo IV - Ensino Médio",
-    "COMPLEXIDADE": "Básico",
-    "TEMPO_ESTIMADO": "1 h/aula (60 min)",
-    "PRE_REQUISITOS": "Noções introdutórias de lógica e manuseio seguro de componentes.",
+    "COMPLEXIDADE": "Intermediário",
+    "TEMPO_ESTIMADO": "2 h/aula (120 min)",
+    "PRE_REQUISITOS": "Vetores bidimensionais, varredura de teclado, funções, tipos numéricos e condições. Relacionar a entrada de caracteres à conversão para operações aritméticas.",
     "HABILIDADES_DE_COMPUTACAO": [
-      "Teclado Matricial, Parsers e Display LCD"
+      "Varredura de matriz 4x4",
+      "Construção e conversão de strings",
+      "Seleção de operação com switch",
+      "Validação de entrada e tratamento de erro"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
-      "COMPETENCIA": "Ciências / Lógica",
-      "BNCC_CODIGO": "EM13CO01",
-      "EIXO": "Pensamento Computacional",
-      "BNCC_GERAL": "EM13CHS605"
+      "HISTORIA_E_SOCIEDADE": "Calculadoras tornam operações repetitivas mais rápidas, mas sua interface precisa deixar claro o que foi digitado. Um resultado só tem sentido quando a operação e os dados estão corretos. Construir esse dispositivo ajuda a discutir a diferença entre executar uma conta, validar a entrada e comunicar uma situação que não pode ser calculada.",
+      "MATEMATICA": "Quatro operações, divisão por zero, casas decimais e limites de representação. Comparar o resultado exibido com cálculo manual e discutir arredondamento em ponto flutuante."
     },
-    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Exploração prática do projeto Calculadora aplicado ao desenvolvimento de habilidades do Módulo IV - Ensino Médio.",
-    "FLUXO_ESTRUTURA_CODIGO": [],
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Como transformar teclas em uma operação mostrada no LCD? O teclado matricial informa dígitos e comandos, e o programa monta dois operandos como strings. A, B, C e D selecionam soma, subtração, multiplicação e divisão; # calcula e * limpa. A rotina verifica dados ausentes e divisão por zero antes de apresentar o resultado com duas casas decimais.",
+    "FLUXO_ESTRUTURA_CODIGO": [
+      "Varrer linhas e colunas",
+      "Confirmar tecla e aguardar soltura",
+      "Acumular primeiro operando",
+      "Selecionar operação A/B/C/D",
+      "Acumular segundo operando",
+      "Receber # para calcular",
+      "Validar dados e divisor",
+      "Executar switch e exibir",
+      "Receber * para limpar"
+    ],
     "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
-      "BOM": [],
-      "MAPEAMENTO_PINOS": [],
-      "IMAGEM_ESQUEMA": "",
-      "LINK_THINKERCAD": ""
+      "BOM": [
+        {
+          "qtd": "1x",
+          "componente": "Placa Arduino Uno R3"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Cabo USB compatível"
+        },
+        {
+          "qtd": "1x",
+          "componente": "LCD 16x2 I2C compatível com Adafruit_LiquidCrystal, configurado com deslocamento 0 em relação a 0x20"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Teclado matricial 4x4"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Conjunto de jumpers; quantidade não especificada"
+        }
+      ],
+      "MAPEAMENTO_PINOS": [
+        "A0, A1, A2, A3 → linhas 1, 2, 3, 4 do teclado, respectivamente",
+        "D2, D3, D4, D5 → colunas 1, 2, 3, 4 do teclado, INPUT_PULLUP",
+        "A4/SDA → SDA do módulo I2C; A5/SCL → SCL do módulo I2C (Arduino Uno)",
+        "5V → VCC dos módulos de 5 V; GND → referência comum, conferindo as ligações da montagem"
+      ],
+      "IMAGEM_ESQUEMA": "Projetos_TCC/Ensino Médio/PRJ 4.2 Calculadora/PRJ 4.2 Esquema.png",
+      "TITULO_ESQUEMA": "FIGURA 1: ESQUEMA DO CIRCUITO",
+      "LINK_THINKERCAD": "https://www.tinkercad.com/",
+      "LINK_GITHUB": ""
     },
     "MODELAGEM_LOGICO_ALGORITMA": {
+      "NOME_PASSO": "Fluxograma Lógico",
+      "TIPO_PASSO": "IMAGEM",
       "ARQUIVO": "",
-      "CODIGO_FONTE": ""
+      "CODIGO_FONTE": "if (operacao == '/' && b == 0) {\n  lcd.clear();\n  lcd.setCursor(0, 0);\n  lcd.print(\"ERRO\");\n  lcd.setCursor(0, 1);\n  lcd.print(\"Divisao por zero\");\n  resultadoPronto = true;\n  return;\n}"
     },
-    "ROTEIRO_PRATICO_DE_EXECUCAO": [],
-    "ARTICULACAO_E_APROFUNDAMENTO": "",
-    "DESAFIOS_DE_EXPANSAO": []
+    "ROTEIRO_PRATICO_DE_EXECUCAO": [
+      "1. Com USB desligado, identifique a ordem dos oito terminais do teclado. Confira linhas e colunas no modelo usado, pois a ordem física do conector precisa corresponder ao esquema.",
+      "2. Conecte linhas a A0–A3 e colunas a D2–D5. O programa faz a varredura diretamente e usa INPUT_PULLUP nas colunas, sem biblioteca de teclado.",
+      "3. Conecte LCD a SDA/SCL do Uno, 5V e GND. Instale Adafruit LiquidCrystal e abra o .ino completo; o trecho do JSON destaca a proteção contra divisão por zero.",
+      "4. Carregue e teste cada dígito. Digite 12, pressione A, digite 3 e pressione #; verifique resultado 15,00, conforme o formato decimal do LCD. O campo CODIGO_FONTE é um recorte didático de até 20 linhas, sobre proteção contra divisão por zero; para executar, use PRJ 4.2 Calculadora.ino completo (trecho nas linhas 149–161).",
+      "5. Repita com B, C e D. Teste # sem operandos completos, divisão por zero e * para limpar; o programa aceita até sete dígitos em cada operando e não possui tecla decimal.",
+      "6. Compare contas simples com valores grandes e registre a precisão observada. Após um resultado, digitar um número inicia outra operação; não há cadeia automática de cálculos implementada. Não há fluxograma fornecido; ARQUIVO permanece vazio."
+    ],
+    "ARTICULACAO_E_APROFUNDAMENTO": "1) Varredura Matricial: Uma linha é levada a LOW por vez, e as colunas são lidas com pull-up interno. A combinação linha/coluna seleciona um caractere em teclas[4][4], reduzindo o número de fios necessário para dezesseis comandos.\n\n2) Entrada e Conversão: Os operandos são acumulados como String e convertidos por toFloat(). O limite de sete dígitos reduz o tamanho digitado, mas não garante precisão decimal exata; a interface não inclui entrada de ponto decimal.\n\n3) Operações e Erros: switch seleciona a operação, enquanto uma condição anterior impede dividir por zero. O teste de operandos vazios evita apresentar um resultado que não corresponde a uma entrada completa.\n\n4) Estado da Interface: resultadoPronto diferencia uma conta em edição de uma saída já calculada. O LCD de duas linhas exige mensagens curtas, e o debounce com espera pela soltura impede que uma tecla seja repetida pelo mesmo acionamento.",
+    "DESAFIOS_DE_EXPANSAO": [
+      {
+        "nivel": "Fácil",
+        "descricao": "Montar uma tabela de testes com uma operação de cada tipo e conferir os resultados manualmente."
+      },
+      {
+        "nivel": "Intermediário",
+        "descricao": "Melhorar as mensagens de entrada incompleta e testar contas negativas e resultados com casas decimais."
+      },
+      {
+        "nivel": "Avançado",
+        "descricao": "Substituir strings dinâmicas por buffers limitados e tratar estouro de entrada, preservando teclado e LCD em uma versão separada."
+      }
+    ]
   },
   {
     "PROJETO": "PRJ 4.3",
     "TITULO": "Urna Eletrônica",
     "MODULO": "Módulo IV - Ensino Médio",
-    "COMPLEXIDADE": "Básico",
-    "TEMPO_ESTIMADO": "1 h/aula (60 min)",
-    "PRE_REQUISITOS": "Noções introdutórias de lógica e manuseio seguro de componentes.",
+    "COMPLEXIDADE": "Avançado",
+    "TEMPO_ESTIMADO": "3 h/aula (180 min)",
+    "PRE_REQUISITOS": "Teclado matricial, strings, contadores, funções e porcentagens. Distinguir uma simulação de votação escolar de um sistema eleitoral com requisitos de segurança e sigilo.",
     "HABILIDADES_DE_COMPUTACAO": [
-      "Máquinas de Estado, Validação e Armazenamento Seguro"
+      "Validação e classificação de entradas",
+      "Contagem por categorias",
+      "Controle de encerramento",
+      "Cálculo e apresentação de porcentagens"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
-      "COMPETENCIA": "Ciências / Lógica",
-      "BNCC_CODIGO": "EM13CO01",
-      "EIXO": "Pensamento Computacional",
-      "BNCC_GERAL": "EM13MAT306"
+      "HISTORIA_E_SOCIEDADE": "Uma votação coletiva precisa de regras para registrar escolhas e conferir totais. A contagem eletrônica permite acompanhar categorias, mas também exige discutir transparência e privacidade. Nesta simulação, os estudantes podem organizar uma escolha fictícia da turma e observar que o próprio programa imprime na serial a categoria de cada voto, sem garantir sigilo.",
+      "MATEMATICA": "Somar categorias de votos e calcular percentual como quantidade × 100 ÷ total. Comparar contagem absoluta, porcentagem e proteção contra divisão por zero."
     },
-    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Exploração prática do projeto Urna Eletrônica aplicado ao desenvolvimento de habilidades do Módulo IV - Ensino Médio.",
-    "FLUXO_ESTRUTURA_CODIGO": [],
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Como registrar votos e apresentar uma apuração por categoria? O teclado recebe 20 para Cadu, 10 para Ana, A para branco e outros números para nulo; # confirma e * corrige. A tecla D encerra quando há votos e nenhuma entrada pendente, passando a exibir porcentagens. Os dados ficam em RAM e o protótipo não controla identidade, voto único nem sigilo, servindo apenas como simulação.",
+    "FLUXO_ESTRUTURA_CODIGO": [
+      "Inicializar contadores zerados",
+      "Varrer teclado",
+      "Receber número ou voto branco",
+      "Corrigir com * ou confirmar com #",
+      "Classificar e incrementar contadores",
+      "Mostrar confirmação e total na serial",
+      "Encerrar com D nas condições válidas",
+      "Alternar porcentagens no LCD"
+    ],
     "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
-      "BOM": [],
-      "MAPEAMENTO_PINOS": [],
-      "IMAGEM_ESQUEMA": "",
-      "LINK_THINKERCAD": ""
+      "BOM": [
+        {
+          "qtd": "1x",
+          "componente": "Placa Arduino Uno R3"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Cabo USB compatível"
+        },
+        {
+          "qtd": "1x",
+          "componente": "LCD 16x2 I2C compatível com Adafruit_LiquidCrystal, configurado com deslocamento 0 em relação a 0x20"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Teclado matricial 4x4"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Buzzer/piezo"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Conjunto de jumpers; quantidade não especificada"
+        }
+      ],
+      "MAPEAMENTO_PINOS": [
+        "A0–A3 → linhas 1–4 do teclado",
+        "D2–D5 → colunas 1–4, INPUT_PULLUP",
+        "D6 → buzzer/piezo; negativo → GND",
+        "A4/SDA → SDA do módulo I2C; A5/SCL → SCL do módulo I2C (Arduino Uno)",
+        "5V → VCC dos módulos de 5 V; GND → referência comum, conferindo as ligações da montagem"
+      ],
+      "IMAGEM_ESQUEMA": "Projetos_TCC/Ensino Médio/PRJ 4.3 Urna Eletronica/PRJ 4.3 Esquema.png",
+      "TITULO_ESQUEMA": "FIGURA 1: ESQUEMA DO CIRCUITO",
+      "LINK_THINKERCAD": "https://www.tinkercad.com/",
+      "LINK_GITHUB": ""
     },
     "MODELAGEM_LOGICO_ALGORITMA": {
+      "NOME_PASSO": "Fluxograma Lógico",
+      "TIPO_PASSO": "IMAGEM",
       "ARQUIVO": "",
-      "CODIGO_FONTE": ""
+      "CODIGO_FONTE": "if (numero == \"20\") {\n  votosCadu++;\n  lcd.print(\"Voto: CADU\");\n  Serial.println(\"Voto registrado: CADU\");\n} else if (numero == \"10\") {\n  votosAna++;\n  lcd.print(\"Voto: ANA\");\n  Serial.println(\"Voto registrado: ANA\");\n} else if (numero == \"A\") {\n  votosBrancos++;\n  lcd.print(\"Voto BRANCO\");\n  Serial.println(\"Voto registrado: BRANCO\");\n} else {\n  votosNulos++;\n  lcd.print(\"Voto NULO\");\n  Serial.println(\"Voto registrado: NULO\");\n}\ntotalVotos++;"
     },
-    "ROTEIRO_PRATICO_DE_EXECUCAO": [],
-    "ARTICULACAO_E_APROFUNDAMENTO": "",
-    "DESAFIOS_DE_EXPANSAO": []
+    "ROTEIRO_PRATICO_DE_EXECUCAO": [
+      "1. Identifique teclado, LCD e buzzer. Com USB desligado, ligue linhas do teclado a A0–A3 e colunas a D2–D5, respeitando o conector do modelo usado.",
+      "2. Ligue buzzer a D6 e GND e LCD ao barramento I2C, 5V e GND. Instale Adafruit LiquidCrystal e abra o .ino completo.",
+      "3. Carregue e confira os contadores zerados no início. Abra o Monitor Serial a 9600 baud e use apenas votos fictícios, pois a categoria registrada é impressa na serial.",
+      "4. Teste 20 e # para Cadu, 10 e # para Ana, A e # para branco e 00 e # para nulo. Use * para corrigir uma entrada antes da confirmação. O campo CODIGO_FONTE é um recorte didático de até 20 linhas, sobre classificação dos votos e atualização do total; para executar, use PRJ 4.3 Urna Eletronica.ino completo (trecho nas linhas 144–170).",
+      "5. Com pelo menos um voto e entrada vazia, pressione D. Observe a alternância dos percentuais dos candidatos e de brancos/nulos a cada três segundos.",
+      "6. Compare a soma dos contadores com totalVotos e calcule percentuais manualmente. Reiniciar a placa apaga a votação; não há cadastro de eleitores, bloqueio de voto repetido nem armazenamento persistente. Não há fluxograma fornecido; ARQUIVO permanece vazio."
+    ],
+    "ARTICULACAO_E_APROFUNDAMENTO": "1) Classificação do Voto: registrarVoto() compara a string com 20, 10 e A; os demais conteúdos confirmados vão para nulos. O total é incrementado uma vez após essa escolha, e as mensagens ajudam a acompanhar a categoria registrada.\n\n2) Apuração Percentual: Cada categoria é dividida pelo total e multiplicada por 100. A rotina verifica total maior que zero antes de dividir e alterna duas telas porque quatro resultados não cabem simultaneamente no LCD 16x2.\n\n3) Estado Encerrado: encerrada desvia o loop para a apresentação contínua dos resultados. A tecla D exige ao menos um voto e ausência de entrada pendente; a operação não pode ser reaberta por uma tecla no programa atual.\n\n4) Limites da Simulação: Os contadores estão na RAM e não resistem ao desligamento. A serial revela categorias de votos, não há autenticação e a mesma pessoa pode votar várias vezes; essas limitações devem orientar o uso exclusivamente didático.",
+    "DESAFIOS_DE_EXPANSAO": [
+      {
+        "nivel": "Fácil",
+        "descricao": "Simular uma votação fictícia e conferir contagens e porcentagens com uma tabela manual."
+      },
+      {
+        "nivel": "Intermediário",
+        "descricao": "Criar um conjunto de testes para entrada incompleta, correção, branco, nulo e encerramento sem votos."
+      },
+      {
+        "nivel": "Avançado",
+        "descricao": "Em uma cópia do fonte, usar EEPROM para guardar apenas totais com estratégia de gravação controlada e discutir o que essa melhoria ainda não resolve sobre sigilo e voto único."
+      }
+    ]
   },
   {
     "PROJETO": "PRJ 4.4",
     "TITULO": "Cofre Digital",
     "MODULO": "Módulo IV - Ensino Médio",
-    "COMPLEXIDADE": "Intermediário",
-    "TEMPO_ESTIMADO": "2 h/aula (100 min)",
-    "PRE_REQUISITOS": "Familiaridade com circuitos eletrônicos básicos, variáveis e estruturas de decisão.",
+    "COMPLEXIDADE": "Avançado",
+    "TEMPO_ESTIMADO": "3 h/aula (180 min)",
+    "PRE_REQUISITOS": "Varredura de teclado, comparação de strings, funções e controle de servo. Compreender a diferença entre esconder caracteres na interface e proteger uma credencial.",
     "HABILIDADES_DE_COMPUTACAO": [
-      "Autenticação por Senha, Bloqueio Lógico e Solenoide"
+      "Validação de senha",
+      "Controle de estados aberto/fechado",
+      "Limitação do tamanho da entrada",
+      "Integração de interface e atuador"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
-      "COMPETENCIA": "Ciências / Lógica",
-      "BNCC_CODIGO": "EM13CO01",
-      "EIXO": "Pensamento Computacional",
-      "BNCC_GERAL": "EM13CNT103"
+      "HISTORIA_E_SOCIEDADE": "Fechaduras com senha relacionam uma informação digitada a uma autorização. A interface precisa comunicar se a entrada foi aceita e qual é o estado da porta. Uma maquete ajuda a discutir privacidade e segurança, percebendo que esconder os dígitos no LCD não protege uma senha que permanece escrita no próprio programa.",
+      "MATEMATICA": "Comparar sequências de dígitos, contar posições até o limite de oito caracteres e relacionar comandos de 0° e 90° ao deslocamento de uma trava leve."
     },
-    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Exploração prática do projeto Cofre Digital aplicado ao desenvolvimento de habilidades do Módulo IV - Ensino Médio.",
-    "FLUXO_ESTRUTURA_CODIGO": [],
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Como liberar uma trava depois de conferir uma sequência digitada? O teclado recebe até oito dígitos e o LCD mostra asteriscos; D compara a entrada com a senha fixa 1234. Se corresponder, o servo vai a 90° e o estado muda para aberto; A fecha a 0° e * limpa a digitação quando fechado. O modelo demonstra uma autorização simples, sem resistência mecânica ou proteção de credenciais de um cofre real.",
+    "FLUXO_ESTRUTURA_CODIGO": [
+      "Inicializar servo fechado a 0°",
+      "Varrer teclado e estabilizar tecla",
+      "Acumular até oito dígitos",
+      "Mostrar asteriscos no LCD",
+      "Receber D para comparar senha",
+      "Abrir a 90° se válida",
+      "Mostrar erro se inválida",
+      "Fechar com A ou limpar com *"
+    ],
     "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
-      "BOM": [],
-      "MAPEAMENTO_PINOS": [],
-      "IMAGEM_ESQUEMA": "",
-      "LINK_THINKERCAD": ""
+      "BOM": [
+        {
+          "qtd": "1x",
+          "componente": "Placa Arduino Uno R3"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Cabo USB compatível"
+        },
+        {
+          "qtd": "1x",
+          "componente": "LCD 16x2 I2C compatível com Adafruit_LiquidCrystal, configurado com deslocamento 0 em relação a 0x20"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Teclado matricial 4x4"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Microservo"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Conjunto de jumpers; quantidade não especificada"
+        }
+      ],
+      "MAPEAMENTO_PINOS": [
+        "A0–A3 → linhas 1–4 do teclado",
+        "D2–D5 → colunas 1–4, INPUT_PULLUP",
+        "D13 → sinal do servo (servoPin)",
+        "Servo → alimentação compatível com o modelo; GND comum com o Uno",
+        "A4/SDA → SDA do módulo I2C; A5/SCL → SCL do módulo I2C (Arduino Uno)",
+        "5V → VCC dos módulos de 5 V; GND → referência comum, conferindo as ligações da montagem"
+      ],
+      "IMAGEM_ESQUEMA": "Projetos_TCC/Ensino Médio/PRJ 4.4 Cofre Digital/PRJ 4.4 Esquema.png",
+      "TITULO_ESQUEMA": "FIGURA 1: ESQUEMA DO CIRCUITO",
+      "LINK_THINKERCAD": "https://www.tinkercad.com/",
+      "LINK_GITHUB": ""
     },
     "MODELAGEM_LOGICO_ALGORITMA": {
+      "NOME_PASSO": "Fluxograma Lógico",
+      "TIPO_PASSO": "IMAGEM",
       "ARQUIVO": "",
-      "CODIGO_FONTE": ""
+      "CODIGO_FONTE": "void verificarSenha() {\n  if (cofreAberto) {\n    return;\n  }\n  if (senhaDigitada == senhaCorreta) {\n    abrirCofre();\n  } else {\n    lcd.clear();\n    lcd.setCursor(0, 0);\n    lcd.print(\"SENHA INVALIDA\");\n    lcd.setCursor(0, 1);\n    lcd.print(\"TENTE NOVAMENTE\");\n    delay(2000);\n    mostrarTelaInicial();\n  }\n}"
     },
-    "ROTEIRO_PRATICO_DE_EXECUCAO": [],
-    "ARTICULACAO_E_APROFUNDAMENTO": "",
-    "DESAFIOS_DE_EXPANSAO": []
+    "ROTEIRO_PRATICO_DE_EXECUCAO": [
+      "1. Construa uma porta de papelão com trava leve, sem guardar objetos de valor. Identifique os fios do servo e os terminais do teclado com alimentação desligada.",
+      "2. Ligue linhas a A0–A3 e colunas a D2–D5. Conecte o sinal do servo a D13 e confira fonte e GND comum antes de fixar a alavanca.",
+      "3. Conecte LCD a SDA/SCL, 5V e GND. Instale Adafruit LiquidCrystal e abra o .ino completo com Servo.h; o trecho no JSON destaca a comparação da senha.",
+      "4. Carregue e confirme a posição inicial de 0°. Digite 1234 e pressione D; observe a abertura a 90° e a mensagem de acesso liberado. O campo CODIGO_FONTE é um recorte didático de até 20 linhas, sobre verificação da senha e mensagem de acesso inválido; para executar, use PRJ 4.4 Cofre Digital.ino completo (trecho nas linhas 186–210).",
+      "5. Pressione A para fechar. Teste senha diferente, * para limpar e mais de oito dígitos, observando as regras do programa sem forçar o servo mecanicamente.",
+      "6. Discuta que a senha está visível no fonte, não há limite de tentativas e o servo só move uma maquete. Não apresente o circuito como proteção física ou digital de bens. Não há fluxograma fornecido; ARQUIVO permanece vazio."
+    ],
+    "ARTICULACAO_E_APROFUNDAMENTO": "1) Comparação de Sequências: senhaDigitada é comparada com senhaCorreta somente quando o cofre está fechado. A igualdade entre strings exige a mesma ordem de caracteres; uma permutação com os mesmos dígitos não é aceita.\n\n2) Estado Mecânico e Lógico: abrirCofre() e fecharCofre() enviam ângulos e alteram cofreAberto. O programa não possui sensor de posição, portanto o estado lógico indica o comando enviado, não uma confirmação física da porta.\n\n3) Interface Limitada: O LCD substitui cada dígito por asterisco e a entrada é limitada a oito caracteres. Isso evita mostrar a sequência a quem olha a tela, mas não cifra nem remove a senha armazenada no código.\n\n4) Segurança do Modelo: A senha 1234 é fixa e não existe bloqueio por tentativas. Melhorias podem ser estudadas no mesmo kit, porém autenticação robusta e resistência da trava ultrapassam o que este protótipo demonstra.",
+    "DESAFIOS_DE_EXPANSAO": [
+      {
+        "nivel": "Fácil",
+        "descricao": "Trocar a senha em uma cópia do fonte e elaborar testes de aceitação e rejeição."
+      },
+      {
+        "nivel": "Intermediário",
+        "descricao": "Adicionar contador de erros e espera temporária com millis(), permitindo reinício do teste sem travar a interface."
+      },
+      {
+        "nivel": "Avançado",
+        "descricao": "Acrescentar um botão ou fim de curso em pino livre para comparar a posição física da porta com o estado cofreAberto, mantendo a trava de papelão."
+      }
+    ]
   },
   {
     "PROJETO": "PRJ 4.5",
@@ -1216,33 +2339,93 @@
     "PROJETO": "PRJ 4.6",
     "TITULO": "Radar de Velocidade",
     "MODULO": "Módulo IV - Ensino Médio",
-    "COMPLEXIDADE": "Intermediário",
-    "TEMPO_ESTIMADO": "2 h/aula (100 min)",
-    "PRE_REQUISITOS": "Familiaridade com circuitos eletrônicos básicos, variáveis e estruturas de decisão.",
+    "COMPLEXIDADE": "Avançado",
+    "TEMPO_ESTIMADO": "3 h/aula (180 min)",
+    "PRE_REQUISITOS": "Leitura ultrassônica, diferença entre distância e deslocamento, unidades de tempo, ponto flutuante e uso de micros()/millis(). Interpretar resultados de um sensor com incerteza.",
     "HABILIDADES_DE_COMPUTACAO": [
-      "Cálculo de Delta Tempo, Sensor Doppler/Ultrassom e Telemetria"
+      "Amostragem de grandezas",
+      "Cálculo por diferenças sucessivas",
+      "Validação de faixa e timeout",
+      "Controle de estados de medição e exibição"
     ],
     "COMPETENCIA_INTERDISCIPLINARES": {
-      "COMPETENCIA": "Ciências / Lógica",
-      "BNCC_CODIGO": "EM13CO07",
-      "EIXO": "Cultura Digital",
-      "BNCC_GERAL": "EM13CNT103"
+      "HISTORIA_E_SOCIEDADE": "Medir movimento permite estudar deslocamentos e comparar experiências com critérios comuns. Equipamentos profissionais usam métodos e calibração apropriados à aplicação. O nome radar aproxima o tema do cotidiano, mas este protótipo usa ultrassom e serve para investigar movimento na direção do sensor, sem equivaler a um instrumento de fiscalização.",
+      "MATEMATICA": "Calcular velocidade como Δdistância/Δtempo, converter centímetros em metros e microssegundos em segundos e multiplicar m/s por 3,6 para obter km/h."
     },
-    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Exploração prática do projeto Radar de Velocidade aplicado ao desenvolvimento de habilidades do Módulo IV - Ensino Médio.",
-    "FLUXO_ESTRUTURA_CODIGO": [],
+    "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Como estimar a rapidez de um objeto que se aproxima ou se afasta? O sensor mede duas distâncias em instantes sucessivos e o programa divide a variação pelo tempo decorrido. Ao atingir módulo de pelo menos 0,10 m/s, congela uma estimativa e a mostra por três segundos no LCD. A medição representa a componente radial do movimento e pode sofrer variações por ecos e posicionamento do alvo.",
+    "FLUXO_ESTRUTURA_CODIGO": [
+      "Disparar HC-SR04",
+      "Validar eco entre 2 e 300 cm",
+      "Guardar primeira leitura válida",
+      "Calcular intervalo entre instantes",
+      "Calcular velocidade em m/s",
+      "Comparar módulo com 0,10 m/s",
+      "Mostrar m/s e km/h",
+      "Aguardar 3 s sem novas medições",
+      "Retomar monitoramento"
+    ],
     "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
-      "BOM": [],
-      "MAPEAMENTO_PINOS": [],
-      "IMAGEM_ESQUEMA": "",
-      "LINK_THINKERCAD": ""
+      "BOM": [
+        {
+          "qtd": "1x",
+          "componente": "Placa Arduino Uno R3"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Cabo USB compatível"
+        },
+        {
+          "qtd": "1x",
+          "componente": "LCD 16x2 I2C compatível com Adafruit_LiquidCrystal, configurado com deslocamento 0 em relação a 0x20"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Sensor HC-SR04"
+        },
+        {
+          "qtd": "1x",
+          "componente": "Conjunto de jumpers; quantidade não especificada"
+        }
+      ],
+      "MAPEAMENTO_PINOS": [
+        "D3 → TRIG; D2 → ECHO do HC-SR04",
+        "A4/SDA → SDA do módulo I2C; A5/SCL → SCL do módulo I2C (Arduino Uno)",
+        "5V → VCC dos módulos de 5 V; GND → referência comum, conferindo as ligações da montagem"
+      ],
+      "IMAGEM_ESQUEMA": "Projetos_TCC/Ensino Médio/PRJ 4.6 Radar de Velocidade/PRJ 4.6 Esquema.png",
+      "TITULO_ESQUEMA": "FIGURA 1: ESQUEMA DO CIRCUITO",
+      "LINK_THINKERCAD": "https://www.tinkercad.com/",
+      "LINK_GITHUB": ""
     },
     "MODELAGEM_LOGICO_ALGORITMA": {
+      "NOME_PASSO": "Fluxograma Lógico",
+      "TIPO_PASSO": "IMAGEM",
       "ARQUIVO": "",
-      "CODIGO_FONTE": ""
+      "CODIGO_FONTE": "float deltaDistancia =\n    distanciaAtual - distanciaAnterior;\nfloat deltaTempo =\n    (instante - tempoAnterior) / 1000000.0;\nif (deltaTempo > 0) {\n  velocidade =\n    (deltaDistancia / 100.0) / deltaTempo;\n}\ndistanciaAnterior = distanciaAtual;\ntempoAnterior = instante;"
     },
-    "ROTEIRO_PRATICO_DE_EXECUCAO": [],
-    "ARTICULACAO_E_APROFUNDAMENTO": "",
-    "DESAFIOS_DE_EXPANSAO": []
+    "ROTEIRO_PRATICO_DE_EXECUCAO": [
+      "1. Prepare um alvo plano que possa ser movido lentamente sobre a mesa na direção do sensor. Evite interpretar movimento lateral como deslocamento radial.",
+      "2. Com USB desligado, conecte TRIG a D3, ECHO a D2 e alimentação do sensor a 5V/GND. Ligue o LCD ao barramento I2C do Uno.",
+      "3. Instale Adafruit LiquidCrystal e abra o .ino completo com Wire.h e math.h. O trecho no JSON mostra o cálculo de diferenças, não toda a aquisição necessária.",
+      "4. Carregue e abra o Monitor Serial a 115200 baud. Mantenha o alvo na faixa de 2 a 300 cm e observe o sinal da velocidade ao aproximar e afastar. O campo CODIGO_FONTE é um recorte didático de até 20 linhas, sobre velocidade por diferença de distância e tempo; para executar, use PRJ 4.6 Radar de Velocidade.ino completo (trecho nas linhas 169–184).",
+      "5. Movimente o alvo até superar o limiar de 0,10 m/s. O LCD mostra o módulo em m/s e a conversão para km/h durante três segundos, sem realizar novas medidas nesse estado.",
+      "6. Compare várias tentativas com um deslocamento e tempo conhecidos. Registre dispersão e ecos inválidos; não use a estimativa para fiscalização, controle de veículos ou decisões que exijam instrumento calibrado. Não há fluxograma fornecido; ARQUIVO permanece vazio."
+    ],
+    "ARTICULACAO_E_APROFUNDAMENTO": "1) Distância e Tempo: O eco é convertido em centímetros e validado antes do cálculo. O instante de cada leitura é obtido com micros(); o intervalo de 30000 µs organiza as amostras sem garantir um período perfeitamente constante.\n\n2) Velocidade por Diferença: A expressão divide a variação de distância em metros pelo tempo em segundos. Aproximação pode produzir sinal negativo e afastamento positivo; fabs() remove o sinal quando o valor é capturado para exibição.\n\n3) Unidades e Apresentação: mostrarVelocidade() apresenta m/s e multiplica por 3,6 para km/h. O limiar de 0,10 m/s dispara o estado de exibição, que dura três segundos antes de reiniciar a referência de leitura.\n\n4) Limites do Método: O sensor observa apenas a mudança de distância ao alvo e não toda a trajetória no espaço. Pequenas diferenças de eco podem aumentar o erro do cálculo, por isso o trabalho deve comparar repetibilidade e não prometer precisão profissional.",
+    "DESAFIOS_DE_EXPANSAO": [
+      {
+        "nivel": "Fácil",
+        "descricao": "Conferir manualmente a conversão de três velocidades entre m/s e km/h."
+      },
+      {
+        "nivel": "Intermediário",
+        "descricao": "Registrar leituras com o alvo parado e em movimento e comparar dispersão e falsos disparos."
+      },
+      {
+        "nivel": "Avançado",
+        "descricao": "Em uma cópia do fonte, calcular velocidade por uma janela de várias amostras e comparar ruído e atraso da resposta com o método de duas leituras."
+      }
+    ]
   },
   {
     "PROJETO": "PRJ 4.7",

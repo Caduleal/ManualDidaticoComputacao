@@ -1,0 +1,55 @@
+{
+  "PROJETO": "PRJ 1.1",
+  "TITULO": "Circuito Simples",
+  "MODULO": "Módulo I - Educação Infantil",
+  "COMPLEXIDADE": "Básico",
+  "TEMPO_ESTIMADO": "1 h/aula (60 min)",
+  "PRE_REQUISITOS": "Reconhecer cores, comparar objetos e seguir instruções com o professor. Não exige leitura, programação ou estudo prévio de eletricidade.",
+  "HABILIDADES_DE_COMPUTACAO": [
+    "Sequenciamento de ações de montagem",
+    "Reconhecimento de estados: aceso e apagado",
+    "Previsão e observação de causa e efeito",
+    "Identificação de falhas por comparação com um modelo"
+  ],
+  "COMPETENCIA_INTERDISCIPLINARES": {
+    "HISTORIA_E_SOCIEDADE": "A iluminação elétrica mudou como as pessoas usam os espaços quando escurece. Lanternas levam luz a lugares sem tomada. Neste circuito, a turma observa como uma bateria alimenta uma pequena luz e conversa sobre seus usos no cotidiano.",
+    "MATEMATICA": "Contar bateria, resistor e LED; comparar os terminais do LED e ordenar a montagem com imagens."
+  },
+  "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Como acender uma luz longe de uma tomada? Uma lanterna resolve essa necessidade com uma bateria e um caminho elétrico fechado. A turma monta um modelo com LED e resistor, observando que a luz depende das conexões. Ao abrir esse caminho, o LED apaga, tornando visível a relação entre ligação e funcionamento.",
+  "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
+    "BOM": [
+      {
+        "qtd": "1x",
+        "componente": "Bateria de 3 V: CR2032 nas imagens; BR2016 no PDF. Usar suporte compatível."
+      },
+      {
+        "qtd": "1x",
+        "componente": "LED, identificado como D1 no esquemático"
+      },
+      {
+        "qtd": "1x",
+        "componente": "Resistor de 220 Ω, identificado como R1 no esquemático"
+      },
+      {
+        "qtd": "1x",
+        "componente": "Suporte da bateria com terminais positivo e negativo, mostrado nas imagens"
+      },
+      {
+        "qtd": "1x",
+        "componente": "Conjunto de fios para unir bateria, resistor e LED; quantidade não especificada"
+      }
+    ],
+    "IMAGEM_ESQUEMA": "Educação Infantil/PRJ 1.1 Circuito Simples/PRJ 1.1 Esquema.png",
+    "TITULO_ESQUEMA": "FIGURA 1: ESQUEMA DO CIRCUITO SIMPLES",
+    "LINK_THINKERCAD": "https://www.tinkercad.com/"
+  },
+  "ROTEIRO_PRATICO_DE_EXECUCAO": [
+    "1. Mostre as imagens e localize com a turma a bateria, o LED e o resistor. O professor mantém a bateria no suporte, fora do alcance das crianças: sua ingestão é perigosa.",
+    "2. Com a bateria desconectada, identifique os terminais do suporte. Confira a bateria: CR2032 de 3 V nas imagens e BR2016 no PDF. Use suporte compatível.",
+    "3. Conecte o terminal positivo do suporte a uma extremidade do resistor de 220 Ω e a outra extremidade ao anodo do LED vermelho. O resistor não tem polaridade; a perna maior do LED costuma indicar o anodo.",
+    "4. Ligue o catodo do LED ao terminal negativo do suporte. Confira a montagem antes de inserir a bateria. Não una seus polos diretamente; mantenha o resistor em série.",
+    "5. O professor conecta a bateria e convida a turma a observar a luz. Se não acender, desconecte a alimentação e confira os contatos e a polaridade do LED. Não há código-fonte nem Arduino nesta pasta; CODIGO_FONTE permanece vazio.",
+    "6. Abra uma conexão e peça às crianças que descrevam o resultado; depois reconecte e compare. Registre os estados com desenhos de uma luz acesa e outra apagada. Sem fluxograma fornecido, ARQUIVO permanece vazio. Ao terminar, retire a bateria e guarde as peças."
+  ],
+  "ARTICULACAO_E_APROFUNDAMENTO": "1) Caminho Fechado: A bateria fornece energia ao circuito. O LED acende quando as conexões formam um caminho contínuo entre seus terminais, com polaridade correta; abrir um contato interrompe a corrente.\n\n2) Orientação do LED: O LED possui anodo e catodo e precisa ser conectado no sentido indicado. A turma pode comparar suas pernas com ajuda do professor, sem exigir nomes técnicos na fala das crianças.\n\n3) Função do Resistor: O resistor de 220 Ω limita a corrente que atravessa o LED. Ele permanece em série durante toda a experiência; sua função pode ser apresentada como um cuidado para proteger a pequena luz.\n\n4) Sequência e Observação: Não existe software neste projeto. Montar, prever, observar e revisar introduz o pensamento computacional por ações concretas e prepara a turma para atividades futuras com comandos."
+}

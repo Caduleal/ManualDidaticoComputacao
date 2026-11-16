@@ -1,0 +1,107 @@
+{
+  "PROJETO": "PRJ 3.2",
+  "TITULO": "Jogo da Memória",
+  "MODULO": "Módulo III - Ensino Fundamental II",
+  "COMPLEXIDADE": "Intermediário",
+  "TEMPO_ESTIMADO": "2 h/aula (120 min)",
+  "PRE_REQUISITOS": "Vetores, índices, repetição, botões com polarização externa e LEDs com resistor. Ler sequências de cores e reproduzi-las em ordem.",
+  "HABILIDADES_DE_COMPUTACAO": [
+    "Armazenamento e comparação de sequências",
+    "Laços com índices",
+    "Abstração em funções",
+    "Sinais sonoros associados a eventos"
+  ],
+  "COMPETENCIA_INTERDISCIPLINARES": {
+    "HISTORIA_E_SOCIEDADE": "Jogos de repetição de cores e sons oferecem um desafio de atenção e memória em regras curtas. Uma mesma sequência pode ser observada por todos e depois reproduzida individualmente. Na turma, o resultado permite conversar sobre estratégias de agrupamento e prática, sem tratar o desempenho em um jogo como medida geral de capacidade.",
+    "MATEMATICA": "Relacionar posições e índices, comparar sequências e representar o aumento de um elemento por rodada. Contar acertos e observar a progressão do nível."
+  },
+  "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Como verificar se alguém repetiu corretamente uma sequência luminosa? O programa acrescenta um índice sorteado ao vetor e apresenta as cores com tons associados. Cada botão recebido é comparado com a posição esperada; um erro produz aviso e reinício. Ao acertar toda a sequência, o nível aumenta e a próxima rodada exige lembrar mais um elemento.",
+  "FLUXO_ESTRUTURA_CODIGO": [
+    "Executar animação inicial",
+    "Semear sorteio com analogRead(A0)",
+    "Acrescentar cor ao vetor",
+    "Reproduzir sequência com luz e som",
+    "Aguardar cada botão",
+    "Comparar índice com posição esperada",
+    "Reiniciar após erro",
+    "Aumentar nível após acerto"
+  ],
+  "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
+    "BOM": [
+      {
+        "qtd": "1x",
+        "componente": "Placa Arduino Uno R3"
+      },
+      {
+        "qtd": "1x",
+        "componente": "Cabo USB compatível"
+      },
+      {
+        "qtd": "4x",
+        "componente": "LEDs: vermelho, amarelo, azul e verde"
+      },
+      {
+        "qtd": "4x",
+        "componente": "Botões de pressão"
+      },
+      {
+        "qtd": "8x",
+        "componente": "Resistores de 220 Ω no PDF: quatro para LEDs e quatro para as redes dos botões"
+      },
+      {
+        "qtd": "1x",
+        "componente": "Buzzer/piezo"
+      },
+      {
+        "qtd": "1x",
+        "componente": "Protoboard, conforme a imagem da montagem"
+      },
+      {
+        "qtd": "1x",
+        "componente": "Conjunto de jumpers; quantidade individual não especificada"
+      }
+    ],
+    "MAPEAMENTO_PINOS": [
+      "D5 → LED vermelho; D8 → botão vermelho",
+      "D4 → LED amarelo; D9 → botão amarelo",
+      "D3 → LED azul; D10 → botão azul",
+      "D2 → LED verde; D11 → botão verde",
+      "D12 → buzzer/piezo; LEDs com resistores individuais e catodos ao GND",
+      "Botões: INPUT com resistores externos para GND; pressionado = HIGH",
+      "A0 → leitura para randomSeed(), sem sensor declarado; 5V/GND → alimentação comum"
+    ],
+    "IMAGEM_ESQUEMA": "Ensino Fundamental II/PRJ 3.2 Jogo da Memoria/PRJ 3.2 Esquema.png",
+    "TITULO_ESQUEMA": "FIGURA 1: ESQUEMA DO CIRCUITO",
+    "LINK_THINKERCAD": "https://www.tinkercad.com/",
+    "LINK_GITHUB": ""
+  },
+  "MODELAGEM_LOGICO_ALGORITMA": {
+    "NOME_PASSO": "Fluxograma Lógico",
+    "TIPO_PASSO": "IMAGEM",
+    "ARQUIVO": "Ensino Fundamental II/PRJ 3.2 Jogo da Memoria/PRJ 3.2 Fluxograma.png",
+    "CODIGO_FONTE": "for(uint16_t i = 0; i < nivel; i++){\n    int botaoPressionado = -1;\n    while (botaoPressionado == -1){\n        botaoPressionado = espelharBotoesNosLeds();\n    }\n    Serial.print(\"Posicao \");\n    Serial.print(i);\n    Serial.print(\" | Digitado: \");\n    Serial.println(botaoPressionado);\n    if (botaoPressionado != filaOriginal[i]){\n        Serial.println(\"-> Erro: Game Over\");\n        gameOver();\n        return;\n    }\n    while(espelharBotoesNosLeds() != -1){\n        delay(10);\n    }\n}"
+  },
+  "ROTEIRO_PRATICO_DE_EXECUCAO": [
+    "1. Com USB desligado, organize quatro pares de botão e LED por cor. Confira os resistores de 220 Ω documentados no esquema e as conexões da protoboard.",
+    "2. Conecte LEDs vermelho D5, amarelo D4, azul D3 e verde D2, sempre com resistor em série e retorno ao GND.",
+    "3. Conecte os botões nas entradas D8, D9, D10 e D11, na mesma ordem de cores, com polarização externa para GND. Ligue o piezo em D12 e GND.",
+    "4. Abra o .ino completo e carregue no Uno. Não há bibliotecas externas; A0 é lido para iniciar o sorteio e não corresponde a um componente de jogo confirmado. O campo CODIGO_FONTE é um recorte didático de até 20 linhas, sobre comparação da sequência e tratamento do erro; para executar, use PRJ 3.2 Jogo da Memoria.ino completo (trecho nas linhas 155–173).",
+    "5. Observe a sequência e pressione os botões na ordem exibida, soltando cada um antes do próximo. Use o Monitor Serial a 9600 baud para comparar índices e nível.",
+    "6. Provoque um erro e observe o reinício. O vetor possui 100 posições, mas não existe condição de encerramento no nível máximo; limite a exploração a rodadas curtas até revisar essa fronteira."
+  ],
+  "ARTICULACAO_E_APROFUNDAMENTO": "1) Sequência em Memória: filaOriginal armazena índices de zero a três. O índice seleciona tanto o LED como o tom no vetor correspondente, separando a regra do jogo dos números físicos dos pinos.\n\n2) Comparação Passo a Passo: O programa aguarda uma entrada em cada posição e compara o botão com filaOriginal[i]. Um resultado diferente chama gameOver(); somente uma sequência inteira correta permite incrementar nivel.\n\n3) Som e Resposta: tone() associa uma frequência a cada cor, e a rotina de erro combina som e piscadas. A espera pela soltura evita que um botão mantido pressionado preencha imediatamente todas as posições seguintes.\n\n4) Fronteira do Vetor: MAX_NIVEL define 100 posições, mas nivel continua crescendo após o acerto. Acessar uma posição além desse limite é uma lacuna do fonte original; acrescentar vitória ou reinício no limite deve ser feito como melhoria separada.",
+  "DESAFIOS_DE_EXPANSAO": [
+    {
+      "nivel": "Fácil",
+      "descricao": "Mudar os tempos de exibição e comparar a dificuldade sem alterar a ordem das cores."
+    },
+    {
+      "nivel": "Intermediário",
+      "descricao": "Criar uma tabela com os índices e as frequências dos quatro sons e experimentar outros tons."
+    },
+    {
+      "nivel": "Avançado",
+      "descricao": "Adicionar condição de vitória no limite do vetor e uma etapa de reinício, testando primeiro com MAX_NIVEL pequeno em uma cópia do código."
+    }
+  ]
+}

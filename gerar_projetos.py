@@ -14,6 +14,7 @@ import base64
 import html
 import io
 import json
+import os
 import re
 import urllib.parse
 from pathlib import Path
@@ -338,6 +339,17 @@ FALLBACK_CSS: str = """
     text-align: justify;
     text-justify: inter-word;
     text-indent: 1.5em;
+    color: #1e293b;
+    font-weight: 400;
+}
+
+/* Seção de Agradecimentos */
+#secao-agradecimentos p {
+    font-size: 13.5px;
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
+    text-indent: 2em;
+    text-align: justify;
     color: #1e293b;
     font-weight: 400;
 }
@@ -822,17 +834,21 @@ class HTMLTemplates:
     <main class="a4-page page-break" id="${id_ancora}">
         ${header_superior}
         <div>
-            <header class="flex items-start justify-between mb-3.5 avoid-break border-b-2 border-brand-800 pb-2.5 gap-4">
-                <div class="flex-1">
-                    <span class="font-mono text-brand-500 text-[10px] font-bold tracking-widest uppercase block mb-0.5">${modulo}</span>
-                    <h2 class="font-heading font-extrabold text-xl text-brand-900 mb-0.5 leading-tight">${codigo} - ${titulo}</h2>
+            <header class="mb-3.5 avoid-break border-b-2 border-brand-800 pb-2.5">
+                <div class="mb-1.5">
+                    <span class="inline-block px-2.5 py-0.5 rounded font-heading font-bold text-[10px] uppercase tracking-wider" style="background-color: ${cor_grupo}; color: ${cor_texto_grupo}; ${sombra_badge}">${modulo}</span>
                 </div>
-                ${qr_code}
+                <div class="flex items-center justify-between gap-4 min-h-[64px]">
+                    <div class="flex-1 flex items-center">
+                        <h2 class="font-heading font-extrabold text-[30px] text-brand-900 leading-tight m-0">${codigo} - ${titulo}</h2>
+                    </div>
+                    ${qr_code}
+                </div>
             </header>
 
             <div class="flex flex-col gap-2.5 mb-3 avoid-break">
-                <!-- Especificações Técnicas: barra verde sinalizando orientação pedagógica -->
-                <div class="bg-white border border-slate-200 border-l-4 border-l-emerald-600 p-2.5 rounded-sm">
+                <!-- Especificações Técnicas: barra colorida sinalizando o grupo do projeto -->
+                <div class="bg-white border border-slate-200 border-l-4 p-2.5 rounded-sm" style="border-left-color: ${cor_grupo};">
                     <h3 class="font-heading font-bold text-brand-900 mb-1 text-[10.5px] uppercase tracking-wider">
                         Especificações Técnicas
                     </h3>
@@ -843,8 +859,8 @@ class HTMLTemplates:
                     </ul>
                 </div>
 
-                <!-- Articulação Curricular: barra verde sinalizando orientação pedagógica -->
-                <div class="bg-white border border-slate-200 border-l-4 border-l-emerald-600 p-2.5 rounded-sm">
+                <!-- Articulação Curricular: barra colorida sinalizando o grupo do projeto -->
+                <div class="bg-white border border-slate-200 border-l-4 p-2.5 rounded-sm" style="border-left-color: ${cor_grupo};">
                     <h3 class="font-heading font-bold text-brand-900 mb-1 text-[10.5px] uppercase tracking-wider">
                         Articulação Curricular
                     </h3>
@@ -872,32 +888,7 @@ class HTMLTemplates:
                     </h3>
                 </div>
                 <div class="p-3">
-                    <div class="grid grid-cols-2 gap-4">
-                        <div>
-                            <h4 class="font-heading font-bold text-slate-900 text-[10.5px] uppercase tracking-wide mb-1.5 pb-0.5 border-b border-sky-200">
-                                Lista de Materiais
-                            </h4>
-                            <table class="w-full text-left border-collapse">
-                                <thead>
-                                    <tr class="border-b-2 border-slate-700 text-slate-900 text-[10px]">
-                                        <th class="py-1 px-2 font-bold text-center w-14">Qtd</th>
-                                        <th class="py-1 px-2 font-bold">Componente</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    ${bom_rows}
-                                </tbody>
-                            </table>
-                        </div>
-                        <div>
-                            <h4 class="font-heading font-bold text-slate-900 text-[10.5px] uppercase tracking-wide mb-1.5 pb-0.5 border-b border-sky-200">
-                                Mapeamento de Pinos
-                            </h4>
-                            <div class="bg-white/80 p-2.5 rounded-md border border-sky-200/80">
-                                <ul class="font-mono text-[9.5px] text-slate-800 space-y-1">${pinos_lis}</ul>
-                            </div>
-                        </div>
-                    </div>
+                    ${bloco_hardware}
                 </div>
             </section>
         </div>
@@ -921,15 +912,110 @@ class HTMLTemplates:
 # FUNÇÕES DE TRATAMENTO DE DADOS E FORMATAÇÃO
 # ==============================================================================
 
-def carregar_projetos(caminho_json: Path) -> List[Dict[str, Any]]:
-    """Carrega e valida o arquivo JSON/TXT contendo a lista de projetos."""
+def carregar_projetos_de_pasta_tcc(pasta: Path, base_dir: Path, apenas_com_esquema: bool = True) -> List[Dict[str, Any]]:
+    """Carrega projetos a partir dos arquivos JSON individuais dentro de Projetos_TCC."""
+    projetos = []
+    if not pasta.exists():
+        print(f"[ERRO] Pasta Projetos_TCC não encontrada em: {pasta}")
+        return []
+
+    for root, dirs, files in os.walk(pasta):
+        jsons = [f for f in files if f.endswith(".json")]
+        if not jsons:
+            continue
+        json_path = Path(root) / jsons[0]
+        try:
+            with open(json_path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+        except Exception as e:
+            print(f"[ERRO] Falha ao ler {json_path.name}: {e}")
+            continue
+
+        cod = str(data.get("PROJETO", "")).strip()
+        hw = data.get("ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS", {})
+        log = data.get("MODELAGEM_LOGICO_ALGORITMA", {})
+
+        # Verificar imagem de esquema
+        raw_esq = hw.get("IMAGEM_ESQUEMA", "") if isinstance(hw, dict) else ""
+        if raw_esq:
+            raw_esq = raw_esq.replace("\\", "/").strip()
+        caminho_esquema = ""
+        if raw_esq and (pasta / raw_esq).exists():
+            caminho_esquema = f"Projetos_TCC/{raw_esq}"
+        elif raw_esq and (base_dir / raw_esq).exists():
+            caminho_esquema = raw_esq
+        else:
+            esq_files = [x for x in files if "esquema" in x.lower() and x.lower().endswith(".png")]
+            if esq_files:
+                rel = (Path(root) / esq_files[0]).relative_to(base_dir)
+                caminho_esquema = str(rel).replace("\\", "/")
+
+        if apenas_com_esquema and not caminho_esquema:
+            continue
+
+        if isinstance(hw, dict):
+            hw["IMAGEM_ESQUEMA"] = caminho_esquema
+
+        # Verificar imagem de fluxograma
+        raw_flx = log.get("ARQUIVO", "") if isinstance(log, dict) else ""
+        if raw_flx:
+            raw_flx = raw_flx.replace("\\", "/").strip()
+        caminho_fluxo = ""
+        if raw_flx and (pasta / raw_flx).exists():
+            caminho_fluxo = f"Projetos_TCC/{raw_flx}"
+        elif raw_flx and (base_dir / raw_flx).exists():
+            caminho_fluxo = raw_flx
+        else:
+            flx_files = [x for x in files if "fluxo" in x.lower() and (x.lower().endswith(".png") or x.lower().endswith(".jpg"))]
+            if flx_files:
+                rel = (Path(root) / flx_files[0]).relative_to(base_dir)
+                caminho_fluxo = str(rel).replace("\\", "/")
+
+        if isinstance(log, dict):
+            log["ARQUIVO"] = caminho_fluxo
+
+        projetos.append(data)
+
+    def chave_ordenacao(p):
+        cod_limpo = re.sub(r"[^0-9\.]", "", str(p.get("PROJETO", "")))
+        partes = cod_limpo.split(".")
+        try:
+            return (int(partes[0]), int(partes[1]))
+        except Exception:
+            return (99, 99)
+
+    projetos.sort(key=chave_ordenacao)
+    print(f"[OK] {len(projetos)} projeto(s) carregado(s) da pasta '{pasta.name}'.")
+    return projetos
+
+
+def carregar_projetos(caminho_json: Path, base_dir: Optional[Path] = None) -> List[Dict[str, Any]]:
+    """Carrega e valida projetos a partir de arquivo consolidado ou pasta Projetos_TCC."""
+    if base_dir is None:
+        base_dir = Path(__file__).parent.resolve()
+
+    pasta_tcc = base_dir / "Projetos_TCC"
+
+    if caminho_json.is_dir() or str(caminho_json).lower() in ["projetos_tcc", "projetos_tcc/"]:
+        return carregar_projetos_de_pasta_tcc(pasta_tcc, base_dir, apenas_com_esquema=True)
+
     if not caminho_json.exists():
+        if pasta_tcc.exists():
+            return carregar_projetos_de_pasta_tcc(pasta_tcc, base_dir, apenas_com_esquema=True)
         print(f"[ERRO] Arquivo não encontrado: {caminho_json.resolve()}")
         return []
 
     with open(caminho_json, "r", encoding="utf-8") as f:
         try:
             dados = json.load(f)
+            # Mescla dinamicamente com os dados mais recentes de Projetos_TCC
+            if pasta_tcc.exists():
+                projetos_tcc = carregar_projetos_de_pasta_tcc(pasta_tcc, base_dir, apenas_com_esquema=True)
+                tcc_map = {p.get("PROJETO"): p for p in projetos_tcc}
+                for i, p in enumerate(dados):
+                    cod = p.get("PROJETO")
+                    if cod in tcc_map:
+                        dados[i] = tcc_map[cod]
             print(f"[OK] {len(dados)} projeto(s) carregado(s) de '{caminho_json.name}'.")
             return dados
         except json.JSONDecodeError as err:
@@ -1163,6 +1249,28 @@ def dividir_codigo_por_comentarios(codigo: str) -> List[Dict[str, str]]:
     return blocos
 
 
+def obter_cor_grupo(codigo: str, modulo: str) -> str:
+    """
+    Retorna a cor temática do grupo de projetos conforme a etapa escolar:
+    - Infantil: Azul (#38b6ff)
+    - Fundamental 1: Verde (#a4bd2d)
+    - Fundamental 2: Amarelo (#ebe912)
+    - Ensino Médio: Vermelho (#e22323)
+    """
+    cod = str(codigo).strip().upper()
+    mod = str(modulo).lower()
+
+    if cod.startswith("PRJ 1.") or "infantil" in mod:
+        return "#38b6ff"
+    elif cod.startswith("PRJ 4.") or "médio" in mod or "medio" in mod:
+        return "#e22323"
+    elif cod.startswith("PRJ 3.") or "fundamental ii" in mod or "fundamental 2" in mod:
+        return "#ebe912"
+    elif cod.startswith("PRJ 2.") or "fundamental i" in mod or "fundamental 1" in mod:
+        return "#a4bd2d"
+    return "#a4bd2d"
+
+
 def formatar_articulacao_teorica(art_raw: str) -> str:
     """
     Formata os tópicos da articulação teórica em blocos textuais sobre fundo branco,
@@ -1227,11 +1335,16 @@ def renderizar_trecho_codigo_fonte(
             break
 
     if not trecho_escolhido:
-        trecho_escolhido = lista_codigos[0] if lista_codigos else {
-            "nome": "Loop Principal",
-            "codigo": "// Loop Principal a ser preenchido",
-            "explicacao": ""
-        }
+        if lista_codigos:
+            trecho_escolhido = lista_codigos[0]
+        elif fontes and str(fontes).strip():
+            trecho_escolhido = {
+                "nome": "Loop Principal",
+                "codigo": str(fontes).strip(),
+                "explicacao": ""
+            }
+        else:
+            return None, []
 
     nome_orig = str(trecho_escolhido.get("nome", "Loop Principal")).strip()
     codigo_str = str(trecho_escolhido.get("codigo", "")).strip()
@@ -1496,17 +1609,21 @@ def gerar_html_projeto(
     pinos_lis = renderizar_lista(pinos_items)
 
     # Resolução e padronização da imagem do Esquema elétrico
-    raw_img_esquema = str(hw_data.get("IMAGEM_ESQUEMA", "")).strip()
+    raw_img_esquema = str(hw_data.get("IMAGEM_ESQUEMA", "")).strip().replace("\\", "/")
     if raw_img_esquema:
         raw_img_esquema = re.sub(r'esquema\.png$', 'Esquema.png', raw_img_esquema, flags=re.IGNORECASE)
+        if not (base_dir / raw_img_esquema).exists():
+            if (base_dir / "Projetos_TCC" / raw_img_esquema).exists():
+                raw_img_esquema = f"Projetos_TCC/{raw_img_esquema}"
     else:
         codigo_formatado = re.sub(r'[^a-zA-Z0-9]+', '_', codigo).strip('_')
         for cand in [
+            Path(base_dir) / "Projetos_TCC" / f"{codigo_formatado}_Esquema.png",
             Path(base_dir) / "projetos" / f"{codigo_formatado}_Esquema.png",
             Path(base_dir) / "projetos" / f"{slug_id.replace('-', '_').upper()}_Esquema.png",
         ]:
             if cand.exists():
-                raw_img_esquema = f"projetos/{cand.name}"
+                raw_img_esquema = str(cand.relative_to(base_dir)).replace("\\", "/")
                 break
     img_esquema = html.escape(raw_img_esquema)
 
@@ -1514,19 +1631,25 @@ def gerar_html_projeto(
 
     # Resolução e padronização da imagem do Fluxograma algorítmico
     logica_data = prj.get("MODELAGEM_LOGICO_ALGORITMA", {})
-    raw_img_fluxo = str(logica_data.get("ARQUIVO", "")).strip() if isinstance(logica_data, dict) else ""
+    raw_img_fluxo = str(logica_data.get("ARQUIVO", "")).strip().replace("\\", "/") if isinstance(logica_data, dict) else ""
     if raw_img_fluxo:
         raw_img_fluxo = re.sub(r'fluxograma\.png$', 'Fluxograma.png', raw_img_fluxo, flags=re.IGNORECASE)
+        if not (base_dir / raw_img_fluxo).exists():
+            if (base_dir / "Projetos_TCC" / raw_img_fluxo).exists():
+                raw_img_fluxo = f"Projetos_TCC/{raw_img_fluxo}"
+            else:
+                raw_img_fluxo = ""
     else:
         codigo_formatado = re.sub(r'[^a-zA-Z0-9]+', '_', codigo).strip('_')
         for cand in [
+            Path(base_dir) / "Projetos_TCC" / f"{codigo_formatado}_Fluxograma.png",
             Path(base_dir) / "projetos" / f"{codigo_formatado}_Fluxograma.png",
             Path(base_dir) / "projetos" / f"{slug_id.replace('-', '_').upper()}_Fluxograma.png",
         ]:
             if cand.exists():
-                raw_img_fluxo = f"projetos/{cand.name}"
+                raw_img_fluxo = str(cand.relative_to(base_dir)).replace("\\", "/")
                 break
-    img_fluxograma = html.escape(raw_img_fluxo)
+    img_fluxograma = html.escape(raw_img_fluxo) if raw_img_fluxo else ""
 
     roteiro_items = prj.get("ROTEIRO_PRATICO_DE_EXECUCAO", [])
     roteiro_lis = renderizar_roteiro_pratico(roteiro_items)
@@ -1559,10 +1682,67 @@ def gerar_html_projeto(
     # --------------------------------------------------------------------------
     # PÁGINA 1 DO PROJETO: Header + Informações Gerais + BOM + Mapeamento de Pinos
     # --------------------------------------------------------------------------
+    cor_grupo = obter_cor_grupo(codigo, modulo)
+
     header_p1 = HTMLTemplates.HEADER_PAGINACAO_SUPERIOR.substitute(
         titulo_secao=f"{codigo} • Visão Geral e Materiais",
         num_pagina=f"{pagina_inicial:02d}"
     )
+
+    eh_infantil = "infantil" in modulo.lower() or str(codigo).startswith("PRJ 1.")
+
+    if eh_infantil:
+        bloco_hardware = f"""
+        <div>
+            <h4 class="font-heading font-bold text-slate-900 text-[10.5px] uppercase tracking-wide mb-1.5 pb-0.5 border-b border-sky-200">
+                Lista de Materiais
+            </h4>
+            <table class="w-full text-left border-collapse">
+                <thead>
+                    <tr class="border-b-2 border-slate-700 text-slate-900 text-[10px]">
+                        <th class="py-1 px-2 font-bold text-center w-14">Qtd</th>
+                        <th class="py-1 px-2 font-bold">Componente</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {bom_rows}
+                </tbody>
+            </table>
+        </div>
+        """
+    else:
+        bloco_hardware = f"""
+        <div class="grid grid-cols-2 gap-4">
+            <div>
+                <h4 class="font-heading font-bold text-slate-900 text-[10.5px] uppercase tracking-wide mb-1.5 pb-0.5 border-b border-sky-200">
+                    Lista de Materiais
+                </h4>
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="border-b-2 border-slate-700 text-slate-900 text-[10px]">
+                            <th class="py-1 px-2 font-bold text-center w-14">Qtd</th>
+                            <th class="py-1 px-2 font-bold">Componente</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {bom_rows}
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <h4 class="font-heading font-bold text-slate-900 text-[10.5px] uppercase tracking-wide mb-1.5 pb-0.5 border-b border-sky-200">
+                    Mapeamento de Pinos
+                </h4>
+                <div class="bg-white/80 p-2.5 rounded-md border border-sky-200/80">
+                    <ul class="font-mono text-[9.5px] text-slate-800 space-y-1">{pinos_lis}</ul>
+                </div>
+            </div>
+        </div>
+        """
+
+    cor_grupo = obter_cor_grupo(codigo, modulo)
+    cor_texto_grupo = "#000000" if cor_grupo == "#ebe912" else "#ffffff"
+    sombra_badge = "text-shadow: 0 1px 2px rgba(0,0,0,0.3);" if cor_texto_grupo == "#ffffff" else ""
 
     p1 = HTMLTemplates.PAGINA_CAPA_A4.substitute(
         header_superior=header_p1,
@@ -1571,14 +1751,16 @@ def gerar_html_projeto(
         codigo=codigo,
         titulo=titulo,
         qr_code=html_qr_code,
+        cor_grupo=cor_grupo,
+        cor_texto_grupo=cor_texto_grupo,
+        sombra_badge=sombra_badge,
         complexidade=complexidade,
         tempo=tempo,
         prereq=prereq,
         inter_texto=inter_texto,
         habilidades_lis=habilidades_lis,
         contexto=contexto,
-        bom_rows=bom_rows,
-        pinos_lis=pinos_lis
+        bloco_hardware=bloco_hardware
     )
 
     # --------------------------------------------------------------------------
@@ -1591,13 +1773,14 @@ def gerar_html_projeto(
     if html_img_esquema:
         elementos_dinamicos.append({"html": html_img_esquema, "linhas_peso": 14})
 
-    if html_img_fluxograma:
-        elementos_dinamicos.append({"html": html_img_fluxograma, "linhas_peso": 15})
+    if not eh_infantil:
+        if html_img_fluxograma:
+            elementos_dinamicos.append({"html": html_img_fluxograma, "linhas_peso": 15})
 
-    if html_fluxo_setas:
-        elementos_dinamicos.append({"html": html_fluxo_setas, "linhas_peso": 5})
+        if html_fluxo_setas:
+            elementos_dinamicos.append({"html": html_fluxo_setas, "linhas_peso": 5})
 
-    elementos_dinamicos.append({"html": bloco_github, "linhas_peso": 5})
+        elementos_dinamicos.append({"html": bloco_github, "linhas_peso": 5})
 
     if roteiro_items:
         html_roteiro = HTMLTemplates.ROTEIRO_PRATICO.substitute(roteiro_lis=roteiro_lis)
@@ -1609,16 +1792,17 @@ def gerar_html_projeto(
         peso_articulacao = 3 + (len(art_raw) // 140)
         elementos_dinamicos.append({"html": html_art, "linhas_peso": peso_articulacao})
 
-    if desafios_items:
-        html_des = HTMLTemplates.DESAFIOS_DE_EXPANSAO.substitute(desafios_html=html_desafios)
-        peso_desafios = 4 + (len(desafios_items) * 3)
-        elementos_dinamicos.append({"html": html_des, "linhas_peso": peso_desafios})
+    if not eh_infantil:
+        if desafios_items:
+            html_des = HTMLTemplates.DESAFIOS_DE_EXPANSAO.substitute(desafios_html=html_desafios)
+            peso_desafios = 4 + (len(desafios_items) * 3)
+            elementos_dinamicos.append({"html": html_des, "linhas_peso": peso_desafios})
 
-    if html_img_fluxograma or roteiro_items:
-        elementos_dinamicos.append({"html": HTMLTemplates.ESTIMULO_POS_FLUXOGRAMA.substitute(), "linhas_peso": 4})
+        if html_img_fluxograma or roteiro_items:
+            elementos_dinamicos.append({"html": HTMLTemplates.ESTIMULO_POS_FLUXOGRAMA.substitute(), "linhas_peso": 4})
 
-    if bloco_codigo:
-        elementos_dinamicos.append(bloco_codigo)
+        if bloco_codigo:
+            elementos_dinamicos.append(bloco_codigo)
 
     # --------------------------------------------------------------------------
     # ALGORITMO DE DISTRIBUIÇÃO EM PÁGINAS A4
@@ -1701,13 +1885,37 @@ def tornar_tabelas_modulos_interativas(mains_modulos: List[Any], projetos_map: D
         "MÓDULO III - ENSINO FUNDAMENTAL II",
         "MÓDULO IV - ENSINO MÉDIO",
     ]
+    cores_modulos_lista = [
+        {"bg": "#38b6ff", "texto": "#ffffff"},
+        {"bg": "#a4bd2d", "texto": "#ffffff"},
+        {"bg": "#ebe912", "texto": "#000000"},
+        {"bg": "#e22323", "texto": "#ffffff"},
+    ]
 
     for idx_mod, main in enumerate(mains_modulos):
+        cor_info = (
+            cores_modulos_lista[idx_mod]
+            if idx_mod < len(cores_modulos_lista)
+            else {"bg": "#a4bd2d", "texto": "#ffffff"}
+        )
+
         # 1. Remove qualquer título 'Matriz de Projetos' situado antes da tabela
         for elem in list(main.find_all(["h1", "h2", "h3", "h4", "h5", "h6", "p", "span"])):
             txt = elem.get_text()
             if txt and "matriz de projetos" in txt.lower():
                 elem.decompose()
+
+        # Atualiza a aba do topo do card do módulo com a cor do grupo escolar (tamanho harmonizado com competências globais)
+        for aba in main.find_all("div", class_="rounded-bl-lg"):
+            classes_limpas = [
+                c for c in aba.get("class", [])
+                if not c.startswith("bg-") and not c.startswith("text-") and not c.startswith("font-") and not c.startswith("p")
+            ]
+            text_class = "text-white" if cor_info['texto'] == "#ffffff" else "text-black"
+            classes_limpas.extend(["font-heading", "font-bold", "text-xs", "px-3.5", "py-1", "rounded-bl-lg", "absolute", "top-0", "right-0", text_class])
+            aba["class"] = list(dict.fromkeys(classes_limpas))
+            sombra_aba = "text-shadow: 0 1px 2px rgba(0,0,0,0.3);" if cor_info['texto'] == "#ffffff" else ""
+            aba["style"] = f"background-color: {cor_info['bg']}; color: {cor_info['texto']}; {sombra_aba}"
 
         identificador = (
             titulos_modulos_header[idx_mod]
@@ -1759,7 +1967,7 @@ def tornar_tabelas_modulos_interativas(mains_modulos: List[Any], projetos_map: D
                     segundo_tr["class"] = ["bg-brand-800", "text-white", "font-heading"]
                     ths = segundo_tr.find_all("th")
                     for i, th in enumerate(ths):
-                        th_classes = ["p-2.5", "border", "border-brand-800", "text-white", "font-semibold", "text-[11px]"]
+                        th_classes = ["p-2.5", "border", "border-brand-800", "text-white", "font-semibold", "text-[11px]", "text-center"]
                         if i == 0:
                             th_classes.append("w-20")
                         th["class"] = th_classes
@@ -1833,7 +2041,7 @@ def executar_automacao(
 
     path_processado = Path(arq_destino)
 
-    projetos = carregar_projetos(path_json)
+    projetos = carregar_projetos(path_json, base_dir=base_dir)
     if not projetos:
         print("[CANCELADO] Nenhum dado válido encontrado.")
         return
@@ -1982,9 +2190,20 @@ def executar_automacao(
                     Agradecimentos
                 </h2>
             </header>
-            <p class="mb-4 text-brand-800 text-justify !text-sm leading-relaxed">
-                [Insira o texto de agradecimentos aqui...]
-            </p>
+            <div class="secao-agradecimentos-corpo">
+                <p>
+                    Aos meus pais, por todo o zelo, dedicação e amor incondicional. Agradeço imensamente pela infância plena e pela excelente educação que me proporcionaram; eles foram os grandes responsáveis por me dar a base educacional necessária para eu chegar até aqui.
+                </p>
+                <p>
+                    Ao meu companheiro e melhor amigo, Vítor Duarte Forny, meu agradecimento especial por estar sempre ao meu lado. Sua contribuição foi fundamental desde a idealização deste trabalho até a realização dos projetos e a aquisição de materiais para a sua elaboração, além de todo o apoio emocional nos momentos em que eu mais precisei.
+                </p>
+                <p>
+                    Às iniciativas e aos projetos de extensão, em especial à Uerjbotz, que me proporcionaram vivenciar a prática de perto e enriquecer minha trajetória acadêmica.
+                </p>
+                <p>
+                    À minha professora e orientadora Carla Nascimento, pelo voto de confiança, pelas correções precisas e por toda a dedicação e atenção dispensadas ao meu trabalho. Sem o seu incentivo e ensinamentos, este trabalho não seria o que é hoje.
+                </p>
+            </div>
         </div>
     </main>
     """
@@ -2085,7 +2304,7 @@ if __name__ == "__main__":
     print("\n--- GERANDO MANUAL DIDÁTICO (index.html) ---")
     executar_automacao(
         arq_origem="index.html",
-        arq_json="projetos/projetos_estruturas.txt",
+        arq_json="Projetos_TCC",
         arq_destino="index.html"
     )
 

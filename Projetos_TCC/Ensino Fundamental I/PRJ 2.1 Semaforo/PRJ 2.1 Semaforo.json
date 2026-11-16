@@ -1,0 +1,104 @@
+{
+  "PROJETO": "PRJ 2.1",
+  "TITULO": "Semáforo",
+  "MODULO": "Módulo II - Ensino Fundamental I",
+  "COMPLEXIDADE": "Básico",
+  "TEMPO_ESTIMADO": "1 h/aula (60 min)",
+  "PRE_REQUISITOS": "Circuito fechado, polaridade de LEDs, uso de resistores e identificação dos pinos digitais. Reconhecer as cores da sinalização com exemplos do entorno da escola.",
+  "HABILIDADES_DE_COMPUTACAO": [
+    "Variáveis e constantes",
+    "Sequenciamento linear de instruções",
+    "Temporização com delay()",
+    "Controle de saídas digitais"
+  ],
+  "COMPETENCIA_INTERDISCIPLINARES": {
+    "HISTORIA_E_SOCIEDADE": "A sinalização organiza o encontro entre pessoas e veículos nas ruas. O uso de luzes permite comunicar regras a muitos usuários ao mesmo tempo. Na escola, uma maquete ajuda a discutir respeito à travessia e mostra como uma sequência automática precisa ser compreendida por todos.",
+    "MATEMATICA": "Converter milissegundos em segundos, somar os intervalos de um ciclo e comparar a duração das três luzes: 5 s, 5 s e 3 s."
+  },
+  "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Como repetir uma sequência de sinais sem alguém ligar cada luz? O Arduino acende vermelho, verde e amarelo em intervalos definidos no programa. Cada LED representa um estado, e apenas uma cor deve permanecer acesa por vez. O circuito modela a temporização de um semáforo em uma maquete, permitindo discutir o tempo reservado para cada movimento.",
+  "FLUXO_ESTRUTURA_CODIGO": [
+    "Defição dos Pinos",
+    "Setup",
+    "Acender LED vermelho ",
+    "Delay",
+    "Desligar LED Vermelho",
+    "Acender LED verde",
+    "Delay",
+    "Deslgiar LED Verde",
+    "Acender LED Amarelo",
+    "Delay",
+    "Desligar LED Amarelo",
+    "Loop"
+  ],
+  "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
+    "BOM": [
+      {
+        "qtd": "1x",
+        "componente": "Placa Arduino Uno R3"
+      },
+      {
+        "qtd": "1x",
+        "componente": "Cabo USB compatível"
+      },
+      {
+        "qtd": "1x",
+        "componente": "LED vermelho"
+      },
+      {
+        "qtd": "1x",
+        "componente": "LED amarelo"
+      },
+      {
+        "qtd": "1x",
+        "componente": "LED verde"
+      },
+      {
+        "qtd": "3x",
+        "componente": "Resistores de 220 Ω, um em série com cada LED"
+      },
+      {
+        "qtd": "1x",
+        "componente": "Protoboard, conforme a imagem da montagem"
+      },
+      {
+        "qtd": "1x",
+        "componente": "Conjunto de jumpers; quantidade individual não especificada"
+      }
+    ],
+    "MAPEAMENTO_PINOS": [
+      "D11 → anodo do LED vermelho via resistor de 220 Ω (LED_VERMELHO)",
+      "D12 → anodo do LED amarelo via resistor de 220 Ω (LED_AMARELO)",
+      "D13 → anodo do LED verde via resistor de 220 Ω (LED_VERDE)",
+      "GND → catodos dos três LEDs"
+    ],
+    "IMAGEM_ESQUEMA": "Ensino Fundamental I/PRJ 2.1 Semaforo/PRJ 2.1 Esquema.png",
+    "TITULO_ESQUEMA": "FIGURA 1: ESQUEMA DO CIRCUITO",
+    "LINK_THINKERCAD": "https://www.tinkercad.com/",
+    "LINK_GITHUB": ""
+  },
+  "MODELAGEM_LOGICO_ALGORITMA": {
+    "NOME_PASSO": "Fluxograma Lógico",
+    "TIPO_PASSO": "IMAGEM",
+    "ARQUIVO": "Ensino Fundamental I/PRJ 2.1 Semaforo/PRJ 2.1 Fluxograma.png",
+    "CODIGO_FONTE": "void loop() {\n  digitalWrite(LED_VERMELHO, HIGH);\n  digitalWrite(LED_AMARELO, LOW);\n  digitalWrite(LED_VERDE, LOW);\n  delay(5000);\n  digitalWrite(LED_VERMELHO, LOW);\n  digitalWrite(LED_AMARELO, LOW);\n  digitalWrite(LED_VERDE, HIGH);\n  delay(5000);\n  digitalWrite(LED_VERMELHO, LOW);\n  digitalWrite(LED_AMARELO, HIGH);\n  digitalWrite(LED_VERDE, LOW);\n  delay(3000);\n}"
+  },
+  "ROTEIRO_PRATICO_DE_EXECUCAO": [
+    "1. Com o USB desligado, separe os três LEDs e os resistores de 220 Ω. Confira anodo e catodo antes de inserir as peças na protoboard.",
+    "2. Ligue vermelho a D11, amarelo a D12 e verde a D13, sempre por meio de um resistor em série. Esses são os pinos presentes no .ino e na imagem.",
+    "3. Conecte os catodos ao GND comum. Confira se cada LED ocupa conexões independentes e se o resistor não foi desviado por um jumper.",
+    "4. Abra o .ino original na IDE, selecione Arduino Uno e a porta da placa. Não são necessárias bibliotecas adicionais. O campo CODIGO_FONTE é um recorte didático de até 20 linhas, sobre ciclo das três luzes; para executar, use PRJ 2.1 Semaforo.ino completo (trecho nas linhas 16–34).",
+    "5. Carregue o programa e observe a ordem vermelho, verde e amarelo. Cronometre os intervalos de 5, 5 e 3 segundos; alguns comentários do fonte descrevem durações diferentes dos valores executados.",
+    "6. Registre a duração total de 13 segundos e explique cada troca de estado. O código original foi preservado, incluindo seus comentários; desligue a placa antes de alterar conexões."
+  ],
+  "ARTICULACAO_E_APROFUNDAMENTO": "1) Saídas Digitais: pinMode() prepara os pinos como OUTPUT e digitalWrite() define HIGH ou LOW. No circuito com catodos no GND, o nível alto permite a passagem de corrente pelo resistor e pelo LED correspondente.\n\n2) Resistores e Polaridade: Cada LED recebe seu próprio resistor de 220 Ω para limitar a corrente. Inverter o LED pode impedir seu acendimento, por isso a orientação dos terminais faz parte da conferência da montagem.\n\n3) Tempo Executado: delay() usa milissegundos, e os valores do arquivo são 5000, 5000 e 3000. Os comentários com outros tempos foram mantidos por fidelidade ao fonte, mas a análise do comportamento deve usar os valores reais.\n\n4) Estados e Repetição: O loop organiza os estados vermelho, verde e amarelo e reinicia continuamente. O modelo não possui botão de pedestre nem sensor; essas entradas só passam a existir se forem acrescentadas em uma expansão.",
+  "DESAFIOS_DE_EXPANSAO": [
+    {
+      "nivel": "Fácil",
+      "descricao": "Alterar um intervalo e calcular a nova duração total do ciclo antes de testar."
+    },
+    {
+      "nivel": "Intermediário",
+      "descricao": "Acrescentar um buzzer para produzir um aviso sonoro."
+    }
+  ]
+}

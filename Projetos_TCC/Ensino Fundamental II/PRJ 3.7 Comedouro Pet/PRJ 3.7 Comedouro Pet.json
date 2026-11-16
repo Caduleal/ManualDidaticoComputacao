@@ -1,0 +1,106 @@
+{
+  "PROJETO": "PRJ 3.7",
+  "TITULO": "Comedouro Pet",
+  "MODULO": "Módulo III - Ensino Fundamental II",
+  "COMPLEXIDADE": "Avançado",
+  "TEMPO_ESTIMADO": "3 h/aula (180 min)",
+  "PRE_REQUISITOS": "Sensor ultrassônico, servo, botão com polarização externa e LCD. Compreender contagem limitada, temporização e necessidade de calibrar uma referência de distância.",
+  "HABILIDADES_DE_COMPUTACAO": [
+    "Calibração de referência",
+    "Detecção de chegada e ausência",
+    "Contagem limitada de eventos",
+    "Debounce e temporização com millis()"
+  ],
+  "COMPETENCIA_INTERDISCIPLINARES": {
+    "HISTORIA_E_SOCIEDADE": "Dispositivos automáticos podem executar tarefas repetitivas quando alguém se aproxima. Um alimentador precisa considerar quantidade, intervalos e supervisão, além do movimento de uma tampa. A maquete permite estudar esses controles com materiais inertes, sem usar a contagem do programa como orientação para alimentar um animal real.",
+    "MATEMATICA": "Contar de zero a cinco porções, comparar distância com uma referência de fundo e relacionar abertura de 1 s com o movimento entre 0° e 60°."
+  },
+  "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Como liberar uma dose de demonstração uma vez por aproximação? O programa observa o fundo ao iniciar e detecta uma mudança de distância de pelo menos 3 cm. Uma chegada abre o servo por um segundo e soma uma porção, com limite de cinco; é preciso detectar ausência para aceitar outra visita. O botão zera a contagem, e o LCD mostra o estado, mas a massa liberada não é medida.",
+  "FLUXO_ESTRUTURA_CODIGO": [
+    "Ler fundo durante inicialização",
+    "Disparar sensor a cada 65 ms",
+    "Comparar distância com referência",
+    "Detectar nova presença",
+    "Abrir servo a 60° por 1 s",
+    "Somar até cinco porções",
+    "Aguardar ausência por 350 ms",
+    "Tratar botão com debounce de 30 ms",
+    "Mostrar estado no LCD"
+  ],
+  "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
+    "BOM": [
+      {
+        "qtd": "1x",
+        "componente": "Placa Arduino Uno R3"
+      },
+      {
+        "qtd": "1x",
+        "componente": "Cabo USB compatível"
+      },
+      {
+        "qtd": "1x",
+        "componente": "LCD 16x2 I2C compatível com Adafruit_LiquidCrystal, configurado com deslocamento 0 em relação a 0x20"
+      },
+      {
+        "qtd": "1x",
+        "componente": "Sensor HC-SR04"
+      },
+      {
+        "qtd": "1x",
+        "componente": "Microservo"
+      },
+      {
+        "qtd": "1x",
+        "componente": "Botão de pressão"
+      },
+      {
+        "qtd": "1x",
+        "componente": "Resistor de 220 Ω para a rede do botão, conforme o PDF"
+      },
+      {
+        "qtd": "1x",
+        "componente": "Conjunto de jumpers; quantidade não especificada"
+      }
+    ],
+    "MAPEAMENTO_PINOS": [
+      "D3 → TRIG; D2 → ECHO do HC-SR04",
+      "D4 → sinal do servo da tampa",
+      "A0 → botão com resistor externo para GND, pressionado = HIGH",
+      "A4/SDA → SDA do módulo I2C; A5/SCL → SCL do módulo I2C (Arduino Uno)",
+      "5V → VCC dos módulos de 5 V; GND → referência comum, conferindo as ligações da montagem"
+    ],
+    "IMAGEM_ESQUEMA": "Ensino Fundamental II/PRJ 3.7 Comedouro Pet/PRJ 3.7 Esquema.png",
+    "TITULO_ESQUEMA": "FIGURA 1: ESQUEMA DO CIRCUITO",
+    "LINK_THINKERCAD": "https://www.tinkercad.com/",
+    "LINK_GITHUB": ""
+  },
+  "MODELAGEM_LOGICO_ALGORITMA": {
+    "NOME_PASSO": "Fluxograma Lógico",
+    "TIPO_PASSO": "IMAGEM",
+    "ARQUIVO": "",
+    "CODIGO_FONTE": "if (!aberto && porcoes < LIMITE_PORCOES) {\n  confirmarReset = false;\n  if (!tampa.attached()) tampa.attach(PINO_SERVO);\n  tampa.write(ANGULO_ABERTO);\n  inicioAbertura = agora;\n  aberto = true;\n  ++porcoes;\n  mostrar();\n}"
+  },
+  "ROTEIRO_PRATICO_DE_EXECUCAO": [
+    "1. Monte uma pequena tampa ou comporta de papelão com peças leves, usando bolinhas de papel para representar a dose. Não teste o protótipo diretamente com animais.",
+    "2. Com alimentação desligada, ligue TRIG em D3, ECHO em D2, sinal do servo em D4 e botão em A0 com polarização externa para GND.",
+    "3. Ligue LCD a SDA/SCL e confira alimentação e GND comum. Instale Adafruit LiquidCrystal e abra o .ino completo com Servo.h.",
+    "4. Coloque um fundo estável diante do sensor e deixe a área sem aproximações ao ligar. O programa aprende uma referência inicial e não fixa um alcance absoluto de acionamento. O campo CODIGO_FONTE é um recorte didático de até 20 linhas, sobre limite de porções e abertura por evento; para executar, use PRJ 3.7 Comedouro Pet.ino completo (trecho nas linhas 85–93).",
+    "5. Aproxime um objeto o suficiente para reduzir a distância em pelo menos 3 cm. Observe uma abertura de 60° por um segundo; afaste o objeto e aguarde a confirmação de ausência para repetir.",
+    "6. Repita até cinco porções e confirme o bloqueio; pressione o botão para zerar. O fonte só associa o servo na primeira visita, sem comandar fechamento em setup(), portanto confira manualmente a posição inicial da comporta. Não há fluxograma fornecido; ARQUIVO permanece vazio."
+  ],
+  "ARTICULACAO_E_APROFUNDAMENTO": "1) Referência de Fundo: fundoCm guarda uma distância observada e pode acompanhar um alvo afastado. A comparação usa variação relativa, diferente de projetos que acionam apenas abaixo de uma distância fixa.\n\n2) Uma Visita por Evento: presente impede nova dose enquanto o mesmo objeto permanece detectado. A ausência por 350 ms permite rearmar; uma margem menor durante a presença ajuda a manter o estado sem alternância imediata.\n\n3) Porções e Temporização: O limite é cinco eventos de abertura e não uma massa de ração. millis() fecha o servo após um segundo e permite verificar o botão durante o funcionamento, sem pausa longa bloqueante.\n\n4) Inicialização Mecânica: O sinal começa em LOW e o servo só recebe attach() na primeira visita. Assim, não existe comando inicial para levar a tampa a 0°; a posição da maquete precisa ser conferida antes do teste.",
+  "DESAFIOS_DE_EXPANSAO": [
+    {
+      "nivel": "Fácil",
+      "descricao": "Registrar aproximações, aberturas e porções no LCD até alcançar o limite de cinco."
+    },
+    {
+      "nivel": "Intermediário",
+      "descricao": "Alterar o tempo de abertura em uma cópia do fonte e comparar a quantidade de bolinhas de papel liberadas."
+    },
+    {
+      "nivel": "Avançado",
+      "descricao": "Adicionar um fechamento controlado na inicialização e testar perda de eco e reset durante uma abertura, mantendo os mesmos componentes."
+    }
+  ]
+}

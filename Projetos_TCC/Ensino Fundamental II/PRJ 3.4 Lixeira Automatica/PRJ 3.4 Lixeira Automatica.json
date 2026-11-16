@@ -1,0 +1,105 @@
+{
+  "PROJETO": "PRJ 3.4",
+  "TITULO": "Lixeira Automática",
+  "MODULO": "Módulo III - Ensino Fundamental II",
+  "COMPLEXIDADE": "Avançado",
+  "TEMPO_ESTIMADO": "3 h/aula (180 min)",
+  "PRE_REQUISITOS": "Controle de servo, leitura ultrassônica, saídas digitais e funções. Compreender alimentação compartilhada e testar um conjunto antes de repetir a montagem.",
+  "HABILIDADES_DE_COMPUTACAO": [
+    "Repetição de módulos de controle",
+    "Função parametrizada de distância",
+    "Associação entre sensor e atuador",
+    "Diagnóstico de limitações de leitura"
+  ],
+  "COMPETENCIA_INTERDISCIPLINARES": {
+    "HISTORIA_E_SOCIEDADE": "Recipientes identificados ajudam a organizar a separação de materiais em um espaço coletivo. Abrir uma tampa por aproximação pode reduzir a necessidade de tocá-la. A maquete permite discutir sinalização e hábitos de descarte, lembrando que o circuito não reconhece o material colocado e depende da escolha feita pela pessoa.",
+    "MATEMATICA": "Associar quatro sensores a quatro tampas, comparar distâncias com 100 cm e relacionar posições de 0° e 90° ao movimento das alavancas."
+  },
+  "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Como abrir a tampa correspondente à aproximação de uma mão? O projeto possui quatro canais, cada um formado por sensor ultrassônico, servo e LED. Para uma distância menor que 100 cm, o programa abre o respectivo servo a 90° e acende seu LED; nos demais casos volta a 0°. O conjunto modela quatro recipientes de uma estação de descarte, sem classificar automaticamente os resíduos.",
+  "FLUXO_ESTRUTURA_CODIGO": [
+    "Inicializar quatro servos a 0°",
+    "Apagar os quatro LEDs",
+    "Medir distância do canal 1",
+    "Comparar com 100 cm e acionar servo/LED",
+    "Repetir para canais 2, 3 e 4",
+    "Registrar distâncias na serial",
+    "Reiniciar ciclo sequencial"
+  ],
+  "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
+    "BOM": [
+      {
+        "qtd": "1x",
+        "componente": "Placa Arduino Uno R3"
+      },
+      {
+        "qtd": "1x",
+        "componente": "Cabo USB compatível"
+      },
+      {
+        "qtd": "4x",
+        "componente": "Sensores ultrassônicos HC-SR04"
+      },
+      {
+        "qtd": "4x",
+        "componente": "Microservos"
+      },
+      {
+        "qtd": "4x",
+        "componente": "LEDs amarelo, verde, azul e vermelho"
+      },
+      {
+        "qtd": "4x",
+        "componente": "Resistores de 220 Ω para os LEDs"
+      },
+      {
+        "qtd": "1x",
+        "componente": "Protoboard, conforme a imagem da montagem"
+      },
+      {
+        "qtd": "1x",
+        "componente": "Conjunto de jumpers; quantidade individual não especificada"
+      }
+    ],
+    "MAPEAMENTO_PINOS": [
+      "Canal 1: D2 TRIG, D3 ECHO, D10 LED amarelo, A0 sinal do servo",
+      "Canal 2: D4 TRIG, D5 ECHO, D11 LED verde, A1 sinal do servo",
+      "Canal 3: D6 TRIG, D7 ECHO, D12 LED azul, A2 sinal do servo",
+      "Canal 4: D8 TRIG, D9 ECHO, D13 LED vermelho, A3 sinal do servo",
+      "LEDs via resistores de 220 Ω; catodos → GND",
+      "Sensores → 5V/GND; servos precisam de fonte de 5 V dimensionada para o conjunto e GND comum com o Uno"
+    ],
+    "IMAGEM_ESQUEMA": "Ensino Fundamental II/PRJ 3.4 Lixeira Automatica/PRJ 3.4 Esquema.png",
+    "TITULO_ESQUEMA": "FIGURA 1: ESQUEMA DO CIRCUITO",
+    "LINK_THINKERCAD": "https://www.tinkercad.com/",
+    "LINK_GITHUB": ""
+  },
+  "MODELAGEM_LOGICO_ALGORITMA": {
+    "NOME_PASSO": "Fluxograma Lógico",
+    "TIPO_PASSO": "IMAGEM",
+    "ARQUIVO": "Ensino Fundamental II/PRJ 3.4 Lixeira Automatica/PRJ 3.4 Fluxograma.jpg",
+    "CODIGO_FONTE": "int dist1 = CalcDist(trigPin1, echoPin1);\nSerial.print(\"Distancia 1: \");\nSerial.println(dist1);\nif (dist1 < 100) {\n  pos = 90;\n  servo1.write(pos);\n  digitalWrite(ledPin1, HIGH);\n  delay(15);\n} else {\n  pos = 0;\n  servo1.write(pos);\n  digitalWrite(ledPin1, LOW);\n  delay(15);\n}"
+  },
+  "ROTEIRO_PRATICO_DE_EXECUCAO": [
+    "1. Monte uma estação de papelão com tampas leves, identificando os quatro canais. Com alimentação desligada, teste primeiro um sensor, servo e LED antes de repetir o circuito.",
+    "2. Ligue os pares TRIG/ECHO D2/D3, D4/D5, D6/D7 e D8/D9. Posicione os sensores para reduzir a leitura de ecos de recipientes vizinhos.",
+    "3. Conecte sinais dos servos a A0–A3 e LEDs com resistores a D10–D13. Confira a correspondência de cada conjunto antes de prender as alavancas.",
+    "4. Use alimentação de servos dimensionada para quatro motores, com GND comum; não presuma que a saída de 5V do Uno sustenta todos. Abra o .ino completo com Servo.h e carregue. O campo CODIGO_FONTE é um recorte didático de até 20 linhas, sobre um canal de sensor, servo e led; para executar, use PRJ 3.4 Lixeira Automatica.ino.ino completo (trecho nas linhas 70–84).",
+    "5. Observe o Monitor Serial a 9600 baud e aproxime um objeto de cada canal. Confira abertura a 90°, retorno a 0° e LED do mesmo recipiente.",
+    "6. Teste a ausência de eco: CalcDist() usa pulseIn() sem timeout explícito e pode retornar distância zero. Registre essa limitação e mantenha mãos longe das articulações durante o movimento."
+  ],
+  "ARTICULACAO_E_APROFUNDAMENTO": "1) Canal Repetido: Cada sensor comanda seu próprio servo e LED. O trecho do JSON apresenta o primeiro conjunto; o programa completo repete a mesma decisão para os outros três canais, com seus respectivos pinos.\n\n2) Leitura Sequencial: As quatro medidas são feitas uma após outra e incluem pulseIn() e pausas. A resposta do conjunto não é simultânea, e um canal sem retorno pode atrasar o processamento dos seguintes.\n\n3) Alimentação dos Servos: Quatro motores podem exigir corrente significativa, especialmente ao iniciar ou travar. A montagem física precisa de fonte adequada e GND comum, além de tampas leves que não forcem a mecânica.\n\n4) Alcance e Limitações: O limiar de 100 cm pode ser grande para uma maquete de mesa. A função não valida ausência de eco, e o circuito não reconhece plástico, papel ou metal; a separação depende da identificação dos recipientes.",
+  "DESAFIOS_DE_EXPANSAO": [
+    {
+      "nivel": "Fácil",
+      "descricao": "Criar placas de identificação para os quatro recipientes e conferir o canal que abre cada tampa."
+    },
+    {
+      "nivel": "Intermediário",
+      "descricao": "Ajustar o limite de distância em uma cópia do fonte e testar acionamentos indesejados entre canais próximos."
+    },
+    {
+      "nivel": "Avançado",
+      "descricao": "Substituir a repetição por vetores e uma função por canal, incluindo timeout e rejeição de eco inválido, sem adicionar sensores ou servos."
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "PROJETO": "PRJ 4.2",
+  "TITULO": "Calculadora",
+  "MODULO": "Módulo IV - Ensino Médio",
+  "COMPLEXIDADE": "Intermediário",
+  "TEMPO_ESTIMADO": "2 h/aula (120 min)",
+  "PRE_REQUISITOS": "Vetores bidimensionais, varredura de teclado, funções, tipos numéricos e condições. Relacionar a entrada de caracteres à conversão para operações aritméticas.",
+  "HABILIDADES_DE_COMPUTACAO": [
+    "Varredura de matriz 4x4",
+    "Construção e conversão de strings",
+    "Seleção de operação com switch",
+    "Validação de entrada e tratamento de erro"
+  ],
+  "COMPETENCIA_INTERDISCIPLINARES": {
+    "HISTORIA_E_SOCIEDADE": "Calculadoras tornam operações repetitivas mais rápidas, mas sua interface precisa deixar claro o que foi digitado. Um resultado só tem sentido quando a operação e os dados estão corretos. Construir esse dispositivo ajuda a discutir a diferença entre executar uma conta, validar a entrada e comunicar uma situação que não pode ser calculada.",
+    "MATEMATICA": "Quatro operações, divisão por zero, casas decimais e limites de representação. Comparar o resultado exibido com cálculo manual e discutir arredondamento em ponto flutuante."
+  },
+  "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Como transformar teclas em uma operação mostrada no LCD? O teclado matricial informa dígitos e comandos, e o programa monta dois operandos como strings. A, B, C e D selecionam soma, subtração, multiplicação e divisão; # calcula e * limpa. A rotina verifica dados ausentes e divisão por zero antes de apresentar o resultado com duas casas decimais.",
+  "FLUXO_ESTRUTURA_CODIGO": [
+    "Varrer linhas e colunas",
+    "Confirmar tecla e aguardar soltura",
+    "Acumular primeiro operando",
+    "Selecionar operação A/B/C/D",
+    "Acumular segundo operando",
+    "Receber # para calcular",
+    "Validar dados e divisor",
+    "Executar switch e exibir",
+    "Receber * para limpar"
+  ],
+  "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
+    "BOM": [
+      {
+        "qtd": "1x",
+        "componente": "Placa Arduino Uno R3"
+      },
+      {
+        "qtd": "1x",
+        "componente": "Cabo USB compatível"
+      },
+      {
+        "qtd": "1x",
+        "componente": "LCD 16x2 I2C compatível com Adafruit_LiquidCrystal, configurado com deslocamento 0 em relação a 0x20"
+      },
+      {
+        "qtd": "1x",
+        "componente": "Teclado matricial 4x4"
+      },
+      {
+        "qtd": "1x",
+        "componente": "Conjunto de jumpers; quantidade não especificada"
+      }
+    ],
+    "MAPEAMENTO_PINOS": [
+      "A0, A1, A2, A3 → linhas 1, 2, 3, 4 do teclado, respectivamente",
+      "D2, D3, D4, D5 → colunas 1, 2, 3, 4 do teclado, INPUT_PULLUP",
+      "A4/SDA → SDA do módulo I2C; A5/SCL → SCL do módulo I2C (Arduino Uno)",
+      "5V → VCC dos módulos de 5 V; GND → referência comum, conferindo as ligações da montagem"
+    ],
+    "IMAGEM_ESQUEMA": "Ensino Médio/PRJ 4.2 Calculadora/PRJ 4.2 Esquema.png",
+    "TITULO_ESQUEMA": "FIGURA 1: ESQUEMA DO CIRCUITO",
+    "LINK_THINKERCAD": "https://www.tinkercad.com/",
+    "LINK_GITHUB": ""
+  },
+  "MODELAGEM_LOGICO_ALGORITMA": {
+    "NOME_PASSO": "Fluxograma Lógico",
+    "TIPO_PASSO": "IMAGEM",
+    "ARQUIVO": "",
+    "CODIGO_FONTE": "if (operacao == '/' && b == 0) {\n  lcd.clear();\n  lcd.setCursor(0, 0);\n  lcd.print(\"ERRO\");\n  lcd.setCursor(0, 1);\n  lcd.print(\"Divisao por zero\");\n  resultadoPronto = true;\n  return;\n}"
+  },
+  "ROTEIRO_PRATICO_DE_EXECUCAO": [
+    "1. Com USB desligado, identifique a ordem dos oito terminais do teclado. Confira linhas e colunas no modelo usado, pois a ordem física do conector precisa corresponder ao esquema.",
+    "2. Conecte linhas a A0–A3 e colunas a D2–D5. O programa faz a varredura diretamente e usa INPUT_PULLUP nas colunas, sem biblioteca de teclado.",
+    "3. Conecte LCD a SDA/SCL do Uno, 5V e GND. Instale Adafruit LiquidCrystal e abra o .ino completo; o trecho do JSON destaca a proteção contra divisão por zero.",
+    "4. Carregue e teste cada dígito. Digite 12, pressione A, digite 3 e pressione #; verifique resultado 15,00, conforme o formato decimal do LCD. O campo CODIGO_FONTE é um recorte didático de até 20 linhas, sobre proteção contra divisão por zero; para executar, use PRJ 4.2 Calculadora.ino completo (trecho nas linhas 149–161).",
+    "5. Repita com B, C e D. Teste # sem operandos completos, divisão por zero e * para limpar; o programa aceita até sete dígitos em cada operando e não possui tecla decimal.",
+    "6. Compare contas simples com valores grandes e registre a precisão observada. Após um resultado, digitar um número inicia outra operação; não há cadeia automática de cálculos implementada. Não há fluxograma fornecido; ARQUIVO permanece vazio."
+  ],
+  "ARTICULACAO_E_APROFUNDAMENTO": "1) Varredura Matricial: Uma linha é levada a LOW por vez, e as colunas são lidas com pull-up interno. A combinação linha/coluna seleciona um caractere em teclas[4][4], reduzindo o número de fios necessário para dezesseis comandos.\n\n2) Entrada e Conversão: Os operandos são acumulados como String e convertidos por toFloat(). O limite de sete dígitos reduz o tamanho digitado, mas não garante precisão decimal exata; a interface não inclui entrada de ponto decimal.\n\n3) Operações e Erros: switch seleciona a operação, enquanto uma condição anterior impede dividir por zero. O teste de operandos vazios evita apresentar um resultado que não corresponde a uma entrada completa.\n\n4) Estado da Interface: resultadoPronto diferencia uma conta em edição de uma saída já calculada. O LCD de duas linhas exige mensagens curtas, e o debounce com espera pela soltura impede que uma tecla seja repetida pelo mesmo acionamento.",
+  "DESAFIOS_DE_EXPANSAO": [
+    {
+      "nivel": "Fácil",
+      "descricao": "Montar uma tabela de testes com uma operação de cada tipo e conferir os resultados manualmente."
+    },
+    {
+      "nivel": "Intermediário",
+      "descricao": "Melhorar as mensagens de entrada incompleta e testar contas negativas e resultados com casas decimais."
+    },
+    {
+      "nivel": "Avançado",
+      "descricao": "Substituir strings dinâmicas por buffers limitados e tratar estouro de entrada, preservando teclado e LCD em uma versão separada."
+    }
+  ]
+}

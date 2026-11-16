@@ -14,6 +14,27 @@ def gerar_html_modulo(modulo):
     """
     Gera a tag <main> HTML correspondente a um módulo de ensino.
     """
+    cores_etapa = {
+        "I": {"bg": "#38b6ff", "texto": "#ffffff"},
+        "II": {"bg": "#a4bd2d", "texto": "#ffffff"},
+        "III": {"bg": "#ebe912", "texto": "#000000"},
+        "IV": {"bg": "#e22323", "texto": "#ffffff"},
+    }
+    mod_id = str(modulo.get('id', '')).strip().upper()
+    cor_info = cores_etapa.get(mod_id)
+    if not cor_info:
+        etapa_lower = str(modulo.get('etapa', '')).lower()
+        if 'infantil' in etapa_lower:
+            cor_info = {"bg": "#38b6ff", "texto": "#ffffff"}
+        elif 'médio' in etapa_lower or 'medio' in etapa_lower:
+            cor_info = {"bg": "#e22323", "texto": "#ffffff"}
+        elif 'fundamental ii' in etapa_lower or 'fundamental 2' in etapa_lower:
+            cor_info = {"bg": "#ebe912", "texto": "#000000"}
+        elif 'fundamental i' in etapa_lower or 'fundamental 1' in etapa_lower:
+            cor_info = {"bg": "#a4bd2d", "texto": "#ffffff"}
+        else:
+            cor_info = {"bg": "#a4bd2d", "texto": "#ffffff"}
+
     competencias_html = "".join([f"<li>{html.escape(c)}</li>" for c in modulo['competencias']])
     
     linhas_tabela = ""
@@ -44,7 +65,7 @@ def gerar_html_modulo(modulo):
                 </h2>
 
                 <div class="bg-brand-50 border border-brand-100 p-5 rounded-lg mb-6 avoid-break relative overflow-hidden">
-                    <div class="absolute top-0 right-0 bg-green-500 text-white px-3 py-0.5 font-mono text-[10px] font-bold rounded-bl-lg">
+                    <div class="absolute top-0 right-0 px-3.5 py-1 font-heading font-bold text-xs rounded-bl-lg" style="background-color: {cor_info['bg']}; color: {cor_info['texto']}; {'text-shadow: 0 1px 2px rgba(0,0,0,0.3);' if cor_info['texto'] == '#ffffff' else ''}">
                         {html.escape(modulo['etapa'])}
                     </div>
 
@@ -64,9 +85,9 @@ def gerar_html_modulo(modulo):
                     <table class="w-full text-left text-xs border-collapse">
                         <thead>
                             <tr class="bg-brand-800 text-white font-heading">
-                                <th class="p-2.5 border border-brand-800 w-20">Cód</th>
-                                <th class="p-2.5 border border-brand-800">Projeto</th>
-                                <th class="p-2.5 border border-brand-800">Conceitos Abordados</th>
+                                <th class="p-2.5 border border-brand-800 w-20 text-center">Cód</th>
+                                <th class="p-2.5 border border-brand-800 text-center">Projeto</th>
+                                <th class="p-2.5 border border-brand-800 text-center">Conceitos Abordados</th>
                                 <th class="p-2.5 border border-brand-800 text-center">Nível</th>
                             </tr>
                         </thead>

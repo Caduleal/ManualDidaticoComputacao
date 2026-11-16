@@ -1,0 +1,112 @@
+{
+  "PROJETO": "PRJ 3.5",
+  "TITULO": "Estacionamento",
+  "MODULO": "Módulo III - Ensino Fundamental II",
+  "COMPLEXIDADE": "Avançado",
+  "TEMPO_ESTIMADO": "3 h/aula (180 min)",
+  "PRE_REQUISITOS": "Máquina de estados, vetores, ultrassom, servo e LCD I2C. Relacionar sequência de passagem, ocupação e capacidade de um espaço.",
+  "HABILIDADES_DE_COMPUTACAO": [
+    "Contagem com limites",
+    "Validação de leituras consecutivas",
+    "Controle por máquina de estados",
+    "Temporização de sinalização e liberação"
+  ],
+  "COMPETENCIA_INTERDISCIPLINARES": {
+    "HISTORIA_E_SOCIEDADE": "Estacionamentos precisam informar vagas e organizar a passagem de veículos. Uma contagem correta depende de distinguir quem entrou de quem saiu. A maquete permite discutir como sensores, mensagens e avisos ajudam na operação, além de mostrar que uma leitura isolada pode ser insuficiente para confirmar uma passagem.",
+    "MATEMATICA": "Calcular vagas livres como 10 menos ocupadas, interpretar limites de 100 e 115 cm e comparar prazos de 1 s e 8 s para liberação da cancela."
+  },
+  "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Como abrir uma cancela e atualizar vagas somente depois de uma passagem confirmada? Dois sensores registram a ordem de chegada: S1–S2 confirma entrada, e S2–S1 confirma saída. O programa limita a capacidade a dez vagas e impede nova entrada quando a lotação é atingida. LED e buzzer indicam a cancela aberta, enquanto o LCD mostra vagas e mensagens do estado atual.",
+  "FLUXO_ESTRUTURA_CODIGO": [
+    "Inicializar capacidade de 10 vagas",
+    "Alternar sensores a cada 65 ms",
+    "Confirmar duas leituras próximas",
+    "Identificar direção pelo primeiro sensor",
+    "Abrir ou informar lotação",
+    "Confirmar passagem no segundo sensor",
+    "Atualizar vagas",
+    "Aguardar ambos livres e fechar",
+    "Atualizar avisos sem delay no ciclo principal"
+  ],
+  "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
+    "BOM": [
+      {
+        "qtd": "1x",
+        "componente": "Placa Arduino Uno R3"
+      },
+      {
+        "qtd": "1x",
+        "componente": "Cabo USB compatível"
+      },
+      {
+        "qtd": "1x",
+        "componente": "LCD 16x2 I2C compatível com Adafruit_LiquidCrystal, configurado com deslocamento 0 em relação a 0x20"
+      },
+      {
+        "qtd": "2x",
+        "componente": "Sensores HC-SR04"
+      },
+      {
+        "qtd": "1x",
+        "componente": "Microservo"
+      },
+      {
+        "qtd": "1x",
+        "componente": "Piezo/buzzer"
+      },
+      {
+        "qtd": "1x",
+        "componente": "LED vermelho"
+      },
+      {
+        "qtd": "1x",
+        "componente": "Resistor de 220 kΩ indicado como R1 no PDF; valor deve ser conferido antes da montagem física"
+      },
+      {
+        "qtd": "1x",
+        "componente": "Conjunto de jumpers; quantidade não especificada"
+      }
+    ],
+    "MAPEAMENTO_PINOS": [
+      "S1: D3 → TRIG; D2 → ECHO",
+      "S2: D4 → TRIG; D5 → ECHO",
+      "D6 → sinal do servo da cancela",
+      "D7 → piezo/buzzer; D8 → LED vermelho via resistor",
+      "Resistor do LED: PDF indica 220 kΩ; conferir valor e corrente no circuito físico",
+      "A4/SDA → SDA do módulo I2C; A5/SCL → SCL do módulo I2C (Arduino Uno)",
+      "5V → VCC dos módulos de 5 V; GND → referência comum, conferindo as ligações da montagem"
+    ],
+    "IMAGEM_ESQUEMA": "Ensino Fundamental II/PRJ 3.5 Estacionamento/PRJ 3.5 Esquema.png",
+    "TITULO_ESQUEMA": "FIGURA 1: ESQUEMA DO CIRCUITO",
+    "LINK_THINKERCAD": "https://www.tinkercad.com/",
+    "LINK_GITHUB": ""
+  },
+  "MODELAGEM_LOGICO_ALGORITMA": {
+    "NOME_PASSO": "Fluxograma Lógico",
+    "TIPO_PASSO": "IMAGEM",
+    "ARQUIVO": "",
+    "CODIGO_FONTE": "void atualizarAlerta(unsigned long agora) {\n  static bool ligado = false;\n  bool aberto = estado == ENTRANDO || estado == SAINDO || estado == CONFIRMADO;\n  bool pulso = aberto && (agora / 150UL) % 2 == 0;\n  if (pulso == ligado) return;\n  ligado = pulso;\n  digitalWrite(LED, ligado ? HIGH : LOW);\n  if (ligado) tone(BUZZER, 1200);\n  else noTone(BUZZER);\n}"
+  },
+  "ROTEIRO_PRATICO_DE_EXECUCAO": [
+    "1. Monte uma passagem de maquete com S1 e S2 identificados. Fixe o servo a uma cancela leve, com alimentação desligada durante as conexões.",
+    "2. Ligue TRIG/ECHO de S1 a D3/D2 e de S2 a D4/D5. Ligue sinal do servo em D6, buzzer em D7 e LED por resistor em D8.",
+    "3. Confira o resistor do LED: o PDF indica 220 kΩ, valor que pode produzir brilho muito baixo. Registre a divergência a revisar; não apresente uma troca de valor como parte do esquema original.",
+    "4. Conecte LCD I2C e alimentação com GND comum. Instale Adafruit LiquidCrystal e use Servo.h; abra o arquivo .ino.ino completo, que mantém essa extensão duplicada na pasta. O campo CODIGO_FONTE é um recorte didático de até 20 linhas, sobre aviso temporizado sem bloquear a passagem; para executar, use PRJ 3.5 Estacionamento.ino.ino completo (trecho nas linhas 101–110).",
+    "5. Carregue e teste S1 seguido de S2 e depois a ordem inversa, confirmando a atualização de vagas. A detecção exige duas leituras próximas; para liberar, ambos precisam registrar distância de pelo menos 115 cm dentro da faixa válida.",
+    "6. Simule dez entradas, tentativa com lotação, saída com total zero e passagem abandonada. Observe fechamento após 1 s com via livre em evento confirmado ou 8 s de via livre em espera incompleta. Não há fluxograma fornecido; ARQUIVO permanece vazio."
+  ],
+  "ARTICULACAO_E_APROFUNDAMENTO": "1) Confirmação de Presença: Duas leituras consecutivas abaixo de 100 cm confirmam a chegada. Para reconhecer via livre, são exigidas duas leituras entre 115 e 400 cm; ausência de eco não é tratada automaticamente como espaço livre.\n\n2) Direção e Capacidade: A ordem dos sensores escolhe ENTRANDO ou SAINDO. A contagem só muda com o segundo evento e permanece entre zero e dez; a condição LOTADO bloqueia uma nova entrada quando não há vaga.\n\n3) Liberação e Aviso: O fechamento depende de ambos os sensores livres por um prazo. millis() também alterna LED e buzzer em pulsos de 150 ms, permitindo sinalizar enquanto a lógica continua monitorando a passagem.\n\n4) Conferência do Protótipo: O PDF indica resistor de 220 kΩ para o LED e o LCD usa a biblioteca Adafruit. Os totais ficam na RAM e somem no reinício; este modelo não identifica placas, pessoas nem veículos individualmente.",
+  "DESAFIOS_DE_EXPANSAO": [
+    {
+      "nivel": "Fácil",
+      "descricao": "Criar uma tabela com entradas, saídas, ocupadas e vagas livres após cada passagem."
+    },
+    {
+      "nivel": "Intermediário",
+      "descricao": "Alterar CAPACIDADE para três em uma cópia do fonte e testar lotação e desistência com poucos eventos."
+    },
+    {
+      "nivel": "Avançado",
+      "descricao": "Registrar pela serial cada mudança de estado e sua duração, verificando falsas passagens sem adicionar novos componentes."
+    }
+  ]
+}

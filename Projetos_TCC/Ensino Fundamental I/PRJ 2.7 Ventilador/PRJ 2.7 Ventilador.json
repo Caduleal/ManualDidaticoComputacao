@@ -1,0 +1,102 @@
+{
+  "PROJETO": "PRJ 2.7",
+  "TITULO": "Ventilador",
+  "MODULO": "Módulo II - Ensino Fundamental I",
+  "COMPLEXIDADE": "Intermediário",
+  "TEMPO_ESTIMADO": "2 h/aula (120 min), após revisão técnica",
+  "PRE_REQUISITOS": "Comparar temperaturas, reconhecer LED RGB e sensor TMP36 e compreender que motores precisam de alimentação e acionamento adequados. O professor deve revisar o circuito antes da montagem física.",
+  "HABILIDADES_DE_COMPUTACAO": [
+    "Identificação de entradas e saídas",
+    "Modelagem de uma regra de controle",
+    "Leitura de um esquema de conexões",
+    "Distinção entre circuito desenhado e software implementado"
+  ],
+  "COMPETENCIA_INTERDISCIPLINARES": {
+    "HISTORIA_E_SOCIEDADE": "Ventiladores ajudam a movimentar o ar em ambientes ocupados. O acionamento automático associa uma medida a uma decisão, em vez de depender apenas de uma chave. A imagem deste projeto permite discutir essa ideia, mas a turma precisa distinguir o que está desenhado do que ainda depende de programa e revisão elétrica.",
+    "MATEMATICA": "Proposta de exploração: comparar temperaturas e representar uma regra por faixas. Não há limiar de acionamento, fórmula executada ou intervalo de atualização definidos no arquivo vazio."
+  },
+  "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Como relacionar a temperatura ao funcionamento de um pequeno ventilador? A imagem reúne Arduino, sensor TMP36, RGB e motor, sugerindo um indicador e um acionamento por temperatura. Entretanto, o .ino está vazio e não confirma nenhuma regra de controle. Além disso, o motor aparece ligado a A1 por resistor, sem estágio de potência, o que exige revisão antes de um teste físico.",
+  "FLUXO_ESTRUTURA_CODIGO": [
+    "Ler a imagem e identificar TMP36, RGB e motor",
+    "Confirmar que o .ino está vazio",
+    "Revisar o acionamento elétrico do motor",
+    "Definir a regra somente após receber o programa",
+    "Validar entradas e saídas antes do teste"
+  ],
+  "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
+    "BOM": [
+      {
+        "qtd": "1x",
+        "componente": "Placa Arduino Uno R3"
+      },
+      {
+        "qtd": "1x",
+        "componente": "Cabo USB compatível"
+      },
+      {
+        "qtd": "1x",
+        "componente": "Sensor TMP36 mostrado na imagem"
+      },
+      {
+        "qtd": "1x",
+        "componente": "LED RGB de catodo comum"
+      },
+      {
+        "qtd": "1x",
+        "componente": "Motor CC com hélice, especificação não informada"
+      },
+      {
+        "qtd": "4x",
+        "componente": "Resistores de 220 Ω indicados no PDF"
+      },
+      {
+        "qtd": "1x",
+        "componente": "Protoboard, conforme a imagem da montagem"
+      },
+      {
+        "qtd": "1x",
+        "componente": "Conjunto de jumpers; quantidade individual não especificada"
+      }
+    ],
+    "MAPEAMENTO_PINOS": [
+      "Mapeamento visual, sem confirmação por código: arquivo .ino vazio",
+      "A0 → saída central do TMP36; alimentação do sensor em 5V/GND",
+      "D2, D3 e D4 → três canais do RGB por resistores de 220 Ω; comum → GND",
+      "A1 → resistor de 220 Ω → motor → GND, conforme a imagem; ligação não validada para montagem física",
+      "5V/GND → barramentos da protoboard; não há driver de motor visível"
+    ],
+    "IMAGEM_ESQUEMA": "Ensino Fundamental I/PRJ 2.7 Ventilador/PRJ 2.7 Esquema.png",
+    "TITULO_ESQUEMA": "FIGURA 1: ESQUEMA DO CIRCUITO",
+    "LINK_THINKERCAD": "https://www.tinkercad.com/",
+    "LINK_GITHUB": ""
+  },
+  "MODELAGEM_LOGICO_ALGORITMA": {
+    "NOME_PASSO": "Fluxograma Lógico",
+    "TIPO_PASSO": "IMAGEM",
+    "ARQUIVO": "",
+    "CODIGO_FONTE": ""
+  },
+  "ROTEIRO_PRATICO_DE_EXECUCAO": [
+    "1. Identifique na imagem o sensor de temperatura, o RGB e o motor. Confirme que o .ino tem zero bytes e não há programa para carregar.",
+    "2. Com a alimentação desligada, registre as conexões visíveis do TMP36 em A0 e do RGB nos pinos D2, D3 e D4.",
+    "3. Marque a ligação de A1 ao motor como pendência técnica. Não conecte o motor diretamente à saída do Uno, mesmo que haja resistor em série.",
+    "4. Antes de montar fisicamente, o professor deve definir um driver ou transistor, proteção contra retorno indutivo e fonte compatível; esses itens são adequações necessárias, não componentes confirmados nos arquivos.",
+    "5. Aguarde o programa para confirmar temperaturas, cores e condições de partida e parada. Discuta essas escolhas como proposta, sem inventar valores para preencher o código.",
+    "6. Após receber o fonte e revisar o hardware, teste primeiro sensor e RGB e depois o motor com acionamento adequado. CODIGO_FONTE e fluxograma ficam vazios nesta versão."
+  ],
+  "ARTICULACAO_E_APROFUNDAMENTO": "1) Entrada Analógica: O TMP36 aparece conectado a A0. Essa ligação sugere uma medida de temperatura, mas não confirma a fórmula ou os limites que seriam usados por um programa, pois o arquivo fornecido não contém instruções.\n\n2) Sinalização RGB: Três pinos digitais chegam ao LED por resistores individuais. Sem fonte, não é possível afirmar qual cor representa frio, normal ou quente; essas associações precisam ser explicitadas quando o projeto for completado.\n\n3) Motor e Potência: Um pino de sinal não substitui um estágio de acionamento de motor. A imagem não apresenta transistor, driver ou diodo de proteção; o resistor de 220 Ω desenhado não resolve essa lacuna de projeto.\n\n4) Regra Pendente: Comparar temperatura com um limiar seria uma possibilidade didática. A versão documentada não implementa essa comparação, portanto os testes funcionais e o trecho de código dependem de arquivos adicionais e revisão da montagem.",
+  "DESAFIOS_DE_EXPANSAO": [
+    {
+      "nivel": "Fácil",
+      "descricao": "Identificar em um desenho quais componentes medem, indicam e produzem movimento."
+    },
+    {
+      "nivel": "Intermediário",
+      "descricao": "Escrever uma tabela de faixas de temperatura como proposta a validar quando houver código."
+    },
+    {
+      "nivel": "Avançado",
+      "descricao": "Depois da revisão do acionamento e do fornecimento do fonte, testar dois limiares de ligar e desligar para evitar alternância perto de uma mesma temperatura."
+    }
+  ]
+}

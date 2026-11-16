@@ -1,0 +1,118 @@
+{
+  "PROJETO": "PRJ 3.3",
+  "TITULO": "Alarme de Incêndio",
+  "MODULO": "Módulo III - Ensino Fundamental II",
+  "COMPLEXIDADE": "Avançado",
+  "TEMPO_ESTIMADO": "3 h/aula (180 min), incluindo revisão da montagem",
+  "PRE_REQUISITOS": "Leitura analógica, conversão do TMP36, operadores lógicos e temporização com millis(). Distinguir um protótipo didático de um equipamento de proteção certificado.",
+  "HABILIDADES_DE_COMPUTACAO": [
+    "Histerese em decisões",
+    "Combinação lógica de sensores",
+    "Temporização sem delay() no ciclo principal",
+    "Diagnóstico de disponibilidade I2C"
+  ],
+  "COMPETENCIA_INTERDISCIPLINARES": {
+    "HISTORIA_E_SOCIEDADE": "Alertas visuais e sonoros ajudam a chamar atenção para uma condição que precisa ser verificada. A automação permite acompanhar mais de uma variável ao mesmo tempo. O projeto escolar usa esse princípio para discutir responsabilidade ao interpretar sensores, sem atribuir ao protótipo a confiabilidade de um sistema real de proteção contra incêndio.",
+    "MATEMATICA": "Comparar limiares de disparo e retorno, converter leitura do TMP36 em graus Celsius e relacionar intervalos de 200, 250 e 500 ms com tarefas diferentes."
+  },
+  "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Como sinalizar quando uma medida ultrapassa uma faixa escolhida? O programa combina leitura bruta de gás e temperatura, acionando luz e som se qualquer alarme estiver ativo. Limiares diferentes de disparo e retorno evitam alternância perto da fronteira. O próprio fonte informa problemas de GND e do resistor do sensor de gás; a montagem deve ser revisada antes de interpretar resultados.",
+  "FLUXO_ESTRUTURA_CODIGO": [
+    "Consultar LCD em 0x20",
+    "Ler gás A0 e TMP36 A1",
+    "Converter temperatura",
+    "Aplicar histerese dos dois sensores",
+    "Combinar alarmes com OU lógico",
+    "Alternar LED e piezo a cada 250 ms",
+    "Atualizar LCD e serial a cada 500 ms",
+    "Repetir leitura a cada 200 ms"
+  ],
+  "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
+    "BOM": [
+      {
+        "qtd": "1x",
+        "componente": "Placa Arduino Uno R3"
+      },
+      {
+        "qtd": "1x",
+        "componente": "Cabo USB compatível"
+      },
+      {
+        "qtd": "1x",
+        "componente": "LCD 16x2 I2C compatível com Adafruit_LiquidCrystal, configurado com deslocamento 0 em relação a 0x20"
+      },
+      {
+        "qtd": "1x",
+        "componente": "Sensor TMP36"
+      },
+      {
+        "qtd": "1x",
+        "componente": "Sensor de gás da montagem; modelo não confirmado no PDF"
+      },
+      {
+        "qtd": "1x",
+        "componente": "LED vermelho"
+      },
+      {
+        "qtd": "1x",
+        "componente": "Resistor de 220 Ω para o LED"
+      },
+      {
+        "qtd": "1x",
+        "componente": "Resistor de 4,7 kΩ indicado no circuito de gás"
+      },
+      {
+        "qtd": "1x",
+        "componente": "Piezo/buzzer"
+      },
+      {
+        "qtd": "1x",
+        "componente": "Protoboard, conforme a imagem da montagem"
+      },
+      {
+        "qtd": "1x",
+        "componente": "Conjunto de jumpers; quantidade individual não especificada"
+      }
+    ],
+    "MAPEAMENTO_PINOS": [
+      "A0 → leitura de gás (PINO_GAS)",
+      "A1 → VOUT do TMP36 (PINO_TEMPERATURA)",
+      "A2 → LED vermelho via resistor de 220 Ω (PINO_LED, saída digital)",
+      "D6 → piezo (PINO_PIEZO)",
+      "A4/SDA e A5/SCL → LCD MCP23008, endereço 0x20",
+      "5V/GND → alimentação e referência a revisar: o fonte avisa ausência de GND comum e resistor de 4,7 kΩ ligado ao +5V"
+    ],
+    "IMAGEM_ESQUEMA": "Ensino Fundamental II/PRJ 3.3 Alarme de Incendio/PRJ 3.3 Esquema.png",
+    "TITULO_ESQUEMA": "FIGURA 1: ESQUEMA DO CIRCUITO",
+    "LINK_THINKERCAD": "https://www.tinkercad.com/",
+    "LINK_GITHUB": ""
+  },
+  "MODELAGEM_LOGICO_ALGORITMA": {
+    "NOME_PASSO": "Fluxograma Lógico",
+    "TIPO_PASSO": "IMAGEM",
+    "ARQUIVO": "",
+    "CODIGO_FONTE": "void atualizarEstadoAlarme() {\n  if (temperaturaC >= TEMPERATURA_DISPARO_C) {\n    alarmeTemperatura = true;\n  } else if (temperaturaC <= TEMPERATURA_RETORNO_C) {\n    alarmeTemperatura = false;\n  }\n  if (leituraGas >= GAS_DISPARO) {\n    alarmeGas = true;\n  } else if (leituraGas <= GAS_RETORNO) {\n    alarmeGas = false;\n  }\n}"
+  },
+  "ROTEIRO_PRATICO_DE_EXECUCAO": [
+    "1. Leia os avisos iniciais do .ino. Ele informa que a montagem original não une o negativo da protoboard ao GND e que o resistor de gás termina em +5V; não considere as leituras validadas.",
+    "2. Antes de alimentar, peça ao professor que revise GND comum e circuito de leitura do gás. O README citado pelo fonte não existe na pasta recebida; as limitações conhecidas estão registradas aqui.",
+    "3. Confira os sinais A0 gás, A1 TMP36, A2 LED por resistor e D6 piezo. Ligue LCD a SDA/SCL e verifique o endereço 0x20 e a alimentação.",
+    "4. Instale Adafruit LiquidCrystal e abra o .ino completo. O recorte no JSON mostra a histerese; ele não inclui toda a inicialização, leitura e exibição necessárias para executar. O campo CODIGO_FONTE é um recorte didático de até 20 linhas, sobre histerese de temperatura e gás; para executar, use PRJ 3.3 Alarme de Incendio.ino completo (trecho nas linhas 78–91).",
+    "5. Carregue e use Monitor Serial a 9600 baud. Em simulação, teste temperatura de disparo em 50 °C e retorno em 45 °C, gás em 400 e retorno em 350; esses valores não representam calibração.",
+    "6. Compare alarmes separados e simultâneos e observe o aviso intermitente. Não use fogo, fumaça ou liberação de gás para testar; trabalhe com os controles do simulador e mantenha o protótipo restrito ao estudo. Não há fluxograma fornecido; ARQUIVO permanece vazio."
+  ],
+  "ARTICULACAO_E_APROFUNDAMENTO": "1) Histerese: Temperatura liga em 50 °C e desliga em 45 °C; gás liga em leitura 400 e desliga em 350. Entre esses limites o estado anterior é mantido, reduzindo oscilações sem exigir novos componentes.\n\n2) Tarefas Temporizadas: millis() organiza leitura em 200 ms, alternância do aviso em 250 ms e exibição em 500 ms. A leitura de sensores, a sinalização e a atualização do LCD são tratadas em funções diferentes.\n\n3) Diagnóstico do LCD: O programa consulta 0x20 e só escreve no LCD se houver resposta. O Monitor Serial continua apresentando dados para diagnóstico, o que ajuda a separar uma falha do mostrador de uma condição dos sensores.\n\n4) Limites Documentados: A leitura bruta do gás não equivale a concentração calibrada. As falhas de GND e da rede resistiva são avisadas no fonte, e nenhum software corrige uma ligação elétrica incorreta; o protótipo não é um dispositivo de proteção.",
+  "DESAFIOS_DE_EXPANSAO": [
+    {
+      "nivel": "Fácil",
+      "descricao": "Em simulação, registrar os estados ao subir e descer a temperatura pelos dois limiares."
+    },
+    {
+      "nivel": "Intermediário",
+      "descricao": "Criar uma tabela com as quatro combinações dos alarmes e conferir o resultado do OU lógico."
+    },
+    {
+      "nivel": "Avançado",
+      "descricao": "Após revisão elétrica, acrescentar registro serial dos instantes de transição sem bloquear as tarefas, comparando leituras e eventos no simulador."
+    }
+  ]
+}

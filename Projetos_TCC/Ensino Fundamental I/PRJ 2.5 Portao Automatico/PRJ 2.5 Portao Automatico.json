@@ -1,0 +1,109 @@
+{
+  "PROJETO": "PRJ 2.5",
+  "TITULO": "Portão Automático",
+  "MODULO": "Módulo II - Ensino Fundamental I",
+  "COMPLEXIDADE": "Intermediário",
+  "TEMPO_ESTIMADO": "2 h/aula (120 min)",
+  "PRE_REQUISITOS": "LEDs com resistor, leitura de distância e comparação de números. Reconhecer que um servo recebe um comando de posição e precisa de alimentação adequada.",
+  "HABILIDADES_DE_COMPUTACAO": [
+    "Funções com parâmetros",
+    "Decisão if/else",
+    "Conversão do tempo de eco em distância",
+    "Controle coordenado de servo, LED e buzzer"
+  ],
+  "COMPETENCIA_INTERDISCIPLINARES": {
+    "HISTORIA_E_SOCIEDADE": "Portões automatizados combinam movimento e avisos para indicar quando uma passagem está sendo aberta. Luz e som ajudam as pessoas a perceber uma mudança no ambiente. Uma maquete permite observar essas funções e discutir por que um mecanismo real precisa de proteções que vão além de um único sensor.",
+    "MATEMATICA": "Comparar distâncias com o limite de 100 cm, reconhecer posições de 0° e 90° e relacionar bipes de 150 ms com pausas de igual duração."
+  },
+  "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Como abrir uma passagem quando um objeto se aproxima? O sensor mede a distância e o programa compara o resultado com 100 cm. Abaixo desse limite, o servo vai a 90° e LED e buzzer alternam avisos; caso contrário, o servo volta a 0°. O modelo representa um portão de papelão e não incorpora as proteções de uma instalação real.",
+  "FLUXO_ESTRUTURA_CODIGO": [
+    "Inicializar servo e pinos",
+    "Medir o tempo de eco",
+    "Calcular distância em centímetros",
+    "Comparar distância com 100 cm",
+    "Abrir a 90° e emitir avisos",
+    "Alternar sinal a cada 150 ms",
+    "Fechar a 0° quando afastado",
+    "Repetir a leitura"
+  ],
+  "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
+    "BOM": [
+      {
+        "qtd": "1x",
+        "componente": "Placa Arduino Uno R3"
+      },
+      {
+        "qtd": "1x",
+        "componente": "Cabo USB compatível"
+      },
+      {
+        "qtd": "1x",
+        "componente": "Sensor ultrassônico HC-SR04"
+      },
+      {
+        "qtd": "1x",
+        "componente": "Microservo"
+      },
+      {
+        "qtd": "1x",
+        "componente": "LED amarelo"
+      },
+      {
+        "qtd": "1x",
+        "componente": "Resistor de 220 Ω"
+      },
+      {
+        "qtd": "1x",
+        "componente": "Buzzer ou piezo"
+      },
+      {
+        "qtd": "1x",
+        "componente": "Protoboard, conforme a imagem da montagem"
+      },
+      {
+        "qtd": "1x",
+        "componente": "Conjunto de jumpers; quantidade individual não especificada"
+      }
+    ],
+    "MAPEAMENTO_PINOS": [
+      "D2 → TRIG; D3 → ECHO do HC-SR04",
+      "D4 → anodo do LED via resistor de 220 Ω",
+      "D5 → positivo do buzzer/piezo",
+      "A0 → sinal do servo, usado como saída digital",
+      "5V → alimentação dos módulos compatíveis; GND → referência comum, catodo do LED e negativo do piezo"
+    ],
+    "IMAGEM_ESQUEMA": "Ensino Fundamental I/PRJ 2.5 Portao Automatico/PRJ 2.5 Esquema.png",
+    "TITULO_ESQUEMA": "FIGURA 1: ESQUEMA DO CIRCUITO",
+    "LINK_THINKERCAD": "https://www.tinkercad.com/",
+    "LINK_GITHUB": ""
+  },
+  "MODELAGEM_LOGICO_ALGORITMA": {
+    "NOME_PASSO": "Fluxograma Lógico",
+    "TIPO_PASSO": "IMAGEM",
+    "ARQUIVO": "Ensino Fundamental I/PRJ 2.5 Portao Automatico/PRJ 2.5 Fluxograma.png",
+    "CODIGO_FONTE": "if (dist < 100) {\n  pos = 90;\n  myservo.write(pos);\n  digitalWrite(ledPin, HIGH);\n  tone(buzzerPin, 1200);\n  delay(150);\n  digitalWrite(ledPin, LOW);\n  noTone(buzzerPin);\n  delay(150);\n} else {\n  pos = 0;\n  myservo.write(pos);\n  digitalWrite(ledPin, LOW);\n  noTone(buzzerPin);\n  delay(15);\n}"
+  },
+  "ROTEIRO_PRATICO_DE_EXECUCAO": [
+    "1. Fixe o microservo a uma pequena cancela de papelão, sem carga pesada. Com USB desligado, identifique os três fios do servo e os quatro pinos do sensor.",
+    "2. Conecte TRIG a D2, ECHO a D3 e sinal do servo a A0. Confira a alimentação do servo e o GND comum; use fonte de 5 V adequada se a alimentação da placa for insuficiente.",
+    "3. Ligue o LED amarelo a D4 por resistor de 220 Ω e o piezo a D5, com retornos ao GND. Não use os pinos RX/TX para esses avisos.",
+    "4. Abra o .ino completo, que utiliza Servo.h, selecione Uno e carregue. O trecho do JSON destaca a abertura com avisos, sem substituir o programa completo. O campo CODIGO_FONTE é um recorte didático de até 20 linhas, sobre abertura com avisos e fechamento por distância; para executar, use PRJ 2.5 Portao Automatico.ino completo (trecho nas linhas 24–45).",
+    "5. Abra o Monitor Serial a 9600 baud e mova um objeto para distâncias abaixo e acima de 100 cm. Observe 90° na abertura e 0° no fechamento.",
+    "6. Teste também ausência de eco e registre o comportamento: pulseIn() não recebe timeout explícito e um retorno zero pode ser interpretado como distância próxima. Mantenha mãos fora do mecanismo."
+  ],
+  "ARTICULACAO_E_APROFUNDAMENTO": "1) Distância por Eco: CalcDist() gera um pulso de disparo e mede o retorno com pulseIn(). O fator de conversão considera a viagem de ida e volta do som; o resultado inteiro em centímetros alimenta a decisão.\n\n2) Posição do Servo: Servo.h produz o sinal de controle no pino A0. Os comandos de 0° e 90° representam posições da maquete, mas a geometria da alavanca e o esforço mecânico precisam ser conferidos antes de prender a cancela.\n\n3) Avisos Coordenados: Na abertura, digitalWrite() e tone() ligam LED e piezo por 150 ms, seguidos de uma pausa igual. Esses delays também limitam a frequência com que o programa consegue realizar novas medições.\n\n4) Limitação da Leitura: O código original não distingue explicitamente a falta de eco de um objeto muito próximo. Esse ponto deve ser observado nos testes; acrescentar validação é uma expansão, não uma característica já existente.",
+  "DESAFIOS_DE_EXPANSAO": [
+    {
+      "nivel": "Fácil",
+      "descricao": "Alterar o limite de distância para uma maquete menor e prever a nova região de acionamento."
+    },
+    {
+      "nivel": "Intermediário",
+      "descricao": "Modificar a frequência e a duração dos bipes, mantendo LED e servo nos mesmos pinos."
+    },
+    {
+      "nivel": "Avançado",
+      "descricao": "Em uma cópia do fonte, acrescentar timeout e validação de eco e substituir as pausas dos avisos por millis()."
+    }
+  ]
+}

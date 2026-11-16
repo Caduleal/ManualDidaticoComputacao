@@ -1,0 +1,59 @@
+{
+  "PROJETO": "PRJ 1.4",
+  "TITULO": "Ventilador",
+  "MODULO": "Módulo I - Educação Infantil",
+  "COMPLEXIDADE": "Básico",
+  "TEMPO_ESTIMADO": "1 h/aula (60 min)",
+  "PRE_REQUISITOS": "Comparar objetos parados e em movimento, reconhecer o comando de uma chave e acompanhar a montagem demonstrativa do professor. Não exige programação.",
+  "HABILIDADES_DE_COMPUTACAO": [
+    "Sequência de acionamento",
+    "Identificação de entrada e efeito",
+    "Comparação entre previsão e observação",
+    "Representação dos estados parado e girando"
+  ],
+  "COMPETENCIA_INTERDISCIPLINARES": {
+    "HISTORIA_E_SOCIEDADE": "Ventiladores movimentam o ar para melhorar a sensação de conforto. Diferentes objetos usam motores para transformar energia elétrica em movimento. A turma observa um modelo pequeno e conversa sobre onde encontra hélices, percebendo que movimento e luz são efeitos diferentes da eletricidade.",
+    "MATEMATICA": "Contar as pás visíveis e os componentes, comparar parado e girando e ordenar as ações necessárias para ligar e desligar a chave."
+  },
+  "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Como produzir movimento com uma pequena fonte de energia? O material mostra bateria, chave, resistor e motor com hélice em um circuito em série. Quando a chave fecha o caminho, o motor recebe energia, mas a bateria e o resistor podem limitar a corrente e impedir a partida. A atividade deve começar pela observação do modelo e pela verificação do professor.",
+  "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
+    "BOM": [
+      {
+        "qtd": "1x",
+        "componente": "Bateria tipo moeda de 3 V: CR2032 na imagem e BR2016 no PDF; conferir o modelo"
+      },
+      {
+        "qtd": "1x",
+        "componente": "Suporte compatível com a bateria mostrada na imagem"
+      },
+      {
+        "qtd": "1x",
+        "componente": "Resistor R1 de 220 Ω"
+      },
+      {
+        "qtd": "1x",
+        "componente": "Conjunto de fios de ligação"
+      },
+      {
+        "qtd": "1x",
+        "componente": "Motor CC M1 com hélice, modelo e corrente não informados"
+      },
+      {
+        "qtd": "1x",
+        "componente": "Chave deslizante S1"
+      }
+    ],
+    "IMAGEM_ESQUEMA": "Educação Infantil/PRJ 1.4 Ventilador/PRJ 1.4 Esquema.png",
+    "TITULO_ESQUEMA": "FIGURA 1: ESQUEMA DO CIRCUITO",
+    "LINK_THINKERCAD": "https://www.tinkercad.com/"
+  },
+  "ROTEIRO_PRATICO_DE_EXECUCAO": [
+    "1. Apresente o circuito como modelo de movimento. O professor mantém a bateria no suporte e a hélice afastada de mãos, cabelos e rosto.",
+    "2. Com a bateria retirada, confira a chave, o resistor de 220 Ω e os dois terminais do motor. A imagem mostra CR2032 e o PDF identifica BR2016.",
+    "3. Reproduza apenas a sequência documentada entre positivo, chave, resistor e motor; ligue o outro terminal do motor ao negativo do suporte.",
+    "4. Antes do teste físico, confira a compatibilidade do motor com a fonte. O resistor de 220 Ω e a bateria tipo moeda podem não fornecer corrente de partida; não elimine o resistor para forçar o funcionamento.",
+    "5. Faça um acionamento breve sob controle do professor e observe se há rotação. Se o motor não partir, desligue e registre a limitação, sem afirmar que a montagem foi validada.",
+    "6. Compare as posições da chave e desenhe o que foi observado. Não há código nem fluxograma; os campos ficam vazios. Desconecte a bateria ao encerrar."
+  ],
+  "ARTICULACAO_E_APROFUNDAMENTO": "1) Energia e Movimento: O motor transforma parte da energia elétrica em movimento de rotação. A turma pode comparar esse efeito com a luz do LED dos projetos anteriores, usando apenas observações concretas.\n\n2) Circuito em Série: A chave, o resistor e o motor estão no mesmo caminho da corrente. Abrir uma conexão interrompe o circuito; a presença de uma bateria, por si só, não garante que o motor consiga iniciar o movimento.\n\n3) Limite da Montagem: Os arquivos mostram resistor de 220 Ω e bateria tipo moeda, mas não especificam o consumo do motor. Essa combinação exige verificação antes do uso físico e pode ser trabalhada inicialmente como simulação.\n\n4) Controle Manual: O comando ocorre na chave e não em software. Registrar parado, tentando partir e girando ajuda a distinguir o resultado esperado do resultado realmente observado durante a experiência."
+}

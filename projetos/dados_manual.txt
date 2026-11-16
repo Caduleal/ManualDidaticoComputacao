@@ -15,7 +15,8 @@
         "Reconhecimento de padrões e ordenação.",
         "Jogos de estados binários e lógica desplugada.",
         "Execução de tarefas ordenadas e circuitos de papel.",
-        "Atividades de contato inicial com eletrônica e som."
+        "Atividades de contato inicial com eletrônica.",
+        "Desenvolvimento de atividades artísticas e manuais."
       ],
       "projetos_matriz": [
         {

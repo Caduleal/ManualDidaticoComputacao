@@ -1,0 +1,98 @@
+{
+  "PROJETO": "PRJ 4.4",
+  "TITULO": "Cofre Digital",
+  "MODULO": "Módulo IV - Ensino Médio",
+  "COMPLEXIDADE": "Avançado",
+  "TEMPO_ESTIMADO": "3 h/aula (180 min)",
+  "PRE_REQUISITOS": "Varredura de teclado, comparação de strings, funções e controle de servo. Compreender a diferença entre esconder caracteres na interface e proteger uma credencial.",
+  "HABILIDADES_DE_COMPUTACAO": [
+    "Validação de senha",
+    "Controle de estados aberto/fechado",
+    "Limitação do tamanho da entrada",
+    "Integração de interface e atuador"
+  ],
+  "COMPETENCIA_INTERDISCIPLINARES": {
+    "HISTORIA_E_SOCIEDADE": "Fechaduras com senha relacionam uma informação digitada a uma autorização. A interface precisa comunicar se a entrada foi aceita e qual é o estado da porta. Uma maquete ajuda a discutir privacidade e segurança, percebendo que esconder os dígitos no LCD não protege uma senha que permanece escrita no próprio programa.",
+    "MATEMATICA": "Comparar sequências de dígitos, contar posições até o limite de oito caracteres e relacionar comandos de 0° e 90° ao deslocamento de uma trava leve."
+  },
+  "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Como liberar uma trava depois de conferir uma sequência digitada? O teclado recebe até oito dígitos e o LCD mostra asteriscos; D compara a entrada com a senha fixa 1234. Se corresponder, o servo vai a 90° e o estado muda para aberto; A fecha a 0° e * limpa a digitação quando fechado. O modelo demonstra uma autorização simples, sem resistência mecânica ou proteção de credenciais de um cofre real.",
+  "FLUXO_ESTRUTURA_CODIGO": [
+    "Inicializar servo fechado a 0°",
+    "Varrer teclado e estabilizar tecla",
+    "Acumular até oito dígitos",
+    "Mostrar asteriscos no LCD",
+    "Receber D para comparar senha",
+    "Abrir a 90° se válida",
+    "Mostrar erro se inválida",
+    "Fechar com A ou limpar com *"
+  ],
+  "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
+    "BOM": [
+      {
+        "qtd": "1x",
+        "componente": "Placa Arduino Uno R3"
+      },
+      {
+        "qtd": "1x",
+        "componente": "Cabo USB compatível"
+      },
+      {
+        "qtd": "1x",
+        "componente": "LCD 16x2 I2C compatível com Adafruit_LiquidCrystal, configurado com deslocamento 0 em relação a 0x20"
+      },
+      {
+        "qtd": "1x",
+        "componente": "Teclado matricial 4x4"
+      },
+      {
+        "qtd": "1x",
+        "componente": "Microservo"
+      },
+      {
+        "qtd": "1x",
+        "componente": "Conjunto de jumpers; quantidade não especificada"
+      }
+    ],
+    "MAPEAMENTO_PINOS": [
+      "A0–A3 → linhas 1–4 do teclado",
+      "D2–D5 → colunas 1–4, INPUT_PULLUP",
+      "D13 → sinal do servo (servoPin)",
+      "Servo → alimentação compatível com o modelo; GND comum com o Uno",
+      "A4/SDA → SDA do módulo I2C; A5/SCL → SCL do módulo I2C (Arduino Uno)",
+      "5V → VCC dos módulos de 5 V; GND → referência comum, conferindo as ligações da montagem"
+    ],
+    "IMAGEM_ESQUEMA": "Ensino Médio/PRJ 4.4 Cofre Digital/PRJ 4.4 Esquema.png",
+    "TITULO_ESQUEMA": "FIGURA 1: ESQUEMA DO CIRCUITO",
+    "LINK_THINKERCAD": "https://www.tinkercad.com/",
+    "LINK_GITHUB": ""
+  },
+  "MODELAGEM_LOGICO_ALGORITMA": {
+    "NOME_PASSO": "Fluxograma Lógico",
+    "TIPO_PASSO": "IMAGEM",
+    "ARQUIVO": "",
+    "CODIGO_FONTE": "void verificarSenha() {\n  if (cofreAberto) {\n    return;\n  }\n  if (senhaDigitada == senhaCorreta) {\n    abrirCofre();\n  } else {\n    lcd.clear();\n    lcd.setCursor(0, 0);\n    lcd.print(\"SENHA INVALIDA\");\n    lcd.setCursor(0, 1);\n    lcd.print(\"TENTE NOVAMENTE\");\n    delay(2000);\n    mostrarTelaInicial();\n  }\n}"
+  },
+  "ROTEIRO_PRATICO_DE_EXECUCAO": [
+    "1. Construa uma porta de papelão com trava leve, sem guardar objetos de valor. Identifique os fios do servo e os terminais do teclado com alimentação desligada.",
+    "2. Ligue linhas a A0–A3 e colunas a D2–D5. Conecte o sinal do servo a D13 e confira fonte e GND comum antes de fixar a alavanca.",
+    "3. Conecte LCD a SDA/SCL, 5V e GND. Instale Adafruit LiquidCrystal e abra o .ino completo com Servo.h; o trecho no JSON destaca a comparação da senha.",
+    "4. Carregue e confirme a posição inicial de 0°. Digite 1234 e pressione D; observe a abertura a 90° e a mensagem de acesso liberado. O campo CODIGO_FONTE é um recorte didático de até 20 linhas, sobre verificação da senha e mensagem de acesso inválido; para executar, use PRJ 4.4 Cofre Digital.ino completo (trecho nas linhas 186–210).",
+    "5. Pressione A para fechar. Teste senha diferente, * para limpar e mais de oito dígitos, observando as regras do programa sem forçar o servo mecanicamente.",
+    "6. Discuta que a senha está visível no fonte, não há limite de tentativas e o servo só move uma maquete. Não apresente o circuito como proteção física ou digital de bens. Não há fluxograma fornecido; ARQUIVO permanece vazio."
+  ],
+  "ARTICULACAO_E_APROFUNDAMENTO": "1) Comparação de Sequências: senhaDigitada é comparada com senhaCorreta somente quando o cofre está fechado. A igualdade entre strings exige a mesma ordem de caracteres; uma permutação com os mesmos dígitos não é aceita.\n\n2) Estado Mecânico e Lógico: abrirCofre() e fecharCofre() enviam ângulos e alteram cofreAberto. O programa não possui sensor de posição, portanto o estado lógico indica o comando enviado, não uma confirmação física da porta.\n\n3) Interface Limitada: O LCD substitui cada dígito por asterisco e a entrada é limitada a oito caracteres. Isso evita mostrar a sequência a quem olha a tela, mas não cifra nem remove a senha armazenada no código.\n\n4) Segurança do Modelo: A senha 1234 é fixa e não existe bloqueio por tentativas. Melhorias podem ser estudadas no mesmo kit, porém autenticação robusta e resistência da trava ultrapassam o que este protótipo demonstra.",
+  "DESAFIOS_DE_EXPANSAO": [
+    {
+      "nivel": "Fácil",
+      "descricao": "Trocar a senha em uma cópia do fonte e elaborar testes de aceitação e rejeição."
+    },
+    {
+      "nivel": "Intermediário",
+      "descricao": "Adicionar contador de erros e espera temporária com millis(), permitindo reinício do teste sem travar a interface."
+    },
+    {
+      "nivel": "Avançado",
+      "descricao": "Acrescentar um botão ou fim de curso em pino livre para comparar a posição física da porta com o estado cofreAberto, mantendo a trava de papelão."
+    }
+  ]
+}

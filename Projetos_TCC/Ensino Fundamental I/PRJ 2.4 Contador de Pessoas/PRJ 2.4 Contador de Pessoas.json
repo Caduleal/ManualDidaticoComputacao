@@ -1,0 +1,92 @@
+{
+  "PROJETO": "PRJ 2.4",
+  "TITULO": "Contador de Pessoas",
+  "MODULO": "Módulo II - Ensino Fundamental I",
+  "COMPLEXIDADE": "Intermediário",
+  "TEMPO_ESTIMADO": "2 h/aula (120 min)",
+  "PRE_REQUISITOS": "Contagem, comparação de distâncias e noção de entrada e saída. Retomar sensores como entradas e mostradores como saídas, com leitura do código mediada pelo professor.",
+  "HABILIDADES_DE_COMPUTACAO": [
+    "Leitura alternada de sensores",
+    "Contagem condicionada por sequência",
+    "Máquina de estados",
+    "Medição de intervalos com micros() e millis()"
+  ],
+  "COMPETENCIA_INTERDISCIPLINARES": {
+    "HISTORIA_E_SOCIEDADE": "Bibliotecas e salas de atividades precisam saber quantas pessoas estão presentes. Uma contagem manual pode perder eventos quando entradas e saídas acontecem rapidamente. O modelo permite discutir por que a ordem de passagem importa e por que uma leitura isolada não descreve todo o movimento de alguém.",
+    "MATEMATICA": "Somar entradas, subtrair saídas sem permitir total negativo e comparar distâncias sucessivas. Explorar velocidade como variação de posição por intervalo, com apoio de exemplos concretos."
+  },
+  "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Como atualizar a quantidade de pessoas quando alguém atravessa uma passagem? Dois sensores observam aproximações em sequência: S1 seguido de S2 soma uma entrada; a ordem inversa registra uma saída. O LCD mostra o total e o estado da passagem. Trata-se de uma maquete que exige posicionamento e testes, pois movimentos simultâneos não são identificados individualmente.",
+  "FLUXO_ESTRUTURA_CODIGO": [
+    "Inicializar LCD e dois sensores",
+    "Alternar medições a cada 30000 µs",
+    "Descartar distância inválida",
+    "Comparar distância com leitura anterior",
+    "Detectar aproximação de pelo menos 0,10 m/s",
+    "Aguardar o segundo sensor",
+    "Somar entrada ou subtrair saída",
+    "Exibir resultado e liberar nova sequência"
+  ],
+  "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
+    "BOM": [
+      {
+        "qtd": "1x",
+        "componente": "Placa Arduino Uno R3"
+      },
+      {
+        "qtd": "1x",
+        "componente": "Cabo USB compatível"
+      },
+      {
+        "qtd": "1x",
+        "componente": "LCD 16x2 I2C compatível com Adafruit_LiquidCrystal, configurado com deslocamento 0 em relação a 0x20"
+      },
+      {
+        "qtd": "2x",
+        "componente": "Sensores ultrassônicos HC-SR04"
+      },
+      {
+        "qtd": "1x",
+        "componente": "Conjunto de jumpers; quantidade individual não especificada"
+      }
+    ],
+    "MAPEAMENTO_PINOS": [
+      "D3 → TRIG de S1; D2 → ECHO de S1 (índice 0)",
+      "D4 → TRIG de S2; D5 → ECHO de S2 (índice 1)",
+      "A4/SDA → SDA do módulo I2C; A5/SCL → SCL do módulo I2C (Arduino Uno)",
+      "5V → VCC dos módulos de 5 V; GND → referência comum, conferindo as ligações da montagem"
+    ],
+    "IMAGEM_ESQUEMA": "Ensino Fundamental I/PRJ 2.4 Contador de Pessoas/PRJ 2.4 Esquema.png",
+    "TITULO_ESQUEMA": "FIGURA 1: ESQUEMA DO CIRCUITO",
+    "LINK_THINKERCAD": "https://www.tinkercad.com/",
+    "LINK_GITHUB": ""
+  },
+  "MODELAGEM_LOGICO_ALGORITMA": {
+    "NOME_PASSO": "Fluxograma Lógico",
+    "TIPO_PASSO": "IMAGEM",
+    "ARQUIVO": "",
+    "CODIGO_FONTE": "if (estado == LIVRE) {\n  inicioSequencia = ultimoMovimento;\n  estado = (i == 0) ? ESPERA_S2 : ESPERA_S1;\n  exibindo = false;\n  mostrarTotal(i == 0 ? \"Aguardando S2\" : \"Aguardando S1\");\n} else if (estado == ESPERA_S2 && i == 1) {\n  ++pessoas;\n  mostrarTotal(\"Entrada\");\n  estado = FINALIZADA;\n} else if (estado == ESPERA_S1 && i == 0) {\n  if (pessoas > 0) --pessoas;\n  mostrarTotal(\"Saida\");\n  estado = FINALIZADA;\n} else {\n  return;\n}"
+  },
+  "ROTEIRO_PRATICO_DE_EXECUCAO": [
+    "1. Organize os dois sensores em uma passagem de maquete, identificando S1 e S2. Monte com o USB desligado e evite apontar os sensores diretamente um para o outro.",
+    "2. Ligue S1 com TRIG em D3 e ECHO em D2; ligue S2 com TRIG em D4 e ECHO em D5. Compartilhe 5V e GND conforme os módulos.",
+    "3. Ligue o LCD I2C ao barramento SDA/SCL do Uno. O PDF está nomeado PRJ 2.3, mas foi encontrado nesta pasta 2.4; use os pinos do .ino como referência funcional.",
+    "4. Instale Adafruit LiquidCrystal e abra o .ino completo da pasta. Selecione Uno e a porta correta; o trecho no JSON destaca apenas a decisão de entrada e saída. O campo CODIGO_FONTE é um recorte didático de até 20 linhas, sobre ordem dos sensores determina entrada ou saída; para executar, use PRJ 2.4 Contador de Pessoas.ino completo (trecho nas linhas 54–69).",
+    "5. Carregue e abra o Monitor Serial a 115200 baud. Aproxime um objeto de S1 e depois de S2; repita na ordem inversa e observe a atualização do total.",
+    "6. Teste uma sequência incompleta e uma saída com total zero. Registre que o programa usa prazo de 20 s, pausa de 800 ms após o movimento final e não deixa a contagem ficar negativa. Não há fluxograma fornecido; ARQUIVO permanece vazio."
+  ],
+  "ARTICULACAO_E_APROFUNDAMENTO": "1) Direção por Ordem: A função registrarAproximacao() guarda qual sensor iniciou a passagem. O segundo evento define entrada ou saída; usar dois pontos de observação diferencia esse projeto de um simples detector de presença.\n\n2) Movimento Calculado: O programa compara duas distâncias e o intervalo entre elas. Apenas aproximações com módulo de velocidade de pelo menos 0,10 m/s acionam o registro, portanto colocar um objeto parado diante do sensor não equivale a atravessar.\n\n3) Estados e Prazos: LIVRE, ESPERA_S1, ESPERA_S2 e FINALIZADA organizam a sequência. Um prazo de 20 segundos cancela a espera incompleta, e a pausa após o movimento reduz a repetição imediata de uma mesma passagem.\n\n4) Limites da Contagem: O total fica na memória RAM e é perdido ao reiniciar. Duas pessoas lado a lado ou leituras com eco ruim podem gerar resultados incorretos; a turma deve comparar o LCD com uma contagem manual durante os testes.",
+  "DESAFIOS_DE_EXPANSAO": [
+    {
+      "nivel": "Fácil",
+      "descricao": "Criar uma tabela com a ordem dos sensores e a mudança esperada no total."
+    },
+    {
+      "nivel": "Intermediário",
+      "descricao": "Testar diferentes posições dos sensores e comparar os acertos com uma contagem manual."
+    },
+    {
+      "nivel": "Avançado",
+      "descricao": "Adicionar, em uma cópia do programa e com pino livre, um botão para zerar a contagem, evitando que um botão mantido pressionado gere comandos repetidos."
+    }
+  ]
+}

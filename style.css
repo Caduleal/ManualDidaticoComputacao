@@ -261,3 +261,14 @@
     color: #1e293b;
     font-weight: 400;
 }
+
+/* Seção de Agradecimentos */
+#secao-agradecimentos p {
+    font-size: 13.5px;
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
+    text-indent: 2em;
+    text-align: justify;
+    color: #1e293b;
+    font-weight: 400;
+}

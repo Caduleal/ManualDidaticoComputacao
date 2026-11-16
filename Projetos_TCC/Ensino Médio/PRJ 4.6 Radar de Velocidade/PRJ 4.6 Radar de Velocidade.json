@@ -1,0 +1,92 @@
+{
+  "PROJETO": "PRJ 4.6",
+  "TITULO": "Radar de Velocidade",
+  "MODULO": "Módulo IV - Ensino Médio",
+  "COMPLEXIDADE": "Avançado",
+  "TEMPO_ESTIMADO": "3 h/aula (180 min)",
+  "PRE_REQUISITOS": "Leitura ultrassônica, diferença entre distância e deslocamento, unidades de tempo, ponto flutuante e uso de micros()/millis(). Interpretar resultados de um sensor com incerteza.",
+  "HABILIDADES_DE_COMPUTACAO": [
+    "Amostragem de grandezas",
+    "Cálculo por diferenças sucessivas",
+    "Validação de faixa e timeout",
+    "Controle de estados de medição e exibição"
+  ],
+  "COMPETENCIA_INTERDISCIPLINARES": {
+    "HISTORIA_E_SOCIEDADE": "Medir movimento permite estudar deslocamentos e comparar experiências com critérios comuns. Equipamentos profissionais usam métodos e calibração apropriados à aplicação. O nome radar aproxima o tema do cotidiano, mas este protótipo usa ultrassom e serve para investigar movimento na direção do sensor, sem equivaler a um instrumento de fiscalização.",
+    "MATEMATICA": "Calcular velocidade como Δdistância/Δtempo, converter centímetros em metros e microssegundos em segundos e multiplicar m/s por 3,6 para obter km/h."
+  },
+  "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Como estimar a rapidez de um objeto que se aproxima ou se afasta? O sensor mede duas distâncias em instantes sucessivos e o programa divide a variação pelo tempo decorrido. Ao atingir módulo de pelo menos 0,10 m/s, congela uma estimativa e a mostra por três segundos no LCD. A medição representa a componente radial do movimento e pode sofrer variações por ecos e posicionamento do alvo.",
+  "FLUXO_ESTRUTURA_CODIGO": [
+    "Disparar HC-SR04",
+    "Validar eco entre 2 e 300 cm",
+    "Guardar primeira leitura válida",
+    "Calcular intervalo entre instantes",
+    "Calcular velocidade em m/s",
+    "Comparar módulo com 0,10 m/s",
+    "Mostrar m/s e km/h",
+    "Aguardar 3 s sem novas medições",
+    "Retomar monitoramento"
+  ],
+  "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
+    "BOM": [
+      {
+        "qtd": "1x",
+        "componente": "Placa Arduino Uno R3"
+      },
+      {
+        "qtd": "1x",
+        "componente": "Cabo USB compatível"
+      },
+      {
+        "qtd": "1x",
+        "componente": "LCD 16x2 I2C compatível com Adafruit_LiquidCrystal, configurado com deslocamento 0 em relação a 0x20"
+      },
+      {
+        "qtd": "1x",
+        "componente": "Sensor HC-SR04"
+      },
+      {
+        "qtd": "1x",
+        "componente": "Conjunto de jumpers; quantidade não especificada"
+      }
+    ],
+    "MAPEAMENTO_PINOS": [
+      "D3 → TRIG; D2 → ECHO do HC-SR04",
+      "A4/SDA → SDA do módulo I2C; A5/SCL → SCL do módulo I2C (Arduino Uno)",
+      "5V → VCC dos módulos de 5 V; GND → referência comum, conferindo as ligações da montagem"
+    ],
+    "IMAGEM_ESQUEMA": "Ensino Médio/PRJ 4.6 Radar de Velocidade/PRJ 4.6 Esquema.png",
+    "TITULO_ESQUEMA": "FIGURA 1: ESQUEMA DO CIRCUITO",
+    "LINK_THINKERCAD": "https://www.tinkercad.com/",
+    "LINK_GITHUB": ""
+  },
+  "MODELAGEM_LOGICO_ALGORITMA": {
+    "NOME_PASSO": "Fluxograma Lógico",
+    "TIPO_PASSO": "IMAGEM",
+    "ARQUIVO": "",
+    "CODIGO_FONTE": "float deltaDistancia =\n    distanciaAtual - distanciaAnterior;\nfloat deltaTempo =\n    (instante - tempoAnterior) / 1000000.0;\nif (deltaTempo > 0) {\n  velocidade =\n    (deltaDistancia / 100.0) / deltaTempo;\n}\ndistanciaAnterior = distanciaAtual;\ntempoAnterior = instante;"
+  },
+  "ROTEIRO_PRATICO_DE_EXECUCAO": [
+    "1. Prepare um alvo plano que possa ser movido lentamente sobre a mesa na direção do sensor. Evite interpretar movimento lateral como deslocamento radial.",
+    "2. Com USB desligado, conecte TRIG a D3, ECHO a D2 e alimentação do sensor a 5V/GND. Ligue o LCD ao barramento I2C do Uno.",
+    "3. Instale Adafruit LiquidCrystal e abra o .ino completo com Wire.h e math.h. O trecho no JSON mostra o cálculo de diferenças, não toda a aquisição necessária.",
+    "4. Carregue e abra o Monitor Serial a 115200 baud. Mantenha o alvo na faixa de 2 a 300 cm e observe o sinal da velocidade ao aproximar e afastar. O campo CODIGO_FONTE é um recorte didático de até 20 linhas, sobre velocidade por diferença de distância e tempo; para executar, use PRJ 4.6 Radar de Velocidade.ino completo (trecho nas linhas 169–184).",
+    "5. Movimente o alvo até superar o limiar de 0,10 m/s. O LCD mostra o módulo em m/s e a conversão para km/h durante três segundos, sem realizar novas medidas nesse estado.",
+    "6. Compare várias tentativas com um deslocamento e tempo conhecidos. Registre dispersão e ecos inválidos; não use a estimativa para fiscalização, controle de veículos ou decisões que exijam instrumento calibrado. Não há fluxograma fornecido; ARQUIVO permanece vazio."
+  ],
+  "ARTICULACAO_E_APROFUNDAMENTO": "1) Distância e Tempo: O eco é convertido em centímetros e validado antes do cálculo. O instante de cada leitura é obtido com micros(); o intervalo de 30000 µs organiza as amostras sem garantir um período perfeitamente constante.\n\n2) Velocidade por Diferença: A expressão divide a variação de distância em metros pelo tempo em segundos. Aproximação pode produzir sinal negativo e afastamento positivo; fabs() remove o sinal quando o valor é capturado para exibição.\n\n3) Unidades e Apresentação: mostrarVelocidade() apresenta m/s e multiplica por 3,6 para km/h. O limiar de 0,10 m/s dispara o estado de exibição, que dura três segundos antes de reiniciar a referência de leitura.\n\n4) Limites do Método: O sensor observa apenas a mudança de distância ao alvo e não toda a trajetória no espaço. Pequenas diferenças de eco podem aumentar o erro do cálculo, por isso o trabalho deve comparar repetibilidade e não prometer precisão profissional.",
+  "DESAFIOS_DE_EXPANSAO": [
+    {
+      "nivel": "Fácil",
+      "descricao": "Conferir manualmente a conversão de três velocidades entre m/s e km/h."
+    },
+    {
+      "nivel": "Intermediário",
+      "descricao": "Registrar leituras com o alvo parado e em movimento e comparar dispersão e falsos disparos."
+    },
+    {
+      "nivel": "Avançado",
+      "descricao": "Em uma cópia do fonte, calcular velocidade por uma janela de várias amostras e comparar ruído e atraso da resposta com o método de duas leituras."
+    }
+  ]
+}

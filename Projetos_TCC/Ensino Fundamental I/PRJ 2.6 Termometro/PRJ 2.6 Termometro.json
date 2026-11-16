@@ -1,0 +1,106 @@
+{
+  "PROJETO": "PRJ 2.6",
+  "TITULO": "Termômetro",
+  "MODULO": "Módulo II - Ensino Fundamental I",
+  "COMPLEXIDADE": "Intermediário",
+  "TEMPO_ESTIMADO": "2 h/aula (120 min)",
+  "PRE_REQUISITOS": "Leitura de números decimais, comparação de valores e noção de temperatura. Identificar sensor, LED RGB e LCD com auxílio do professor.",
+  "HABILIDADES_DE_COMPUTACAO": [
+    "Leitura analógica",
+    "Conversão de escala",
+    "Decisões encadeadas",
+    "Exibição de dados em texto e cores"
+  ],
+  "COMPETENCIA_INTERDISCIPLINARES": {
+    "HISTORIA_E_SOCIEDADE": "Medir a temperatura ajuda a comparar ambientes e perceber mudanças ao longo do dia. Mostradores e cores tornam uma informação numérica mais fácil de acompanhar. Na atividade escolar, as crianças relacionam medidas ao ambiente sem confundir as faixas escolhidas no programa com uma classificação universal de conforto.",
+    "MATEMATICA": "Ler valores decimais, converter uma leitura de 0 a 1023 em tensão e comparar temperaturas com os limites de 20 °C e 30 °C."
+  },
+  "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Como mostrar uma temperatura de forma numérica e visual? O Arduino lê o TMP36 e converte a tensão em graus Celsius. Abaixo de 20 °C acende azul; de 20 °C a 30 °C combina vermelho e verde para produzir amarelo; acima de 30 °C acende vermelho. O LCD apresenta o valor e a faixa escolhida, criando um indicador ambiental didático.",
+  "FLUXO_ESTRUTURA_CODIGO": [
+    "Ler TMP36 em A0",
+    "Converter leitura em tensão",
+    "Calcular temperatura Celsius",
+    "Comparar com 20 °C e 30 °C",
+    "Selecionar azul, amarelo ou vermelho",
+    "Atualizar LCD e Monitor Serial",
+    "Aguardar 1000 ms",
+    "Repetir"
+  ],
+  "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
+    "BOM": [
+      {
+        "qtd": "1x",
+        "componente": "Placa Arduino Uno R3"
+      },
+      {
+        "qtd": "1x",
+        "componente": "Cabo USB compatível"
+      },
+      {
+        "qtd": "1x",
+        "componente": "LCD 16x2 I2C compatível com Adafruit_LiquidCrystal, configurado com deslocamento 0 em relação a 0x20"
+      },
+      {
+        "qtd": "1x",
+        "componente": "Sensor de temperatura TMP36"
+      },
+      {
+        "qtd": "1x",
+        "componente": "LED RGB de catodo comum"
+      },
+      {
+        "qtd": "3x",
+        "componente": "Resistores de 220 Ω, um por canal RGB"
+      },
+      {
+        "qtd": "1x",
+        "componente": "Protoboard, conforme a imagem da montagem"
+      },
+      {
+        "qtd": "1x",
+        "componente": "Conjunto de jumpers; quantidade individual não especificada"
+      }
+    ],
+    "MAPEAMENTO_PINOS": [
+      "A0 → VOUT do TMP36; +VS → 5V; GND do sensor → GND",
+      "D2 → canal vermelho do RGB via resistor de 220 Ω",
+      "D3 → canal azul do RGB via resistor de 220 Ω",
+      "D4 → canal verde do RGB via resistor de 220 Ω; comum do RGB → GND",
+      "A4/SDA → SDA do módulo I2C; A5/SCL → SCL do módulo I2C (Arduino Uno)",
+      "5V → VCC dos módulos de 5 V; GND → referência comum, conferindo as ligações da montagem"
+    ],
+    "IMAGEM_ESQUEMA": "Ensino Fundamental I/PRJ 2.6 Termometro/PRJ 2.6 Esquema.png",
+    "TITULO_ESQUEMA": "FIGURA 1: ESQUEMA DO CIRCUITO",
+    "LINK_THINKERCAD": "https://www.tinkercad.com/",
+    "LINK_GITHUB": ""
+  },
+  "MODELAGEM_LOGICO_ALGORITMA": {
+    "NOME_PASSO": "Fluxograma Lógico",
+    "TIPO_PASSO": "IMAGEM",
+    "ARQUIVO": "Ensino Fundamental I/PRJ 2.6 Termometro/PRJ 2.6 Fluxograma.png",
+    "CODIGO_FONTE": "if (temperatura < 20.0) {\n  controlarLED(false, false, true);\n  cor = \"AZUL\";\n  estado = \"FRIO\";\n}\nelse if (temperatura <= 30.0) {\n  controlarLED(true, true, false);\n  cor = \"AMARELO\";\n  estado = \"NORMAL\";\n}\nelse {\n  controlarLED(true, false, false);\n  cor = \"VERMELHO\";\n  estado = \"QUENTE\";\n}"
+  },
+  "ROTEIRO_PRATICO_DE_EXECUCAO": [
+    "1. Identifique o TMP36 e confira seus terminais no componente usado, com alimentação desconectada. Não substitua por outro sensor sem revisar a conversão de temperatura.",
+    "2. Ligue VOUT a A0 e os terminais de alimentação ao 5V e GND. Monte os três canais do RGB com resistores individuais: vermelho D2, azul D3 e verde D4.",
+    "3. Conecte o LCD ao barramento I2C do Uno e à alimentação. Confira o GND comum antes de ligar o USB.",
+    "4. Instale Adafruit LiquidCrystal, abra o .ino completo com Wire.h e selecione placa e porta. O trecho no JSON destaca a classificação por faixas e as combinações do RGB. O campo CODIGO_FONTE é um recorte didático de até 20 linhas, sobre classificação por faixa e mistura das cores; para executar, use PRJ 2.6 Termometro.ino completo (trecho nas linhas 84–109).",
+    "5. Carregue e leia LCD e Monitor Serial a 9600 baud. Em simulação, varie a temperatura para testar abaixo de 20 °C, exatamente 20 °C, 30 °C e acima de 30 °C.",
+    "6. Registre valor e cor em uma tabela. No teste físico, observe apenas mudanças ambientais seguras, sem chama ou aquecimento direto; as faixas não representam medição clínica."
+  ],
+  "ARTICULACAO_E_APROFUNDAMENTO": "1) Conversão do TMP36: O programa usa tensão = leitura × 5/1023 e temperatura = (tensão − 0,5) × 100. A expressão depende do sensor TMP36 e da referência adotada, por isso não é uma fórmula genérica para qualquer termômetro.\n\n2) Faixas de Decisão: O primeiro teste usa temperatura menor que 20 e o segundo menor ou igual a 30. Assim, 20 °C e 30 °C pertencem à faixa NORMAL; testar os valores de fronteira ajuda a entender os operadores.\n\n3) Mistura de Cores: O amarelo é produzido ligando os canais vermelho e verde do RGB, e não por um quarto LED. controlarLED() recebe os estados dos canais e reúne as escritas digitais em uma função.\n\n4) Comunicação do Resultado: O LCD recebe o número e a descrição da faixa, e o Monitor Serial repete dados para conferência. O caractere de grau é desenhado em uma matriz de oito linhas; delay(1000) define a atualização aproximada.",
+  "DESAFIOS_DE_EXPANSAO": [
+    {
+      "nivel": "Fácil",
+      "descricao": "Registrar temperaturas de dois locais da sala e comparar as cores indicadas."
+    },
+    {
+      "nivel": "Intermediário",
+      "descricao": "Modificar os limites das faixas e elaborar uma tabela com os novos valores de fronteira."
+    },
+    {
+      "nivel": "Avançado",
+      "descricao": "Usar millis() para atualizar o LCD sem delay() e calcular uma média de poucas leituras, comparando a estabilidade com o programa original."
+    }
+  ]
+}

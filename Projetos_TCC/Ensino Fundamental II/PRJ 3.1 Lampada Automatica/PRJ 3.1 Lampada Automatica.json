@@ -1,0 +1,100 @@
+{
+  "PROJETO": "PRJ 3.1",
+  "TITULO": "Lâmpada Automática",
+  "MODULO": "Módulo III - Ensino Fundamental II",
+  "COMPLEXIDADE": "Intermediário",
+  "TEMPO_ESTIMADO": "2 h/aula (120 min), com revisão do acionamento",
+  "PRE_REQUISITOS": "Entradas e saídas digitais, uso de if/else e diferença entre circuito de controle e circuito da carga. Ler um esquema com sensor PIR e relé.",
+  "HABILIDADES_DE_COMPUTACAO": [
+    "Leitura de presença em nível digital",
+    "Decisão condicional",
+    "Acionamento de saída",
+    "Diagnóstico pela comunicação serial"
+  ],
+  "COMPETENCIA_INTERDISCIPLINARES": {
+    "HISTORIA_E_SOCIEDADE": "A iluminação automática aparece em passagens e locais de uso eventual. Detectar movimento pode reduzir o tempo em que uma luz permanece ligada sem necessidade. A atividade permite discutir economia de energia e as limitações de inferir ocupação apenas pela resposta de um sensor de movimento.",
+    "MATEMATICA": "Comparar tempos ligado e desligado, registrar eventos em uma tabela e estimar a diferença de tempo de uso em dois cenários de circulação."
+  },
+  "CONTEXTUALIZACAO_E_MODELAGEM_DO_PROBLEMA_REAL": "Como acender uma luz quando há movimento em uma passagem? O PIR fornece um sinal digital ao Arduino, que comanda o relé conforme HIGH ou LOW. A imagem representa uma lâmpada alimentada por bateria de 9 V, sem rede elétrica. O desenho do relé precisa de revisão do acionamento antes da montagem física, pois o código sozinho não fornece a etapa de potência.",
+  "FLUXO_ESTRUTURA_CODIGO": [
+    "Configurar D13 como saída e A0 como entrada",
+    "Ler sinal do PIR",
+    "Se HIGH, acionar D13",
+    "Registrar movimento na serial",
+    "Aguardar 100 ms",
+    "Se LOW, desligar D13",
+    "Aguardar 300 ms",
+    "Repetir"
+  ],
+  "ARQUITETURA_DE_HARDWARE_E_LISTA_DE_MATERIAIS": {
+    "BOM": [
+      {
+        "qtd": "1x",
+        "componente": "Placa Arduino Uno R3"
+      },
+      {
+        "qtd": "1x",
+        "componente": "Cabo USB compatível"
+      },
+      {
+        "qtd": "1x",
+        "componente": "Sensor PIR"
+      },
+      {
+        "qtd": "1x",
+        "componente": "Relé K1 mostrado sem módulo de acionamento na imagem"
+      },
+      {
+        "qtd": "1x",
+        "componente": "Lâmpada de baixa tensão compatível com a fonte de 9 V, a conferir"
+      },
+      {
+        "qtd": "1x",
+        "componente": "Bateria de 9 V BAT1"
+      },
+      {
+        "qtd": "1x",
+        "componente": "Conjunto de fios de ligação"
+      }
+    ],
+    "MAPEAMENTO_PINOS": [
+      "A0 → OUT do PIR (pinoPir); PIR VCC/GND → 5V/GND",
+      "D13 → comando do relé (pinoRele); imagem mostra relé avulso, sem driver",
+      "Contatos do relé → circuito separado com bateria de 9 V e lâmpada, conforme imagem",
+      "Acionamento da bobina e proteção precisam de revisão; não ligar a bobina diretamente ao pino nem usar rede elétrica"
+    ],
+    "IMAGEM_ESQUEMA": "Ensino Fundamental II/PRJ 3.1 Lampada Automatica/PRJ 3.1 Esquema.png",
+    "TITULO_ESQUEMA": "FIGURA 1: ESQUEMA DO CIRCUITO",
+    "LINK_THINKERCAD": "https://www.tinkercad.com/",
+    "LINK_GITHUB": ""
+  },
+  "MODELAGEM_LOGICO_ALGORITMA": {
+    "NOME_PASSO": "Fluxograma Lógico",
+    "TIPO_PASSO": "IMAGEM",
+    "ARQUIVO": "",
+    "CODIGO_FONTE": "void loop() {\n  val = digitalRead(pinoPir);\n  if (val == HIGH) {\n    digitalWrite(pinoRele, HIGH);\n    Serial.println(\"Movimento detectado - Lampada LIGADA\");\n    delay(100);\n  } else {\n    digitalWrite(pinoRele, LOW);\n    delay(300);\n  }\n}"
+  },
+  "ROTEIRO_PRATICO_DE_EXECUCAO": [
+    "1. Compare o esquema e o .ino. Identifique PIR, relé, bateria de 9 V e lâmpada; use somente uma carga de baixa tensão nesta atividade.",
+    "2. Com tudo desligado, conecte OUT do PIR a A0 e confira VCC e GND. Aguarde a estabilização do sensor antes de interpretar os testes.",
+    "3. Não reproduza o comando direto de bobina do desenho. O professor deve selecionar módulo de relé ou driver com proteção adequado ao comando D13; esses itens são adequações, não materiais confirmados na imagem.",
+    "4. Mantenha os contatos do relé no circuito de bateria de 9 V e lâmpada compatível, conforme revisão do professor. Não conecte este projeto a uma tomada. O campo CODIGO_FONTE é um recorte didático de até 20 linhas, sobre presença comanda a saída do relé; para executar, use PRJ 3.1 Lampada Automatica.ino completo (trecho nas linhas 11–22).",
+    "5. Abra o .ino completo, selecione Uno e carregue. Observe no Monitor Serial a 9600 baud o sinal de movimento e confira se o módulo escolhido responde ao nível HIGH esperado pelo programa.",
+    "6. Compare movimento e repouso do PIR com o estado da luz. Registre o tempo de resposta do sensor; não há temporização prolongada de permanência implementada além das pausas de 100/300 ms. Não há fluxograma fornecido; ARQUIVO permanece vazio."
+  ],
+  "ARTICULACAO_E_APROFUNDAMENTO": "1) PIR como Entrada: A0 é lido por digitalRead(), portanto funciona como entrada digital neste projeto. O resultado indica o estado do módulo PIR e não uma medida numérica de distância ou uma identificação de pessoas.\n\n2) Regra de Acionamento: O if/else escreve HIGH em D13 quando a entrada está HIGH e LOW no caso contrário. Um módulo ativo em nível baixo produziria comportamento diferente, razão para conferir sua compatibilidade antes do teste.\n\n3) Relé e Carga: Os contatos comutam o circuito da lâmpada de 9 V. A bobina exige acionamento apropriado e proteção contra retorno indutivo; o relé avulso mostrado na imagem não deve ser tratado como um módulo pronto.\n\n4) Limite da Automação: O programa depende do sinal de movimento e não garante detectar alguém parado. O estudo pode comparar luz acesa e uso do espaço, deixando claro que economia depende da situação e da configuração do sensor.",
+  "DESAFIOS_DE_EXPANSAO": [
+    {
+      "nivel": "Fácil",
+      "descricao": "Contar acionamentos do PIR em diferentes posições na sala, usando apenas sinalização de baixa tensão."
+    },
+    {
+      "nivel": "Intermediário",
+      "descricao": "Adicionar um intervalo de permanência após o último movimento, com millis(), em uma cópia do programa."
+    },
+    {
+      "nivel": "Avançado",
+      "descricao": "Acrescentar um LDR em pino livre para permitir acionamento somente no escuro, mantendo o circuito de carga em baixa tensão e com driver adequado."
+    }
+  ]
+}
